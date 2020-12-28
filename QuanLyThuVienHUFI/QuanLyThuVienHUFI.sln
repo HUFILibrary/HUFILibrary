@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_QuanLyThuVien", "Form_QuanLyThuVien\Form_QuanLyThuVien.csproj", "{F67AE174-2A16-4FFF-AF3A-22DBF9DD4D0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{60269B56-9A66-457F-9C47-4961EBE78D74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F67AE174-2A16-4FFF-AF3A-22DBF9DD4D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F67AE174-2A16-4FFF-AF3A-22DBF9DD4D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F67AE174-2A16-4FFF-AF3A-22DBF9DD4D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F67AE174-2A16-4FFF-AF3A-22DBF9DD4D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60269B56-9A66-457F-9C47-4961EBE78D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60269B56-9A66-457F-9C47-4961EBE78D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60269B56-9A66-457F-9C47-4961EBE78D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60269B56-9A66-457F-9C47-4961EBE78D74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC2042C0-7EE6-4EDA-BFE7-FF33B051EA98}
+	EndGlobalSection
+EndGlobal
