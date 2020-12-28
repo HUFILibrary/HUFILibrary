@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_QuanLyThuVien", "Form_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{60269B56-9A66-457F-9C47-4961EBE78D74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HUFILibrary", "HUFILibrary\HUFILibrary.csproj", "{97391160-9392-4807-89B0-CE2468401527}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{60269B56-9A66-457F-9C47-4961EBE78D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60269B56-9A66-457F-9C47-4961EBE78D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60269B56-9A66-457F-9C47-4961EBE78D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97391160-9392-4807-89B0-CE2468401527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97391160-9392-4807-89B0-CE2468401527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97391160-9392-4807-89B0-CE2468401527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97391160-9392-4807-89B0-CE2468401527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
