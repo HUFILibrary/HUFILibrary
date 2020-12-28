@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Form_QuanLyThuVien", "Form_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{60269B56-9A66-457F-9C47-4961EBE78D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HUFILibrary", "HUFILibrary\HUFILibrary.csproj", "{97391160-9392-4807-89B0-CE2468401527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHUFILibrary", "HUFILibrary\WebHUFILibrary.csproj", "{97391160-9392-4807-89B0-CE2468401527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

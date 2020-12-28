@@ -1,0 +1,105 @@
+﻿@using BLL_DAL;
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="timkiem">
+    <div class="container">
+        <div class="title">
+            <p>Tra cứu tài liệu</p>
+        </div>
+        <div class="search">
+            @using (Html.BeginForm("TimKiem", "Home", FormMethod.Post))
+            {
+            <div class="form__search">
+                <select class="selection__search" name="typesearch">
+                    <option value="1" class="item__selection">Mã vạch</option>
+                    <option value="2" class="item__selection">Tiêu đề</option>
+                    <option value="3" class="item__selection">Tác giả</option>
+                    <option value="4" class="item__selection">Nhà xuất bản</option>
+                    <option value="5" class="item__selection">Chủ đề</option>
+                </select>
+                <input type="text" name="txtsearch" id="txtsearch" class="inputsearch">
+                <button href="#" class="btnsearch"> <span>Tìm kiếm</span> </button>
+                <a href="#" class="optionsearch">
+                    <div>
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </div>
+                </a>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="tailieu">
+    <div class="container">
+        <div class="rowHeader">
+            <div class="himg">
+                <span>Hình ảnh</span>
+            </div>
+            <div class="htieude">
+                <span>Tiêu đề</span>
+            </div>
+            <div class="hmota">
+                <span>Mô tả</span>
+            </div>
+            <div class="htacgia">
+                <span>Tác giả chính</span>
+            </div>
+            <div class="hchon">
+                <span>Chọn</span>
+            </div>
+        </div>
+
+        @{
+            if (ViewData["listData"] != null)
+            {
+                List<VW_TAILIEU> lstData = (List<VW_TAILIEU>)ViewData["listData"];
+                foreach (VW_TAILIEU item in lstData)
+                {
+                    <div class="row">
+                        <div class="img">
+                            @{
+                                string uploadsPath = System.Web.HttpContext.Current.Server.MapPath("..//");
+                                string url = uploadsPath.Replace("WebHUFILibrary", "Images");
+                                string urlImage = Path.Combine(url, "Images","TaiLieu", item.MaVach);
+
+                            } 
+                            <img src="@urlImage" alt="">
+                        </div>
+                        <div class="tieude">
+                            <a href="#">
+                                <span>@item.TenTaiLieu</span>
+                            </a>
+                        </div>
+                        <div class="mota">
+                            <a href="#">
+                                <span>
+                                    @item.ThongTinTaiLieu
+                                </span>
+                            </a>
+                        </div>
+                        <div class="tacgia">
+                            <span>@item.TenTacGia</span>
+                        </div>
+
+                        <div class="chon">
+                            <a href="#"><span>Xem chi tiết</span></a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="row">
+                    Không có kết quả
+                </div>
+            }
+        }
+    </div>
+</section>
+

@@ -111,7 +111,7 @@ namespace BLL_DAL
     #endregion
 		
 		public DB_QLTVDataContext() : 
-				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTPConnectionString, mappingSource)
+				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTPConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -347,6 +347,14 @@ namespace BLL_DAL
 				return this.GetTable<TAILIEU>();
 			}
 		}
+		
+		public System.Data.Linq.Table<VW_TAILIEU> VW_TAILIEUs
+		{
+			get
+			{
+				return this.GetTable<VW_TAILIEU>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CHUDE")]
@@ -469,9 +477,9 @@ namespace BLL_DAL
 		
 		private System.Nullable<int> _Tang;
 		
-		private System.Nullable<bool> _TinhTrangXoa;
-		
 		private string _Ke;
+		
+		private System.Nullable<bool> _TinhTrangXoa;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -481,10 +489,10 @@ namespace BLL_DAL
     partial void OnMaViTriChanged();
     partial void OnTangChanging(System.Nullable<int> value);
     partial void OnTangChanged();
-    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
-    partial void OnTinhTrangXoaChanged();
     partial void OnKeChanging(string value);
     partial void OnKeChanged();
+    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
+    partial void OnTinhTrangXoaChanged();
     #endregion
 		
 		public VITRI()
@@ -532,26 +540,6 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
-		public System.Nullable<bool> TinhTrangXoa
-		{
-			get
-			{
-				return this._TinhTrangXoa;
-			}
-			set
-			{
-				if ((this._TinhTrangXoa != value))
-				{
-					this.OnTinhTrangXoaChanging(value);
-					this.SendPropertyChanging();
-					this._TinhTrangXoa = value;
-					this.SendPropertyChanged("TinhTrangXoa");
-					this.OnTinhTrangXoaChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ke", DbType="VarChar(50)")]
 		public string Ke
 		{
@@ -568,6 +556,26 @@ namespace BLL_DAL
 					this._Ke = value;
 					this.SendPropertyChanged("Ke");
 					this.OnKeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
+		public System.Nullable<bool> TinhTrangXoa
+		{
+			get
+			{
+				return this._TinhTrangXoa;
+			}
+			set
+			{
+				if ((this._TinhTrangXoa != value))
+				{
+					this.OnTinhTrangXoaChanging(value);
+					this.SendPropertyChanging();
+					this._TinhTrangXoa = value;
+					this.SendPropertyChanged("TinhTrangXoa");
+					this.OnTinhTrangXoaChanged();
 				}
 			}
 		}
@@ -605,9 +613,9 @@ namespace BLL_DAL
 		
 		private System.Nullable<bool> _TinhTrangTraCT;
 		
-		private System.Nullable<bool> _TinhTrangXoa;
-		
 		private string _MaVach;
+		
+		private System.Nullable<bool> _TinhTrangXoa;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -619,10 +627,10 @@ namespace BLL_DAL
     partial void OnMaPhieuMuonChanged();
     partial void OnTinhTrangTraCTChanging(System.Nullable<bool> value);
     partial void OnTinhTrangTraCTChanged();
-    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
-    partial void OnTinhTrangXoaChanged();
     partial void OnMaVachChanging(string value);
     partial void OnMaVachChanged();
+    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
+    partial void OnTinhTrangXoaChanged();
     #endregion
 		
 		public CT_PHIEUMUON()
@@ -690,26 +698,6 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
-		public System.Nullable<bool> TinhTrangXoa
-		{
-			get
-			{
-				return this._TinhTrangXoa;
-			}
-			set
-			{
-				if ((this._TinhTrangXoa != value))
-				{
-					this.OnTinhTrangXoaChanging(value);
-					this.SendPropertyChanging();
-					this._TinhTrangXoa = value;
-					this.SendPropertyChanged("TinhTrangXoa");
-					this.OnTinhTrangXoaChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVach", DbType="VarChar(50)")]
 		public string MaVach
 		{
@@ -726,6 +714,26 @@ namespace BLL_DAL
 					this._MaVach = value;
 					this.SendPropertyChanged("MaVach");
 					this.OnMaVachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
+		public System.Nullable<bool> TinhTrangXoa
+		{
+			get
+			{
+				return this._TinhTrangXoa;
+			}
+			set
+			{
+				if ((this._TinhTrangXoa != value))
+				{
+					this.OnTinhTrangXoaChanging(value);
+					this.SendPropertyChanging();
+					this._TinhTrangXoa = value;
+					this.SendPropertyChanged("TinhTrangXoa");
+					this.OnTinhTrangXoaChanged();
 				}
 			}
 		}
@@ -919,11 +927,11 @@ namespace BLL_DAL
 		
 		private System.Nullable<int> _MaPhieuTra;
 		
+		private string _MaVach;
+		
 		private System.Nullable<bool> _TinhTrangXoa;
 		
 		private System.Nullable<int> _MaPhieuMuon;
-		
-		private string _MaVach;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -933,12 +941,12 @@ namespace BLL_DAL
     partial void OnMaChiTietPhieuTraChanged();
     partial void OnMaPhieuTraChanging(System.Nullable<int> value);
     partial void OnMaPhieuTraChanged();
+    partial void OnMaVachChanging(string value);
+    partial void OnMaVachChanged();
     partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
     partial void OnTinhTrangXoaChanged();
     partial void OnMaPhieuMuonChanging(System.Nullable<int> value);
     partial void OnMaPhieuMuonChanged();
-    partial void OnMaVachChanging(string value);
-    partial void OnMaVachChanged();
     #endregion
 		
 		public CT_PHIEUTRA()
@@ -986,6 +994,26 @@ namespace BLL_DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVach", DbType="VarChar(50)")]
+		public string MaVach
+		{
+			get
+			{
+				return this._MaVach;
+			}
+			set
+			{
+				if ((this._MaVach != value))
+				{
+					this.OnMaVachChanging(value);
+					this.SendPropertyChanging();
+					this._MaVach = value;
+					this.SendPropertyChanged("MaVach");
+					this.OnMaVachChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
 		public System.Nullable<bool> TinhTrangXoa
 		{
@@ -1026,26 +1054,6 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVach", DbType="VarChar(50)")]
-		public string MaVach
-		{
-			get
-			{
-				return this._MaVach;
-			}
-			set
-			{
-				if ((this._MaVach != value))
-				{
-					this.OnMaVachChanging(value);
-					this.SendPropertyChanging();
-					this._MaVach = value;
-					this.SendPropertyChanged("MaVach");
-					this.OnMaVachChanged();
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1081,9 +1089,9 @@ namespace BLL_DAL
 		
 		private string _MaVach;
 		
-		private System.Nullable<bool> _TinhTrangXoa;
-		
 		private System.Nullable<double> _TienBoiThuong;
+		
+		private System.Nullable<bool> _TinhTrangXoa;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1097,10 +1105,10 @@ namespace BLL_DAL
     partial void OnMaLoaiViPhamChanged();
     partial void OnMaVachChanging(string value);
     partial void OnMaVachChanged();
-    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
-    partial void OnTinhTrangXoaChanged();
     partial void OnTienBoiThuongChanging(System.Nullable<double> value);
     partial void OnTienBoiThuongChanged();
+    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
+    partial void OnTinhTrangXoaChanged();
     #endregion
 		
 		public CT_XULYVIPHAM()
@@ -1188,26 +1196,6 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
-		public System.Nullable<bool> TinhTrangXoa
-		{
-			get
-			{
-				return this._TinhTrangXoa;
-			}
-			set
-			{
-				if ((this._TinhTrangXoa != value))
-				{
-					this.OnTinhTrangXoaChanging(value);
-					this.SendPropertyChanging();
-					this._TinhTrangXoa = value;
-					this.SendPropertyChanged("TinhTrangXoa");
-					this.OnTinhTrangXoaChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienBoiThuong", DbType="Float")]
 		public System.Nullable<double> TienBoiThuong
 		{
@@ -1224,6 +1212,26 @@ namespace BLL_DAL
 					this._TienBoiThuong = value;
 					this.SendPropertyChanged("TienBoiThuong");
 					this.OnTienBoiThuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
+		public System.Nullable<bool> TinhTrangXoa
+		{
+			get
+			{
+				return this._TinhTrangXoa;
+			}
+			set
+			{
+				if ((this._TinhTrangXoa != value))
+				{
+					this.OnTinhTrangXoaChanging(value);
+					this.SendPropertyChanging();
+					this._TinhTrangXoa = value;
+					this.SendPropertyChanged("TinhTrangXoa");
+					this.OnTinhTrangXoaChanged();
 				}
 			}
 		}
@@ -3899,6 +3907,8 @@ namespace BLL_DAL
 		
 		private int _MaPhieuTra;
 		
+		private System.Nullable<int> _MaPhieuMuon;
+		
 		private System.Nullable<int> _MaNhanVien;
 		
 		private System.Nullable<System.DateTime> _NgayLap;
@@ -3913,6 +3923,8 @@ namespace BLL_DAL
     partial void OnCreated();
     partial void OnMaPhieuTraChanging(int value);
     partial void OnMaPhieuTraChanged();
+    partial void OnMaPhieuMuonChanging(System.Nullable<int> value);
+    partial void OnMaPhieuMuonChanged();
     partial void OnMaNhanVienChanging(System.Nullable<int> value);
     partial void OnMaNhanVienChanged();
     partial void OnNgayLapChanging(System.Nullable<System.DateTime> value);
@@ -3944,6 +3956,26 @@ namespace BLL_DAL
 					this._MaPhieuTra = value;
 					this.SendPropertyChanged("MaPhieuTra");
 					this.OnMaPhieuTraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhieuMuon", DbType="Int")]
+		public System.Nullable<int> MaPhieuMuon
+		{
+			get
+			{
+				return this._MaPhieuMuon;
+			}
+			set
+			{
+				if ((this._MaPhieuMuon != value))
+				{
+					this.OnMaPhieuMuonChanging(value);
+					this.SendPropertyChanging();
+					this._MaPhieuMuon = value;
+					this.SendPropertyChanged("MaPhieuMuon");
+					this.OnMaPhieuMuonChanged();
 				}
 			}
 		}
@@ -4090,7 +4122,7 @@ namespace BLL_DAL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaXuLyViPham", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaXuLyViPham", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int MaXuLyViPham
 		{
 			get
@@ -4783,6 +4815,537 @@ namespace BLL_DAL
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_TAILIEU")]
+	public partial class VW_TAILIEU
+	{
+		
+		private string _TenNhaXuatBan;
+		
+		private string _TenTacGia;
+		
+		private string _MaVach;
+		
+		private string _MaTaiLieu;
+		
+		private System.Nullable<int> _MaLoaiTaiLieu;
+		
+		private string _MaDauTaiLieu;
+		
+		private System.Nullable<int> _MaChuDe;
+		
+		private string _MaTap;
+		
+		private string _TenTaiLieu;
+		
+		private System.Nullable<int> _SoTrang;
+		
+		private System.Nullable<double> _Gia;
+		
+		private System.Nullable<int> _NamXuatBan;
+		
+		private System.Nullable<int> _Expr1;
+		
+		private System.Nullable<int> _Expr2;
+		
+		private string _ThongTinTaiLieu;
+		
+		private System.Nullable<int> _MaNgonNgu;
+		
+		private string _MaViTri;
+		
+		private string _HinhAnh;
+		
+		private string _Ke;
+		
+		private System.Nullable<int> _Tang;
+		
+		private string _TenLoaiTaiLieu;
+		
+		private string _TenChuDe;
+		
+		private string _TenNgonNgu;
+		
+		private int _Expr4;
+		
+		private string _Expr3;
+		
+		private int _Expr6;
+		
+		private int _MaNhaXuatBan;
+		
+		private int _MaTacGia;
+		
+		private int _Expr5;
+		
+		public VW_TAILIEU()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNhaXuatBan", DbType="NVarChar(200)")]
+		public string TenNhaXuatBan
+		{
+			get
+			{
+				return this._TenNhaXuatBan;
+			}
+			set
+			{
+				if ((this._TenNhaXuatBan != value))
+				{
+					this._TenNhaXuatBan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTacGia", DbType="NVarChar(200)")]
+		public string TenTacGia
+		{
+			get
+			{
+				return this._TenTacGia;
+			}
+			set
+			{
+				if ((this._TenTacGia != value))
+				{
+					this._TenTacGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVach", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MaVach
+		{
+			get
+			{
+				return this._MaVach;
+			}
+			set
+			{
+				if ((this._MaVach != value))
+				{
+					this._MaVach = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTaiLieu", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MaTaiLieu
+		{
+			get
+			{
+				return this._MaTaiLieu;
+			}
+			set
+			{
+				if ((this._MaTaiLieu != value))
+				{
+					this._MaTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiTaiLieu", DbType="Int")]
+		public System.Nullable<int> MaLoaiTaiLieu
+		{
+			get
+			{
+				return this._MaLoaiTaiLieu;
+			}
+			set
+			{
+				if ((this._MaLoaiTaiLieu != value))
+				{
+					this._MaLoaiTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDauTaiLieu", DbType="VarChar(50)")]
+		public string MaDauTaiLieu
+		{
+			get
+			{
+				return this._MaDauTaiLieu;
+			}
+			set
+			{
+				if ((this._MaDauTaiLieu != value))
+				{
+					this._MaDauTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaChuDe", DbType="Int")]
+		public System.Nullable<int> MaChuDe
+		{
+			get
+			{
+				return this._MaChuDe;
+			}
+			set
+			{
+				if ((this._MaChuDe != value))
+				{
+					this._MaChuDe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTap", DbType="VarChar(50)")]
+		public string MaTap
+		{
+			get
+			{
+				return this._MaTap;
+			}
+			set
+			{
+				if ((this._MaTap != value))
+				{
+					this._MaTap = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiLieu", DbType="NVarChar(200)")]
+		public string TenTaiLieu
+		{
+			get
+			{
+				return this._TenTaiLieu;
+			}
+			set
+			{
+				if ((this._TenTaiLieu != value))
+				{
+					this._TenTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoTrang", DbType="Int")]
+		public System.Nullable<int> SoTrang
+		{
+			get
+			{
+				return this._SoTrang;
+			}
+			set
+			{
+				if ((this._SoTrang != value))
+				{
+					this._SoTrang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Float")]
+		public System.Nullable<double> Gia
+		{
+			get
+			{
+				return this._Gia;
+			}
+			set
+			{
+				if ((this._Gia != value))
+				{
+					this._Gia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NamXuatBan", DbType="Int")]
+		public System.Nullable<int> NamXuatBan
+		{
+			get
+			{
+				return this._NamXuatBan;
+			}
+			set
+			{
+				if ((this._NamXuatBan != value))
+				{
+					this._NamXuatBan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr1", DbType="Int")]
+		public System.Nullable<int> Expr1
+		{
+			get
+			{
+				return this._Expr1;
+			}
+			set
+			{
+				if ((this._Expr1 != value))
+				{
+					this._Expr1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr2", DbType="Int")]
+		public System.Nullable<int> Expr2
+		{
+			get
+			{
+				return this._Expr2;
+			}
+			set
+			{
+				if ((this._Expr2 != value))
+				{
+					this._Expr2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string ThongTinTaiLieu
+		{
+			get
+			{
+				return this._ThongTinTaiLieu;
+			}
+			set
+			{
+				if ((this._ThongTinTaiLieu != value))
+				{
+					this._ThongTinTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNgonNgu", DbType="Int")]
+		public System.Nullable<int> MaNgonNgu
+		{
+			get
+			{
+				return this._MaNgonNgu;
+			}
+			set
+			{
+				if ((this._MaNgonNgu != value))
+				{
+					this._MaNgonNgu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaViTri", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MaViTri
+		{
+			get
+			{
+				return this._MaViTri;
+			}
+			set
+			{
+				if ((this._MaViTri != value))
+				{
+					this._MaViTri = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HinhAnh", DbType="VarChar(50)")]
+		public string HinhAnh
+		{
+			get
+			{
+				return this._HinhAnh;
+			}
+			set
+			{
+				if ((this._HinhAnh != value))
+				{
+					this._HinhAnh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ke", DbType="VarChar(50)")]
+		public string Ke
+		{
+			get
+			{
+				return this._Ke;
+			}
+			set
+			{
+				if ((this._Ke != value))
+				{
+					this._Ke = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tang", DbType="Int")]
+		public System.Nullable<int> Tang
+		{
+			get
+			{
+				return this._Tang;
+			}
+			set
+			{
+				if ((this._Tang != value))
+				{
+					this._Tang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiTaiLieu", DbType="NVarChar(200)")]
+		public string TenLoaiTaiLieu
+		{
+			get
+			{
+				return this._TenLoaiTaiLieu;
+			}
+			set
+			{
+				if ((this._TenLoaiTaiLieu != value))
+				{
+					this._TenLoaiTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenChuDe", DbType="NVarChar(200)")]
+		public string TenChuDe
+		{
+			get
+			{
+				return this._TenChuDe;
+			}
+			set
+			{
+				if ((this._TenChuDe != value))
+				{
+					this._TenChuDe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNgonNgu", DbType="NVarChar(200)")]
+		public string TenNgonNgu
+		{
+			get
+			{
+				return this._TenNgonNgu;
+			}
+			set
+			{
+				if ((this._TenNgonNgu != value))
+				{
+					this._TenNgonNgu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr4", DbType="Int NOT NULL")]
+		public int Expr4
+		{
+			get
+			{
+				return this._Expr4;
+			}
+			set
+			{
+				if ((this._Expr4 != value))
+				{
+					this._Expr4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr3", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Expr3
+		{
+			get
+			{
+				return this._Expr3;
+			}
+			set
+			{
+				if ((this._Expr3 != value))
+				{
+					this._Expr3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr6", DbType="Int NOT NULL")]
+		public int Expr6
+		{
+			get
+			{
+				return this._Expr6;
+			}
+			set
+			{
+				if ((this._Expr6 != value))
+				{
+					this._Expr6 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhaXuatBan", DbType="Int NOT NULL")]
+		public int MaNhaXuatBan
+		{
+			get
+			{
+				return this._MaNhaXuatBan;
+			}
+			set
+			{
+				if ((this._MaNhaXuatBan != value))
+				{
+					this._MaNhaXuatBan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTacGia", DbType="Int NOT NULL")]
+		public int MaTacGia
+		{
+			get
+			{
+				return this._MaTacGia;
+			}
+			set
+			{
+				if ((this._MaTacGia != value))
+				{
+					this._MaTacGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expr5", DbType="Int NOT NULL")]
+		public int Expr5
+		{
+			get
+			{
+				return this._Expr5;
+			}
+			set
+			{
+				if ((this._Expr5 != value))
+				{
+					this._Expr5 = value;
+				}
 			}
 		}
 	}
