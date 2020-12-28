@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="~/Content/css/reset.css">
+    <link rel="stylesheet" href="~/Content/font/stylesheet.css">
+    <link rel="stylesheet" href="~/Content/css/main.css">
+</head>
+<body>
+    <div class="wrapper-login">
+        <div class="login">
+            <div class="form__login">
+                <div class="left">
+                    <div class="img">
+                        <img src="~/Content/img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <h2>ĐĂNG NHẬP</h2>
+                    </div>
+                    <div class="form__wrapper">
+                        @using (Html.BeginForm("DangNhap", "Login", FormMethod.Post))
+                        {
+                        <div class="form">
+                            <div class="row">
+                                <label for="username">Tài khoản: </label>
+                                <input type="text" name="username" class="input__row">
+                            </div>
+                            <div class="row">
+                                <label for="password">Mật khẩu: </label>
+                                <input type="password" name="password" class="input__row">
+                            </div>
+                            <div class="row submit">
+                                <button type="submit" class="submitButton"> Đăng nhập</button>
+                            </div>
+                            <div class="row forget">
+                                <a href="#" class="forgetPassword"><span>Lấy lại mật khẩu?</span></a>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,195 @@
+﻿@using BLL_DAL
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/css/reset.css">
+    <link rel="stylesheet" href="~/Content/font/stylesheet.css">
+    <link rel="stylesheet" href="~/Content/css/main.css">
+    <link rel="stylesheet" href="~/Content/css/search.css">
+
+    <title>Thư viện trường Đại Học Công Nghiệp Thực Phẩm</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="toolbar">
+                <div class="container">
+                    <div class="toolbar__logo">
+                        <img src="~/Content/img/logo.jpg" alt="">
+                    </div>
+                    <div class="toolbar__selection">
+                        <div class="selection__account">
+                            @{
+                                if (Session["DocGiaIsLogin"] != null)
+                                {
+
+                                    DOCGIA dg = (DOCGIA)Session["DocGiaIsLogin"];
+
+                                    <div class="account">
+                                        <a href="" class="username">@dg.TenDocGia</a>
+                                        <div class="selection">
+                                            <a href="#">Thông tin tài khoản</a>
+                                            <a href="#">Danh sách tài liệu mượn</a>
+                                            <a href="#">Đổi mật khẩu</a>
+                                            <a href="@Url.Action("DangXuat","Login")">Đăng xuất</a>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("DangNhap","Login")">Đăng nhập</a>
+                                }
+                            }
+                            <div class="line"></div>
+                            <div class="lang">
+                                <span>Ngôn ngữ</span>
+                            </div>
+                        </div>
+                        <div class="selection__opentime">
+                            <p>Giờ hoạt động</p>
+                            <div class="line"></div>
+                            <a href="#">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="container">
+                    <ul class="navbar__list">
+                        <li class="navbar__list-item">
+                            <a href="#" class="navbar__list-link">Trang chủ</a>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#" class="navbar__list-link">Giới thiệu</a>
+                            <ul class="sublist">
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Tổng quan</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Nội quy thư viện</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Tổ chức nhân sự</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Vị trí & thời gian hoạt động</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#" class="navbar__list-link">Dịch vụ</a>
+                            <ul class="sublist">
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Lưu hành tài liệu</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Đọc tại chỗ và mượn sách</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Yêu cầu bổ sung tài liệu</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Mượn liên thư viện</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#" class="navbar__list-link">Tài nguyên</a>
+                            <ul class="sublist">
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Tài liệu in</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Tài liệu điện tử</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Cơ sở dữ liệu</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#" class="navbar__list-link">Hướng dẫn</a>
+                            <ul class="sublist">
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Hướng dẫn sử dụng thư viện</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Tìm kiếm và khai thác tài liệu</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar__list-item">
+                            <a href="#" class="navbar__list-link">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            <div class="footer__top">
+                <div class="container">
+                    <div class="box">
+                        <div class="box__title">
+                            <h3>Giới thiệu</h3>
+                        </div>
+                        <div class="box__list">
+                            <a href="#" class="link">Về HUFI</a>
+                            <a href="#" class="link">Đào tạo</a>
+                            <a href="#" class="link">Hợp tác quốc tế</a>
+                            <a href="#" class="link">Sinh viên tương lai</a>
+                            <a href="#" class="link">Sinh viên HUFI</a>
+                            <a href="#" class="link">Doanh nghiệp - Cựu sinh viên</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box__title">
+                            <h3>Khoa</h3>
+                        </div>
+                        <div class="box__list">
+                            <a href="#" class="link">Khoa Công nghệ thông tin</a>
+                            <a href="#" class="link">Khoa Công nghệ thực phẩm</a>
+                            <a href="#" class="link">Khoa Ngoại ngữ</a>
+                            <a href="#" class="link">Khoa Quản trị kinh doanh</a>
+                            <a href="#" class="link">Khoa Du lịch</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box__title">
+                            <h3>Trung tâm/ Phòng</h3>
+                        </div>
+                        <div class="box__list">
+                            <a href="#" class="link">Đảm bảo chất lượng & Khảo khí</a>
+                            <a href="#" class="link">Tham vấn tâm lý</a>
+                            <a href="#" class="link">Service Learning</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box__title">
+                            <h3>Kết nối</h3>
+                        </div>
+                        <div class="box__list">
+                            <a href="#" class="link">Điện thoại: 028 3816 1673 - 137</a>
+                            <a href="#" class="link">Email:thuvien@hufi.edu.vn</a>
+                            <a href="#" class="link social"><img src="~/Content/img/facebook.svg" alt=""> /thuvienhufi</a>
+                            <a href="#" class="link social"><img src="~/Content/img/instagram.svg" alt=""> /thuvienhufi</a>
+                            <a href="#" class="link social"><img src="~/Content/img/youtube-logotype.svg" alt=""> /thuvienhufi</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <p>2020 @@ Thư viện Đại học Công nghiệp Thực phẩm TP. HCM.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

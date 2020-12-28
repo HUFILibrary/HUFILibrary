@@ -10,6 +10,37 @@ namespace BLL_DAL
     public class QuanLyTaiLieu
     {
         DB_QLTVDataContext db = new DB_QLTVDataContext();
+        public List<VW_TAILIEU> getListTaiLieuByMaTaiLieu(string matailieu, ref List<string> lstDangMuon, ref List<VW_TAILIEU> lstKhongLuuThong)
+        {
+            List<VW_TAILIEU> lst = db.VW_TAILIEUs.Where(a => a.MaTaiLieu == matailieu).ToList();
+            lstKhongLuuThong = db.VW_TAILIEUs.Where(a => a.TinhTrangXoa == true && a.MaTaiLieu == matailieu).ToList();
+            List<string> lstCT = db.CT_PHIEUMUONs.Where(a => a.TinhTrangTraCT.ToString() == "False").Select(a => a.MaVach).ToList();
+            //List<VW_TAILIEU> lstDangMuon = from lst in db.VW_TAILIEUs
+            //                               join ct in db.CT_PHIEUMUONs on lst.MaVach equals ct.MaVach
+            //                               where (!ct.MaVach.Contains(lst.MaVach)) && (ct.TinhTrangTraCT = false)
+            //                               select lst;
+            var listDM = from lstDM in db.VW_TAILIEUs
+                         join ct in db.CT_PHIEUMUONs on lstDM.MaVach equals ct.MaVach
+                         where (lstCT.Contains(lstDM.MaVach)) && (lstDM.MaTaiLieu == matailieu)
+                         select lstDM;
+
+            foreach(VW_TAILIEU item in listDM)
+            {
+                lstDangMuon.Add(item.MaVach);
+            }
+            return lst;
+        }
+
+        public VW_TAILIEU getTaiLieuByMaVach(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            return tl;
+        }
+        public List<VW_TAILIEU> timKiemTheoMaVach(string mavach)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a=>a.MaVach.Contains(mavach)).ToList();
+            return lstTL;
+        }
         public IQueryable loadDgvViTri()
         {
             var vts = from vt in db.VITRIs

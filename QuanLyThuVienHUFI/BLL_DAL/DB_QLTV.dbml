@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVienCNTP" Class="DB_QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-RDLUFLH4\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTPConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTPConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHUDE" Member="CHUDEs">
     <Type Name="CHUDE">
       <Column Name="MaChuDe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -11,8 +11,8 @@
     <Type Name="VITRI">
       <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Tang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="Ke" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CT_PHIEUMUON" Member="CT_PHIEUMUONs">
@@ -20,8 +20,8 @@
       <Column Name="MaChiTietPhieuMuon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TinhTrangTraCT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="MaVach" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CT_PHIEUNHAP" Member="CT_PHIEUNHAPs">
@@ -37,9 +37,9 @@
     <Type Name="CT_PHIEUTRA">
       <Column Name="MaChiTietPhieuTra" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaPhieuTra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaVach" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaVach" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CT_XULYVIPHAM" Member="CT_XULYVIPHAMs">
@@ -48,8 +48,8 @@
       <Column Name="MaXuLyViPham" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaLoaiViPham" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaVach" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="TienBoiThuong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.DOCGIA" Member="DOCGIAs">
@@ -202,6 +202,7 @@
   <Table Name="dbo.PHIEUTRA" Member="PHIEUTRAs">
     <Type Name="PHIEUTRA">
       <Column Name="MaPhieuTra" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayLap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="SoLuongSachTra" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -210,7 +211,7 @@
   </Table>
   <Table Name="dbo.PHIEUXULYVIPHAM" Member="PHIEUXULYVIPHAMs">
     <Type Name="PHIEUXULYVIPHAM">
-      <Column Name="MaXuLyViPham" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaXuLyViPham" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaPhieuTra" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NgayLap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
@@ -243,6 +244,40 @@
       <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEU" Member="VW_TAILIEUs">
+    <Type Name="VW_TAILIEU">
+      <Column Name="TenNhaXuatBan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenTacGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaVach" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiTaiLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaDauTaiLieu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaChuDe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Expr2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ke" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenLoaiTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenChuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenNgonNgu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Expr4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Expr3" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Expr6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNhaXuatBan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaTacGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Expr5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
