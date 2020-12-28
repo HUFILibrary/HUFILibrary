@@ -108,3 +108,4 @@ D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompi
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.pdb
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache

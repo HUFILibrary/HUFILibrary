@@ -1,0 +1,15 @@
+﻿@using BLL_DAL;
+@{
+    ViewBag.Title = "ThongTinChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ThongTinChiTiet</h2>
+@{ 
+    if(ViewData["data"] != null)
+    {
+        TAILIEU tl = (TAILIEU)ViewData["data"];
+        <span>@tl.TenTaiLieu</span>
+    }
+}
+

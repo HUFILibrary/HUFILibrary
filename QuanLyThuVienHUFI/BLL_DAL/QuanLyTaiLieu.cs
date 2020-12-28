@@ -10,6 +10,11 @@ namespace BLL_DAL
     public class QuanLyTaiLieu
     {
         DB_QLTVDataContext db = new DB_QLTVDataContext();
+        public TAILIEU getTaiLieuByMaVach(string mavach)
+        {
+            TAILIEU tl = db.TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            return tl;
+        }
         public List<VW_TAILIEU> timKiemTheoMaVach(string mavach)
         {
             List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a=>a.MaVach.Contains(mavach)).ToList();
