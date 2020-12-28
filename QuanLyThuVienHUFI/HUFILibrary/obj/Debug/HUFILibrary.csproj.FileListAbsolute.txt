@@ -77,3 +77,10 @@ D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\obj\Debug\HUFILibrary.csproj.C
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\obj\Debug\HUFILibrary.csproj.CopyComplete
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\obj\Debug\HUFILibrary.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\obj\Debug\HUFILibrary.pdb
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\BLL_DAL.dll
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\EPPlus.dll
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\BLL_DAL.pdb
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\BLL_DAL.dll.config
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\EPPlus.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\HUFILibrary\bin\Microsoft.IO.RecyclableMemoryStream.xml
