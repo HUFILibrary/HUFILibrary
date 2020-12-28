@@ -172,6 +172,7 @@ body {
 
                                     body .wrapper header .toolbar .container .toolbar__selection .selection__account .account .selection a {
                                         padding: 10px;
+                                        border-radius: 5px;
                                         -webkit-transition: .3s;
                                         transition: .3s;
                                     }
@@ -1081,4 +1082,337 @@ body {
                                             color: #0652a0;
                                             text-decoration: underline;
                                         }
+
+    body .container.thongtinchitiet .wrapper__info {
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+        body .container.thongtinchitiet .wrapper__info .info {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(72, 101, 247, 0.4);
+            box-shadow: 0px 0px 15px 0px rgba(72, 101, 247, 0.4);
+            border: 1.5px solid rgba(2, 133, 255, 0.2);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+            body .container.thongtinchitiet .wrapper__info .info .img {
+                width: 20%;
+                height: 200px;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+                body .container.thongtinchitiet .wrapper__info .info .img img {
+                    max-width: 100%;
+                    height: 100%;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                }
+
+                body .container.thongtinchitiet .wrapper__info .info .img:hover img {
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+
+            body .container.thongtinchitiet .wrapper__info .info .thongtintailieu {
+                width: 80%;
+            }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .title h2 {
+                    color: #0da3e2;
+                    font-size: 22px;
+                    font-weight: bold;
+                    font-family: 'romedium';
+                }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .line {
+                    margin: 15px 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .tacgia {
+                    margin: 5px 0;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .tacgia span {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                    }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .tacgia a {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                        text-decoration: none;
+                        color: #FE2E2E;
+                    }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .nhaxuatban {
+                    margin: 5px 0;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .nhaxuatban span {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                    }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .nhaxuatban a {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                        text-decoration: none;
+                        color: #FE2E2E;
+                    }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .sotrang {
+                    margin: 5px 0;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .sotrang span {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                    }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .sotrang a {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                        text-decoration: none;
+                        color: #FE2E2E;
+                    }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .chude {
+                    margin: 5px 0;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .chude span {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                    }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .chude a {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                        text-decoration: none;
+                        color: #FE2E2E;
+                    }
+
+                body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .kyhieuxepgia {
+                    margin: 5px 0;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .kyhieuxepgia span {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                    }
+
+                    body .container.thongtinchitiet .wrapper__info .info .thongtintailieu .content .kyhieuxepgia a {
+                        font-size: 18px;
+                        font-family: 'roregular';
+                        text-decoration: none;
+                        color: #FE2E2E;
+                    }
+
+        body .container.thongtinchitiet .wrapper__info .thongtinchung {
+            margin-top: 20px;
+        }
+
+            body .container.thongtinchitiet .wrapper__info .thongtinchung .title {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .title .line {
+                    height: 35px;
+                    width: 2px;
+                    background-color: black;
+                    margin-right: 20px;
+                }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .title h3 {
+                    font-size: 25px;
+                    font-family: 'roregular';
+                }
+
+            body .container.thongtinchitiet .wrapper__info .thongtinchung .content {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                margin-top: 10px;
+            }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .content .tongso {
+                    margin: 0 5px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: #F78181;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .content .tongso p {
+                        font-size: 16px;
+                        font-family: 'roregular';
+                    }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .content .sanco {
+                    margin: 0 5px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: #A9F5F2;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .content .sanco p {
+                        font-size: 16px;
+                        font-family: 'roregular';
+                    }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .content .dangchomuon {
+                    margin: 0 5px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: #81F781;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .content .dangchomuon p {
+                        font-size: 16px;
+                        font-family: 'roregular';
+                    }
+
+            body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list {
+                    width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    height: 50px;
+                    background-color: #F2F2F2;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list .masach {
+                        width: 40%;
+                        padding: 0px 20px;
+                    }
+
+                        body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list .masach p {
+                            font-size: 18px;
+                            font-family: 'roregular';
+                        }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list .tinhtrang {
+                        width: 30%;
+                        padding: 0px 20px;
+                    }
+
+                        body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list .tinhtrang p {
+                            font-size: 18px;
+                            font-family: 'roregular';
+                        }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list .vitri {
+                        width: 30%;
+                        padding: 0px 20px;
+                    }
+
+                        body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .header__list .vitri p {
+                            font-size: 18px;
+                            font-family: 'roregular';
+                        }
+
+                body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list {
+                    width: 100%;
+                }
+
+                    body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row {
+                        width: 100%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        margin: 10px 0;
+                    }
+
+                        body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .masach {
+                            width: 40%;
+                            padding: 0px 20px;
+                        }
+
+                            body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .masach p {
+                                font-size: 16px;
+                                font-family: 'roregular';
+                            }
+
+                        body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .tinhtrang {
+                            width: 30%;
+                            padding: 0px 20px;
+                        }
+
+                            body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .tinhtrang .box {
+                                width: 150px;
+                            }
+
+                                body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .tinhtrang .box.sanco p {
+                                    background-color: #A9F5F2;
+                                    color: black;
+                                }
+
+                                body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .tinhtrang .box.khongluuthong p {
+                                    background-color: #BDBDBD;
+                                }
+
+                                body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .tinhtrang .box.dangmuon p {
+                                    background-color: #82FA58;
+                                    color: black;
+                                }
+
+                                body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .tinhtrang .box p {
+                                    font-size: 15px;
+                                    text-align: center;
+                                    font-family: 'roregular';
+                                    padding: 10px 8px 10px 8px;
+                                    color: white;
+                                    border-radius: 5px;
+                                }
+
+                        body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .vitri {
+                            width: 30%;
+                            padding: 0px 20px;
+                        }
+
+                            body .container.thongtinchitiet .wrapper__info .thongtinchung .listtailieu .content__list .row .vitri p {
+                                font-size: 16px;
+                                font-family: 'roregular';
+                            }
 /*# sourceMappingURL=main.css.map */

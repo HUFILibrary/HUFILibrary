@@ -12,8 +12,18 @@ namespace WebHUFILibrary.Controllers
         // GET: TaiLieu
         public ActionResult ThongTinChiTiet(string mavach)
         {
-            TAILIEU tl = qltl.getTaiLieuByMaVach(mavach);
+            if(mavach == null)
+            {
+                return RedirectToAction("TimKiem","Home");
+            }    
+            VW_TAILIEU tl = qltl.getTaiLieuByMaVach(mavach);
+            List<string> lstDM = new List<string>();
+            List<VW_TAILIEU> lstKhongLuuThong = new List<VW_TAILIEU>();
+            List<VW_TAILIEU> lst = qltl.getListTaiLieuByMaTaiLieu(tl.MaTaiLieu,ref lstDM, ref lstKhongLuuThong);
             ViewData["data"] = tl;
+            ViewData["listdata"] = lst;
+            ViewData["listDangMuon"] = lstDM;
+            ViewData["listKhongLuuThong"] = lstKhongLuuThong;
             return View();
         }
     }

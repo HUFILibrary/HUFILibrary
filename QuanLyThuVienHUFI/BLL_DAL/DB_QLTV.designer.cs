@@ -4881,6 +4881,8 @@ namespace BLL_DAL
 		
 		private int _Expr5;
 		
+		private System.Nullable<bool> _TinhTrangXoa;
+		
 		public VW_TAILIEU()
 		{
 		}
@@ -5345,6 +5347,22 @@ namespace BLL_DAL
 				if ((this._Expr5 != value))
 				{
 					this._Expr5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrangXoa", DbType="Bit")]
+		public System.Nullable<bool> TinhTrangXoa
+		{
+			get
+			{
+				return this._TinhTrangXoa;
+			}
+			set
+			{
+				if ((this._TinhTrangXoa != value))
+				{
+					this._TinhTrangXoa = value;
 				}
 			}
 		}
