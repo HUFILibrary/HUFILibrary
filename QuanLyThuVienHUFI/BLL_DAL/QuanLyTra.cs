@@ -42,7 +42,7 @@ namespace BLL_DAL
             }
             return dg;
         }
-        public float tinhPhiBT(LOAIVIPHAM lvp, int songay, float coc, float giatl)
+        public float tinhPhiBT(LOAIVIPHAM lvp, int songay, float giatl)
         {
             float tongtien = 0;
             LOAIVIPHAM vp = qltv.LOAIVIPHAMs.Where(v => v.MaLoaiViPham == lvp.MaLoaiViPham).FirstOrDefault();
@@ -194,6 +194,58 @@ namespace BLL_DAL
                 {
                     return false;
                 }
+            }
+            return false;
+        }
+
+        public IQueryable layDGTuPMChuaTra(string mathetv)
+        {
+            var mdg = from dg in qltv.DOCGIAs
+                      join pm in qltv.PHIEUMUONs on dg.MaTheThuVien equals pm.MaTheThuVien
+                      join ctpm in qltv.CT_PHIEUMUONs on pm.MaPhieuMuon equals ctpm.MaPhieuMuon
+                      join mv in qltv.TAILIEUs on ctpm.MaVach equals mv.MaVach
+                      join cd in qltv.CHUDEs on mv.MaChuDe equals cd.MaChuDe
+                      join nn in qltv.NGONNGUs on mv.MaNgonNgu equals nn.MaNgonNgu
+                      join loaitl in qltv.LOAITAILIEUs on mv.MaLoaiTaiLieu equals loaitl.MaLoaiTaiLieu
+                      join tg in qltv.TACGIAs on mv.MaTacGia equals tg.MaTacGia
+                      join nxb in qltv.NHAXUATBANs on mv.MaNhaXuatBan equals nxb.MaNhaXuatBan
+                      where pm.MaTheThuVien == mathetv && pm.TinhTrangTra == false
+                      select new { pm.MaPhieuMuon, mv.MaVach,  mv.TenTaiLieu, cd.TenChuDe, mv.MaTap, nn.TenNgonNgu, nxb.TenNhaXuatBan, tg.TenTacGia, pm.NgayLap, mv.Gia,ctpm.MaChiTietPhieuMuon };
+            return mdg;
+        }
+        public int ktraTonTaiDG(DOCGIA dg)
+        {
+            DOCGIA dgs = qltv.DOCGIAs.Where(d => d.MaTheThuVien == dg.MaTheThuVien).FirstOrDefault();
+            if (dgs != null)
+            {
+                return 1;
+            }
+            else { return -1; }
+        }
+        public int ktraDGTrongPM(DOCGIA dg)
+        {
+            PHIEUMUON pms = qltv.PHIEUMUONs.Where(d => d.MaTheThuVien == dg.MaTheThuVien && d.TinhTrangTra == false).FirstOrDefault();
+            if (pms != null)
+            {
+                return 1;
+            }
+            else { return -1; }
+        }
+        public DOCGIA layDGtuPM(DOCGIA dg, ref string tiencoc)
+        {
+            DOCGIA dgs = qltv.DOCGIAs.Where(d => d.MaTheThuVien == dg.MaTheThuVien).FirstOrDefault();
+            PHIEUMUON pms = qltv.PHIEUMUONs.Where(m => m.MaTheThuVien == dg.MaTheThuVien).FirstOrDefault();
+            dg = dgs;
+            tiencoc = pms.PhiCoc.ToString();
+            return dg;
+        }
+
+        public bool layTTtra(int mactpm)
+        {
+            CT_PHIEUMUON _ct = qltv.CT_PHIEUMUONs.Where(t => t.MaChiTietPhieuMuon == mactpm && t.TinhTrangTraCT == true).FirstOrDefault();
+            if(_ct != null)
+            {
+                return true;
             }
             return false;
         }
