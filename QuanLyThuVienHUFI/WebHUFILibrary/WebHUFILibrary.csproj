@@ -46,6 +46,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,6 +133,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\SearchModel.cs" />
+    <Compile Include="Models\TaiLieuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,12 +168,50 @@
     <Content Include="Content\img\slider1.jpg" />
     <Content Include="Content\img\slider2.jpg" />
     <Content Include="Content\img\youtube-logotype.svg" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\Roboto-Black.woff" />
+    <Content Include="fonts\Roboto-Black.woff2" />
+    <Content Include="fonts\Roboto-BlackItalic.woff" />
+    <Content Include="fonts\Roboto-BlackItalic.woff2" />
+    <Content Include="fonts\Roboto-Bold.woff" />
+    <Content Include="fonts\Roboto-Bold.woff2" />
+    <Content Include="fonts\Roboto-BoldCondensed.woff" />
+    <Content Include="fonts\Roboto-BoldCondensed.woff2" />
+    <Content Include="fonts\Roboto-BoldCondensedItalic.woff" />
+    <Content Include="fonts\Roboto-BoldCondensedItalic.woff2" />
+    <Content Include="fonts\Roboto-BoldItalic.woff" />
+    <Content Include="fonts\Roboto-BoldItalic.woff2" />
+    <Content Include="fonts\Roboto-Condensed.woff" />
+    <Content Include="fonts\Roboto-Condensed.woff2" />
+    <Content Include="fonts\Roboto-CondensedItalic.woff" />
+    <Content Include="fonts\Roboto-CondensedItalic.woff2" />
+    <Content Include="fonts\Roboto-Italic.woff" />
+    <Content Include="fonts\Roboto-Italic.woff2" />
+    <Content Include="fonts\Roboto-Light.woff" />
+    <Content Include="fonts\Roboto-Light.woff2" />
+    <Content Include="fonts\Roboto-LightItalic.woff" />
+    <Content Include="fonts\Roboto-LightItalic.woff2" />
+    <Content Include="fonts\Roboto-Medium.ttf" />
+    <Content Include="fonts\Roboto-Medium.woff" />
+    <Content Include="fonts\Roboto-Medium.woff2" />
+    <Content Include="fonts\Roboto-MediumItalic.ttf" />
+    <Content Include="fonts\Roboto-MediumItalic.woff" />
+    <Content Include="fonts\Roboto-MediumItalic.woff2" />
+    <Content Include="fonts\Roboto-Regular.ttf" />
+    <Content Include="fonts\Roboto-Regular.woff" />
+    <Content Include="fonts\Roboto-Regular.woff2" />
+    <Content Include="fonts\Roboto-Thin.ttf" />
+    <Content Include="fonts\Roboto-Thin.woff" />
+    <Content Include="fonts\Roboto-Thin.woff2" />
+    <Content Include="fonts\Roboto-ThinItalic.ttf" />
+    <Content Include="fonts\Roboto-ThinItalic.woff" />
+    <Content Include="fonts\Roboto-ThinItalic.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -195,7 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Image\" />
     <Folder Include="Views\TimKiem\" />
   </ItemGroup>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BLL_DAL;
+using PagedList;
 namespace WebHUFILibrary.Controllers
 {
     public class TaiLieuController : Controller
@@ -12,10 +13,11 @@ namespace WebHUFILibrary.Controllers
         // GET: TaiLieu
         public ActionResult ThongTinChiTiet(string mavach)
         {
+            
             if(mavach == null)
-            {
+            {     
                 return RedirectToAction("TimKiem","Home");
-            }    
+            }
             VW_TAILIEU tl = qltl.getTaiLieuByMaVach(mavach);
             List<string> lstDM = new List<string>();
             List<VW_TAILIEU> lstKhongLuuThong = new List<VW_TAILIEU>();

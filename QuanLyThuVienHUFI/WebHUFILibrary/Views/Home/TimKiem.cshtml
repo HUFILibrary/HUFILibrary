@@ -1,4 +1,8 @@
 ﻿@using BLL_DAL;
+@using PagedList;
+@using PagedList.Mvc;
+@using WebHUFILibrary.Models;
+@model PagedList.IPagedList<BLL_DAL.VW_TAILIEU>
 @{
     ViewBag.Title = "TimKiem";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,26 +14,42 @@
             <p>Tra cứu tài liệu</p>
         </div>
         <div class="search">
-            @using (Html.BeginForm("TimKiem", "Home", FormMethod.Post))
+            @using (Html.BeginForm("TimKiem", "Home", FormMethod.Get))
             {
-            <div class="form__search">
-                <select class="selection__search" name="typesearch">
-                    <option value="1" class="item__selection">Mã vạch</option>
-                    <option value="2" class="item__selection">Tiêu đề</option>
-                    <option value="3" class="item__selection">Tác giả</option>
-                    <option value="4" class="item__selection">Nhà xuất bản</option>
-                    <option value="5" class="item__selection">Chủ đề</option>
-                </select>
-                <input type="text" name="txtsearch" id="txtsearch" class="inputsearch">
-                <button href="#" class="btnsearch"> <span>Tìm kiếm</span> </button>
-                <a href="#" class="optionsearch">
-                    <div>
-                        <span>.</span>
-                        <span>.</span>
-                        <span>.</span>
-                    </div>
-                </a>
-            </div>
+                <div class="form__search">
+                    <select class="selection__search" name="typesearch">
+                        @{
+                            List<SearchModel> lstSearchModel = (List<SearchModel>)ViewData["lstSearchModel"];
+                            foreach (SearchModel item in lstSearchModel)
+                            {
+                                if (item._key.ToString() == ViewBag.CurrentTypeSearch)
+                                {
+                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                }
+                                else
+                                {
+                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                }
+
+                            }
+                        }
+                        @*<option value="1" class="item__selection">Mã vạch</option>
+        <option value="2" class="item__selection">Tiêu đề</option>
+        <option value="3" class="item__selection">Tác giả</option>
+        <option value="4" class="item__selection">Nhà xuất bản</option>
+        <option value="5" class="item__selection">Chủ đề</option>*@
+                    </select>
+                    @*<input type="text" name="txtsearch" id="txtsearch" class="inputsearch">*@
+                    @Html.TextBox("txtsearch",ViewBag.CurrentTxtSearch as string, new { @class = "inputsearch" })
+                    <button href="#" class="btnsearch"> <span>Tìm kiếm</span> </button>
+                    <a href="#" class="optionsearch"> 
+                        <div>
+                            <span>.</span>
+                            <span>.</span>
+                            <span>.</span>
+                        </div>
+                    </a>
+                </div>
             }
         </div>
     </div>
@@ -56,23 +76,23 @@
         </div>
 
         @{
-            if (ViewData["listData"] != null)
+            if (Model.Count() != 0)
             {
                 List<VW_TAILIEU> lstData = (List<VW_TAILIEU>)ViewData["listData"];
-                foreach (VW_TAILIEU item in lstData)
+                foreach (VW_TAILIEU item in Model)
                 {
                     <div class="row">
                         <div class="img">
                             @{
                                 string uploadsPath = System.Web.HttpContext.Current.Server.MapPath("..//");
                                 string url = uploadsPath.Replace("WebHUFILibrary", "Images");
-                                string urlImage = Path.Combine(url,"TaiLieu", item.HinhAnh);
-                            } 
+                                string urlImage = Path.Combine(url, "TaiLieu", item.HinhAnh);
+                            }
                             <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt=""></a>
-                            
+
                         </div>
                         <div class="tieude">
-                            <a href="#">
+                            <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })">
                                 <span>@item.TenTaiLieu</span>
                             </a>
                         </div>
@@ -88,18 +108,23 @@
                         </div>
 
                         <div class="chon">
-                            <a href="#"><span>Xem chi tiết</span></a>
+                            <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><span>Xem chi tiết</span></a>
                         </div>
                     </div>
                 }
             }
             else
             {
-                <div class="row">
-                    Không có kết quả
+                <div class="row khongcoketqua">
+                    <p> Không có kết quả</p>
                 </div>
             }
         }
+        <div class="pagination__wrapper">
+            @*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber) trong @Model.PageCount*@
+            @Html.PagedListPager(Model, page => Url.Action("TimKiem", new { page, CurrentTypeSearch = ViewBag.CurrentTypeSearch, CurrentTxtSearch = ViewBag.CurrentTxtSearch, @class = "pagination__delete-form" }))
+        </div>
     </div>
+    
 </section>
 

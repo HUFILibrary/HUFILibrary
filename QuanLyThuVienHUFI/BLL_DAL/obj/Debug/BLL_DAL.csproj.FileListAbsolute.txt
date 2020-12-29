@@ -109,3 +109,16 @@ D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyCompl
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.pdb
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\BLL_DAL.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\BLL_DAL.pdb
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\EPPlus.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\System.ComponentModel.Annotations.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\EPPlus.xml
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.pdb
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
