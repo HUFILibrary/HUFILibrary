@@ -41,6 +41,26 @@ namespace BLL_DAL
             List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a=>a.MaVach.Contains(mavach)).ToList();
             return lstTL;
         }
+        public List<VW_TAILIEU> timKiemTheoTieuDe(string tieude)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenTaiLieu.Contains(tieude)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoTacGia(string tacgia)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenTacGia.Contains(tacgia)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoNhaXuatBan(string nxb)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenNhaXuatBan.Contains(nxb)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoChuDe(string chude)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenChuDe.Contains(chude)).ToList();
+            return lstTL;
+        }
         public IQueryable loadDgvViTri()
         {
             var vts = from vt in db.VITRIs
