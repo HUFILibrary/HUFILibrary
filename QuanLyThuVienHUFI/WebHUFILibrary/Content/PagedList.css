@@ -13,12 +13,15 @@
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 6px 12px;
+  padding: 10px 15px;
   margin-left: -1px;
   line-height: 1.428571429;
   text-decoration: none;
   background-color: #ffffff;
   border: 1px solid #dddddd;
+  font-size:16px;
+  font-family:'romedium';
+  text-decoration:none;
 }
 
 .pagination > li:first-child > a,

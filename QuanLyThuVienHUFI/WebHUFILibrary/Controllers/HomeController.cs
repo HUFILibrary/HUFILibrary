@@ -13,6 +13,7 @@ namespace WebHUFILibrary.Controllers
         QuanLyTaiLieu qltl = new QuanLyTaiLieu();
         public ActionResult Index()
         {
+              
             return View();
         }
 
@@ -34,7 +35,7 @@ namespace WebHUFILibrary.Controllers
         [HttpGet]
         public ActionResult TimKiem(int? page, string typesearch, string txtsearch, string CurrentTxtSearch, string CurrentTypeSearch)
         {
-            int pageSize = 5;
+            int pageSize = 8;
             int pageNumber = (page ?? 1);
             if (txtsearch != null)
             {

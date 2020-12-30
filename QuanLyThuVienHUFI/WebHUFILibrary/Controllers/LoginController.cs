@@ -12,10 +12,11 @@ namespace WebHUFILibrary.Controllers
         // GET: Login
         public ActionResult DangNhap()
         {
+
             return View();
         }
         [HttpPost]
-        public ActionResult DangNhap(string username, string password)
+        public ActionResult DangNhap(string username, string password, string targetUrl)
         {
             if (qldn.kiemTraDangNhap(username, password))
             {
@@ -23,12 +24,17 @@ namespace WebHUFILibrary.Controllers
                 if (dg != null)
                 {
                     Session["DocGiaIsLogin"] = dg;
-                    return RedirectToAction("Index","Home");
+                    if (!string.IsNullOrEmpty(targetUrl))
+                    {
+                        return new RedirectResult(targetUrl);
+                    }
+                    return RedirectToAction("Index", "Home");
                 }
             }
             else
             {
-                ViewData["FailedLogin"] = "Tài khoản và mật khẩu không hợp lệ.";
+                ViewBag.username = username;
+                ViewData["Msg"] = "Tài khoản và mật khẩu không hợp lệ.";
                 return this.View();
             }
             return View();
@@ -37,7 +43,50 @@ namespace WebHUFILibrary.Controllers
         public ActionResult DangXuat()
         {
             Session.Clear();
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public ActionResult ChangePassword()
+        {
+            if (Session["DocGiaIsLogin"] == null)
+            {
+                return RedirectToAction("DangNhap", "Login");
+            }
+            return View();
+        } 
+            [HttpPost]
+        public ActionResult ChangePassword(string passwordold, string password, string repassword)
+        {
+            if(Session["DocGiaIsLogin"] == null)
+            {
+                return RedirectToAction("DangNhap","Login");
+            }    
+            else
+            {
+                if(password.Equals(passwordold))
+                {
+                    ViewData["Msg"] = "Lỗi: Mật khẩu mới trùng với mật khẩu cũ.";
+                    return this.View();
+                }
+                DOCGIA dg = (DOCGIA)Session["DocGiaIsLogin"];
+                if(!qldn.kiemTraMatKhauCu(dg.MaTheThuVien,passwordold))
+                {
+                    ViewData["Msg"] = "Lỗi: Mật khẩu cũ không đúng.";
+                    return this.View();
+                }    
+                if(qldn.changePassword(dg.MaTheThuVien,password))
+                {
+                    ViewData["Msg"] = "Thông báo: Thay đổi mật khẩu thành công.";
+                    
+                }    
+                else
+                {
+                    ViewData["Msg"] = "Lỗi: Thay đổi mật khẩu không thành công.";
+                }
+                return this.View();
+            }    
+            return View();
         }
     }
 }

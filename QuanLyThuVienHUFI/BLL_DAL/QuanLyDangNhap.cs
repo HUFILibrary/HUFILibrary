@@ -35,5 +35,37 @@ namespace BLL_DAL
                 return dg;
             }
         }
+
+        public bool changePassword(string mathethuvien, string matkhau)
+        {
+            DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == mathethuvien).FirstOrDefault();
+            if(dg != null)
+            {
+                dg.MatKhau = matkhau;
+                db.SubmitChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool kiemTraMatKhauCu(string mathethuvien, string matkhaucu)
+        {
+            DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == mathethuvien).FirstOrDefault();
+            if (dg != null)
+            {
+                if(dg.MatKhau != matkhaucu)
+                {
+                    return false;
+                }    
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

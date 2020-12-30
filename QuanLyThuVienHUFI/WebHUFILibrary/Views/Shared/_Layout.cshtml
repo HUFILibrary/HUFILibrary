@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header id="top">
             <div class="toolbar">
                 <div class="container">
                     <div class="toolbar__logo">
@@ -33,7 +33,7 @@
                                         <div class="selection">
                                             <a href="#">Thông tin tài khoản</a>
                                             <a href="#">Danh sách tài liệu mượn</a>
-                                            <a href="#">Đổi mật khẩu</a>
+                                            <a href="@Url.Action("ChangePassword","Login")">Đổi mật khẩu</a>
                                             <a href="@Url.Action("DangXuat","Login")">Đăng xuất</a>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                 <div class="container">
                     <ul class="navbar__list">
                         <li class="navbar__list-item">
-                            <a href="#" class="navbar__list-link">Trang chủ</a>
+                            <a href="@Url.Action("Index","Home")" class="navbar__list-link">Trang chủ</a>
                         </li>
                         <li class="navbar__list-item">
                             <a href="#" class="navbar__list-link">Giới thiệu</a>
@@ -190,6 +190,11 @@
                 </div>
             </div>
         </footer>
+        <a href="#top" class="scrolltop">
+            <div class="scrolltop__wrapper">
+                <img src="~/Content/img/up-arrow.svg" width="35px" alt="">
+            </div>
+        </a>
     </div>
     <script src="/js/main.js"></script>
 </body>

@@ -21,7 +21,7 @@ namespace BLL_DAL
             //                               select lst;
             var listDM = from lstDM in db.VW_TAILIEUs
                          join ct in db.CT_PHIEUMUONs on lstDM.MaVach equals ct.MaVach
-                         where (lstCT.Contains(lstDM.MaVach)) && (lstDM.MaTaiLieu == matailieu)
+                         where (lstCT.Contains(lstDM.MaVach)) && (lstDM.MaTaiLieu == matailieu) && (ct.TinhTrangTraCT == false)
                          select lstDM;
 
             foreach(VW_TAILIEU item in listDM)
