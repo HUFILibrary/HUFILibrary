@@ -61,7 +61,6 @@ namespace BLL_DAL
                             join vt in db.VITRIs on tls.MaViTri equals vt.MaViTri
                             where (pm.TinhTrangTra == false) && (pm.MaTheThuVien == mathethuvien) && (ctpm.TinhTrangTraCT == false)
                             select new { tls.MaVach, tls.TenTaiLieu, cd.TenChuDe, nn.TenNgonNgu, nxb.TenNhaXuatBan };
-
             return phieumuon;
         }
 

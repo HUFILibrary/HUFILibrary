@@ -20,7 +20,7 @@ namespace WebHUFILibrary.Controllers
         {
             if (qldn.kiemTraDangNhap(username, password))
             {
-                DOCGIA dg = qldn.getModelDocGia(username);
+                VW_DOCGIA dg = qldn.getModelDocGia(username);
                 if (dg != null)
                 {
                     Session["DocGiaIsLogin"] = dg;
@@ -69,7 +69,7 @@ namespace WebHUFILibrary.Controllers
                     ViewData["Msg"] = "Lỗi: Mật khẩu mới trùng với mật khẩu cũ.";
                     return this.View();
                 }
-                DOCGIA dg = (DOCGIA)Session["DocGiaIsLogin"];
+                VW_DOCGIA dg = (VW_DOCGIA)Session["DocGiaIsLogin"];
                 if(!qldn.kiemTraMatKhauCu(dg.MaTheThuVien,passwordold))
                 {
                     ViewData["Msg"] = "Lỗi: Mật khẩu cũ không đúng.";

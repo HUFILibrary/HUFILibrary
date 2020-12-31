@@ -260,3 +260,7 @@ C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debu
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csproj.CopyComplete
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.dll
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.pdb
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.dll
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.Mvc.dll
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.Mvc.xml

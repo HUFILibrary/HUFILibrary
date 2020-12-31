@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DocGiaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\.gitignore" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -151,9 +153,11 @@
     <Content Include="Content\img\100000000.jpg" />
     <Content Include="Content\img\account.svg" />
     <Content Include="Content\img\chat.svg" />
+    <Content Include="Content\img\downArrow.svg" />
     <Content Include="Content\img\facebook.svg" />
     <Content Include="Content\img\instagram.svg" />
     <Content Include="Content\img\left-arrow.svg" />
+    <Content Include="Content\img\leftArrow.svg" />
     <Content Include="Content\img\lienhe.svg" />
     <Content Include="Content\img\lightbulb.svg" />
     <Content Include="Content\img\logo.jpg" />
@@ -163,13 +167,20 @@
     <Content Include="Content\img\news3.jpg" />
     <Content Include="Content\img\opentime.svg" />
     <Content Include="Content\img\right-arrow.svg" />
+    <Content Include="Content\img\rightArrow.svg" />
     <Content Include="Content\img\sachmoi1.jpg" />
     <Content Include="Content\img\sachmoi2.jpg" />
     <Content Include="Content\img\sachmoi3.jpg" />
     <Content Include="Content\img\slider1.jpg" />
     <Content Include="Content\img\slider2.jpg" />
     <Content Include="Content\img\up-arrow.svg" />
+    <Content Include="Content\img\upArrow.svg" />
     <Content Include="Content\img\youtube-logotype.svg" />
+    <Content Include="Content\index.html" />
+    <Content Include="Content\js\jquery-3.5.1.min.js" />
+    <Content Include="Content\js\lib\slick.css" />
+    <Content Include="Content\js\lib\slick.min.js" />
+    <Content Include="Content\js\main.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -214,6 +225,15 @@
     <Content Include="fonts\Roboto-ThinItalic.ttf" />
     <Content Include="fonts\Roboto-ThinItalic.woff" />
     <Content Include="fonts\Roboto-ThinItalic.woff2" />
+    <Content Include="Content\bower.json" />
+    <Content Include="Content\component.json" />
+    <Content Include="Content\CONTRIBUTING.markdown" />
+    <Content Include="Content\ISSUE_TEMPLATE.md" />
+    <Content Include="Content\LICENSE" />
+    <Content Include="Content\Makefile" />
+    <Content Include="Content\package.json" />
+    <Content Include="Content\README.markdown" />
+    <Content Include="Content\slick.jquery.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -241,6 +261,7 @@
     <Content Include="Views\Home\TimKiem.cshtml" />
     <Content Include="Views\TaiLieu\ThongTinChiTiet.cshtml" />
     <Content Include="Views\Login\ChangePassword.cshtml" />
+    <Content Include="Views\DocGia\ThongTinTaiKhoan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

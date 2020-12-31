@@ -23,9 +23,9 @@ namespace BLL_DAL
             }
         }
 
-        public DOCGIA getModelDocGia(string username)
+        public VW_DOCGIA getModelDocGia(string username)
         {
-            DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == username).FirstOrDefault();
+            VW_DOCGIA dg = db.VW_DOCGIAs.Where(a => a.MaTheThuVien == username).FirstOrDefault();
             if(dg != null)
             {
                 return dg;

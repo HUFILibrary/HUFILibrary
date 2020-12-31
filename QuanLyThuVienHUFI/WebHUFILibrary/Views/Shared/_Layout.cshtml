@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/Content/font/stylesheet.css">
     <link rel="stylesheet" href="~/Content/css/reset.css">
-
+    <link rel="stylesheet" href="~/Content/js/lib/slick.css">
     <link rel="stylesheet" href="~/Content/css/main.css">
     <link rel="stylesheet" href="~/Content/css/search.css">
     <link rel="stylesheet" href="~/Content/PagedList.css">
@@ -26,13 +26,13 @@
                                 if (Session["DocGiaIsLogin"] != null)
                                 {
 
-                                    DOCGIA dg = (DOCGIA)Session["DocGiaIsLogin"];
+                                    VW_DOCGIA dg = (VW_DOCGIA)Session["DocGiaIsLogin"];
 
                                     <div class="account">
                                         <a href="" class="username">@dg.TenDocGia</a>
                                         <div class="selection">
-                                            <a href="#">Thông tin tài khoản</a>
-                                            <a href="#">Danh sách tài liệu mượn</a>
+                                            <a href="@Url.Action("ThongTinTaiKhoan","DocGia")">Thông tin tài khoản</a>
+                                            @*<a href="#">Danh sách tài liệu mượn</a>*@
                                             <a href="@Url.Action("ChangePassword","Login")">Đổi mật khẩu</a>
                                             <a href="@Url.Action("DangXuat","Login")">Đăng xuất</a>
                                         </div>
@@ -196,6 +196,18 @@
             </div>
         </a>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
+    <script src="~/Content/js/lib/slick.min.js"></script>
+    <script src="~/Content/js/main.js"></script>
+    <script>
+        $('.lienquantheotacgia .content').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+        });
+    </script>
 </body>
 </html>

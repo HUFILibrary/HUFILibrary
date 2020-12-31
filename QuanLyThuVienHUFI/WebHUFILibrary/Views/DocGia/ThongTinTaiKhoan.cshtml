@@ -1,0 +1,251 @@
+﻿@using BLL_DAL; 
+@{
+    ViewBag.Title = "ThongTinTaiKhoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    VW_DOCGIA dg = (VW_DOCGIA)ViewData["DocGiaInfo"];
+}
+
+<div class="thongtintaikhoan__wrapper">
+    <div class="container">
+        <div class="tab__content">
+            <div id="tab-thongtintaihkoan" class="tab__panel thongtintaikhoan activeflex">
+                <div class="left">
+                    <div class="img">
+                        <img src="~/Content/img/100000000.jpg" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="thongtinchung">
+                        <div class="title">
+                            <h3>Thông tin chung</h3>
+                        </div>
+                        <div class="line"></div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="label">
+                                    <p>Họ tên: </p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.TenDocGia</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Mã thẻ thư viện: </p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.MaTheThuVien</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Ngày sinh: </p>
+                                </div>
+                                <div class="text">
+                                    <p>@DateTime.Parse(dg.NgaySinh.ToString()).ToShortDateString()</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Giới tính: </p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.GioiTinh</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Tình trạng thẻ: </p>
+                                </div>
+                                <div class="text">
+                                    @{
+                                        if (dg.TinhTrangTheThuVien == true)
+                                        {
+                                            <p>Bị khoá</p>
+                                        }
+                                        else
+                                        {
+                                            <p>Đang hoạt động</p>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thongtinlienhe">
+                        <div class="title">
+                            <h3>Thông tin liên hệ</h3>
+                        </div>
+                        <div class="line"></div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="label">
+                                    <p>Địa chỉ:</p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.DiaChi</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Email:</p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.Email</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Số điện thoại:</p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.SoDienThoai</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Khoa:</p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.TenKhoa</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="label">
+                                    <p>Ngành:</p>
+                                </div>
+                                <div class="text">
+                                    <p>@dg.TenNganh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-danhsachtailieudangmuon" class=" tab__panel tailieu">
+
+                <div class="rowHeader">
+                    <div class="himg">
+                        <span>Hình ảnh</span>
+                    </div>
+                    <div class="hmavach">
+                        <span>Mã vạch</span>
+                    </div>
+                    <div class="htieude">
+                        <span>Tiêu đề</span>
+                    </div>
+                    <div class="hngaymuon">
+                        <span>Ngày mượn</span>
+                    </div>
+                    <div class="hhantra">
+                        <span>Hạn trả</span>
+                    </div>
+                    <div class="hphicoc">
+                        <span>Phí cọc</span>
+                    </div>
+                </div>
+                @{
+                    if (ViewData["lstTaiLieuDangMuon"] != null)
+                    {
+                        foreach (VW_TAILIEUDANGMUON item in (List<VW_TAILIEUDANGMUON>)ViewData["lstTaiLieuDangMuon"])
+                        {
+                            <div class="row">
+                                <div class="img">
+                                    <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt=""></a>
+                                </div>
+                                <div class="mavach">
+                                    <a href="#"><span>@item.MaVach</span></a>
+                                </div>
+                                <div class="tieude">
+                                    <a href="#">
+                                        <span>@item.TenTaiLieu</span>
+                                    </a>
+                                </div>
+
+                                <div class="ngaymuon">
+                                    <span>@DateTime.Parse(item.NgayLap.ToString()).ToShortDateString()</span>
+                                </div>
+                                <div class="hantra">
+                                    <span>@DateTime.Parse(item.ThoiHanMuon.ToString()).ToShortDateString()</span>
+                                </div>
+                                <div class="phicoc">
+                                    <span>@item.PhiCoc đ</span>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+
+
+
+
+
+            </div>
+
+            
+            <div id="tab-danhsachtailieudamuon" class=" tab__panel tailieudamuon">
+
+                <div class="rowHeader">
+                    <div class="himg">
+                        <span>Hình ảnh</span>
+                    </div>
+                    <div class="hmavach">
+                        <span>Mã vạch</span>
+                    </div>
+                    <div class="htieude">
+                        <span>Tiêu đề</span>
+                    </div>
+                    <div class="hngaymuon">
+                        <span>Ngày mượn</span>
+                    </div>
+                    <div class="hngaytra">
+                        <span>Ngày trả</span>
+                    </div>
+                </div>
+                @{
+                    if (ViewData["lstTaiLieuDaMuon"] != null)
+                    {
+                        foreach (VW_TAILIEUDAMUON item in (List<VW_TAILIEUDAMUON>)ViewData["lstTaiLieuDaMuon"])
+                        {
+                                <div class="row">
+                                    <div class="img">
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt=""></a>
+                                    </div>
+                                    <div class="mavach">
+                                        <a href="#"><span>@item.MaVach</span></a>
+                                    </div>
+                                    <div class="tieude">
+                                        <a href="#">
+                                            <span>@item.TenTaiLieu</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="ngaymuon">
+                                        <span>@DateTime.Parse(item.Expr6.ToString()).ToShortDateString()</span>
+                                    </div>
+                                    <div class="ngaytra">
+                                        <span>@DateTime.Parse(item.NgayLap.ToString()).ToShortDateString()</span>
+                                    </div>
+                                </div>
+                        }
+                    }
+                  }
+                
+
+
+                        </div>
+        </div>
+        <div class="tab__selection">
+            <div class="right">
+                <div class="table__wrapper">
+                    <a href="#" data-selection="tab_thongtintaihkoan" class="active">Thông tin độc giả</a>
+                    <a href="#" data-selection="tab_danhsachtailieudangmuon" class="">Danh sách tài liệu đang mượn</a>
+                    <a href="#" data-selection="tab_danhsachtailieudamuon" class="">Danh sách tài liệu đã mượn</a>
+                    <a href="#" class="">Danh sách tài liệu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

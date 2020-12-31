@@ -83,6 +83,7 @@
     <Compile Include="QuanLyPhieuTra.cs" />
     <Compile Include="QuanLyPhieuXLVP.cs" />
     <Compile Include="QuanLyTaiLieu.cs" />
+    <Compile Include="QuanLyThongTinDocGia.cs" />
     <Compile Include="QuanLyTra.cs" />
     <Compile Include="ThongKe.cs" />
   </ItemGroup>
