@@ -62,8 +62,8 @@ body {
             position: fixed;
             top: 80%;
             right: 10px;
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.2);
             cursor: pointer;
@@ -87,6 +87,7 @@ body {
 
                 body .wrapper .scrolltop .scrolltop__wrapper img {
                     position: absolute;
+                    width: 25px;
                 }
 
         body .wrapper header {
@@ -443,7 +444,21 @@ body {
 
                 body .wrapper main .slider .container {
                     width: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    position: relative;
                 }
+
+                    body .wrapper main .slider .container .slick-prev {
+                        width: 35px;
+                        cursor: pointer;
+                    }
+
+                    body .wrapper main .slider .container .slick-next {
+                        width: 35px;
+                        cursor: pointer;
+                    }
 
                     body .wrapper main .slider .container .slider__item {
                         width: 100%;
@@ -454,6 +469,52 @@ body {
                             -o-object-fit: cover;
                             object-fit: cover;
                         }
+
+                    body .wrapper main .slider .container .slick-dots {
+                        position: absolute;
+                        bottom: 2%;
+                        left: 50%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                    }
+
+                        body .wrapper main .slider .container .slick-dots li {
+                            margin: 0 5px;
+                            cursor: pointer;
+                        }
+
+                            body .wrapper main .slider .container .slick-dots li.slick-active button {
+                                background-color: rgba(0, 0, 0, 0.6);
+                                color: white;
+                            }
+
+                            body .wrapper main .slider .container .slick-dots li button {
+                                padding: 5px;
+                                background-color: transparent;
+                                border: none;
+                                border-radius: 50%;
+                                width: 15px;
+                                height: 15px;
+                                background-color: rgba(0, 0, 0, 0.3);
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-box-pack: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                                outline: none;
+                                cursor: pointer;
+                                color: #D8D8D8;
+                                font-size: 0;
+                                font-family: 'roregular';
+                                font-weight: bold;
+                            }
 
             body .wrapper main .selection {
                 width: 100%;
