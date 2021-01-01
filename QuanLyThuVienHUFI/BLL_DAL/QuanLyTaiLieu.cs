@@ -30,7 +30,46 @@ namespace BLL_DAL
             }
             return lst;
         }
-
+        public List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGia(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEUCUNGTACGIA> lst = new List<VW_TAILIEUCUNGTACGIA>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUCUNGTACGIAs.Where(a => a.TenTacGia == tl.TenTacGia && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            return lst;
+        }
+        public List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDe(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEUCUNGCHUDE> lst = new List<VW_TAILIEUCUNGCHUDE>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUCUNGCHUDEs.Where(a => a.TenChuDe == tl.TenChuDe && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            return lst;
+        }
+        public List<VW_TAILIEU> lstTLCungTacGiaCoMaVach(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEU> lst = new List<VW_TAILIEU>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUs.Where(a => a.TenTacGia == tl.TenTacGia && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            return lst;
+        }
+        public List<VW_TAILIEU> lstTLCungChuDeCoMaVach(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEU> lst = new List<VW_TAILIEU>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUs.Where(a => a.TenChuDe == tl.TenChuDe && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            return lst;
+        }
         public VW_TAILIEU getTaiLieuByMaVach(string mavach)
         {
             VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();

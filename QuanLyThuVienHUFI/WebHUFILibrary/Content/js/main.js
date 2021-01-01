@@ -33,9 +33,14 @@ document.querySelectorAll('.table__wrapper a').forEach(a => a.addEventListener('
 
 // tài liệu liên quan theo tác giả
 var tacgia = document.querySelector('.lienquantheotacgia .title');
+var chude = document.querySelector('.lienquantheochude .title');
 var arrow = document.querySelector('.lienquantheotacgia .title .arrow');
+var arrowCD = document.querySelector('.lienquantheochude .title .arrowCD');
 var img = document.getElementById('imgArrow');
+var imgCD = document.getElementById('imgArrowCD');
 var content = document.querySelector('.lienquantheotacgia .content');
+var contentCD = document.querySelector('.lienquantheochude .content');
+
 tacgia.addEventListener('click', function () {
     if (arrow.getAttribute('data-arrow') == "down") {
         arrow.setAttribute('data-arrow', 'up');
@@ -56,6 +61,29 @@ tacgia.addEventListener('click', function () {
         img.src = '/Content/img/downArrow.svg';
         content.style.height = "0";
         content.style.transition = "all 0.4s";
+    }
+})
+
+chude.addEventListener('click', function () {
+    if (arrowCD.getAttribute('data-arrow') == "down") {
+        arrowCD.setAttribute('data-arrow', 'up');
+        imgCD.src = '/Content/img/upArrow.svg';
+        contentCD.style.height = "auto";
+        contentCD.style.transition = "all 0.4s";
+        // if(content.classList.contains('showContent'))
+        // {
+        //     content.classList.remove('showContent')
+        // }
+        // else
+        // {
+        //     content.classList.add('showContent')
+        // }
+    }
+    else if (arrowCD.getAttribute('data-arrow') == "up") {
+        arrowCD.setAttribute('data-arrow', 'down');
+        imgCD.src = '/Content/img/downArrow.svg';
+        contentCD.style.height = "0";
+        contentCD.style.transition = "all 0.4s";
     }
 })
 
