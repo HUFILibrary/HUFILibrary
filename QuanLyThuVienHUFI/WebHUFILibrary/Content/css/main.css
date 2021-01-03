@@ -1775,12 +1775,12 @@ body {
                                     font-family: 'roregular';
                                 }
 
-            body .container.thongtinchitiet .wrapper__info .lienquantheotacgia {
+            body .container.thongtinchitiet .wrapper__info .lienquan {
                 width: 100%;
                 margin-top: 50px;
             }
 
-                body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .title {
+                body .container.thongtinchitiet .wrapper__info .lienquan .title {
                     width: 100%;
                     display: -webkit-box;
                     display: -ms-flexbox;
@@ -1791,19 +1791,19 @@ body {
                     cursor: pointer;
                 }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .title .line {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .title .line {
                         height: 35px;
                         width: 2px;
                         background-color: black;
                         margin-right: 20px;
                     }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .title h3 {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .title h3 {
                         font-size: 25px;
                         font-family: 'roregular';
                     }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .title .arrow {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .title .iarrow {
                         padding: 0 15px;
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -1813,11 +1813,11 @@ body {
                         align-items: center;
                     }
 
-                        body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .title .arrow img {
+                        body .container.thongtinchitiet .wrapper__info .lienquan .title .iarrow img {
                             width: 22px;
                         }
 
-                body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content {
+                body .container.thongtinchitiet .wrapper__info .lienquan .content {
                     width: 100%;
                     height: 0;
                     display: -webkit-box;
@@ -1833,21 +1833,30 @@ body {
                     align-items: center;
                 }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content.showContent {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .content.showContent {
                         height: auto;
                     }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .slick-prev {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .content .slick-prev {
                         width: 35px;
                         cursor: pointer;
                     }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .slick-next {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .content .slick-next {
                         width: 35px;
                         cursor: pointer;
                     }
 
-                    body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .box {
+                    body .container.thongtinchitiet .wrapper__info .lienquan .content .slack-list {
+                        height: 280px;
+                    }
+
+                        body .container.thongtinchitiet .wrapper__info .lienquan .content .slack-list .slick-track {
+                            height: 100%;
+                        }
+
+                    body .container.thongtinchitiet .wrapper__info .lienquan .content .box {
+                        width: 33.33%;
                         padding: 20px;
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -1859,24 +1868,38 @@ body {
                         -webkit-box-align: center;
                         -ms-flex-align: center;
                         align-items: center;
+                        height: 100%;
                     }
 
-                        body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .box .img {
+                        body .container.thongtinchitiet .wrapper__info .lienquan .content .box .img {
                             width: 180px;
+                            height: 180px;
                         }
 
-                            body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .box .img img {
-                                max-width: 100%;
-                                height: auto;
+                            body .container.thongtinchitiet .wrapper__info .lienquan .content .box .img a {
+                                width: 100%;
                             }
 
-                        body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .box .text {
+                                body .container.thongtinchitiet .wrapper__info .lienquan .content .box .img a img {
+                                    width: 100%;
+                                    -o-object-fit: cover;
+                                    object-fit: cover;
+                                    height: 100%;
+                                }
+
+                        body .container.thongtinchitiet .wrapper__info .lienquan .content .box .text {
+                            width: 100%;
                             margin-top: 15px;
                         }
 
-                            body .container.thongtinchitiet .wrapper__info .lienquantheotacgia .content .box .text p {
+                            body .container.thongtinchitiet .wrapper__info .lienquan .content .box .text p {
+                                text-align: center;
                                 font-size: 16px;
                                 font-family: 'roregular';
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
                             }
 
     body .thongtintaikhoan__wrapper {

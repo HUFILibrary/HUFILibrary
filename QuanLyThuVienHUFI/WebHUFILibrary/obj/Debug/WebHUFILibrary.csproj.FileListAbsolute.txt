@@ -264,3 +264,7 @@ D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.Mvc.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.xml
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.Mvc.xml
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.SqlServer.dll
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.xml
+C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.SqlServer.xml

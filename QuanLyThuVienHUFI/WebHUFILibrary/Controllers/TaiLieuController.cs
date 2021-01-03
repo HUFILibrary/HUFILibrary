@@ -26,6 +26,48 @@ namespace WebHUFILibrary.Controllers
             ViewData["listdata"] = lst;
             ViewData["listDangMuon"] = lstDM;
             ViewData["listKhongLuuThong"] = lstKhongLuuThong;
+
+            //*** Tài liệu cùng tác giả
+            List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGia = qltl.lstTLCungTacGia(mavach);
+            List<VW_TAILIEU> lstTLCungTacGiaCoMaVach = qltl.lstTLCungTacGiaCoMaVach(mavach);
+            Dictionary<string, string> lstDicMaVach = new Dictionary<string, string>();
+            Dictionary<string, string> lstDicHinhAnh = new Dictionary<string, string>();
+            foreach (VW_TAILIEU item in lstTLCungTacGiaCoMaVach)
+            {
+                if(!lstDicMaVach.ContainsKey(item.MaTaiLieu))
+                {
+                    lstDicMaVach.Add(item.MaTaiLieu, item.MaVach);
+                }    
+                if(!lstDicHinhAnh.ContainsKey(item.MaTaiLieu))
+                {
+                    lstDicHinhAnh.Add(item.MaTaiLieu, item.HinhAnh);
+                }
+            }
+            ViewData["lstDicMaVach"] = lstDicMaVach;
+            ViewData["lstDicHinhAnh"] = lstDicHinhAnh;
+            ViewData["lstTLCungTacGia"] = lstTLCungTacGia;
+
+            // *** Tài liệu cùng chủ đề
+            List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDe = qltl.lstTLCungChuDe(mavach);
+            List<VW_TAILIEU> lstTLCungChuDeCoMaVach = qltl.lstTLCungChuDeCoMaVach(mavach);
+            Dictionary<string, string> lstDicMaVachChuDe = new Dictionary<string, string>();
+            Dictionary<string, string> lstDicHinhAnhChuDe = new Dictionary<string, string>();
+            foreach (VW_TAILIEU item in lstTLCungChuDeCoMaVach)
+            {
+                if (!lstDicMaVachChuDe.ContainsKey(item.MaTaiLieu))
+                {
+                    lstDicMaVachChuDe.Add(item.MaTaiLieu, item.MaVach);
+                }
+                if (!lstDicHinhAnhChuDe.ContainsKey(item.MaTaiLieu))
+                {
+                    lstDicHinhAnhChuDe.Add(item.MaTaiLieu, item.HinhAnh);
+                }
+            }
+            ViewData["lstDicMaVachChuDe"] = lstDicMaVachChuDe;
+            ViewData["lstDicHinhAnhChuDe"] = lstDicHinhAnhChuDe;
+            ViewData["lstTLCungChuDe"] = lstTLCungChuDe;
+
+
             return View();
         }
     }
