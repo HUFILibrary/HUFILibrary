@@ -5,11 +5,98 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
+
 namespace BLL_DAL
 {
     public class QuanLyTaiLieu
     {
         DB_QLTVDataContext db = new DB_QLTVDataContext();
+
+        public List<VW_TAILIEU> getList(string typesearch, string txtsearch,string selection__toantu1, string txtSearchNangCao1, string selection__noidung1, string selection__toantu2, string txtSearchNangCao2, string selection__noidung2, string selection__toantu3, string txtSearchNangCao3, string selection__noidung3)
+        {
+            List<VW_TAILIEU> lstTL = new List<VW_TAILIEU>();
+            List<SqlParameter> param_list = new List<SqlParameter>();
+
+            string select = "";
+            select += " SELECT * ";
+            select += " FROM VW_TAILIEU ";
+            select += " WHERE VW_TAILIEU.TinhTrangXoa = 0 ";
+            if (typesearch == "1")
+            {
+                select += " AND VW_TAILIEU.MaVach LIKE {0} ";
+                param_list.Add(new SqlParameter("MaVach1", "%"+txtsearch+"%"));
+            }
+            else if (typesearch == "2")
+            {
+
+                select += " AND VW_TAILIEU.TenTaiLieu LIKE {0} ";
+                param_list.Add(new SqlParameter("TenTaiLieu1", "%" + txtsearch + "%"));
+            }
+            else if (typesearch == "3")
+            {
+
+                select += " AND VW_TAILIEU.TenTacGia LIKE {0} ";
+                param_list.Add(new SqlParameter("TenTacGia1", "%" + txtsearch + "%"));
+            }
+            else if (typesearch == "4")
+            {
+
+                select += " AND VW_TAILIEU.TenNhaXuatBan LIKE {0} ";
+                param_list.Add(new SqlParameter("TenNhaXuatBan1", "%" + txtsearch + "%"));
+            }
+            else if (typesearch == "5")
+            {
+
+                select += " AND VW_TAILIEU.TenChuDe LIKE {0} ";
+                param_list.Add(new SqlParameter("TenChuDe1", "%" + txtsearch + "%"));
+            }
+            if(!string.IsNullOrEmpty(txtSearchNangCao1))
+            {
+                select += " "+ selection__toantu1 + " VW_TAILIEU."+ selection__noidung1+" LIKE {1} ";
+                param_list.Add(new SqlParameter(selection__noidung1 + "2", "%" + txtSearchNangCao1 + "%"));
+            }
+            if (!string.IsNullOrEmpty(txtSearchNangCao2))
+            {
+                select += " " + selection__toantu2 + " VW_TAILIEU." + selection__noidung2 + " LIKE {2} ";
+                param_list.Add(new SqlParameter(selection__noidung2 + "3", "%" + txtSearchNangCao2 + "%"));
+            }
+            if (!string.IsNullOrEmpty(txtSearchNangCao3))
+            {
+                select += " " + selection__toantu3 + " VW_TAILIEU." + selection__noidung3 + " LIKE {3} ";
+                param_list.Add(new SqlParameter(selection__noidung3 + "3", "%" + txtSearchNangCao3 + "%"));
+            }
+
+
+            #region ORDER BY
+            select += " ORDER BY VW_TAILIEU.MaVach ";
+            #endregion
+            try
+            {
+                txtsearch = "%" + txtsearch + "%";
+                lstTL = db.ExecuteQuery<VW_TAILIEU>(select,getSqlParameters(param_list)).ToList();
+            }
+            catch(Exception ex)
+            {
+                string temp = ex.ToString();
+            }
+            
+
+            return lstTL;
+        }
+        public Object[] getSqlParameters(List<SqlParameter> param_list)
+        {
+
+            var param_count = param_list.Count;
+            var sql_parameters = new Object[param_count];
+
+            for (var i = 0; i < param_count; i++)
+            {
+                sql_parameters[i] = param_list[i].Value;
+            }
+
+            return sql_parameters;
+        }
         public List<VW_TAILIEU> getListTaiLieuByMaTaiLieu(string matailieu, ref List<string> lstDangMuon, ref List<VW_TAILIEU> lstKhongLuuThong)
         {
             List<VW_TAILIEU> lst = db.VW_TAILIEUs.Where(a => a.MaTaiLieu == matailieu).ToList();
@@ -98,6 +185,7 @@ namespace BLL_DAL
         public List<VW_TAILIEU> timKiemTheoChuDe(string chude)
         {
             List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenChuDe.Contains(chude)).ToList();
+            
             return lstTL;
         }
         public IQueryable loadDgvViTri()
