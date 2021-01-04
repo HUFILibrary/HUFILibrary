@@ -16,6 +16,17 @@
         <div class="search">
             @using (Html.BeginForm("TimKiem", "Home", FormMethod.Get))
             {
+
+                if (ViewBag.flgShow != null)
+                {
+                        @Html.Hidden("flgShow", ViewBag.flgShow as string, new { id = "flgShow" })
+                }
+                else
+                {
+                        @Html.Hidden("flgShow", "False", new { id = "flgShow" })
+                }
+
+
             <div class="form__search">
                 <div class="form__wrapper">
                     <select class="selection__search" name="typesearch">
@@ -36,130 +47,402 @@
                         }
                     </select>
                     @Html.TextBox("txtsearch", ViewBag.CurrentTxtSearch as string, new { @class = "inputsearch" })
-                <div class="control">
-                    <button type="submit" href="#" class="btnsearch"> <span>Tìm kiếm</span> </button>
-                    <div href="#" id="searchnangcao" class="optionsearch" data-search="hide">
-                        <div class="img">
-                            <img src="~/Content/img/more.svg" alt="">
-                        </div>
+                    <div class="control">
+                        <button type="submit" href="#" class="btnsearch"> <span>Tìm kiếm</span> </button>
+                        @{
+                            if (ViewBag.flgShow != null)
+                            {
+                                if ((ViewBag.flgShow as string).Equals("True"))
+                                {
+                                    <div href="#" id="searchnangcao" class="optionsearch" data-search="show">
+                                        <div class="img">
+                                            <img src="~/Content/img/more.svg" alt="">
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div href="#" id="searchnangcao" class="optionsearch" data-search="hide">
+                                        <div class="img">
+                                            <img src="~/Content/img/more.svg" alt="">
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div href="#" id="searchnangcao" class="optionsearch" data-search="hide">
+                                    <div class="img">
+                                        <img src="~/Content/img/more.svg" alt="">
+                                    </div>
+                                </div>
+                            }
+
+                        }
+                        @*<div href="#" id="searchnangcao" class="optionsearch" data-search="hide">
+                    <div class="img">
+                        <img src="~/Content/img/more.svg" alt="">
+                    </div>
+                </div>*@
                     </div>
                 </div>
-                </div>
+                @{
+                    if (ViewBag.flgShow != null)
+                    {
+                        if ((ViewBag.flgShow as string).Equals("True"))
+                        {
+                            <div class="form__nangcao show" id="form__nangcao">
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu1" id="selection__toantu1">
+                                        @{
+                                            List<SearchModel> lstToanTu1 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu1)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu1)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
 
-                <div class="form__nangcao" id="form__nangcao">
-                    <div class="row">
-                        <select class="selection__toantu" name="selection__toantu1" id="selection__toantu1">
-                            @{
-                                List<SearchModel> lstToanTu1 = (List<SearchModel>)ViewData["lstToanTu"];
-                                foreach (SearchModel item in lstToanTu1)
-                                {
-                                    if (item._key.ToString() == ViewBag.CurrentSelectionToanTu1)
-                                    {
-                                        <option value="@item._key" selected>@item._value</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@item._key">@item._value</option>
-                                    }
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao1", ViewBag.CurrentTxtSearchNangCao1 as string, new { @class = "txtSearchNangCao" })
 
-                                }
-                            }
-                        </select>
-                        @Html.TextBox("txtSearchNangCao1", ViewBag.CurrentTxtSearchNangCao1 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung1" id="selection__noidung1">
+                                        @{
+                                            List<SearchModel> lstSearchModel1 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel1)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung1)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
 
-                        <select class="selection__noidung" name="selection__noidung1" id="selection__noidung1">
-                            @{
-                                List<SearchModel> lstSearchModel1 = (List<SearchModel>)ViewData["lstSearchModel1"];
-                                foreach (SearchModel item in lstSearchModel1)
-                                {
-                                    if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung1)
-                                    {
-                                        <option value="@item._key" class="item__selection" selected>@item._value</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@item._key" class="item__selection">@item._value</option>
-                                    }
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu2" id="selection__toantu2">
+                                        @{
+                                            List<SearchModel> lstToanTu2 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu2)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu2)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
 
-                                }
-                            }
-                        </select>
-                    </div>
-                    <div class="row">
-                        <select class="selection__toantu" name="selection__toantu2" id="selection__toantu2">
-                            @{
-                                List<SearchModel> lstToanTu2 = (List<SearchModel>)ViewData["lstToanTu"];
-                                foreach (SearchModel item in lstToanTu2)
-                                {
-                                    if (item._key.ToString() == ViewBag.CurrentSelectionToanTu2)
-                                    {
-                                        <option value="@item._key" selected>@item._value</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@item._key">@item._value</option>
-                                    }
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao2", ViewBag.CurrentTxtSearchNangCao2 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung2" id="selection__noidung2">
+                                        @{
+                                            List<SearchModel> lstSearchModel2 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel2)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung2)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
 
-                                }
-                            }
-                        </select>
-                        @Html.TextBox("txtSearchNangCao2", ViewBag.CurrentTxtSearchNangCao2 as string, new { @class = "txtSearchNangCao" })
-                        <select class="selection__noidung" name="selection__noidung2" id="selection__noidung2">
-                            @{
-                                List<SearchModel> lstSearchModel2 = (List<SearchModel>)ViewData["lstSearchModel1"];
-                                foreach (SearchModel item in lstSearchModel2)
-                                {
-                                    if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung2)
-                                    {
-                                        <option value="@item._key" class="item__selection" selected>@item._value</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@item._key" class="item__selection">@item._value</option>
-                                    }
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu3" id="selection__toantu3">
+                                        @{
+                                            List<SearchModel> lstToanTu3 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu3)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu3)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
 
-                                }
-                            }
-                        </select>
-                    </div>
-                    <div class="row">
-                        <select class="selection__toantu" name="selection__toantu3" id="selection__toantu3">
-                            @{
-                                List<SearchModel> lstToanTu3 = (List<SearchModel>)ViewData["lstToanTu"];
-                                foreach (SearchModel item in lstToanTu3)
-                                {
-                                    if (item._key.ToString() == ViewBag.CurrentSelectionToanTu3)
-                                    {
-                                        <option value="@item._key" selected>@item._value</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@item._key">@item._value</option>
-                                    }
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao3", ViewBag.CurrentTxtSearchNangCao3 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung3" id="selection__noidung3">
+                                        @{
+                                            List<SearchModel> lstSearchModel3 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel3)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung3)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
 
-                                }
-                            }
-                        </select>
-                        @Html.TextBox("txtSearchNangCao3", ViewBag.CurrentTxtSearchNangCao3 as string, new { @class = "txtSearchNangCao" })
-                        <select class="selection__noidung" name="selection__noidung3" id="selection__noidung3">
-                            @{
-                                List<SearchModel> lstSearchModel3 = (List<SearchModel>)ViewData["lstSearchModel1"];
-                                foreach (SearchModel item in lstSearchModel3)
-                                {
-                                    if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung3)
-                                    {
-                                        <option value="@item._key" class="item__selection" selected>@item._value</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@item._key" class="item__selection">@item._value</option>
-                                    }
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="form__nangcao" id="form__nangcao">
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu1" id="selection__toantu1">
+                                        @{
+                                            List<SearchModel> lstToanTu1 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu1)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu1)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
 
-                                }
-                            }
-                        </select>
-                    </div>
-                </div>
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao1", ViewBag.CurrentTxtSearchNangCao1 as string, new { @class = "txtSearchNangCao" })
+
+                                    <select class="selection__noidung" name="selection__noidung1" id="selection__noidung1">
+                                        @{
+                                            List<SearchModel> lstSearchModel1 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel1)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung1)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu2" id="selection__toantu2">
+                                        @{
+                                            List<SearchModel> lstToanTu2 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu2)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu2)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao2", ViewBag.CurrentTxtSearchNangCao2 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung2" id="selection__noidung2">
+                                        @{
+                                            List<SearchModel> lstSearchModel2 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel2)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung2)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu3" id="selection__toantu3">
+                                        @{
+                                            List<SearchModel> lstToanTu3 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu3)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu3)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao3", ViewBag.CurrentTxtSearchNangCao3 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung3" id="selection__noidung3">
+                                        @{
+                                            List<SearchModel> lstSearchModel3 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel3)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung3)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                            <div class="form__nangcao" id="form__nangcao">
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu1" id="selection__toantu1">
+                                        @{
+                                            List<SearchModel> lstToanTu1 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu1)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu1)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao1", ViewBag.CurrentTxtSearchNangCao1 as string, new { @class = "txtSearchNangCao" })
+
+                                    <select class="selection__noidung" name="selection__noidung1" id="selection__noidung1">
+                                        @{
+                                            List<SearchModel> lstSearchModel1 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel1)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung1)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu2" id="selection__toantu2">
+                                        @{
+                                            List<SearchModel> lstToanTu2 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu2)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu2)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao2", ViewBag.CurrentTxtSearchNangCao2 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung2" id="selection__noidung2">
+                                        @{
+                                            List<SearchModel> lstSearchModel2 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel2)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung2)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <select class="selection__toantu" name="selection__toantu3" id="selection__toantu3">
+                                        @{
+                                            List<SearchModel> lstToanTu3 = (List<SearchModel>)ViewData["lstToanTu"];
+                                            foreach (SearchModel item in lstToanTu3)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionToanTu3)
+                                                {
+                                                    <option value="@item._key" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                    @Html.TextBox("txtSearchNangCao3", ViewBag.CurrentTxtSearchNangCao3 as string, new { @class = "txtSearchNangCao" })
+                                    <select class="selection__noidung" name="selection__noidung3" id="selection__noidung3">
+                                        @{
+                                            List<SearchModel> lstSearchModel3 = (List<SearchModel>)ViewData["lstSearchModel1"];
+                                            foreach (SearchModel item in lstSearchModel3)
+                                            {
+                                                if (item._key.ToString() == ViewBag.CurrentSelectionNoiDung3)
+                                                {
+                                                    <option value="@item._key" class="item__selection" selected>@item._value</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item._key" class="item__selection">@item._value</option>
+                                                }
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                    }
+                }
+
             </div>
             }
         </div>
@@ -252,16 +535,23 @@
 <script>
         var flgSearchNangCao = document.getElementById('searchnangcao');
         var form__nangcao = document.getElementById('form__nangcao');
+        var flgShow = document.getElementById('flgShow');
         flgSearchNangCao.addEventListener('click',function(){
             if(flgSearchNangCao.getAttribute('data-search') == "hide")
             {
                 flgSearchNangCao.setAttribute('data-search','show');
                 form__nangcao.classList.add('show');
+                if (flgShow.value == "False") {
+                    flgShow.value = "True";
+                }
             }
             else
             {
                 flgSearchNangCao.setAttribute('data-search','hide');
                 form__nangcao.classList.remove('show');
+                if (flgShow.value == "True") {
+                    flgShow.value = "False";
+                }
             }
         })
 </script>
