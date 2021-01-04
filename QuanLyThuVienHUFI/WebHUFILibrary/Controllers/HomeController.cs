@@ -76,7 +76,7 @@ namespace WebHUFILibrary.Controllers
             ViewBag.CurrentSelectionNoiDung3 = selection__noidung3;
             ViewBag.flgShow = flgShow;
             List<VW_TAILIEU> lstTL = new List<VW_TAILIEU>();
-            if(string.IsNullOrEmpty(txtsearch) && string.IsNullOrEmpty(txtSearchNangCao1) && string.IsNullOrEmpty(txtSearchNangCao2) && string.IsNullOrEmpty(txtSearchNangCao3))
+            if(string.IsNullOrEmpty(txtsearch) && string.IsNullOrEmpty(txtSearchNangCao1))
             {
                 
             }
