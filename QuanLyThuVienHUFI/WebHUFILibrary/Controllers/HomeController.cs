@@ -35,7 +35,7 @@ namespace WebHUFILibrary.Controllers
         //}
 
         [HttpGet]
-        public ActionResult TimKiem(int? page, string typesearch, string txtsearch, string CurrentTxtSearch, 
+        public ActionResult TimKiem(int? page, string typesearch, string txtsearch, string CurrentTxtSearch,  string flgShow,
             string CurrentTypeSearch, string selection__toantu1, string selection__toantu2, string selection__toantu3, 
             string txtSearchNangCao1, string txtSearchNangCao2, string txtSearchNangCao3,
             string selection__noidung1, string selection__noidung2, string selection__noidung3,
@@ -74,7 +74,7 @@ namespace WebHUFILibrary.Controllers
             ViewBag.CurrentSelectionNoiDung1 = selection__noidung1;
             ViewBag.CurrentSelectionNoiDung2 = selection__noidung2;
             ViewBag.CurrentSelectionNoiDung3 = selection__noidung3;
-
+            ViewBag.flgShow = flgShow;
             List<VW_TAILIEU> lstTL = new List<VW_TAILIEU>();
             if(string.IsNullOrEmpty(txtsearch) && string.IsNullOrEmpty(txtSearchNangCao1) && string.IsNullOrEmpty(txtSearchNangCao2) && string.IsNullOrEmpty(txtSearchNangCao3))
             {
@@ -82,7 +82,9 @@ namespace WebHUFILibrary.Controllers
             }
             else
             {
+                
                 lstTL = qltl.getList(typesearch, txtsearch, selection__toantu1, txtSearchNangCao1, selection__noidung1, selection__toantu2, txtSearchNangCao2, selection__noidung2, selection__toantu3, txtSearchNangCao3, selection__noidung3);
+                
             }
             //// sql query
             //List<SqlParameter> param_list = new List<SqlParameter>();
