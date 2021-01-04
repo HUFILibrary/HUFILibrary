@@ -238,9 +238,9 @@
                                     <div class="img">
                                         @{
                                             string hinhanh = "";
-                                            lstDicHinhAnh.TryGetValue(tlCungChuDe.MaTaiLieu, out hinhanh);
+                                            lstDicHinhAnhChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out hinhanh);
                                             string mavach2 = "";
-                                            lstDicMaVach.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
+                                            lstDicMaVachChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
                                         }
                                         <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh })" id="arrow" loading="lazy" alt=""></a>
 

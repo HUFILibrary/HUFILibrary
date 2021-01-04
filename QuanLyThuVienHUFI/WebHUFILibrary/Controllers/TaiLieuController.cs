@@ -28,8 +28,9 @@ namespace WebHUFILibrary.Controllers
             ViewData["listKhongLuuThong"] = lstKhongLuuThong;
 
             //*** Tài liệu cùng tác giả
-            List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGia = qltl.lstTLCungTacGia(mavach);
+            //List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGia = qltl.lstTLCungTacGia(mavach);
             List<VW_TAILIEU> lstTLCungTacGiaCoMaVach = qltl.lstTLCungTacGiaCoMaVach(mavach);
+            List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGia = new List<VW_TAILIEUCUNGTACGIA>();
             Dictionary<string, string> lstDicMaVach = new Dictionary<string, string>();
             Dictionary<string, string> lstDicHinhAnh = new Dictionary<string, string>();
             foreach (VW_TAILIEU item in lstTLCungTacGiaCoMaVach)
@@ -43,12 +44,22 @@ namespace WebHUFILibrary.Controllers
                     lstDicHinhAnh.Add(item.MaTaiLieu, item.HinhAnh);
                 }
             }
+            foreach (VW_TAILIEU itemFlg in lstTLCungTacGiaCoMaVach)
+            {
+                VW_TAILIEUCUNGTACGIA item = new VW_TAILIEUCUNGTACGIA();
+                item.MaTaiLieu = itemFlg.MaTaiLieu;
+                item.TenTacGia = itemFlg.TenTacGia;
+                item.TenTaiLieu = itemFlg.TenTaiLieu;
+
+                lstTLCungTacGia.Add(item);
+            }
             ViewData["lstDicMaVach"] = lstDicMaVach;
             ViewData["lstDicHinhAnh"] = lstDicHinhAnh;
             ViewData["lstTLCungTacGia"] = lstTLCungTacGia;
 
             // *** Tài liệu cùng chủ đề
-            List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDe = qltl.lstTLCungChuDe(mavach);
+            //List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDe = qltl.lstTLCungChuDe(mavach);
+            List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDe = new List<VW_TAILIEUCUNGCHUDE>();
             List<VW_TAILIEU> lstTLCungChuDeCoMaVach = qltl.lstTLCungChuDeCoMaVach(mavach);
             Dictionary<string, string> lstDicMaVachChuDe = new Dictionary<string, string>();
             Dictionary<string, string> lstDicHinhAnhChuDe = new Dictionary<string, string>();
@@ -62,6 +73,15 @@ namespace WebHUFILibrary.Controllers
                 {
                     lstDicHinhAnhChuDe.Add(item.MaTaiLieu, item.HinhAnh);
                 }
+            }
+            foreach(VW_TAILIEU itemFlg in lstTLCungChuDeCoMaVach)
+            {
+                VW_TAILIEUCUNGCHUDE item = new VW_TAILIEUCUNGCHUDE();
+                item.MaTaiLieu = itemFlg.MaTaiLieu;
+                item.TenChuDe = itemFlg.TenChuDe;
+                item.TenTaiLieu = itemFlg.TenTaiLieu;
+
+                lstTLCungChuDe.Add(item);
             }
             ViewData["lstDicMaVachChuDe"] = lstDicMaVachChuDe;
             ViewData["lstDicHinhAnhChuDe"] = lstDicHinhAnhChuDe;

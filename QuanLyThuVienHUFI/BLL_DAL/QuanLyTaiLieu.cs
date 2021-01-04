@@ -145,7 +145,66 @@ namespace BLL_DAL
             {
                 lst = db.VW_TAILIEUs.Where(a => a.TenTacGia == tl.TenTacGia && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
             }
-            return lst;
+
+            List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGiaDistinct = lstTLCungTacGia(mavach);
+            List<VW_TAILIEU> rs = new List<VW_TAILIEU>();
+            if (lstTLCungTacGiaDistinct.Count() > 6)
+            {
+                while (rs.Count() <= 5)
+                {
+                    VW_TAILIEU flg = lst.OrderBy(a => Guid.NewGuid()).Take(1).FirstOrDefault();
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(flg);
+                    }
+                    else
+                    {
+                        int flgInt = 0;
+                        foreach (VW_TAILIEU itemFlg in rs)
+                        {
+                            if (itemFlg.MaTaiLieu == flg.MaTaiLieu)
+                            {
+                                flgInt = 1;
+                            }
+                        }
+                        if (flgInt == 0)
+                        {
+                            rs.Add(flg);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (VW_TAILIEU itemFlg in lst)
+                {
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(itemFlg);
+                    }
+                    else
+                    {
+                        int temp = 0;
+                        foreach (VW_TAILIEU itemFlgA in rs.ToList())
+                        {
+                            if (itemFlgA.MaTaiLieu == itemFlg.MaTaiLieu)
+                            {
+                                temp = 1;
+
+                            }
+                        }
+                        if (temp == 0)
+                        {
+                            rs.Add(itemFlg);
+                        }
+                    }
+                }
+            }
+
+            return rs;
+
+            //return lst;
+            ////return rs;
         }
         public List<VW_TAILIEU> lstTLCungChuDeCoMaVach(string mavach)
         {
@@ -155,7 +214,63 @@ namespace BLL_DAL
             {
                 lst = db.VW_TAILIEUs.Where(a => a.TenChuDe == tl.TenChuDe && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
             }
-            return lst;
+            List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDeDistinct = lstTLCungChuDe(mavach);
+            List<VW_TAILIEU> rs = new List<VW_TAILIEU>();
+            if (lstTLCungChuDeDistinct.Count() > 6)
+            {
+                while (rs.Count() <= 5)
+                {
+                    VW_TAILIEU flg = lst.OrderBy(a => Guid.NewGuid()).Take(1).FirstOrDefault();
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(flg);
+                    }
+                    else
+                    {
+                        int flgInt = 0;
+                        foreach (VW_TAILIEU itemFlg in rs)
+                        {
+                            if (itemFlg.MaTaiLieu == flg.MaTaiLieu)
+                            {
+                                flgInt = 1;
+                            }
+                        }
+                        if (flgInt == 0)
+                        {
+                            rs.Add(flg);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (VW_TAILIEU itemFlg in lst)
+                {
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(itemFlg);
+                    }
+                    else
+                    {
+                        int temp = 0;
+                        foreach (VW_TAILIEU itemFlgA in rs.ToList())
+                        {
+                            if (itemFlgA.MaTaiLieu == itemFlg.MaTaiLieu)
+                            {
+                                temp = 1;
+                                
+                            }
+                        }
+                        if (temp == 0)
+                        {
+                            rs.Add(itemFlg);
+                        }
+                    }
+                }
+            }
+
+            return rs;
+            //return lst;
         }
         public VW_TAILIEU getTaiLieuByMaVach(string mavach)
         {
