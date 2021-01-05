@@ -87,7 +87,7 @@ namespace WebHUFILibrary.Controllers
             ViewData["lstDicHinhAnhChuDe"] = lstDicHinhAnhChuDe;
             ViewData["lstTLCungChuDe"] = lstTLCungChuDe;
 
-
+            ViewData["mavach"] = mavach.ToString();
             return View();
         }
     }

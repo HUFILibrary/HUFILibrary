@@ -16,6 +16,10 @@
     Dictionary<string, string> lstDicMaVachChuDe = (Dictionary<string, string>)ViewData["lstDicMaVachChuDe"];
     Dictionary<string, string> lstDicHinhAnhChuDe = (Dictionary<string, string>)ViewData["lstDicHinhAnhChuDe"];
     List<VW_TAILIEUCUNGCHUDE> lstTLCCD = (List<VW_TAILIEUCUNGCHUDE>)ViewData["lstTLCungChuDe"];
+    List<VW_TAILIEU> mavach = (List<VW_TAILIEU>)ViewData["listdata"];
+    string mavach44 = ViewData["mavach"].ToString();
+    
+
 }
 
 <div class="container thongtinchitiet">
@@ -285,7 +289,7 @@
 </div>
 @if (lstTLCCD.Count > 3)
 {
-    <script type="text/javascript">
+<script type="text/javascript">
         $('.lienquantheochude .content').slick({
             infinite: true,
             slidesToShow: 3,
@@ -294,11 +298,17 @@
             nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
 
         });
-    </script>
+
+        var loginDocGia = document.getElementById('loginDocGia');
+        window.onload = function () {
+        var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+        loginDocGia.href = url;
+    };
+</script>
 }
 @if (lstTLCTG.Count() > 3)
 {
-    <script type="text/javascript">
+<script type="text/javascript">
         $('.lienquantheotacgia .content').slick({
             infinite: true,
             slidesToShow: 3,
@@ -307,6 +317,27 @@
             nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
 
         });
-    </script>
+
+        var loginDocGia = document.getElementById('loginDocGia');
+        window.onload = function () {
+        var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+        loginDocGia.href = url;
+    };
+</script>
 }
+<script type="text/javascript">
+    var loginDocGia = document.getElementById('loginDocGia');
+    var logoutDocGia = document.getElementById('logoutDocGia');
+    window.onload = function () {
+        if (loginDocGia != null) {
+            var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+            loginDocGia.href = url;
+        }
+        if (logoutDocGia != null) {
+            var url = '@Url.Action("DangXuat", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+            logoutDocGia.href = url;
+        }
+
+    };
+</script>
 

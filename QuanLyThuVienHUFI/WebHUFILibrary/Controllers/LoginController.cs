@@ -10,14 +10,20 @@ namespace WebHUFILibrary.Controllers
     {
         QuanLyDangNhap qldn = new QuanLyDangNhap();
         // GET: Login
-        public ActionResult DangNhap()
+        public ActionResult DangNhap(string targetUrl)
         {
-
+            TempData["targetUrl"] = targetUrl;
             return View();
         }
         [HttpPost]
-        public ActionResult DangNhap(string username, string password, string targetUrl)
+        public ActionResult DangNhap(string username, string password)
         {
+            string targetUrl = "";
+            if (TempData["targetUrl"] != null)
+            {
+                targetUrl = TempData["targetUrl"].ToString();
+                TempData.Keep("targetUrl");
+            }    
             if (qldn.kiemTraDangNhap(username, password))
             {
                 VW_DOCGIA dg = qldn.getModelDocGia(username);
@@ -40,9 +46,13 @@ namespace WebHUFILibrary.Controllers
             return View();
         }
 
-        public ActionResult DangXuat()
+        public ActionResult DangXuat(string targetUrl)
         {
             Session.Clear();
+            if (!string.IsNullOrEmpty(targetUrl))
+            {
+                    return new RedirectResult(targetUrl);
+            }
             return RedirectToAction("Index", "Home");
         }
 

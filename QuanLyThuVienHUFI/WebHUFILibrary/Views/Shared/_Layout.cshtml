@@ -36,13 +36,13 @@
                                             <a href="@Url.Action("ThongTinTaiKhoan","DocGia")">Thông tin tài khoản</a>
                                             @*<a href="#">Danh sách tài liệu mượn</a>*@
                                             <a href="@Url.Action("ChangePassword","Login")">Đổi mật khẩu</a>
-                                            <a href="@Url.Action("DangXuat","Login")">Đăng xuất</a>
+                                            <a id="logoutDocGia" href="@Url.Action("DangXuat","Login")">Đăng xuất</a>
                                         </div>
                                     </div>
                                 }
                                 else
                                 {
-                                    <a href="@Url.Action("DangNhap","Login")">Đăng nhập</a>
+                                    <a id="loginDocGia" href="@Url.Action("DangNhap","Login")">Đăng nhập</a>
                                 }
                             }
                             <div class="line"></div>
