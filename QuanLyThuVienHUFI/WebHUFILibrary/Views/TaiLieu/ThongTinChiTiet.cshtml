@@ -26,7 +26,7 @@
     <div class="wrapper__info">
         <div class="info">
             <div class="img">
-                <img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt="">
+                <img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh, type="TaiLieu" })" loading="lazy" alt="">
             </div>
             <div class="thongtintailieu" style="margin-left:15px;">
                 <div class="title">
@@ -173,7 +173,7 @@
                                             string mavach2 = "";
                                             lstDicMaVach.TryGetValue(tlCungTacGia.MaTaiLieu, out mavach2);
                                         }
-                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh })" id="arrow" loading="lazy" alt=""></a>
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
 
                                     </div>
                                     <div class="text">
@@ -194,7 +194,7 @@
                                             string mavach2 = "";
                                             lstDicMaVach.TryGetValue(tlCungTacGia.MaTaiLieu, out mavach2);
                                         }
-                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh })" id="arrow" loading="lazy" alt=""></a>
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
                                     </div>
                                     <div class="text">
                                         <p>@tlCungTacGia.TenTaiLieu</p>
@@ -246,7 +246,7 @@
                                             string mavach2 = "";
                                             lstDicMaVachChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
                                         }
-                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh })" id="arrow" loading="lazy" alt=""></a>
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
 
                                     </div>
                                     <div class="text">
@@ -267,7 +267,7 @@
                                             string mavach2 = "";
                                             lstDicMaVachChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
                                         }
-                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh })" id="arrow" loading="lazy" alt=""></a>
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
 
                                     </div>
                                     <div class="text">

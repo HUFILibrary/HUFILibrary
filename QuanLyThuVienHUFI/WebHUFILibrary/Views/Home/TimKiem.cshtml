@@ -482,7 +482,7 @@
                                 string url = uploadsPath.Replace("WebHUFILibrary", "Images");
                                 string urlImage = Path.Combine(url, "TaiLieu", item.HinhAnh);
                             }
-                            <a href="@Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage", "Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt=""></a>
+                            <a href="@Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage", "Image", new { hinhanh = item.HinhAnh, type="TaiLieu" })" loading="lazy" alt=""></a>
 
                         </div>
                         <div class="tieude">

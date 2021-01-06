@@ -10,11 +10,11 @@ namespace WebHUFILibrary.Controllers
     public class ImageController : Controller
     {
         // GET: Image
-        public ActionResult getImage(string hinhanh)
+        public ActionResult getImage(string hinhanh, string type)
         {
             string uploadsPath = System.Web.HttpContext.Current.Server.MapPath("..//");
             string url = uploadsPath.Replace("WebHUFILibrary", "Images");
-            string urlImage = Path.Combine(url, "TaiLieu", hinhanh);
+            string urlImage = Path.Combine(url, type, hinhanh);
 
             return File(urlImage, "image/jpeg");
         }

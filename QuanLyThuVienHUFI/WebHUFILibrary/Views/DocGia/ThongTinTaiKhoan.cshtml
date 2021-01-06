@@ -11,7 +11,7 @@
             <div id="tab-thongtintaihkoan" class="tab__panel thongtintaikhoan activeflex">
                 <div class="left">
                     <div class="img">
-                        <img src="~/Content/img/100000000.jpg" alt="">
+                        <img src="@Url.Action("getImage", "Image", new { hinhanh = dg.HinhAnh, type="DocGia" })" loading="lazy" alt="">
                     </div>
                 </div>
                 <div class="right">
@@ -152,7 +152,7 @@
                         {
                             <div class="row">
                                 <div class="img">
-                                    <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt=""></a>
+                                    <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh, type="TaiLieu" })" loading="lazy" alt=""></a>
                                 </div>
                                 <div class="mavach">
                                     <a href="#"><span>@item.MaVach</span></a>
@@ -205,7 +205,7 @@
                         {
                                 <div class="row">
                                     <div class="img">
-                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh })" loading="lazy" alt=""></a>
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = item.MaVach })"><img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh, type="TaiLieu" })" loading="lazy" alt=""></a>
                                     </div>
                                     <div class="mavach">
                                         <a href="#"><span>@item.MaVach</span></a>
