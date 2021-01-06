@@ -251,6 +251,11 @@ namespace Form_QuanLyThuVien
             {
                 tl.HinhAnh = TL_urlImage.ToString();
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn hình ảnh.");
+                return;
+            }    
 
             string maphieunhap = QLP_N_dgvDanhSachPN.CurrentRow.Cells[0].Value.ToString();
             string mancc = QLN_cboNhaCungCap.SelectedValue.ToString();
@@ -259,6 +264,7 @@ namespace Form_QuanLyThuVien
             {
                 MessageBox.Show("Nhập tài liệu thành công.");
                 loadDgvChiTietPhieuNhap();
+                loadDgvPhieuNhaps();
             }   
             else
             {

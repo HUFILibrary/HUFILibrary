@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL_DAL</RootNamespace>
     <AssemblyName>BLL_DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,6 +73,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyDangNhap.cs" />
     <Compile Include="QuanLyDocGia.cs" />
     <Compile Include="QuanLyKhoa.cs" />
     <Compile Include="QuanLyLoaiNhanVien.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="QuanLyPhieuTra.cs" />
     <Compile Include="QuanLyPhieuXLVP.cs" />
     <Compile Include="QuanLyTaiLieu.cs" />
+    <Compile Include="QuanLyThongTinDocGia.cs" />
     <Compile Include="QuanLyTra.cs" />
     <Compile Include="ThongKe.cs" />
   </ItemGroup>

@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVienCNTP" Class="DB_QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-RDLUFLH4\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTPConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVienCNTP2" Class="DB_QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-F6GMAH7\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTP2ConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHUDE" Member="CHUDEs">
     <Type Name="CHUDE">
       <Column Name="MaChuDe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -244,6 +244,165 @@
       <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_DOCGIA" Member="VW_DOCGIAs">
+    <Type Name="VW_DOCGIA">
+      <Column Name="Expr3" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenNganh" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaKhoa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTheThuVien" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiDocGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNganh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenDocGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="HanSuDungTheThuVien" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TinhTrangTheThuVien" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayLamThe" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEUDANGMUON" Member="VW_TAILIEUDANGMUONs">
+    <Type Name="VW_TAILIEUDANGMUON">
+      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaTheThuVien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ThoiHanMuon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoSachMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrangTra" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhiCoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaChiTietPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrangTraCT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TenNhaXuatBan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ke" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenNgonNgu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenLoaiTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenChuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenTacGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaVach" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiTaiLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaDauTaiLieu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaChuDe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTacGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhaXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEU" Member="VW_TAILIEUs">
+    <Type Name="VW_TAILIEU">
+      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenNhaXuatBan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Expr2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ke" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Expr3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenNgonNgu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Expr4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Expr5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Expr6" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTacGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaVach" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiTaiLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaDauTaiLieu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaChuDe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTacGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhaXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEUCUNGCHUDE" Member="VW_TAILIEUCUNGCHUDEs">
+    <Type Name="VW_TAILIEUCUNGCHUDE">
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEUCUNGTACGIA" Member="VW_TAILIEUCUNGTACGIAs">
+    <Type Name="VW_TAILIEUCUNGTACGIA">
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenTacGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEUDAMUON" Member="VW_TAILIEUDAMUONs">
+    <Type Name="VW_TAILIEUDAMUON">
+      <Column Name="MaChiTietPhieuTra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaPhieuTra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaVach" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoLuongSachTra" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaChiTietPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Expr2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrangTraCT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Expr3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Expr4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaTheThuVien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Expr5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiHanMuon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SoSachMuon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrangTra" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhiCoc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TenNhaXuatBan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ke" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenNgonNgu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenLoaiTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenChuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenTacGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Expr7" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiTaiLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaDauTaiLieu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaChuDe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaTacGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhaXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Expr6" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

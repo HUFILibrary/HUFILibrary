@@ -550,6 +550,11 @@ namespace Form_QuanLyThuVien
             {
                 item.HinhAnh = TL_urlImage.ToString();
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn hình ảnh.");
+                return;
+            }    
             qltl.themTaiLieu(item, int.Parse(TL_txtSoLuong.Text));
             loadDgvTaiLieu();
             TL_lblSoLuong.Visible = false;

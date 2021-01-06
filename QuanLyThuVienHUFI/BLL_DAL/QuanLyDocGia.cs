@@ -155,7 +155,7 @@ namespace BLL_DAL
 
                 }
             }
-            item.MatKhau = matkhau;
+            //item.MatKhau = matkhau;
             item.TinhTrangXoa = false;
             db.SubmitChanges();
             MessageBox.Show("Sửa thành công.");

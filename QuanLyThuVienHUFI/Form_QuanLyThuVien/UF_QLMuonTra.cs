@@ -57,6 +57,27 @@ namespace Form_QuanLyThuVien
             QLMT_T_btnXacNhanTra.Enabled = false;
 
             QLMT_T_chkNhanTienCoc.Checked = false;
+
+            QLMT_TDG_txtTimMaDG.Text = "";
+            QLMT_TDG_txtTimMaDG.Focus();
+            QLMT_TDG_lblMaThe.Text = "";
+            QLMT_TDG_lblTienCoc.Text = "";
+            QLMT_TDG_lblTTThe.Text = "";
+            QLMT_TDG_lblHoTen.Text = "";
+            QLMT_TDG_lblEmail.Text = "";
+            QLMT_TDG_lblSDT.Text = "";
+            QLMT_TDG_txtMV.Text = "";
+            QLMT_TDG_txtTenNV.Text = "";
+            QLMT_TDG_txtGiaTL.Text = "";
+            QLMT_TDG_lblTongtien.Text = "";
+            QLMT_TDG_lblTongTienBT.Text = "";
+
+            QLMT_TDG_btnXacNhanTra.Enabled = false;
+            QLMT_TDG_btnTinhTien.Enabled = false;
+            QLMT_TDG_btnXoa.Enabled = false;
+            QLMT_TDG_btnChon.Enabled = false;
+            QLMT_TDG_btnHuyChon.Enabled = false;
+            QLMT_TDG_btnXacNhanVP.Enabled = false;
             loadCboLoaiVP();
         }
 
@@ -312,6 +333,10 @@ namespace Form_QuanLyThuVien
             QLMT_T_cboLoaiVP.DisplayMember = "TenLoaiViPham";
             QLMT_T_cboLoaiVP.ValueMember = "MaLoaiViPham";
             QLMT_T_cboLoaiVP.DataSource = qlt.loadLoaiVP();
+
+            QLMT_TDG_cboLoaiVP.DisplayMember = "TenLoaiViPham";
+            QLMT_TDG_cboLoaiVP.ValueMember = "MaLoaiViPham";
+            QLMT_TDG_cboLoaiVP.DataSource = qlt.loadLoaiVP();
         }
 
         private void QLTL_T_btnTimTL_Click(object sender, EventArgs e)
@@ -472,7 +497,7 @@ namespace Form_QuanLyThuVien
             LOAIVIPHAM lvp = new LOAIVIPHAM();
             lvp.MaLoaiViPham = int.Parse(QLMT_T_cboLoaiVP.SelectedValue.ToString());
             float giatl = float.Parse(QLMT_T_txtGiaTL.Text);
-            float coc = float.Parse(QLMT_T_lblTienCoc.Text);
+            //float coc = float.Parse(QLMT_T_lblTienCoc.Text);
 
             if (QLMT_T_cboLoaiVP.Text == "Mất tài liệu")
             {
@@ -480,7 +505,7 @@ namespace Form_QuanLyThuVien
             }
             int songay = int.Parse(QLMT_T_txtSoNgayVP.Text);
 
-            tongtien = qlt.tinhPhiBT(lvp, songay, coc, giatl);
+            tongtien = qlt.tinhPhiBT(lvp, songay, giatl);
             QLMT_T_lblTongtien.Text = tongtien.ToString() + " VNĐ";
         }
 
@@ -728,5 +753,306 @@ namespace Form_QuanLyThuVien
         }
 
 
+
+
+
+        //Tra theo độc giả
+        
+        private void QLMT_TDG_btnTimDG_Click(object sender, EventArgs e)
+        {
+            string tiencoc = "";
+            DOCGIA dg = new DOCGIA();
+            List<CT_PHIEUMUON> lstCTPM = new List<CT_PHIEUMUON>();
+            dg.MaTheThuVien = QLMT_TDG_txtTimMaDG.Text;
+            if (qlt.ktraTonTaiDG(dg) == -1)
+            {
+                MessageBox.Show("Mã thẻ thư viện không tồn tại !");
+                return;
+            }
+            else
+            {
+                if (qlt.ktraDGTrongPM(dg) == -1)
+                {
+                    MessageBox.Show("Độc giả không có trong phiếu mượn !");
+                }
+                else
+                {
+                    QLMT_TDG_dgvDSTLTra.DataSource = qlt.layDGTuPMChuaTra(QLMT_TDG_txtTimMaDG.Text);
+
+                    for (int i = 0; i < QLMT_TDG_dgvDSTLTra.Rows.Count - 1; i++)
+                    {
+
+                        if (qlt.layTTtra(int.Parse(QLMT_TDG_dgvDSTLTra.Rows[i].Cells[10].Value.ToString())))
+                        {
+                            QLMT_TDG_dgvDSTLTra.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                            QLMT_TDG_dgvDSTLTra.Rows[i].ReadOnly = true;
+                        }
+                      
+                    }
+
+                    dg = qlt.layDGtuPM(dg, ref tiencoc);
+                    QLMT_TDG_lblEmail.Text = dg.Email;
+                    QLMT_TDG_lblHoTen.Text = dg.TenDocGia;
+                    QLMT_TDG_lblMaThe.Text = dg.MaTheThuVien;
+                    QLMT_TDG_lblSDT.Text = dg.SoDienThoai;
+                    QLMT_TDG_lblTienCoc.Text = tiencoc;
+                    if (dg.TinhTrangTheThuVien == true)
+                    {
+                        QLMT_TDG_lblTTThe.Text = "Đang hoạt động";
+                    }
+                    else { QLMT_TDG_lblTTThe.Text = "Ngưng hoạt động"; }
+                    string path;
+                    if (!string.IsNullOrEmpty(dg.HinhAnh))
+                    {
+                        path = System.IO.Path.GetFullPath("..\\..\\..\\");
+                        path += "Images\\DocGia\\";
+                        string urlImage = path + dg.HinhAnh;
+                        using (FileStream stream = new FileStream(urlImage, FileMode.Open, FileAccess.Read))
+                        {
+                            QLMT_TDG_ptbAvatar.Image = new Bitmap(urlImage);
+                            QLMT_TDG_ptbAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
+                    }
+                    else
+                    {
+                        path = System.IO.Path.GetFullPath("..\\..\\..\\");
+                        path += "Images\\DocGia\\";
+                        using (FileStream stream = new FileStream(path + "defaul.png", FileMode.Open, FileAccess.Read))
+                        {
+
+                            QLMT_TDG_ptbAvatar.Image = new Bitmap(path + "defaul.png");
+                            QLMT_TDG_ptbAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void QLMT_TDG_btnChon_Click(object sender, EventArgs e)
+        {
+            int mv = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[1].Value.ToString());
+
+            foreach (DataRow row in dt2.Rows)
+            {
+                if (row["MaVach"].Equals(mv))
+                {
+                    MessageBox.Show("Tài liệu đã tồn tại trong danh sách trả !");
+                    return;
+                }
+            }
+            if (QLMT_TDG_dgvDSTLTra.CurrentRow.DefaultCellStyle.BackColor == Color.LightSkyBlue)
+            {
+                MessageBox.Show("Tài liệu đã được trả !");
+                return;
+            }
+            dr = dt2.NewRow();
+            dr["MaVach"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[1].Value.ToString());
+            dr["MaPhieuMuon"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[0].Value.ToString());
+            dr["TenTaiLieu"] = QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[2].Value.ToString();
+            dr["NgayLap"] = DateTime.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[8].Value.ToString());
+            dr["Gia"] = QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[9].Value.ToString();
+
+            dt2.Rows.Add(dr);
+            QLMT_TDG_dgvCT_TLTra.DataSource = dt2;
+        }
+
+        private void QLMT_TDG_btnHuyChon_Click(object sender, EventArgs e)
+        {
+           QLMT_TDG_dgvCT_TLTra.Rows.RemoveAt(QLMT_TDG_dgvCT_TLTra.CurrentRow.Index);
+           QLMT_TDG_dgvCT_TLTra.DataSource = dt2;
+        }
+
+        private void QLMT_TDG_dgvCT_TLTra_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            hoten = Frm_Main.hoten;
+            QLMT_TDG_txtMV.Text = QLMT_TDG_dgvCT_TLTra.Rows[e.RowIndex].Cells[0].Value.ToString();
+           QLMT_TDG_txtGiaTL.Text = QLMT_TDG_dgvCT_TLTra.Rows[e.RowIndex].Cells[4].Value.ToString();
+            QLMT_TDG_txtTenNV.Text = hoten;
+            //QLMT_T_btnXacNhanVP.Enabled = true;
+            QLMT_TDG_txtSoNgayVP.Enabled = true;
+            QLMT_TDG_cboLoaiVP.Enabled = true;
+            QLMT_TDG_btnTinhTien.Enabled = true;
+            QLMT_TDG_btnXoa.Enabled = true;
+            
+        }
+
+        private void QLMT_TDG_btnXacNhanVP_Click(object sender, EventArgs e)
+        {
+            QLMT_TDG_btnHuyChon.Enabled = true;
+            string[] arrtien = QLMT_TDG_lblTongtien.Text.Split(' ');
+            int mav = int.Parse(QLMT_TDG_txtMV.Text);
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row["MaVach"].Equals(mav))
+                {
+                    MessageBox.Show("Tài liệu đã tồn tại trong danh sách trả !");
+                    return;
+                }
+            }
+            dr = dt.NewRow();
+            dr["MaPhieuMuon"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[1].Value.ToString());
+            dr["MaVach"] = int.Parse(QLMT_TDG_txtMV.Text);
+            dr["TenLoaiViPham"] = QLMT_TDG_cboLoaiVP.Text;
+            dr["TienBoiThuong"] = arrtien.First();
+            dr["MaLoaiViPham"] = QLMT_TDG_cboLoaiVP.SelectedValue;
+            dt.Rows.Add(dr);
+            QLMT_TDG_dgvCT_Vipham.DataSource = dt;
+            float tt = 0;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                tt += float.Parse(QLMT_TDG_dgvCT_Vipham.Rows[i].Cells[3].Value.ToString());
+            }
+            QLMT_TDG_lblTongTienBT.Text = tt.ToString();
+        }
+
+        private void QLMT_TDG_btnTinhTien_Click(object sender, EventArgs e)
+        {
+            QLMT_TDG_btnXacNhanVP.Enabled = true;
+            float tongtien = 0;
+            LOAIVIPHAM lvp = new LOAIVIPHAM();
+            lvp.MaLoaiViPham = int.Parse(QLMT_TDG_cboLoaiVP.SelectedValue.ToString());
+            float giatl = float.Parse(QLMT_TDG_txtGiaTL.Text);
+            //float coc = float.Parse(QLMT_TDG_lblTienCoc.Text);
+
+            if (QLMT_TDG_cboLoaiVP.Text == "Mất tài liệu")
+            {
+                QLMT_TDG_txtSoNgayVP.Text = "0";
+            }
+            int songay = int.Parse(QLMT_TDG_txtSoNgayVP.Text);
+
+            tongtien = qlt.tinhPhiBT(lvp, songay, giatl);
+            QLMT_TDG_lblTongtien.Text = tongtien.ToString() + " VNĐ";
+        }
+
+        private void QLMT_TDG_btnXoa_Click(object sender, EventArgs e)
+        {
+            QLMT_TDG_dgvCT_Vipham.Rows.RemoveAt(QLMT_TDG_dgvCT_Vipham.CurrentRow.Index);
+            QLMT_TDG_dgvCT_Vipham.DataSource = dt;
+            float tt = 0;
+            if (QLMT_TDG_dgvCT_Vipham.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    tt += float.Parse(QLMT_TDG_dgvCT_Vipham.Rows[i].Cells[3].Value.ToString());
+                }
+            }
+            QLMT_TDG_lblTongTienBT.Text = tt.ToString();
+        }
+
+        private void QLMT_TDG_dgvCT_Vipham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            QLMT_TDG_btnXoa.Enabled = true;
+        }
+
+        private void QLMT_TDG_btnXacNhanTra_Click(object sender, EventArgs e)
+        {
+            //luu phieu tra
+            //cap nha phieu muon ( neu tra du thi tinh trang = true, tinh trang chi tiet = true
+
+            List<CT_PHIEUTRA> lstCTPT = new List<CT_PHIEUTRA>();
+            List<LOAIVIPHAM> lstLoaivp = new List<LOAIVIPHAM>();
+            List<CT_XULYVIPHAM> lstCTXL = new List<CT_XULYVIPHAM>();
+
+            string[] tienbt = QLMT_TDG_lblTongtien.Text.Split(' ');
+            manv = Frm_Main.username;
+            int sltra = QLMT_TDG_dgvCT_TLTra.Rows.Count - 1;
+            DateTime ngaytra = DateTime.Now;
+            int mapm = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[1].Value.ToString());
+            //lvp.MaLoaiViPham = QLMT_T_cboLoaiVP.SelectedIndex;
+
+
+            if (QLMT_TDG_dgvCT_TLTra.Rows.Count - 1 > 0)
+            {
+                for (int i = 0; i < QLMT_TDG_dgvCT_TLTra.Rows.Count - 1; i++)
+                {
+                    CT_PHIEUTRA _ct = new CT_PHIEUTRA();
+                    _ct.MaVach = QLMT_TDG_dgvCT_TLTra.Rows[i].Cells[0].Value.ToString();
+                    _ct.MaPhieuMuon = int.Parse(QLMT_TDG_dgvCT_TLTra.Rows[i].Cells[1].Value.ToString());
+                    lstCTPT.Add(_ct);
+                }
+            }
+
+
+            if (QLMT_TDG_dgvCT_Vipham.Rows.Count - 1 > 0)
+            {
+                for (int i = 0; i < QLMT_TDG_dgvCT_Vipham.Rows.Count - 1; i++)
+                {
+                    CT_XULYVIPHAM ctxl = new CT_XULYVIPHAM();
+                    ctxl.MaVach = QLMT_TDG_dgvCT_Vipham.Rows[i].Cells[1].Value.ToString();
+                    ctxl.MaLoaiViPham = int.Parse(QLMT_TDG_dgvCT_Vipham.Rows[i].Cells[4].Value.ToString());
+                    ctxl.TienBoiThuong = float.Parse(QLMT_TDG_dgvCT_Vipham.Rows[i].Cells[3].Value.ToString());
+                    lstCTXL.Add(ctxl);
+                }
+            }
+
+            // lấy ds loại vi phạm và ds tiền bồi thường
+
+            bool phicoc;
+            if (QLMT_TDG_chkTraTienCoc.Checked)
+            {
+                phicoc = true;
+            }
+            else
+            {
+                phicoc = false;
+            }
+
+            if (QLMT_TDG_dgvCT_TLTra.RowCount - 1 > 0)
+            {
+                if (qlt.luuPhieuTra(mapm, int.Parse(manv.ToString()), ngaytra, sltra, phicoc, QLMT_TDG_lblTienCoc.Text, lstCTPT))
+                {
+                    // luu phieu xu ly neu co
+                    if (QLMT_TDG_dgvCT_Vipham.Rows.Count - 1 > 0)
+                    {
+                        qlt.luuPhieuXLVP(ngaytra, float.Parse(QLMT_TDG_lblTongTienBT.Text), lstCTXL, int.Parse(manv));
+                        mathetv = "";
+
+                    }
+                    MessageBox.Show("Quá trình trả thành công ! ");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Quá trình trả thất bại !");
+            }
+
+
+
+
+            //luu chi tiet phieu nhap
+
+
+
+            //reset dgv
+            QLMT_TDG_dgvDSTLTra.DataSource = null;
+            QLMT_TDG_dgvDSTLTra.Refresh();
+            QLMT_TDG_dgvCT_Vipham.DataSource = null;
+            QLMT_TDG_dgvCT_Vipham.Refresh();
+            QLMT_TDG_dgvCT_TLTra.DataSource = null;
+            QLMT_TDG_dgvCT_TLTra.Refresh();
+            QLMT_TDG_txtTimMaDG.Text = "";
+            QLMT_TDG_txtTimMaDG.Focus();
+            QLMT_TDG_lblMaThe.Text = "";
+            QLMT_TDG_lblTienCoc.Text = "";
+            QLMT_TDG_lblTTThe.Text = "";
+            QLMT_TDG_lblHoTen.Text = "";
+            QLMT_TDG_lblEmail.Text = "";
+            QLMT_TDG_lblSDT.Text = "";
+            QLMT_TDG_txtMV.Text = "";
+            QLMT_TDG_txtTenNV.Text = "";
+            QLMT_TDG_txtGiaTL.Text = "";
+            QLMT_TDG_lblTongtien.Text = "";
+            QLMT_TDG_lblTongTienBT.Text = "";
+
+            QLMT_TDG_btnXacNhanTra.Enabled = false;
+            QLMT_TDG_btnTinhTien.Enabled = false;
+            QLMT_TDG_btnXoa.Enabled = false;
+            QLMT_TDG_btnChon.Enabled = false;
+            QLMT_TDG_btnHuyChon.Enabled = false;
+            QLMT_TDG_btnXacNhanVP.Enabled = false;
+
+            ////QLMT_TDG_chkTraTienCoc.Checked = false;
+        }
     }
 }

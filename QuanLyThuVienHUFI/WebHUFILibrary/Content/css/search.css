@@ -1,0 +1,439 @@
+body .wrapper main .timkiem .container .title {
+    padding: 20px 20px;
+    margin-left: 20px;
+}
+
+    body .wrapper main .timkiem .container .title p {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'roregular';
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+        body .wrapper main .timkiem .container .title p::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 3px;
+            height: 25px;
+            background-color: black;
+            left: -1.5%;
+        }
+
+body .wrapper main .timkiem .container .search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+    body .wrapper main .timkiem .container .search .form__search .form__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 15px 0 15px 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+        body .wrapper main .timkiem .container .search .form__search .form__wrapper .selection__search {
+            height: 36px;
+        }
+
+            body .wrapper main .timkiem .container .search .form__search .form__wrapper .selection__search .item__selection {
+                font-size: 16px;
+                font-family: 'roregular';
+            }
+
+        body .wrapper main .timkiem .container .search .form__search .form__wrapper .inputsearch {
+            height: 36px;
+            width: 400px;
+            padding-left: 10px;
+            outline: none;
+        }
+
+        body .wrapper main .timkiem .container .search .form__search .form__wrapper .control {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            background-color: #149bfe;
+        }
+
+            body .wrapper main .timkiem .container .search .form__search .form__wrapper .control .btnsearch {
+                background-color: #149bfe;
+                color: white;
+                text-decoration: none;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                height: 36px;
+                outline: none;
+                border: none;
+                border-right: 1px solid rgba(255, 255, 255, 0.3);
+                cursor: pointer;
+            }
+
+                body .wrapper main .timkiem .container .search .form__search .form__wrapper .control .btnsearch span {
+                    font-size: 16px;
+                    padding: 15px;
+                    font-family: 'roregular';
+                }
+
+            body .wrapper main .timkiem .container .search .form__search .form__wrapper .control .optionsearch {
+                height: 36px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+                body .wrapper main .timkiem .container .search .form__search .form__wrapper .control .optionsearch .img img {
+                    width: 20px;
+                }
+
+    body .wrapper main .timkiem .container .search .form__search .form__nangcao {
+        height: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+        body .wrapper main .timkiem .container .search .form__search .form__nangcao.show {
+            height: auto;
+            visibility: visible;
+            display: block;
+        }
+
+        body .wrapper main .timkiem .container .search .form__search .form__nangcao .row {
+            margin: 8px 0;
+            height: 36px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+            body .wrapper main .timkiem .container .search .form__search .form__nangcao .row .selection__toantu {
+                outline: none;
+                margin-right: 2px;
+                height: 100%;
+                padding: 0 25px;
+            }
+
+            body .wrapper main .timkiem .container .search .form__search .form__nangcao .row .txtSearchNangCao {
+                outline: none;
+                height: 100%;
+                width: 400px;
+                margin-right: 2px;
+                padding-left: 10px;
+            }
+
+            body .wrapper main .timkiem .container .search .form__search .form__nangcao .row .selection__noidung {
+                outline: none;
+                height: 100%;
+            }
+
+body .wrapper main .tailieu {
+    margin-bottom: 100px;
+}
+
+    body .wrapper main .tailieu .container {
+        padding: 0 15px;
+    }
+
+        body .wrapper main .tailieu .container .rowHeader {
+            margin-top: 15px;
+            background-color: #2E9AFE;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 50px;
+            color: white;
+        }
+
+            body .wrapper main .tailieu .container .rowHeader .himg {
+                cursor: pointer;
+                width: 15%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .rowHeader .himg span {
+                    font-family: 'roregular';
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+            body .wrapper main .tailieu .container .rowHeader .htieude {
+                cursor: pointer;
+                width: 20%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .rowHeader .htieude span {
+                    font-family: 'roregular';
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+            body .wrapper main .tailieu .container .rowHeader .hmota {
+                cursor: pointer;
+                width: 40%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .rowHeader .hmota span {
+                    font-family: 'roregular';
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+            body .wrapper main .tailieu .container .rowHeader .htacgia {
+                cursor: pointer;
+                width: 15%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .rowHeader .htacgia span {
+                    font-family: 'roregular';
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+            body .wrapper main .tailieu .container .rowHeader .hchon {
+                cursor: pointer;
+                width: 15%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .rowHeader .hchon span {
+                    font-family: 'roregular';
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+        body .wrapper main .tailieu .container .row {
+            background-color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 150px;
+            margin: 10px 0;
+        }
+
+            body .wrapper main .tailieu .container .row.khongcoketqua {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .row.khongcoketqua p {
+                    margin-top: 20px;
+                    color: red;
+                    font-size: 20px;
+                    font-family: 'roregular';
+                    font-weight: bold;
+                }
+
+            body .wrapper main .tailieu .container .row .img {
+                width: 15%;
+                height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+                body .wrapper main .tailieu .container .row .img a {
+                    width: 100%;
+                    height: 100%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+
+                    body .wrapper main .tailieu .container .row .img a img {
+                        max-width: 100%;
+                        height: 100%;
+                        -o-object-fit: cover;
+                        object-fit: cover;
+                        -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
+                        -webkit-transition: 0.4s;
+                        transition: 0.4s;
+                    }
+
+                body .wrapper main .tailieu .container .row .img:hover img {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                }
+
+            body .wrapper main .tailieu .container .row .mota {
+                width: 40%;
+                height: 100%;
+            }
+
+                body .wrapper main .tailieu .container .row .mota a {
+                    text-decoration: none;
+                    color: black;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                }
+
+                    body .wrapper main .tailieu .container .row .mota a:hover {
+                        color: #0072C6;
+                    }
+
+                    body .wrapper main .tailieu .container .row .mota a span {
+                        margin-top: 15px;
+                        text-transform: initial;
+                        font-family: 'roregular';
+                        font-size: 15px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+            body .wrapper main .tailieu .container .row .tacgia {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                margin-top: 15px;
+                width: 15%;
+                height: 100%;
+            }
+
+                body .wrapper main .tailieu .container .row .tacgia span {
+                    text-transform: initial;
+                    font-family: 'roregular';
+                    font-size: 15px;
+                }
+
+            body .wrapper main .tailieu .container .row .tieude {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                margin-top: 15px;
+                width: 20%;
+                height: 100%;
+                padding: 0 20px;
+            }
+
+                body .wrapper main .tailieu .container .row .tieude a {
+                    text-decoration: none;
+                    color: black;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                }
+
+                    body .wrapper main .tailieu .container .row .tieude a:hover {
+                        color: #0072C6;
+                    }
+
+                    body .wrapper main .tailieu .container .row .tieude a span {
+                        text-transform: initial;
+                        font-family: 'roregular';
+                        font-size: 15px;
+                    }
+
+            body .wrapper main .tailieu .container .row .chon {
+                width: 15%;
+                height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tailieu .container .row .chon a {
+                    text-decoration: none;
+                    color: white;
+                    height: 35px;
+                    background-color: red;
+                    border-radius: 5px;
+                    margin-top: 15px;
+                }
+
+                    body .wrapper main .tailieu .container .row .chon a span {
+                        text-decoration: none;
+                        font-family: 'roregular';
+                        padding: 10px 20px;
+                        display: block;
+                    }
+/*# sourceMappingURL=search.css.map */

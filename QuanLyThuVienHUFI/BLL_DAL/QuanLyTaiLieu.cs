@@ -5,11 +5,304 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
+
 namespace BLL_DAL
 {
     public class QuanLyTaiLieu
     {
         DB_QLTVDataContext db = new DB_QLTVDataContext();
+
+        public List<VW_TAILIEU> getList(string typesearch, string txtsearch,string selection__toantu1, string txtSearchNangCao1, string selection__noidung1, string selection__toantu2, string txtSearchNangCao2, string selection__noidung2, string selection__toantu3, string txtSearchNangCao3, string selection__noidung3)
+        {
+            List<VW_TAILIEU> lstTL = new List<VW_TAILIEU>();
+            List<SqlParameter> param_list = new List<SqlParameter>();
+
+            string select = "";
+            select += " SELECT * ";
+            select += " FROM VW_TAILIEU ";
+            select += " WHERE VW_TAILIEU.TinhTrangXoa = 0 ";
+            if (typesearch == "1")
+            {
+                select += " AND VW_TAILIEU.MaVach LIKE {0} ";
+                param_list.Add(new SqlParameter("MaVach1", "%"+txtsearch+"%"));
+            }
+            else if (typesearch == "2")
+            {
+
+                select += " AND VW_TAILIEU.TenTaiLieu LIKE {0} ";
+                param_list.Add(new SqlParameter("TenTaiLieu1", "%" + txtsearch + "%"));
+            }
+            else if (typesearch == "3")
+            {
+
+                select += " AND VW_TAILIEU.TenTacGia LIKE {0} ";
+                param_list.Add(new SqlParameter("TenTacGia1", "%" + txtsearch + "%"));
+            }
+            else if (typesearch == "4")
+            {
+
+                select += " AND VW_TAILIEU.TenNhaXuatBan LIKE {0} ";
+                param_list.Add(new SqlParameter("TenNhaXuatBan1", "%" + txtsearch + "%"));
+            }
+            else if (typesearch == "5")
+            {
+
+                select += " AND VW_TAILIEU.TenChuDe LIKE {0} ";
+                param_list.Add(new SqlParameter("TenChuDe1", "%" + txtsearch + "%"));
+            }
+            if(!string.IsNullOrEmpty(txtSearchNangCao1))
+            {
+                select += " "+ selection__toantu1 + " VW_TAILIEU."+ selection__noidung1+" LIKE {1} ";
+                param_list.Add(new SqlParameter(selection__noidung1 + "2", "%" + txtSearchNangCao1 + "%"));
+            }
+            if (!string.IsNullOrEmpty(txtSearchNangCao2))
+            {
+                select += " " + selection__toantu2 + " VW_TAILIEU." + selection__noidung2 + " LIKE {2} ";
+                param_list.Add(new SqlParameter(selection__noidung2 + "3", "%" + txtSearchNangCao2 + "%"));
+            }
+            if (!string.IsNullOrEmpty(txtSearchNangCao3))
+            {
+                select += " " + selection__toantu3 + " VW_TAILIEU." + selection__noidung3 + " LIKE {3} ";
+                param_list.Add(new SqlParameter(selection__noidung3 + "3", "%" + txtSearchNangCao3 + "%"));
+            }
+
+
+            #region ORDER BY
+            select += " ORDER BY VW_TAILIEU.MaVach ";
+            #endregion
+            try
+            {
+                txtsearch = "%" + txtsearch + "%";
+                lstTL = db.ExecuteQuery<VW_TAILIEU>(select,getSqlParameters(param_list)).ToList();
+            }
+            catch(Exception ex)
+            {
+                string temp = ex.ToString();
+            }
+            
+
+            return lstTL;
+        }
+        public Object[] getSqlParameters(List<SqlParameter> param_list)
+        {
+
+            var param_count = param_list.Count;
+            var sql_parameters = new Object[param_count];
+
+            for (var i = 0; i < param_count; i++)
+            {
+                sql_parameters[i] = param_list[i].Value;
+            }
+
+            return sql_parameters;
+        }
+        public List<VW_TAILIEU> getListTaiLieuByMaTaiLieu(string matailieu, ref List<string> lstDangMuon, ref List<VW_TAILIEU> lstKhongLuuThong)
+        {
+            List<VW_TAILIEU> lst = db.VW_TAILIEUs.Where(a => a.MaTaiLieu == matailieu).ToList();
+            lstKhongLuuThong = db.VW_TAILIEUs.Where(a => a.TinhTrangXoa == true && a.MaTaiLieu == matailieu).ToList();
+            List<string> lstCT = db.CT_PHIEUMUONs.Where(a => a.TinhTrangTraCT.ToString() == "False").Select(a => a.MaVach).ToList();
+            //List<VW_TAILIEU> lstDangMuon = from lst in db.VW_TAILIEUs
+            //                               join ct in db.CT_PHIEUMUONs on lst.MaVach equals ct.MaVach
+            //                               where (!ct.MaVach.Contains(lst.MaVach)) && (ct.TinhTrangTraCT = false)
+            //                               select lst;
+            var listDM = from lstDM in db.VW_TAILIEUs
+                         join ct in db.CT_PHIEUMUONs on lstDM.MaVach equals ct.MaVach
+                         where (lstCT.Contains(lstDM.MaVach)) && (lstDM.MaTaiLieu == matailieu) && (ct.TinhTrangTraCT == false)
+                         select lstDM;
+
+            foreach(VW_TAILIEU item in listDM)
+            {
+                lstDangMuon.Add(item.MaVach);
+            }
+            return lst;
+        }
+        public List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGia(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEUCUNGTACGIA> lst = new List<VW_TAILIEUCUNGTACGIA>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUCUNGTACGIAs.Where(a => a.TenTacGia == tl.TenTacGia && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            return lst;
+        }
+        public List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDe(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEUCUNGCHUDE> lst = new List<VW_TAILIEUCUNGCHUDE>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUCUNGCHUDEs.Where(a => a.TenChuDe == tl.TenChuDe && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            return lst;
+        }
+        public List<VW_TAILIEU> lstTLCungTacGiaCoMaVach(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEU> lst = new List<VW_TAILIEU>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUs.Where(a => a.TenTacGia == tl.TenTacGia && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+
+            List<VW_TAILIEUCUNGTACGIA> lstTLCungTacGiaDistinct = lstTLCungTacGia(mavach);
+            List<VW_TAILIEU> rs = new List<VW_TAILIEU>();
+            if (lstTLCungTacGiaDistinct.Count() > 6)
+            {
+                while (rs.Count() <= 5)
+                {
+                    VW_TAILIEU flg = lst.OrderBy(a => Guid.NewGuid()).Take(1).FirstOrDefault();
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(flg);
+                    }
+                    else
+                    {
+                        int flgInt = 0;
+                        foreach (VW_TAILIEU itemFlg in rs)
+                        {
+                            if (itemFlg.MaTaiLieu == flg.MaTaiLieu)
+                            {
+                                flgInt = 1;
+                            }
+                        }
+                        if (flgInt == 0)
+                        {
+                            rs.Add(flg);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (VW_TAILIEU itemFlg in lst)
+                {
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(itemFlg);
+                    }
+                    else
+                    {
+                        int temp = 0;
+                        foreach (VW_TAILIEU itemFlgA in rs.ToList())
+                        {
+                            if (itemFlgA.MaTaiLieu == itemFlg.MaTaiLieu)
+                            {
+                                temp = 1;
+
+                            }
+                        }
+                        if (temp == 0)
+                        {
+                            rs.Add(itemFlg);
+                        }
+                    }
+                }
+            }
+
+            return rs;
+
+            //return lst;
+            ////return rs;
+        }
+        public List<VW_TAILIEU> lstTLCungChuDeCoMaVach(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            List<VW_TAILIEU> lst = new List<VW_TAILIEU>();
+            if (tl != null)
+            {
+                lst = db.VW_TAILIEUs.Where(a => a.TenChuDe == tl.TenChuDe && a.MaTaiLieu != tl.MaTaiLieu).Distinct().ToList();
+            }
+            List<VW_TAILIEUCUNGCHUDE> lstTLCungChuDeDistinct = lstTLCungChuDe(mavach);
+            List<VW_TAILIEU> rs = new List<VW_TAILIEU>();
+            if (lstTLCungChuDeDistinct.Count() > 6)
+            {
+                while (rs.Count() <= 5)
+                {
+                    VW_TAILIEU flg = lst.OrderBy(a => Guid.NewGuid()).Take(1).FirstOrDefault();
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(flg);
+                    }
+                    else
+                    {
+                        int flgInt = 0;
+                        foreach (VW_TAILIEU itemFlg in rs)
+                        {
+                            if (itemFlg.MaTaiLieu == flg.MaTaiLieu)
+                            {
+                                flgInt = 1;
+                            }
+                        }
+                        if (flgInt == 0)
+                        {
+                            rs.Add(flg);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (VW_TAILIEU itemFlg in lst)
+                {
+                    if (rs.Count() == 0)
+                    {
+                        rs.Add(itemFlg);
+                    }
+                    else
+                    {
+                        int temp = 0;
+                        foreach (VW_TAILIEU itemFlgA in rs.ToList())
+                        {
+                            if (itemFlgA.MaTaiLieu == itemFlg.MaTaiLieu)
+                            {
+                                temp = 1;
+                                
+                            }
+                        }
+                        if (temp == 0)
+                        {
+                            rs.Add(itemFlg);
+                        }
+                    }
+                }
+            }
+
+            return rs;
+            //return lst;
+        }
+        public VW_TAILIEU getTaiLieuByMaVach(string mavach)
+        {
+            VW_TAILIEU tl = db.VW_TAILIEUs.Where(a => a.MaVach == mavach).FirstOrDefault();
+            return tl;
+        }
+        public List<VW_TAILIEU> timKiemTheoMaVach(string mavach)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a=>a.MaVach.Contains(mavach)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoTieuDe(string tieude)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenTaiLieu.Contains(tieude)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoTacGia(string tacgia)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenTacGia.Contains(tacgia)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoNhaXuatBan(string nxb)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenNhaXuatBan.Contains(nxb)).ToList();
+            return lstTL;
+        }
+        public List<VW_TAILIEU> timKiemTheoChuDe(string chude)
+        {
+            List<VW_TAILIEU> lstTL = db.VW_TAILIEUs.Where(a => a.TenChuDe.Contains(chude)).ToList();
+            
+            return lstTL;
+        }
         public IQueryable loadDgvViTri()
         {
             var vts = from vt in db.VITRIs
@@ -211,6 +504,7 @@ namespace BLL_DAL
         {
             if(themmoi == true)
             {
+                bool flg = true;
                 if (string.IsNullOrEmpty(tl.TenTaiLieu.ToString()) || string.IsNullOrEmpty(tl.SoTrang.ToString()) || string.IsNullOrEmpty(tl.Gia.ToString()) || string.IsNullOrEmpty(tl.NamXuatBan.ToString()) || string.IsNullOrEmpty(tl.MaTacGia.ToString()) || string.IsNullOrEmpty(tl.MaNhaXuatBan.ToString()) || string.IsNullOrEmpty(tl.ThongTinTaiLieu.ToString()) || string.IsNullOrEmpty(tl.MaNgonNgu.ToString()) || string.IsNullOrEmpty(tl.MaViTri.ToString()))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu.");
@@ -276,13 +570,17 @@ namespace BLL_DAL
                     {
                         db.TAILIEUs.InsertOnSubmit(rs);
                         db.SubmitChanges();
-                        MessageBox.Show("Thêm thành công tài liệu.");
                     }
                     catch(Exception ex)
                     {
+                        flg = false;
                         MessageBox.Show("Thêm không thành công tài liệu: " + rs.MaVach.ToString());
                         return;
                     }
+                }
+                if(flg == true)
+                {
+                    MessageBox.Show("Thêm thành công tài liệu.");
                 }
             }
             
