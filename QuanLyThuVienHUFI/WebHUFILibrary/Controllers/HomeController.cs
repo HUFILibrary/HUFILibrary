@@ -15,7 +15,6 @@ namespace WebHUFILibrary.Controllers
         DB_QLTVDataContext ent = new DB_QLTVDataContext();
         public ActionResult Index()
         {
-              
             return View();
         }
 

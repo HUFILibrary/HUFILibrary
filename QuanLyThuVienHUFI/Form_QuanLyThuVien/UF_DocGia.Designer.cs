@@ -106,12 +106,13 @@ namespace Form_QuanLyThuVien
             this.MaLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTenLoaiDocGia = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.LDG_btnThem = new System.Windows.Forms.Button();
             this.LDG_btnXoa = new System.Windows.Forms.Button();
             this.LDG_btnSua = new System.Windows.Forms.Button();
             this.LDG_btnLuu = new System.Windows.Forms.Button();
+            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtTenLoaiDocGia = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
@@ -123,14 +124,14 @@ namespace Form_QuanLyThuVien
             this.DG_N_btnSua = new System.Windows.Forms.Button();
             this.DG_N_btnLuu = new System.Windows.Forms.Button();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.DG_N_txtTenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.DG_N_txtMaNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel17 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.label6 = new System.Windows.Forms.Label();
             this.kryptonLabel16 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.DG_N_cboTenKhoa = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonLabel17 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.DG_N_txtTenNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonGroupBox5 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.DG_N_dgvDSNganh = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.DG_N_txtMaNganh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.DG_K__btnThem = new System.Windows.Forms.Button();
@@ -146,7 +147,6 @@ namespace Form_QuanLyThuVien
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -181,6 +181,7 @@ namespace Form_QuanLyThuVien
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDocGia)).BeginInit();
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel24.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -201,7 +202,6 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox4.Panel.SuspendLayout();
             this.kryptonGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_K_dgvDSKhoa)).BeginInit();
-            this.tableLayoutPanel24.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -1131,7 +1131,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 471F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 630F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(1892, 630);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
@@ -1215,17 +1215,6 @@ namespace Form_QuanLyThuVien
             this.label2.Text = "Tên loại:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtTenLoaiDocGia
-            // 
-            this.txtTenLoaiDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTenLoaiDocGia.Location = new System.Drawing.Point(3, 3);
-            this.txtTenLoaiDocGia.Multiline = true;
-            this.txtTenLoaiDocGia.Name = "txtTenLoaiDocGia";
-            this.txtTenLoaiDocGia.Size = new System.Drawing.Size(273, 36);
-            this.txtTenLoaiDocGia.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLoaiDocGia.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
-            this.txtTenLoaiDocGia.TabIndex = 1;
-            // 
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 4;
@@ -1296,6 +1285,32 @@ namespace Form_QuanLyThuVien
             this.LDG_btnLuu.TabIndex = 0;
             this.LDG_btnLuu.UseVisualStyleBackColor = false;
             this.LDG_btnLuu.Click += new System.EventHandler(this.LDG_btnLuu_Click);
+            // 
+            // tableLayoutPanel24
+            // 
+            this.tableLayoutPanel24.ColumnCount = 2;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.Controls.Add(this.txtTenLoaiDocGia, 0, 0);
+            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            this.tableLayoutPanel24.RowCount = 1;
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(559, 42);
+            this.tableLayoutPanel24.TabIndex = 3;
+            // 
+            // txtTenLoaiDocGia
+            // 
+            this.txtTenLoaiDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTenLoaiDocGia.Location = new System.Drawing.Point(3, 3);
+            this.txtTenLoaiDocGia.Multiline = true;
+            this.txtTenLoaiDocGia.Name = "txtTenLoaiDocGia";
+            this.txtTenLoaiDocGia.Size = new System.Drawing.Size(273, 36);
+            this.txtTenLoaiDocGia.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenLoaiDocGia.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
+            this.txtTenLoaiDocGia.TabIndex = 1;
             // 
             // label3
             // 
@@ -1368,7 +1383,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel22, 0, 1);
             this.tableLayoutPanel18.Controls.Add(this.kryptonGroupBox5, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(601, 3);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(600, 3);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 3;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.77539F));
@@ -1376,7 +1391,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.9635F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1294, 618);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1295, 618);
             this.tableLayoutPanel18.TabIndex = 4;
             // 
             // tableLayoutPanel21
@@ -1399,7 +1414,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(1288, 75);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(1289, 75);
             this.tableLayoutPanel21.TabIndex = 2;
             // 
             // DG_N_btnThem
@@ -1471,8 +1486,47 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 1;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(1288, 38);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(1289, 38);
             this.tableLayoutPanel22.TabIndex = 3;
+            // 
+            // DG_N_txtTenNganh
+            // 
+            this.DG_N_txtTenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DG_N_txtTenNganh.Location = new System.Drawing.Point(828, 3);
+            this.DG_N_txtTenNganh.Multiline = true;
+            this.DG_N_txtTenNganh.Name = "DG_N_txtTenNganh";
+            this.DG_N_txtTenNganh.Size = new System.Drawing.Size(358, 32);
+            this.DG_N_txtTenNganh.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
+            this.DG_N_txtTenNganh.TabIndex = 1;
+            // 
+            // DG_N_txtMaNganh
+            // 
+            this.DG_N_txtMaNganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DG_N_txtMaNganh.Location = new System.Drawing.Point(454, 3);
+            this.DG_N_txtMaNganh.Multiline = true;
+            this.DG_N_txtMaNganh.Name = "DG_N_txtMaNganh";
+            this.DG_N_txtMaNganh.Size = new System.Drawing.Size(225, 32);
+            this.DG_N_txtMaNganh.TabIndex = 1;
+            // 
+            // kryptonLabel17
+            // 
+            this.kryptonLabel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel17.Location = new System.Drawing.Point(685, 3);
+            this.kryptonLabel17.Name = "kryptonLabel17";
+            this.kryptonLabel17.Size = new System.Drawing.Size(137, 32);
+            this.kryptonLabel17.TabIndex = 0;
+            this.kryptonLabel17.Values.Text = "Tên ngành";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(344, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 38);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Mã ngành:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kryptonLabel16
             // 
@@ -1494,25 +1548,6 @@ namespace Form_QuanLyThuVien
             this.DG_N_cboTenKhoa.TabIndex = 1;
             this.DG_N_cboTenKhoa.SelectedIndexChanged += new System.EventHandler(this.DG_N_cboTenKhoa_SelectedIndexChanged);
             // 
-            // kryptonLabel17
-            // 
-            this.kryptonLabel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel17.Location = new System.Drawing.Point(685, 3);
-            this.kryptonLabel17.Name = "kryptonLabel17";
-            this.kryptonLabel17.Size = new System.Drawing.Size(137, 32);
-            this.kryptonLabel17.TabIndex = 0;
-            this.kryptonLabel17.Values.Text = "Tên ngành";
-            // 
-            // DG_N_txtTenNganh
-            // 
-            this.DG_N_txtTenNganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DG_N_txtTenNganh.Location = new System.Drawing.Point(828, 3);
-            this.DG_N_txtTenNganh.Multiline = true;
-            this.DG_N_txtTenNganh.Name = "DG_N_txtTenNganh";
-            this.DG_N_txtTenNganh.Size = new System.Drawing.Size(358, 32);
-            this.DG_N_txtTenNganh.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
-            this.DG_N_txtTenNganh.TabIndex = 1;
-            // 
             // kryptonGroupBox5
             // 
             this.kryptonGroupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1522,7 +1557,7 @@ namespace Form_QuanLyThuVien
             // kryptonGroupBox5.Panel
             // 
             this.kryptonGroupBox5.Panel.Controls.Add(this.DG_N_dgvDSNganh);
-            this.kryptonGroupBox5.Size = new System.Drawing.Size(1288, 487);
+            this.kryptonGroupBox5.Size = new System.Drawing.Size(1289, 487);
             this.kryptonGroupBox5.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.kryptonGroupBox5.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonGroupBox5.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1537,29 +1572,9 @@ namespace Form_QuanLyThuVien
             this.DG_N_dgvDSNganh.Name = "DG_N_dgvDSNganh";
             this.DG_N_dgvDSNganh.RowHeadersWidth = 51;
             this.DG_N_dgvDSNganh.RowTemplate.Height = 24;
-            this.DG_N_dgvDSNganh.Size = new System.Drawing.Size(1284, 458);
+            this.DG_N_dgvDSNganh.Size = new System.Drawing.Size(1285, 458);
             this.DG_N_dgvDSNganh.TabIndex = 0;
             this.DG_N_dgvDSNganh.SelectionChanged += new System.EventHandler(this.DG_N_dgvDSNganh_SelectionChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(344, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 38);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Mã ngành:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DG_N_txtMaNganh
-            // 
-            this.DG_N_txtMaNganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DG_N_txtMaNganh.Location = new System.Drawing.Point(454, 3);
-            this.DG_N_txtMaNganh.Multiline = true;
-            this.DG_N_txtMaNganh.Name = "DG_N_txtMaNganh";
-            this.DG_N_txtMaNganh.Size = new System.Drawing.Size(225, 32);
-            this.DG_N_txtMaNganh.TabIndex = 1;
             // 
             // tableLayoutPanel16
             // 
@@ -1577,7 +1592,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.443366F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.78317F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(551, 618);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(550, 618);
             this.tableLayoutPanel16.TabIndex = 3;
             // 
             // tableLayoutPanel17
@@ -1600,7 +1615,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(545, 74);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(544, 74);
             this.tableLayoutPanel17.TabIndex = 2;
             // 
             // DG_K__btnThem
@@ -1647,7 +1662,7 @@ namespace Form_QuanLyThuVien
             this.DG_K_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
             this.DG_K_btnLuu.Location = new System.Drawing.Point(411, 3);
             this.DG_K_btnLuu.Name = "DG_K_btnLuu";
-            this.DG_K_btnLuu.Size = new System.Drawing.Size(131, 68);
+            this.DG_K_btnLuu.Size = new System.Drawing.Size(130, 68);
             this.DG_K_btnLuu.TabIndex = 0;
             this.DG_K_btnLuu.UseVisualStyleBackColor = false;
             this.DG_K_btnLuu.Click += new System.EventHandler(this.DG_K_btnLuu_Click);
@@ -1665,7 +1680,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(545, 40);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(544, 40);
             this.tableLayoutPanel20.TabIndex = 4;
             // 
             // kryptonLabel15
@@ -1683,7 +1698,7 @@ namespace Form_QuanLyThuVien
             this.DG_K_txtTenKhoa.Location = new System.Drawing.Point(166, 3);
             this.DG_K_txtTenKhoa.Multiline = true;
             this.DG_K_txtTenKhoa.Name = "DG_K_txtTenKhoa";
-            this.DG_K_txtTenKhoa.Size = new System.Drawing.Size(376, 34);
+            this.DG_K_txtTenKhoa.Size = new System.Drawing.Size(375, 34);
             this.DG_K_txtTenKhoa.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
             this.DG_K_txtTenKhoa.TabIndex = 1;
             // 
@@ -1696,7 +1711,7 @@ namespace Form_QuanLyThuVien
             // kryptonGroupBox4.Panel
             // 
             this.kryptonGroupBox4.Panel.Controls.Add(this.DG_K_dgvDSKhoa);
-            this.kryptonGroupBox4.Size = new System.Drawing.Size(545, 486);
+            this.kryptonGroupBox4.Size = new System.Drawing.Size(544, 486);
             this.kryptonGroupBox4.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.kryptonGroupBox4.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.kryptonGroupBox4.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1714,7 +1729,7 @@ namespace Form_QuanLyThuVien
             this.DG_K_dgvDSKhoa.Name = "DG_K_dgvDSKhoa";
             this.DG_K_dgvDSKhoa.RowHeadersWidth = 51;
             this.DG_K_dgvDSKhoa.RowTemplate.Height = 24;
-            this.DG_K_dgvDSKhoa.Size = new System.Drawing.Size(541, 457);
+            this.DG_K_dgvDSKhoa.Size = new System.Drawing.Size(540, 457);
             this.DG_K_dgvDSKhoa.TabIndex = 0;
             this.DG_K_dgvDSKhoa.SelectionChanged += new System.EventHandler(this.DG_K_dgvDSKhoa_SelectionChanged);
             // 
@@ -1740,7 +1755,7 @@ namespace Form_QuanLyThuVien
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(560, 0);
+            this.label4.Location = new System.Drawing.Point(559, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 624);
             this.label4.TabIndex = 5;
@@ -1757,21 +1772,6 @@ namespace Form_QuanLyThuVien
             this.label5.TabIndex = 1;
             this.label5.Text = "KHOA && NGÀNH";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel24
-            // 
-            this.tableLayoutPanel24.ColumnCount = 2;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.Controls.Add(this.txtTenLoaiDocGia, 0, 0);
-            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 87);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 1;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(559, 42);
-            this.tableLayoutPanel24.TabIndex = 3;
             // 
             // UF_DocGia
             // 
@@ -1822,6 +1822,8 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel24.ResumeLayout(false);
+            this.tableLayoutPanel24.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel14.PerformLayout();
@@ -1846,8 +1848,6 @@ namespace Form_QuanLyThuVien
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).EndInit();
             this.kryptonGroupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_K_dgvDSKhoa)).EndInit();
-            this.tableLayoutPanel24.ResumeLayout(false);
-            this.tableLayoutPanel24.PerformLayout();
             this.ResumeLayout(false);
 
         }

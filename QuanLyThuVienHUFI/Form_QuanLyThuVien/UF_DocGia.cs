@@ -213,7 +213,7 @@ namespace Form_QuanLyThuVien
             }
             dg.NgayLamThe = DG_dtpNgayLamThe.Value;
 
-            dg.MatKhau = DG_txtMaThe.Text.ToString();
+            //dg.MatKhau = DG_txtMaThe.Text.ToString();
             dg.TinhTrangXoa = false;
             string hinhanh = "";
             if (!string.IsNullOrEmpty(DG_urlImage))
