@@ -22,7 +22,7 @@ namespace BLL_DAL
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyThuVienCNTP")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="QuanLyThuVienCNTP2")]
 	public partial class DB_QLTVDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -105,13 +105,10 @@ namespace BLL_DAL
     partial void InsertTACGIA(TACGIA instance);
     partial void UpdateTACGIA(TACGIA instance);
     partial void DeleteTACGIA(TACGIA instance);
-    partial void InsertTAILIEU(TAILIEU instance);
-    partial void UpdateTAILIEU(TAILIEU instance);
-    partial void DeleteTAILIEU(TAILIEU instance);
     #endregion
 		
 		public DB_QLTVDataContext() : 
-				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTPConnectionString2, mappingSource)
+				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTP2ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -369,6 +366,22 @@ namespace BLL_DAL
 			get
 			{
 				return this.GetTable<VW_TAILIEU>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_TAILIEUCUNGCHUDE> VW_TAILIEUCUNGCHUDEs
+		{
+			get
+			{
+				return this.GetTable<VW_TAILIEUCUNGCHUDE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_TAILIEUCUNGTACGIA> VW_TAILIEUCUNGTACGIAs
+		{
+			get
+			{
+				return this.GetTable<VW_TAILIEUCUNGTACGIA>();
 			}
 		}
 		
@@ -4374,10 +4387,8 @@ namespace BLL_DAL
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TAILIEU")]
-	public partial class TAILIEU : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class TAILIEU
 	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _MaVach;
 		
@@ -4413,52 +4424,11 @@ namespace BLL_DAL
 		
 		private System.Nullable<bool> _TinhTrangXoa;
 		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaVachChanging(string value);
-    partial void OnMaVachChanged();
-    partial void OnMaTaiLieuChanging(string value);
-    partial void OnMaTaiLieuChanged();
-    partial void OnMaLoaiTaiLieuChanging(System.Nullable<int> value);
-    partial void OnMaLoaiTaiLieuChanged();
-    partial void OnMaDauTaiLieuChanging(string value);
-    partial void OnMaDauTaiLieuChanged();
-    partial void OnMaChuDeChanging(System.Nullable<int> value);
-    partial void OnMaChuDeChanged();
-    partial void OnMaTapChanging(string value);
-    partial void OnMaTapChanged();
-    partial void OnTenTaiLieuChanging(string value);
-    partial void OnTenTaiLieuChanged();
-    partial void OnSoTrangChanging(System.Nullable<int> value);
-    partial void OnSoTrangChanged();
-    partial void OnGiaChanging(System.Nullable<double> value);
-    partial void OnGiaChanged();
-    partial void OnNamXuatBanChanging(System.Nullable<int> value);
-    partial void OnNamXuatBanChanged();
-    partial void OnMaTacGiaChanging(System.Nullable<int> value);
-    partial void OnMaTacGiaChanged();
-    partial void OnMaNhaXuatBanChanging(System.Nullable<int> value);
-    partial void OnMaNhaXuatBanChanged();
-    partial void OnThongTinTaiLieuChanging(string value);
-    partial void OnThongTinTaiLieuChanged();
-    partial void OnMaNgonNguChanging(System.Nullable<int> value);
-    partial void OnMaNgonNguChanged();
-    partial void OnMaViTriChanging(string value);
-    partial void OnMaViTriChanged();
-    partial void OnHinhAnhChanging(string value);
-    partial void OnHinhAnhChanged();
-    partial void OnTinhTrangXoaChanging(System.Nullable<bool> value);
-    partial void OnTinhTrangXoaChanged();
-    #endregion
-		
 		public TAILIEU()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVach", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVach", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string MaVach
 		{
 			get
@@ -4469,11 +4439,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaVach != value))
 				{
-					this.OnMaVachChanging(value);
-					this.SendPropertyChanging();
 					this._MaVach = value;
-					this.SendPropertyChanged("MaVach");
-					this.OnMaVachChanged();
 				}
 			}
 		}
@@ -4489,11 +4455,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaTaiLieu != value))
 				{
-					this.OnMaTaiLieuChanging(value);
-					this.SendPropertyChanging();
 					this._MaTaiLieu = value;
-					this.SendPropertyChanged("MaTaiLieu");
-					this.OnMaTaiLieuChanged();
 				}
 			}
 		}
@@ -4509,11 +4471,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaLoaiTaiLieu != value))
 				{
-					this.OnMaLoaiTaiLieuChanging(value);
-					this.SendPropertyChanging();
 					this._MaLoaiTaiLieu = value;
-					this.SendPropertyChanged("MaLoaiTaiLieu");
-					this.OnMaLoaiTaiLieuChanged();
 				}
 			}
 		}
@@ -4529,11 +4487,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaDauTaiLieu != value))
 				{
-					this.OnMaDauTaiLieuChanging(value);
-					this.SendPropertyChanging();
 					this._MaDauTaiLieu = value;
-					this.SendPropertyChanged("MaDauTaiLieu");
-					this.OnMaDauTaiLieuChanged();
 				}
 			}
 		}
@@ -4549,11 +4503,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaChuDe != value))
 				{
-					this.OnMaChuDeChanging(value);
-					this.SendPropertyChanging();
 					this._MaChuDe = value;
-					this.SendPropertyChanged("MaChuDe");
-					this.OnMaChuDeChanged();
 				}
 			}
 		}
@@ -4569,16 +4519,12 @@ namespace BLL_DAL
 			{
 				if ((this._MaTap != value))
 				{
-					this.OnMaTapChanging(value);
-					this.SendPropertyChanging();
 					this._MaTap = value;
-					this.SendPropertyChanged("MaTap");
-					this.OnMaTapChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiLieu", DbType="NVarChar(200)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiLieu", DbType="NVarChar(MAX)")]
 		public string TenTaiLieu
 		{
 			get
@@ -4589,11 +4535,7 @@ namespace BLL_DAL
 			{
 				if ((this._TenTaiLieu != value))
 				{
-					this.OnTenTaiLieuChanging(value);
-					this.SendPropertyChanging();
 					this._TenTaiLieu = value;
-					this.SendPropertyChanged("TenTaiLieu");
-					this.OnTenTaiLieuChanged();
 				}
 			}
 		}
@@ -4609,11 +4551,7 @@ namespace BLL_DAL
 			{
 				if ((this._SoTrang != value))
 				{
-					this.OnSoTrangChanging(value);
-					this.SendPropertyChanging();
 					this._SoTrang = value;
-					this.SendPropertyChanged("SoTrang");
-					this.OnSoTrangChanged();
 				}
 			}
 		}
@@ -4629,11 +4567,7 @@ namespace BLL_DAL
 			{
 				if ((this._Gia != value))
 				{
-					this.OnGiaChanging(value);
-					this.SendPropertyChanging();
 					this._Gia = value;
-					this.SendPropertyChanged("Gia");
-					this.OnGiaChanged();
 				}
 			}
 		}
@@ -4649,11 +4583,7 @@ namespace BLL_DAL
 			{
 				if ((this._NamXuatBan != value))
 				{
-					this.OnNamXuatBanChanging(value);
-					this.SendPropertyChanging();
 					this._NamXuatBan = value;
-					this.SendPropertyChanged("NamXuatBan");
-					this.OnNamXuatBanChanged();
 				}
 			}
 		}
@@ -4669,11 +4599,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaTacGia != value))
 				{
-					this.OnMaTacGiaChanging(value);
-					this.SendPropertyChanging();
 					this._MaTacGia = value;
-					this.SendPropertyChanged("MaTacGia");
-					this.OnMaTacGiaChanged();
 				}
 			}
 		}
@@ -4689,16 +4615,12 @@ namespace BLL_DAL
 			{
 				if ((this._MaNhaXuatBan != value))
 				{
-					this.OnMaNhaXuatBanChanging(value);
-					this.SendPropertyChanging();
 					this._MaNhaXuatBan = value;
-					this.SendPropertyChanged("MaNhaXuatBan");
-					this.OnMaNhaXuatBanChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NVarChar(MAX)")]
 		public string ThongTinTaiLieu
 		{
 			get
@@ -4709,11 +4631,7 @@ namespace BLL_DAL
 			{
 				if ((this._ThongTinTaiLieu != value))
 				{
-					this.OnThongTinTaiLieuChanging(value);
-					this.SendPropertyChanging();
 					this._ThongTinTaiLieu = value;
-					this.SendPropertyChanged("ThongTinTaiLieu");
-					this.OnThongTinTaiLieuChanged();
 				}
 			}
 		}
@@ -4729,11 +4647,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaNgonNgu != value))
 				{
-					this.OnMaNgonNguChanging(value);
-					this.SendPropertyChanging();
 					this._MaNgonNgu = value;
-					this.SendPropertyChanged("MaNgonNgu");
-					this.OnMaNgonNguChanged();
 				}
 			}
 		}
@@ -4749,11 +4663,7 @@ namespace BLL_DAL
 			{
 				if ((this._MaViTri != value))
 				{
-					this.OnMaViTriChanging(value);
-					this.SendPropertyChanging();
 					this._MaViTri = value;
-					this.SendPropertyChanged("MaViTri");
-					this.OnMaViTriChanged();
 				}
 			}
 		}
@@ -4769,11 +4679,7 @@ namespace BLL_DAL
 			{
 				if ((this._HinhAnh != value))
 				{
-					this.OnHinhAnhChanging(value);
-					this.SendPropertyChanging();
 					this._HinhAnh = value;
-					this.SendPropertyChanged("HinhAnh");
-					this.OnHinhAnhChanged();
 				}
 			}
 		}
@@ -4789,32 +4695,8 @@ namespace BLL_DAL
 			{
 				if ((this._TinhTrangXoa != value))
 				{
-					this.OnTinhTrangXoaChanging(value);
-					this.SendPropertyChanging();
 					this._TinhTrangXoa = value;
-					this.SendPropertyChanged("TinhTrangXoa");
-					this.OnTinhTrangXoaChanged();
 				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -6389,6 +6271,132 @@ namespace BLL_DAL
 				if ((this._TinhTrangXoa != value))
 				{
 					this._TinhTrangXoa = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_TAILIEUCUNGCHUDE")]
+	public partial class VW_TAILIEUCUNGCHUDE
+	{
+		
+		private string _MaTaiLieu;
+		
+		private string _TenChuDe;
+		
+		private string _TenTaiLieu;
+		
+		public VW_TAILIEUCUNGCHUDE()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTaiLieu", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MaTaiLieu
+		{
+			get
+			{
+				return this._MaTaiLieu;
+			}
+			set
+			{
+				if ((this._MaTaiLieu != value))
+				{
+					this._MaTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenChuDe", DbType="NVarChar(200)")]
+		public string TenChuDe
+		{
+			get
+			{
+				return this._TenChuDe;
+			}
+			set
+			{
+				if ((this._TenChuDe != value))
+				{
+					this._TenChuDe = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiLieu", DbType="NVarChar(200)")]
+		public string TenTaiLieu
+		{
+			get
+			{
+				return this._TenTaiLieu;
+			}
+			set
+			{
+				if ((this._TenTaiLieu != value))
+				{
+					this._TenTaiLieu = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_TAILIEUCUNGTACGIA")]
+	public partial class VW_TAILIEUCUNGTACGIA
+	{
+		
+		private string _TenTaiLieu;
+		
+		private string _MaTaiLieu;
+		
+		private string _TenTacGia;
+		
+		public VW_TAILIEUCUNGTACGIA()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTaiLieu", DbType="NVarChar(200)")]
+		public string TenTaiLieu
+		{
+			get
+			{
+				return this._TenTaiLieu;
+			}
+			set
+			{
+				if ((this._TenTaiLieu != value))
+				{
+					this._TenTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaTaiLieu", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MaTaiLieu
+		{
+			get
+			{
+				return this._MaTaiLieu;
+			}
+			set
+			{
+				if ((this._MaTaiLieu != value))
+				{
+					this._MaTaiLieu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTacGia", DbType="NVarChar(200)")]
+		public string TenTacGia
+		{
+			get
+			{
+				return this._TenTacGia;
+			}
+			set
+			{
+				if ((this._TenTacGia != value))
+				{
+					this._TenTacGia = value;
 				}
 			}
 		}

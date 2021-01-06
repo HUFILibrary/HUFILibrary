@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVienCNTP" Class="DB_QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTPConnectionString2" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVienCNTP2" Class="DB_QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-RDLUFLH4\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTP2ConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHUDE" Member="CHUDEs">
     <Type Name="CHUDE">
       <Column Name="MaChuDe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -227,19 +227,19 @@
   </Table>
   <Table Name="dbo.TAILIEU" Member="TAILIEUs">
     <Type Name="TAILIEU">
-      <Column Name="MaVach" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaVach" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="MaLoaiTaiLieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaDauTaiLieu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MaChuDe" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaTap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SoTrang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaTacGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNhaXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -342,6 +342,20 @@
       <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEUCUNGCHUDE" Member="VW_TAILIEUCUNGCHUDEs">
+    <Type Name="VW_TAILIEUCUNGCHUDE">
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TAILIEUCUNGTACGIA" Member="VW_TAILIEUCUNGTACGIAs">
+    <Type Name="VW_TAILIEUCUNGTACGIA">
+      <Column Name="TenTaiLieu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaTaiLieu" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TenTacGia" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.VW_TAILIEUDAMUON" Member="VW_TAILIEUDAMUONs">

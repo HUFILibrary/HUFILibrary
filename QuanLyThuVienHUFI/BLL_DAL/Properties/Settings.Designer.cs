@@ -77,5 +77,16 @@ namespace BLL_DAL.Properties {
                 return ((string)(this["QuanLyThuVienCNTPConnectionString3"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-RDLUFLH4\\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integra" +
+            "ted Security=True")]
+        public string QuanLyThuVienCNTP2ConnectionString1 {
+            get {
+                return ((string)(this["QuanLyThuVienCNTP2ConnectionString1"]));
+            }
+        }
     }
 }
