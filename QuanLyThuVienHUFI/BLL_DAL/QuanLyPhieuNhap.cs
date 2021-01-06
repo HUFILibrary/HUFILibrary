@@ -155,6 +155,7 @@ namespace BLL_DAL
         {
             TAILIEU matailieu = db.TAILIEUs.OrderByDescending(a => a.MaTaiLieu).First();
             string matl = (int.Parse(matailieu.MaTaiLieu.ToString()) + 1).ToString();
+            double? tongtien = 0;
             for (int i = 0; i < soluong; i++)
             {
                 TAILIEU rs = new TAILIEU();
@@ -171,7 +172,7 @@ namespace BLL_DAL
                 rs.MaTap = tl.MaTap;
                 rs.MaViTri = tl.MaViTri;
                 rs.TinhTrangXoa = false;
-
+                tongtien += rs.Gia != null?rs.Gia:0;
                 TAILIEU mavach = db.TAILIEUs.OrderByDescending(a => a.MaVach).First();
                 string mv = (int.Parse(mavach.MaVach.ToString()) + 1).ToString();
                 rs.MaVach = mv;
@@ -223,10 +224,14 @@ namespace BLL_DAL
                 {
                     return false;
                 }
-            }    
-            
+            }
 
-            
+            PHIEUNHAP pn = db.PHIEUNHAPs.Where(a => a.MaPhieuNhap == int.Parse(maphieunhap)).FirstOrDefault();
+            if(pn != null)
+            {
+                pn.TongTien += tongtien;
+                db.SubmitChanges();
+            }
 
             return true;
         }

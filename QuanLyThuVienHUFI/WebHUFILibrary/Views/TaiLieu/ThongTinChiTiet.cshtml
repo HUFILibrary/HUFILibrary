@@ -158,11 +158,14 @@
             <div class="content">
 
                 @{
+                     
                     if (ViewData["lstTLCungTacGia"] != null)
                     {
 
                         if (lstTLCTG.Count() < 3)
                         {
+                            
+                            @*<input type="hidden" data-haveslick="false" id="cungtacgia" />*@
                             foreach (VW_TAILIEUCUNGTACGIA tlCungTacGia in (List<VW_TAILIEUCUNGTACGIA>)ViewData["lstTLCungTacGia"])
                             {
                                 <div class="box">
@@ -184,6 +187,8 @@
                         }
                         else
                         {
+                            
+                            @*<input type="hidden" data-haveslick="true" id="cungtacgia" />*@
                             foreach (VW_TAILIEUCUNGTACGIA tlCungTacGia in (List<VW_TAILIEUCUNGTACGIA>)ViewData["lstTLCungTacGia"])
                             {
                                 <div class="box">
@@ -201,16 +206,7 @@
                                     </div>
                                 </div>
                             }
-                            <script type="text/javascript">
-                                $('.lienquantheotacgia .content').slick({
-                                    infinite: true,
-                                    slidesToShow: 3,
-                                    slidesToScroll: 3,
-                                    prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
-                                    nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
 
-                                });
-                            </script>
                         }
 
 
@@ -231,11 +227,14 @@
             </div>
             <div class="content">
                 @{
+                    
                     if (ViewData["lstTLCungChuDe"] != null)
                     {
 
                         if (lstTLCCD.Count() < 3)
                         {
+                            
+                            @*<input type="hidden" data-haveslick="false" id="cungchude" />*@
                             foreach (VW_TAILIEUCUNGCHUDE tlCungChuDe in (List<VW_TAILIEUCUNGCHUDE>)ViewData["lstTLCungChuDe"])
                             {
                                 <div class="box">
@@ -257,9 +256,11 @@
                         }
                         else
                         {
+                            
+                            @*<input type="hidden" data-haveslick="true" id="cungchude" />*@
                             foreach (VW_TAILIEUCUNGCHUDE tlCungChuDe in (List<VW_TAILIEUCUNGCHUDE>)ViewData["lstTLCungChuDe"])
                             {
-                                <div class="box">
+                                <div class="box" id="cungchude" data-haveslick="True">
                                     <div class="img">
                                         @{
                                             string hinhanh = "";
@@ -267,7 +268,7 @@
                                             string mavach2 = "";
                                             lstDicMaVachChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
                                         }
-                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img style="outline:none;" src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
 
                                     </div>
                                     <div class="text">
@@ -289,7 +290,18 @@
 </div>
 @if (lstTLCCD.Count > 3)
 {
-<script type="text/javascript">
+<script type="text/javascript" defer>
+    $('.lienquantheochude .content').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+        nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+    });
+    @*var itemsCD = document.getElementsByClassName('rowCD');
+    var itemsTG = document.getElementsByClassName('rowTG');
+    if (@flgHaveslickCD.ToString() == "True") {
         $('.lienquantheochude .content').slick({
             infinite: true,
             slidesToShow: 3,
@@ -298,7 +310,42 @@
             nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
 
         });
+    }
+    if (@flgHaveslickTG.ToString() == "True") {
+        $('.lienquantheotacgia .content').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
 
+        });
+    }*@
+    //var haveslick = document.getElementById("cungtacgia");
+    //var haveslickcd = document.getElementById("cungchude");
+    //    var data = haveslick.getAttribute('data-haveslick');
+    //    var datacd = haveslickcd.getAttribute('data-haveslick');
+    //    if (data == 'true') {
+    //        $('.lienquantheotacgia .content').slick({
+    //            infinite: true,
+    //            slidesToShow: 3,
+    //            slidesToScroll: 3,
+    //            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+    //            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+    //        });
+    //    }
+    //    if (datacd == 'true') {
+    //        $('.lienquantheochude .content').slick({
+    //            infinite: true,
+    //            slidesToShow: 3,
+    //            slidesToScroll: 3,
+    //            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+    //            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+    //        });
+    //    }
+    
         var loginDocGia = document.getElementById('loginDocGia');
         window.onload = function () {
         var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';

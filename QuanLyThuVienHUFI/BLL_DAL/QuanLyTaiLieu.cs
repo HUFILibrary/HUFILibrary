@@ -504,6 +504,7 @@ namespace BLL_DAL
         {
             if(themmoi == true)
             {
+                bool flg = true;
                 if (string.IsNullOrEmpty(tl.TenTaiLieu.ToString()) || string.IsNullOrEmpty(tl.SoTrang.ToString()) || string.IsNullOrEmpty(tl.Gia.ToString()) || string.IsNullOrEmpty(tl.NamXuatBan.ToString()) || string.IsNullOrEmpty(tl.MaTacGia.ToString()) || string.IsNullOrEmpty(tl.MaNhaXuatBan.ToString()) || string.IsNullOrEmpty(tl.ThongTinTaiLieu.ToString()) || string.IsNullOrEmpty(tl.MaNgonNgu.ToString()) || string.IsNullOrEmpty(tl.MaViTri.ToString()))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu.");
@@ -569,13 +570,17 @@ namespace BLL_DAL
                     {
                         db.TAILIEUs.InsertOnSubmit(rs);
                         db.SubmitChanges();
-                        MessageBox.Show("Thêm thành công tài liệu.");
                     }
                     catch(Exception ex)
                     {
+                        flg = false;
                         MessageBox.Show("Thêm không thành công tài liệu: " + rs.MaVach.ToString());
                         return;
                     }
+                }
+                if(flg == true)
+                {
+                    MessageBox.Show("Thêm thành công tài liệu.");
                 }
             }
             
