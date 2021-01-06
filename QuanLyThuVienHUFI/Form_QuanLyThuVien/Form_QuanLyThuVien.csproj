@@ -287,5 +287,8 @@
     <None Include="Resources\icons8-search-30.png" />
     <None Include="Resources\icons8-print-401.png" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
