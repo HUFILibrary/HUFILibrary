@@ -481,6 +481,7 @@ namespace Form_QuanLyThuVien
                 {
                     MessageBox.Show("Xoá chi tiết phiếu mượn thành công.");
                     QLP_M_dgvCTPM.DataSource = qlpm.loadDgvCT_Phieumuon(QLP_M_dgvDSM.CurrentRow.Cells[0].Value.ToString());
+                    loadDgvPhieuMuon();
                 }
                 else
                 {

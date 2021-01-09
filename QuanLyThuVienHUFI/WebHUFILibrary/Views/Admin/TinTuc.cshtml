@@ -1,0 +1,171 @@
+﻿@using BLL_DAL;
+@model PagedList.IPagedList<BLL_DAL.VW_TINTUC>
+@using PagedList;
+@using PagedList.Mvc;
+@using WebHUFILibrary.Models;
+@{
+    ViewBag.Title = "TinTuc";
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="main tintuc">
+    <div class="title">
+        <h2>Danh sách tin tức</h2>
+    </div>
+    <div class="line"></div>
+    <div class="content">
+        <div class="row">
+            <div class="addnew">
+                <div class="add">
+                    <a href="#">Thêm mới</a>
+                    <div class="img">
+                        <img src="~/Content/img/add.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="search">
+                <select class="selectSearch">
+                    <option value="1" class="optionSearch">Mã</option>
+                    <option value="2" class="optionSearch">Tiêu đề</option>
+                    <option value="3" class="optionSearch">Loại tin</option>
+                </select>
+                <input type="text" name="search" id="inputSearch">
+                <div class="img">
+                    <a href="#">
+                        <img src="~/Content/img/search.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="table__wrapper">
+            <div class="table">
+                <div class="row__table header">
+                    <div class="col col__id">
+                        <p>Mã</p>
+                    </div>
+                    <div class="col col__tieude">
+                        <p>Tiêu đề</p>
+                    </div>
+                    <div class="col col__loaitintuc">
+                        <p>Loại tin tức</p>
+                    </div>
+                    <div class="col col__xoa">
+                        <p>Xoá</p>
+                    </div>
+                    <div class="col col__sua">
+                        <p>Sửa</p>
+                    </div>
+                    <div class="col col__chitiet">
+                        <p>Chi tiết</p>
+                    </div>
+                </div>
+                @if (ViewData["lstTinTuc"] != null)
+                {
+                    List<VW_TINTUC> lstItem = (List<VW_TINTUC>)ViewData["lstTinTuc"];
+                    foreach (VW_TINTUC item in Model)
+                    {
+                        <div class="row__table" data-id="@item.MaTinTuc.ToString()">
+                            <div class="col col__id">
+                                <a href="@Url.Action("ThongTinTinTuc","Admin", new { matintuc = item.MaTinTuc.ToString() })">@item.MaTinTuc</a>
+                            </div>
+                            <div class="col col__tieude">
+                                <a href="@Url.Action("ThongTinTinTuc","Admin", new { matintuc = item.MaTinTuc.ToString() })">@item.TieuDe</a>
+                            </div>
+                            <div class="col col__loaitintuc">
+                                <a>@item.TenMaLoaiTinTuc</a>
+                            </div>
+                            <div class="col col__xoa">
+                                @*<a href="@Url.Action("XoaTinTuc","Admin", new { matintuc = item.MaTinTuc.ToString() })">Xoá</a>*@
+                                <a class="xoatintuc" data-matintuc="@item.MaTinTuc">Xoá</a>
+                            </div>
+                            <div class="col col__sua">
+                                <a href="@Url.Action("SuaTinTuc","Admin", new { matintuc = item.MaTinTuc.ToString() })">Sửa</a>
+                            </div>
+                            <div class="col col__chitiet">
+                                <a href="@Url.Action("ThongTinTinTuc","Admin", new { matintuc = item.MaTinTuc.ToString() })">Chi tiết</a>
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+            <div class="pagination__wrapper">
+                @*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber) trong @Model.PageCount*@
+                @Html.PagedListPager(Model, page => Url.Action("TinTuc", new
+                {
+                    page,
+                    CurrentTypeSearch = ViewBag.CurrentTypeSearch,
+                   CurrentTxtSearch = ViewBag.CurrentTxtSearch,
+                   CurrentSelectionNoiDung3 = ViewBag.CurrentSelectionNoiDung3
+
+                }))
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.xoatintuc').each(function (index) {
+        $(this).click(function () {
+            var isDel = confirm('Bạn có thực sự muốn xoá ?');
+            if (isDel) {
+                $.ajax({
+                    type: 'post',
+                    url: '@Url.Action("xoaTinTucAjax", "Admin")',
+                    dataType: 'json',
+                    data: {
+                        matintuc: $(this).attr('data-matintuc')
+                    },
+                    success: function (result) {
+                        if (result.rs) {
+                            alert('Xoá thành công.');
+                            location.href = '@Url.Action("TinTuc","Admin")';
+                        }
+                        else {
+                            alert('Quá trình xoá không thành công.');
+                            return false;
+                        }
+                    },
+                    error: function () {
+                        alert('Lỗi !');
+                    }
+                });
+            }
+            else {
+                return false;
+            }
+        })
+
+    });
+    @*$('#xoatintuc').click(function () {
+        var isDel = confirm('Bạn có thực sự muốn xoá ?');
+        if (isDel) {
+            $.ajax({
+                type: 'post',
+                url: '@Url.Action("xoaTinTucAjax", "Admin")',
+                dataType: 'json',
+                data: {
+                    matintuc: $('#xoatintuc').attr('data-matintuc')
+                },
+                success: function (result) {
+                    if (result.rs) {
+                        alert('Xoá thành công.');
+                        location.href = '@Url.Action("TinTuc","Admin")';
+                    }
+                    else {
+                        alert('Quá trình xoá không thành công.');
+                        return false;
+                    }
+                },
+                error: function () {
+                    alert('Lỗi !');
+                }
+            });
+        }
+        else {
+            return false;
+        }
+
+    });*@
+</script>
+
