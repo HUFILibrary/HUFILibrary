@@ -11,10 +11,15 @@ namespace WebHUFILibrary.Controllers
 {
     public class HomeController : Controller
     {
+        QuanLyTinTuc qltt = new QuanLyTinTuc();
         QuanLyTaiLieu qltl = new QuanLyTaiLieu();
         DB_QLTVDataContext ent = new DB_QLTVDataContext();
         public ActionResult Index()
         {
+            List<VW_TINTUC> lstTinTucSuKien = qltt.getLstTinTucSuKien();
+            List<VW_TINTUC> lstThongBao = qltt.getLstThongBao();
+            ViewData["lstTinTucSuKien"] = lstTinTucSuKien;
+            ViewData["lstThongBao"] = lstThongBao;
             return View();
         }
 
@@ -157,9 +162,43 @@ namespace WebHUFILibrary.Controllers
             return View(lstTL.OrderByDescending(a=>a.MaVach).ToPagedList(pageNumber,pageSize));
         }
 
+        public ActionResult SuKien(int? page)
+        {
+            int pageSize = 8;
+            int pageNumber = (page ?? 1);
 
+            List<VW_TINTUC> lstTinTucSuKien = qltt.getLstTinTucSuKien();
+            ViewData["lstTinTucSuKien"] = lstTinTucSuKien;
+            return View(lstTinTucSuKien.OrderBy(a => a.MaTinTuc).ToPagedList(pageNumber, pageSize));
+        }
 
+        public ActionResult ThongBao(int? page)
+        {
+            int pageSize = 8;
+            int pageNumber = (page ?? 1);
 
-        
+            List<VW_TINTUC> lstTinThongBao = qltt.getLstThongBao();
+            ViewData["lstTinThongBao"] = lstTinThongBao;
+            return View(lstTinThongBao.OrderBy(a => a.MaTinTuc).ToPagedList(pageNumber, pageSize));
+        }
+
+        public ActionResult ChiTietTinTuc(string matintuc)
+        {
+            if(string.IsNullOrEmpty(matintuc))
+            {
+                return RedirectToAction("Index","Home");
+            }
+            updateView(matintuc);
+            VW_TINTUC item = qltt.getTinTuc(matintuc);
+
+            ViewData["data"] = item;
+            return View();
+        }
+
+        public void updateView(string matintuc)
+        {
+            qltt.updateView(matintuc);
+        }
+
     }
 }

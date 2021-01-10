@@ -166,8 +166,10 @@
     <Content Include="Content\img\add.svg" />
     <Content Include="Content\img\arrowAdminDown.svg" />
     <Content Include="Content\img\arrowAdminRight.svg" />
+    <Content Include="Content\img\calendar.svg" />
     <Content Include="Content\img\chat.svg" />
     <Content Include="Content\img\downArrow.svg" />
+    <Content Include="Content\img\eye.svg" />
     <Content Include="Content\img\facebook.svg" />
     <Content Include="Content\img\instagram.svg" />
     <Content Include="Content\img\left-arrow.svg" />
@@ -204,6 +206,7 @@
     <Content Include="Content\js\lib\vendor.js" />
     <Content Include="Content\js\main.js" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\TinTuc\default.jpg" />
     <Content Include="Content\TinTuc\Logo\5\5.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -296,6 +299,10 @@
     <Content Include="Views\Admin\TinTuc.cshtml" />
     <Content Include="Views\Admin\SuaTinTuc.cshtml" />
     <Content Include="Views\Admin\ThongTinTinTuc.cshtml" />
+    <Content Include="Views\Admin\ThemTinTuc.cshtml" />
+    <Content Include="Views\Home\SuKien.cshtml" />
+    <Content Include="Views\Home\ThongBao.cshtml" />
+    <Content Include="Views\Home\ChiTietTinTuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

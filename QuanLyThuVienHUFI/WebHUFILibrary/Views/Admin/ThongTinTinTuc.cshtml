@@ -3,6 +3,7 @@
     Layout = null;
     VW_TINTUC item = (VW_TINTUC)ViewData["data"];
     List<LOAITINTUC> lstLoaiTinTuc = (List<LOAITINTUC>)ViewData["lstLoaiTinTuc"];
+    VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
 }
 
 <!DOCTYPE html>
@@ -68,7 +69,7 @@
                 <div class="header">
                     <div class="account">
                         <div class="username">
-                            <p>Nguyễn Trần Nhật Minh Bá</p>
+                            <p>@nv.TenNhanVien</p>
                             <div class="img">
                                 <img src="~/Content/img/profile.svg" alt="">
                             </div>
@@ -167,6 +168,7 @@
                         <div class="row controls">
                             <a href="@Url.Action("TinTuc","Admin")">Quay về</a>
                             <a href="@Url.Action("SuaTinTuc","Admin", new { matintuc = item.MaTinTuc })">Sửa</a>
+                            <a data-matintuc="@item.MaTinTuc" id="xoatintuc" style="cursor:pointer;">Xoá</a>
                         </div>
                     </div>
                 </div>
@@ -174,6 +176,36 @@
         </div>
     </div>
     <script>
+        $('#xoatintuc').click(function () {
+            var isDel = confirm('Bạn có thực sự muốn xoá ?');
+            if (isDel) {
+                $.ajax({
+                    type: 'post',
+                    url: '@Url.Action("xoaTinTucAjax", "Admin")',
+                    dataType: 'json',
+                    data: {
+                        matintuc: $(this).attr('data-matintuc')
+                    },
+                    success: function (result) {
+                        if (result.rs) {
+                            alert('Xoá thành công.');
+                            location.href = '@Url.Action("TinTuc","Admin")';
+                        }
+                        else {
+                            alert('Quá trình xoá không thành công.');
+                            return false;
+                        }
+                    },
+                    error: function () {
+                        alert('Lỗi !');
+                    }
+                });
+            }
+            else {
+                return false;
+            }
+        })
+
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();

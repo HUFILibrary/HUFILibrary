@@ -17,26 +17,45 @@
         <div class="row">
             <div class="addnew">
                 <div class="add">
-                    <a href="#">Thêm mới</a>
+                    <a href="@Url.Action("ThemTinTuc","Admin")">Thêm mới</a>
                     <div class="img">
                         <img src="~/Content/img/add.svg" alt="">
                     </div>
                 </div>
             </div>
+            @using (Html.BeginForm("TinTuc", "Admin", FormMethod.Get, new { @style="height:100%;" }))
+            {
+                <div class="search">
+                    <select class="selectSearch" name="typesearch">
+                        @{
+                            List<SearchModel> lstTypeSearch = (List<SearchModel>)ViewData["lstTypeSearch"];
+                            foreach (SearchModel itemTypeSearch in lstTypeSearch)
+                            {
+                                if (itemTypeSearch._key == ViewBag.CurrentTypeSearch)
+                                {
+                                    <option value="@itemTypeSearch._key" class="optionSearch" selected>@itemTypeSearch._value</option>
+                                }
+                                else
+                                {
+                                    <option value="@itemTypeSearch._key" class="optionSearch">@itemTypeSearch._value</option>
+                                }
+                            }
 
-            <div class="search">
-                <select class="selectSearch">
-                    <option value="1" class="optionSearch">Mã</option>
+                        }
+                        @*<option value="1" class="optionSearch">Mã</option>
                     <option value="2" class="optionSearch">Tiêu đề</option>
-                    <option value="3" class="optionSearch">Loại tin</option>
-                </select>
-                <input type="text" name="search" id="inputSearch">
-                <div class="img">
-                    <a href="#">
-                        <img src="~/Content/img/search.svg" alt="">
-                    </a>
+                    <option value="3" class="optionSearch">Loại tin</option>*@
+                    </select>
+                    @Html.TextBox("txtsearch", ViewBag.CurrentTxtSearch as string, new { @class = "", id= "inputSearch" })
+                    @*<input type="text" name="txtsearch" id="inputSearch">*@
+                    <div class="img">
+                        <button type="submit">
+                            <img src="~/Content/img/search.svg" alt="">
+                        </button>
+                    </div>
                 </div>
-            </div>
+            }
+
         </div>
         <div class="table__wrapper">
             <div class="table">

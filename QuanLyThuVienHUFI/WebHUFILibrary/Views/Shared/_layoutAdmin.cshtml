@@ -1,6 +1,7 @@
-﻿
+﻿@using BLL_DAL;
 @{
     Layout = null;
+    VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
 }
 
 <!DOCTYPE html>
@@ -66,7 +67,7 @@
                 <div class="header">
                     <div class="account">
                         <div class="username">
-                            <p>Nguyễn Trần Nhật Minh Bá</p>
+                            <p>@nv.TenNhanVien</p>
                             <div class="img">
                                 <img src="~/Content/img/profile.svg" alt="">
                             </div>
