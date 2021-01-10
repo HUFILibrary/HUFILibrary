@@ -584,7 +584,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.44108F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.25926F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.32209F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 476F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
             this.tableLayoutPanel33.Controls.Add(this.label16, 0, 0);
             this.tableLayoutPanel33.Controls.Add(this.QLTL_btnSearchMaVach, 2, 0);
             this.tableLayoutPanel33.Controls.Add(this.tableLayoutPanel34, 1, 0);
@@ -603,7 +603,7 @@ namespace Form_QuanLyThuVien
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Location = new System.Drawing.Point(3, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(147, 50);
+            this.label16.Size = new System.Drawing.Size(146, 50);
             this.label16.TabIndex = 0;
             this.label16.Text = "Mã vạch:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,7 +616,7 @@ namespace Form_QuanLyThuVien
             this.QLTL_btnSearchMaVach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QLTL_btnSearchMaVach.FlatAppearance.BorderSize = 0;
             this.QLTL_btnSearchMaVach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QLTL_btnSearchMaVach.Location = new System.Drawing.Point(488, 3);
+            this.QLTL_btnSearchMaVach.Location = new System.Drawing.Point(485, 3);
             this.QLTL_btnSearchMaVach.Name = "QLTL_btnSearchMaVach";
             this.QLTL_btnSearchMaVach.Size = new System.Drawing.Size(68, 44);
             this.QLTL_btnSearchMaVach.TabIndex = 2;
@@ -630,13 +630,13 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel34.Controls.Add(this.QLTL_txtSearchMaVach, 0, 1);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(156, 3);
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(155, 3);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 3;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(326, 44);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(324, 44);
             this.tableLayoutPanel34.TabIndex = 3;
             // 
             // QLTL_txtSearchMaVach
@@ -645,7 +645,7 @@ namespace Form_QuanLyThuVien
             this.QLTL_txtSearchMaVach.Location = new System.Drawing.Point(3, 7);
             this.QLTL_txtSearchMaVach.Multiline = true;
             this.QLTL_txtSearchMaVach.Name = "QLTL_txtSearchMaVach";
-            this.QLTL_txtSearchMaVach.Size = new System.Drawing.Size(320, 29);
+            this.QLTL_txtSearchMaVach.Size = new System.Drawing.Size(318, 29);
             this.QLTL_txtSearchMaVach.TabIndex = 1;
             this.QLTL_txtSearchMaVach.TextChanged += new System.EventHandler(this.QLTL_txtSearchMaVach_TextChanged);
             // 
@@ -1264,11 +1264,11 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel4.Location = new System.Drawing.Point(1230, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53474F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.410256F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.730769F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.42308F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.29487F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.62081F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.451022F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.019078F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5148F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.39429F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(659, 624);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
@@ -1285,25 +1285,22 @@ namespace Form_QuanLyThuVien
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 4;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnCount = 5;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.Controls.Add(this.LTL_btnThem, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.LTL_btnXoa, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.LTL_btnSua, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.LTL_btnLuu, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 167);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 145);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(653, 83);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(653, 84);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // LTL_btnThem
@@ -1313,7 +1310,7 @@ namespace Form_QuanLyThuVien
             this.LTL_btnThem.Image = global::Form_QuanLyThuVien.Properties.Resources.add2;
             this.LTL_btnThem.Location = new System.Drawing.Point(3, 3);
             this.LTL_btnThem.Name = "LTL_btnThem";
-            this.LTL_btnThem.Size = new System.Drawing.Size(157, 77);
+            this.LTL_btnThem.Size = new System.Drawing.Size(124, 78);
             this.LTL_btnThem.TabIndex = 0;
             this.LTL_btnThem.UseVisualStyleBackColor = false;
             this.LTL_btnThem.Click += new System.EventHandler(this.LTL_btnThem_Click);
@@ -1323,9 +1320,9 @@ namespace Form_QuanLyThuVien
             this.LTL_btnXoa.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.LTL_btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LTL_btnXoa.Image = global::Form_QuanLyThuVien.Properties.Resources.delete;
-            this.LTL_btnXoa.Location = new System.Drawing.Point(166, 3);
+            this.LTL_btnXoa.Location = new System.Drawing.Point(133, 3);
             this.LTL_btnXoa.Name = "LTL_btnXoa";
-            this.LTL_btnXoa.Size = new System.Drawing.Size(157, 77);
+            this.LTL_btnXoa.Size = new System.Drawing.Size(124, 78);
             this.LTL_btnXoa.TabIndex = 0;
             this.LTL_btnXoa.UseVisualStyleBackColor = false;
             this.LTL_btnXoa.Click += new System.EventHandler(this.LTL_btnXoa_Click);
@@ -1335,9 +1332,9 @@ namespace Form_QuanLyThuVien
             this.LTL_btnSua.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.LTL_btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LTL_btnSua.Image = global::Form_QuanLyThuVien.Properties.Resources.fix;
-            this.LTL_btnSua.Location = new System.Drawing.Point(329, 3);
+            this.LTL_btnSua.Location = new System.Drawing.Point(263, 3);
             this.LTL_btnSua.Name = "LTL_btnSua";
-            this.LTL_btnSua.Size = new System.Drawing.Size(157, 77);
+            this.LTL_btnSua.Size = new System.Drawing.Size(124, 78);
             this.LTL_btnSua.TabIndex = 0;
             this.LTL_btnSua.UseVisualStyleBackColor = false;
             this.LTL_btnSua.Click += new System.EventHandler(this.LTL_btnSua_Click);
@@ -1347,9 +1344,9 @@ namespace Form_QuanLyThuVien
             this.LTL_btnLuu.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.LTL_btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LTL_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
-            this.LTL_btnLuu.Location = new System.Drawing.Point(492, 3);
+            this.LTL_btnLuu.Location = new System.Drawing.Point(393, 3);
             this.LTL_btnLuu.Name = "LTL_btnLuu";
-            this.LTL_btnLuu.Size = new System.Drawing.Size(158, 77);
+            this.LTL_btnLuu.Size = new System.Drawing.Size(124, 78);
             this.LTL_btnLuu.TabIndex = 0;
             this.LTL_btnLuu.UseVisualStyleBackColor = false;
             this.LTL_btnLuu.Click += new System.EventHandler(this.LTL_btnLuu_Click);
@@ -1365,8 +1362,8 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(653, 33);
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(653, 34);
             this.tableLayoutPanel35.TabIndex = 3;
             // 
             // LTL_txtTen
@@ -1500,11 +1497,11 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel8.Location = new System.Drawing.Point(1210, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 5;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53474F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.847134F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.324841F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.12739F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.64331F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.89862F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.03122F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.080655F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53503F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.57962F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(685, 628);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
@@ -1514,7 +1511,7 @@ namespace Form_QuanLyThuVien
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(679, 84);
+            this.label4.Size = new System.Drawing.Size(679, 87);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên chủ đề:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1522,21 +1519,21 @@ namespace Form_QuanLyThuVien
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 5;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel9.Controls.Add(this.CD_btnThem, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.CD_btnXoa, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.CD_btnSua, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.CD_btnLuu, 3, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 174);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 153);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(679, 88);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(679, 78);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // CD_btnThem
@@ -1546,7 +1543,7 @@ namespace Form_QuanLyThuVien
             this.CD_btnThem.Image = global::Form_QuanLyThuVien.Properties.Resources.add2;
             this.CD_btnThem.Location = new System.Drawing.Point(3, 3);
             this.CD_btnThem.Name = "CD_btnThem";
-            this.CD_btnThem.Size = new System.Drawing.Size(135, 82);
+            this.CD_btnThem.Size = new System.Drawing.Size(129, 72);
             this.CD_btnThem.TabIndex = 0;
             this.CD_btnThem.UseVisualStyleBackColor = false;
             this.CD_btnThem.Click += new System.EventHandler(this.CD_btnThem_Click);
@@ -1556,9 +1553,9 @@ namespace Form_QuanLyThuVien
             this.CD_btnXoa.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.CD_btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CD_btnXoa.Image = global::Form_QuanLyThuVien.Properties.Resources.delete;
-            this.CD_btnXoa.Location = new System.Drawing.Point(144, 3);
+            this.CD_btnXoa.Location = new System.Drawing.Point(138, 3);
             this.CD_btnXoa.Name = "CD_btnXoa";
-            this.CD_btnXoa.Size = new System.Drawing.Size(135, 82);
+            this.CD_btnXoa.Size = new System.Drawing.Size(129, 72);
             this.CD_btnXoa.TabIndex = 0;
             this.CD_btnXoa.UseVisualStyleBackColor = false;
             this.CD_btnXoa.Click += new System.EventHandler(this.CD_btnXoa_Click);
@@ -1568,9 +1565,9 @@ namespace Form_QuanLyThuVien
             this.CD_btnSua.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.CD_btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CD_btnSua.Image = global::Form_QuanLyThuVien.Properties.Resources.fix;
-            this.CD_btnSua.Location = new System.Drawing.Point(285, 3);
+            this.CD_btnSua.Location = new System.Drawing.Point(273, 3);
             this.CD_btnSua.Name = "CD_btnSua";
-            this.CD_btnSua.Size = new System.Drawing.Size(135, 82);
+            this.CD_btnSua.Size = new System.Drawing.Size(129, 72);
             this.CD_btnSua.TabIndex = 0;
             this.CD_btnSua.UseVisualStyleBackColor = false;
             this.CD_btnSua.Click += new System.EventHandler(this.CD_btnSua_Click);
@@ -1580,9 +1577,9 @@ namespace Form_QuanLyThuVien
             this.CD_btnLuu.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.CD_btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CD_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
-            this.CD_btnLuu.Location = new System.Drawing.Point(426, 3);
+            this.CD_btnLuu.Location = new System.Drawing.Point(408, 3);
             this.CD_btnLuu.Name = "CD_btnLuu";
-            this.CD_btnLuu.Size = new System.Drawing.Size(135, 82);
+            this.CD_btnLuu.Size = new System.Drawing.Size(129, 72);
             this.CD_btnLuu.TabIndex = 0;
             this.CD_btnLuu.UseVisualStyleBackColor = false;
             this.CD_btnLuu.Click += new System.EventHandler(this.CD_btnLuu_Click);
@@ -1594,12 +1591,12 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.17183F));
             this.tableLayoutPanel36.Controls.Add(this.CD_txtTen, 0, 0);
             this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel36.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel36.Location = new System.Drawing.Point(3, 90);
             this.tableLayoutPanel36.Name = "tableLayoutPanel36";
             this.tableLayoutPanel36.RowCount = 1;
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel36.Size = new System.Drawing.Size(679, 36);
+            this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel36.Size = new System.Drawing.Size(679, 38);
             this.tableLayoutPanel36.TabIndex = 3;
             // 
             // CD_txtTen
@@ -1733,11 +1730,11 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel12.Location = new System.Drawing.Point(1166, 3);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 5;
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53474F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.961783F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.10191F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.71975F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.15924F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.74134F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.083314F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.045793F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.05732F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.26115F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(729, 628);
             this.tableLayoutPanel12.TabIndex = 1;
             // 
@@ -1747,7 +1744,7 @@ namespace Form_QuanLyThuVien
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(723, 84);
+            this.label6.Size = new System.Drawing.Size(723, 86);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tên ngôn ngữ:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1755,21 +1752,21 @@ namespace Form_QuanLyThuVien
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 5;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel13.Controls.Add(this.NN_btnThem, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.NN_btnXoa, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.NN_btnSua, 2, 0);
             this.tableLayoutPanel13.Controls.Add(this.NN_btnLuu, 3, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 211);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 158);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(723, 98);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(723, 75);
             this.tableLayoutPanel13.TabIndex = 2;
             // 
             // NN_btnThem
@@ -1779,7 +1776,7 @@ namespace Form_QuanLyThuVien
             this.NN_btnThem.Image = global::Form_QuanLyThuVien.Properties.Resources.add2;
             this.NN_btnThem.Location = new System.Drawing.Point(3, 3);
             this.NN_btnThem.Name = "NN_btnThem";
-            this.NN_btnThem.Size = new System.Drawing.Size(144, 92);
+            this.NN_btnThem.Size = new System.Drawing.Size(138, 69);
             this.NN_btnThem.TabIndex = 0;
             this.NN_btnThem.UseVisualStyleBackColor = false;
             this.NN_btnThem.Click += new System.EventHandler(this.NN_btnThem_Click);
@@ -1789,9 +1786,9 @@ namespace Form_QuanLyThuVien
             this.NN_btnXoa.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.NN_btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NN_btnXoa.Image = global::Form_QuanLyThuVien.Properties.Resources.delete;
-            this.NN_btnXoa.Location = new System.Drawing.Point(153, 3);
+            this.NN_btnXoa.Location = new System.Drawing.Point(147, 3);
             this.NN_btnXoa.Name = "NN_btnXoa";
-            this.NN_btnXoa.Size = new System.Drawing.Size(144, 92);
+            this.NN_btnXoa.Size = new System.Drawing.Size(138, 69);
             this.NN_btnXoa.TabIndex = 0;
             this.NN_btnXoa.UseVisualStyleBackColor = false;
             this.NN_btnXoa.Click += new System.EventHandler(this.NN_btnXoa_Click);
@@ -1801,9 +1798,9 @@ namespace Form_QuanLyThuVien
             this.NN_btnSua.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.NN_btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NN_btnSua.Image = global::Form_QuanLyThuVien.Properties.Resources.fix;
-            this.NN_btnSua.Location = new System.Drawing.Point(303, 3);
+            this.NN_btnSua.Location = new System.Drawing.Point(291, 3);
             this.NN_btnSua.Name = "NN_btnSua";
-            this.NN_btnSua.Size = new System.Drawing.Size(144, 92);
+            this.NN_btnSua.Size = new System.Drawing.Size(138, 69);
             this.NN_btnSua.TabIndex = 0;
             this.NN_btnSua.UseVisualStyleBackColor = false;
             this.NN_btnSua.Click += new System.EventHandler(this.NN_btnSua_Click);
@@ -1813,9 +1810,9 @@ namespace Form_QuanLyThuVien
             this.NN_btnLuu.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.NN_btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NN_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
-            this.NN_btnLuu.Location = new System.Drawing.Point(453, 3);
+            this.NN_btnLuu.Location = new System.Drawing.Point(435, 3);
             this.NN_btnLuu.Name = "NN_btnLuu";
-            this.NN_btnLuu.Size = new System.Drawing.Size(144, 92);
+            this.NN_btnLuu.Size = new System.Drawing.Size(138, 69);
             this.NN_btnLuu.TabIndex = 0;
             this.NN_btnLuu.UseVisualStyleBackColor = false;
             this.NN_btnLuu.Click += new System.EventHandler(this.NN_btnLuu_Click);
@@ -1827,12 +1824,12 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel37.Controls.Add(this.NN_txtTenNN, 0, 0);
             this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel37.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel37.Location = new System.Drawing.Point(3, 89);
             this.tableLayoutPanel37.Name = "tableLayoutPanel37";
             this.tableLayoutPanel37.RowCount = 1;
             this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel37.Size = new System.Drawing.Size(723, 43);
+            this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel37.Size = new System.Drawing.Size(723, 44);
             this.tableLayoutPanel37.TabIndex = 3;
             // 
             // NN_txtTenNN
@@ -1967,11 +1964,11 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel16.Location = new System.Drawing.Point(1272, 3);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 5;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53474F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.687898F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.3758F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.44586F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.43312F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.92139F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.878952F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.085701F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53503F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.73885F));
             this.tableLayoutPanel16.Size = new System.Drawing.Size(623, 628);
             this.tableLayoutPanel16.TabIndex = 1;
             // 
@@ -1981,7 +1978,7 @@ namespace Form_QuanLyThuVien
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(617, 84);
+            this.label8.Size = new System.Drawing.Size(617, 87);
             this.label8.TabIndex = 0;
             this.label8.Text = "Tên nhà xuất bản:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1999,11 +1996,11 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel17.Controls.Add(this.NXB_btnSua, 2, 0);
             this.tableLayoutPanel17.Controls.Add(this.NXB_btnLuu, 3, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 211);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 152);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(617, 90);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(617, 78);
             this.tableLayoutPanel17.TabIndex = 2;
             // 
             // NXB_btnThem
@@ -2013,7 +2010,7 @@ namespace Form_QuanLyThuVien
             this.NXB_btnThem.Image = global::Form_QuanLyThuVien.Properties.Resources.add2;
             this.NXB_btnThem.Location = new System.Drawing.Point(3, 3);
             this.NXB_btnThem.Name = "NXB_btnThem";
-            this.NXB_btnThem.Size = new System.Drawing.Size(122, 84);
+            this.NXB_btnThem.Size = new System.Drawing.Size(122, 72);
             this.NXB_btnThem.TabIndex = 0;
             this.NXB_btnThem.UseVisualStyleBackColor = false;
             this.NXB_btnThem.Click += new System.EventHandler(this.NXB_btnThem_Click);
@@ -2025,7 +2022,7 @@ namespace Form_QuanLyThuVien
             this.NXB_btnXoa.Image = global::Form_QuanLyThuVien.Properties.Resources.delete;
             this.NXB_btnXoa.Location = new System.Drawing.Point(131, 3);
             this.NXB_btnXoa.Name = "NXB_btnXoa";
-            this.NXB_btnXoa.Size = new System.Drawing.Size(122, 84);
+            this.NXB_btnXoa.Size = new System.Drawing.Size(122, 72);
             this.NXB_btnXoa.TabIndex = 0;
             this.NXB_btnXoa.UseVisualStyleBackColor = false;
             this.NXB_btnXoa.Click += new System.EventHandler(this.NXB_btnXoa_Click);
@@ -2037,7 +2034,7 @@ namespace Form_QuanLyThuVien
             this.NXB_btnSua.Image = global::Form_QuanLyThuVien.Properties.Resources.fix;
             this.NXB_btnSua.Location = new System.Drawing.Point(259, 3);
             this.NXB_btnSua.Name = "NXB_btnSua";
-            this.NXB_btnSua.Size = new System.Drawing.Size(122, 84);
+            this.NXB_btnSua.Size = new System.Drawing.Size(122, 72);
             this.NXB_btnSua.TabIndex = 0;
             this.NXB_btnSua.UseVisualStyleBackColor = false;
             this.NXB_btnSua.Click += new System.EventHandler(this.NXB_btnSua_Click);
@@ -2049,7 +2046,7 @@ namespace Form_QuanLyThuVien
             this.NXB_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
             this.NXB_btnLuu.Location = new System.Drawing.Point(387, 3);
             this.NXB_btnLuu.Name = "NXB_btnLuu";
-            this.NXB_btnLuu.Size = new System.Drawing.Size(122, 84);
+            this.NXB_btnLuu.Size = new System.Drawing.Size(122, 72);
             this.NXB_btnLuu.TabIndex = 0;
             this.NXB_btnLuu.UseVisualStyleBackColor = false;
             this.NXB_btnLuu.Click += new System.EventHandler(this.NXB_btnLuu_Click);
@@ -2061,12 +2058,12 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.68071F));
             this.tableLayoutPanel38.Controls.Add(this.NXB_txtTen, 0, 0);
             this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel38.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel38.Location = new System.Drawing.Point(3, 90);
             this.tableLayoutPanel38.Name = "tableLayoutPanel38";
             this.tableLayoutPanel38.RowCount = 1;
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel38.Size = new System.Drawing.Size(617, 35);
+            this.tableLayoutPanel38.Size = new System.Drawing.Size(617, 37);
             this.tableLayoutPanel38.TabIndex = 3;
             // 
             // NXB_txtTen
@@ -2215,22 +2212,22 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel20.ColumnCount = 1;
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel20.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 6);
-            this.tableLayoutPanel20.Controls.Add(this.label14, 0, 3);
+            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 5);
+            this.tableLayoutPanel20.Controls.Add(this.label14, 0, 2);
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel39, 0, 1);
-            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel40, 0, 4);
+            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel40, 0, 3);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel20.Location = new System.Drawing.Point(1271, 3);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 8;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.68421F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.165605F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.324841F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.254777F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.528662F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.67516F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.73885F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.89172F));
+            this.tableLayoutPanel20.RowCount = 7;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.96696F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.982211F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.241423F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.982211F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.992376F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.9695F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.86531F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel20.Size = new System.Drawing.Size(624, 628);
             this.tableLayoutPanel20.TabIndex = 1;
             // 
@@ -2240,7 +2237,7 @@ namespace Form_QuanLyThuVien
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(618, 84);
+            this.label10.Size = new System.Drawing.Size(618, 81);
             this.label10.TabIndex = 0;
             this.label10.Text = "Tầng:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2248,21 +2245,21 @@ namespace Form_QuanLyThuVien
             // tableLayoutPanel21
             // 
             this.tableLayoutPanel21.ColumnCount = 5;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel21.Controls.Add(this.VT_btnThem, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.VT_btnXoa, 1, 0);
             this.tableLayoutPanel21.Controls.Add(this.VT_btnSua, 2, 0);
             this.tableLayoutPanel21.Controls.Add(this.VT_btnLuu, 3, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 357);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 220);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(618, 73);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(618, 69);
             this.tableLayoutPanel21.TabIndex = 2;
             // 
             // VT_btnThem
@@ -2272,7 +2269,7 @@ namespace Form_QuanLyThuVien
             this.VT_btnThem.Image = global::Form_QuanLyThuVien.Properties.Resources.add2;
             this.VT_btnThem.Location = new System.Drawing.Point(3, 3);
             this.VT_btnThem.Name = "VT_btnThem";
-            this.VT_btnThem.Size = new System.Drawing.Size(122, 67);
+            this.VT_btnThem.Size = new System.Drawing.Size(117, 63);
             this.VT_btnThem.TabIndex = 0;
             this.VT_btnThem.UseVisualStyleBackColor = false;
             this.VT_btnThem.Click += new System.EventHandler(this.VT_btnThem_Click);
@@ -2282,9 +2279,9 @@ namespace Form_QuanLyThuVien
             this.VT_btnXoa.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.VT_btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VT_btnXoa.Image = global::Form_QuanLyThuVien.Properties.Resources.delete;
-            this.VT_btnXoa.Location = new System.Drawing.Point(131, 3);
+            this.VT_btnXoa.Location = new System.Drawing.Point(126, 3);
             this.VT_btnXoa.Name = "VT_btnXoa";
-            this.VT_btnXoa.Size = new System.Drawing.Size(122, 67);
+            this.VT_btnXoa.Size = new System.Drawing.Size(117, 63);
             this.VT_btnXoa.TabIndex = 0;
             this.VT_btnXoa.UseVisualStyleBackColor = false;
             this.VT_btnXoa.Click += new System.EventHandler(this.VT_btnXoa_Click);
@@ -2294,9 +2291,9 @@ namespace Form_QuanLyThuVien
             this.VT_btnSua.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.VT_btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VT_btnSua.Image = global::Form_QuanLyThuVien.Properties.Resources.fix;
-            this.VT_btnSua.Location = new System.Drawing.Point(259, 3);
+            this.VT_btnSua.Location = new System.Drawing.Point(249, 3);
             this.VT_btnSua.Name = "VT_btnSua";
-            this.VT_btnSua.Size = new System.Drawing.Size(122, 67);
+            this.VT_btnSua.Size = new System.Drawing.Size(117, 63);
             this.VT_btnSua.TabIndex = 0;
             this.VT_btnSua.UseVisualStyleBackColor = false;
             this.VT_btnSua.Click += new System.EventHandler(this.VT_btnSua_Click);
@@ -2306,9 +2303,9 @@ namespace Form_QuanLyThuVien
             this.VT_btnLuu.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.VT_btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VT_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
-            this.VT_btnLuu.Location = new System.Drawing.Point(387, 3);
+            this.VT_btnLuu.Location = new System.Drawing.Point(372, 3);
             this.VT_btnLuu.Name = "VT_btnLuu";
-            this.VT_btnLuu.Size = new System.Drawing.Size(122, 67);
+            this.VT_btnLuu.Size = new System.Drawing.Size(117, 63);
             this.VT_btnLuu.TabIndex = 0;
             this.VT_btnLuu.UseVisualStyleBackColor = false;
             this.VT_btnLuu.Click += new System.EventHandler(this.VT_btnLuu_Click);
@@ -2317,7 +2314,7 @@ namespace Form_QuanLyThuVien
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(3, 173);
+            this.label14.Location = new System.Drawing.Point(3, 124);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(618, 32);
             this.label14.TabIndex = 3;
@@ -2331,12 +2328,12 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.13269F));
             this.tableLayoutPanel39.Controls.Add(this.cboViTri, 0, 0);
             this.tableLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel39.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel39.Location = new System.Drawing.Point(3, 84);
             this.tableLayoutPanel39.Name = "tableLayoutPanel39";
             this.tableLayoutPanel39.RowCount = 1;
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel39.Size = new System.Drawing.Size(618, 38);
+            this.tableLayoutPanel39.Size = new System.Drawing.Size(618, 37);
             this.tableLayoutPanel39.TabIndex = 6;
             // 
             // cboViTri
@@ -2354,12 +2351,12 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel40.Controls.Add(this.VT_txtKe, 0, 0);
             this.tableLayoutPanel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel40.Location = new System.Drawing.Point(3, 208);
+            this.tableLayoutPanel40.Location = new System.Drawing.Point(3, 159);
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             this.tableLayoutPanel40.RowCount = 1;
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel40.Size = new System.Drawing.Size(618, 34);
+            this.tableLayoutPanel40.Size = new System.Drawing.Size(618, 37);
             this.tableLayoutPanel40.TabIndex = 7;
             // 
             // VT_txtKe
@@ -2494,11 +2491,11 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel24.Location = new System.Drawing.Point(1372, 3);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 5;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.53474F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.00637F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.05732F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.96815F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.91083F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.87593F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.182992F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.075626F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.30251F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.56295F));
             this.tableLayoutPanel24.Size = new System.Drawing.Size(523, 628);
             this.tableLayoutPanel24.TabIndex = 1;
             // 
@@ -2508,7 +2505,7 @@ namespace Form_QuanLyThuVien
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(517, 84);
+            this.label12.Size = new System.Drawing.Size(517, 87);
             this.label12.TabIndex = 0;
             this.label12.Text = "Tên tác giả:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2516,21 +2513,21 @@ namespace Form_QuanLyThuVien
             // tableLayoutPanel25
             // 
             this.tableLayoutPanel25.ColumnCount = 5;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.83333F));
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel25.Controls.Add(this.TG_btnThem, 0, 0);
             this.tableLayoutPanel25.Controls.Add(this.TG_btnXoa, 1, 0);
             this.tableLayoutPanel25.Controls.Add(this.TG_btnSua, 2, 0);
             this.tableLayoutPanel25.Controls.Add(this.TG_btnLuu, 3, 0);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 211);
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 154);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 1;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(517, 87);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(517, 71);
             this.tableLayoutPanel25.TabIndex = 2;
             // 
             // TG_btnThem
@@ -2540,7 +2537,7 @@ namespace Form_QuanLyThuVien
             this.TG_btnThem.Image = global::Form_QuanLyThuVien.Properties.Resources.add2;
             this.TG_btnThem.Location = new System.Drawing.Point(3, 3);
             this.TG_btnThem.Name = "TG_btnThem";
-            this.TG_btnThem.Size = new System.Drawing.Size(101, 81);
+            this.TG_btnThem.Size = new System.Drawing.Size(97, 65);
             this.TG_btnThem.TabIndex = 0;
             this.TG_btnThem.UseVisualStyleBackColor = false;
             this.TG_btnThem.Click += new System.EventHandler(this.TG_btnThem_Click);
@@ -2550,9 +2547,9 @@ namespace Form_QuanLyThuVien
             this.TG_btnXoa.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.TG_btnXoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TG_btnXoa.Image = global::Form_QuanLyThuVien.Properties.Resources.delete;
-            this.TG_btnXoa.Location = new System.Drawing.Point(110, 3);
+            this.TG_btnXoa.Location = new System.Drawing.Point(106, 3);
             this.TG_btnXoa.Name = "TG_btnXoa";
-            this.TG_btnXoa.Size = new System.Drawing.Size(101, 81);
+            this.TG_btnXoa.Size = new System.Drawing.Size(97, 65);
             this.TG_btnXoa.TabIndex = 0;
             this.TG_btnXoa.UseVisualStyleBackColor = false;
             this.TG_btnXoa.Click += new System.EventHandler(this.TG_btnXoa_Click);
@@ -2562,9 +2559,9 @@ namespace Form_QuanLyThuVien
             this.TG_btnSua.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.TG_btnSua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TG_btnSua.Image = global::Form_QuanLyThuVien.Properties.Resources.fix;
-            this.TG_btnSua.Location = new System.Drawing.Point(217, 3);
+            this.TG_btnSua.Location = new System.Drawing.Point(209, 3);
             this.TG_btnSua.Name = "TG_btnSua";
-            this.TG_btnSua.Size = new System.Drawing.Size(101, 81);
+            this.TG_btnSua.Size = new System.Drawing.Size(97, 65);
             this.TG_btnSua.TabIndex = 0;
             this.TG_btnSua.UseVisualStyleBackColor = false;
             this.TG_btnSua.Click += new System.EventHandler(this.TG_btnSua_Click);
@@ -2574,9 +2571,9 @@ namespace Form_QuanLyThuVien
             this.TG_btnLuu.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.TG_btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TG_btnLuu.Image = global::Form_QuanLyThuVien.Properties.Resources.save;
-            this.TG_btnLuu.Location = new System.Drawing.Point(324, 3);
+            this.TG_btnLuu.Location = new System.Drawing.Point(312, 3);
             this.TG_btnLuu.Name = "TG_btnLuu";
-            this.TG_btnLuu.Size = new System.Drawing.Size(101, 81);
+            this.TG_btnLuu.Size = new System.Drawing.Size(97, 65);
             this.TG_btnLuu.TabIndex = 0;
             this.TG_btnLuu.UseVisualStyleBackColor = false;
             this.TG_btnLuu.Click += new System.EventHandler(this.TG_btnLuu_Click);
@@ -2588,12 +2585,12 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel41.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.62934F));
             this.tableLayoutPanel41.Controls.Add(this.TG_txtTenTG, 0, 0);
             this.tableLayoutPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel41.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel41.Location = new System.Drawing.Point(3, 90);
             this.tableLayoutPanel41.Name = "tableLayoutPanel41";
             this.tableLayoutPanel41.RowCount = 1;
             this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel41.Size = new System.Drawing.Size(517, 37);
+            this.tableLayoutPanel41.Size = new System.Drawing.Size(517, 39);
             this.tableLayoutPanel41.TabIndex = 3;
             // 
             // TG_txtTenTG

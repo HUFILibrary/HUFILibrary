@@ -810,8 +810,9 @@ namespace Form_QuanLyThuVien
             // 
             // QLP_M_dpkNgayMuon
             // 
+            this.QLP_M_dpkNgayMuon.CustomFormat = "dd/MM/yyyy";
             this.QLP_M_dpkNgayMuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLP_M_dpkNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.QLP_M_dpkNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.QLP_M_dpkNgayMuon.Location = new System.Drawing.Point(196, 129);
             this.QLP_M_dpkNgayMuon.Margin = new System.Windows.Forms.Padding(4);
             this.QLP_M_dpkNgayMuon.Name = "QLP_M_dpkNgayMuon";
@@ -820,8 +821,9 @@ namespace Form_QuanLyThuVien
             // 
             // QLP_M_dtpThoiHanMuon
             // 
+            this.QLP_M_dtpThoiHanMuon.CustomFormat = "dd/MM/yyyy";
             this.QLP_M_dtpThoiHanMuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLP_M_dtpThoiHanMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.QLP_M_dtpThoiHanMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.QLP_M_dtpThoiHanMuon.Location = new System.Drawing.Point(620, 129);
             this.QLP_M_dtpThoiHanMuon.Margin = new System.Windows.Forms.Padding(4);
             this.QLP_M_dtpThoiHanMuon.Name = "QLP_M_dtpThoiHanMuon";
@@ -3202,7 +3204,7 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(285, 29);
             this.kryptonLabel4.TabIndex = 0;
-            this.kryptonLabel4.Values.Text = "Số lượng";
+            this.kryptonLabel4.Values.Text = "Tìm kiếm";
             // 
             // tableLayoutPanel53
             // 

@@ -65,6 +65,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_QLTV.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DSTK_CD.cs" />
+    <Compile Include="DSTK_Khoa.cs" />
+    <Compile Include="DSTK_LTL.cs" />
+    <Compile Include="DSTK_PhiCoc.cs" />
+    <Compile Include="DSTK_TLPM.cs" />
+    <Compile Include="DSTK_TLTheoKhoang.cs" />
     <Compile Include="ExcelReport.cs" />
     <Compile Include="PhanQuyen.cs" />
     <Compile Include="PhieuMuonTreHanModel.cs" />

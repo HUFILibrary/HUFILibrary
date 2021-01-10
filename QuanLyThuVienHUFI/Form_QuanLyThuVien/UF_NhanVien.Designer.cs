@@ -197,7 +197,7 @@ namespace Form_QuanLyThuVien
             this.NV_dgvDSNV.RowHeadersWidth = 51;
             this.NV_dgvDSNV.RowTemplate.Height = 24;
             this.NV_dgvDSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.NV_dgvDSNV.Size = new System.Drawing.Size(1236, 824);
+            this.NV_dgvDSNV.Size = new System.Drawing.Size(1236, 820);
             this.NV_dgvDSNV.TabIndex = 0;
             this.NV_dgvDSNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NV_dgvDSNV_CellClick);
             // 
@@ -208,6 +208,7 @@ namespace Form_QuanLyThuVien
             this.Column1.HeaderText = "Tên nhân viên";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 122;
             // 
             // Column2
             // 
@@ -216,7 +217,7 @@ namespace Form_QuanLyThuVien
             this.Column2.HeaderText = "Ngày sinh";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 82;
+            this.Column2.Width = 99;
             // 
             // Column3
             // 
@@ -225,7 +226,7 @@ namespace Form_QuanLyThuVien
             this.Column3.HeaderText = "Giới tính";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 75;
+            this.Column3.Width = 91;
             // 
             // Column4
             // 
@@ -234,7 +235,7 @@ namespace Form_QuanLyThuVien
             this.Column4.HeaderText = "Số điện thoại";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 97;
+            this.Column4.Width = 120;
             // 
             // Column5
             // 
@@ -243,7 +244,7 @@ namespace Form_QuanLyThuVien
             this.Column5.HeaderText = "CMND";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 72;
+            this.Column5.Width = 86;
             // 
             // Column6
             // 
@@ -252,7 +253,7 @@ namespace Form_QuanLyThuVien
             this.Column6.HeaderText = "Địa chỉ";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 53;
+            this.Column6.Width = 65;
             // 
             // Column7
             // 
@@ -261,7 +262,7 @@ namespace Form_QuanLyThuVien
             this.Column7.HeaderText = "Ngày vào làm";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 82;
+            this.Column7.Width = 101;
             // 
             // Column8
             // 
@@ -270,6 +271,7 @@ namespace Form_QuanLyThuVien
             this.Column8.HeaderText = "Tình trạng tài khoản";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 123;
             // 
             // Column9
             // 
@@ -278,7 +280,7 @@ namespace Form_QuanLyThuVien
             this.Column9.HeaderText = "Mật khẩu";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
-            this.Column9.Width = 80;
+            this.Column9.Width = 95;
             // 
             // Column10
             // 
@@ -287,7 +289,7 @@ namespace Form_QuanLyThuVien
             this.Column10.HeaderText = "Loại nhân viên";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
-            this.Column10.Width = 104;
+            this.Column10.Width = 126;
             // 
             // Column11
             // 
@@ -305,7 +307,7 @@ namespace Form_QuanLyThuVien
             this.Column12.HeaderText = "Hình ảnh";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
-            this.Column12.Width = 79;
+            this.Column12.Width = 94;
             // 
             // tableLayoutPanel3
             // 
@@ -441,7 +443,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.58496F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.41505F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(593, 824);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(593, 820);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // tableLayoutPanel5
@@ -458,8 +460,8 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 156F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(587, 157);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 157F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(587, 156);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -489,13 +491,13 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.68421F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.31579F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(410, 153);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(410, 152);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // kryptonLabel6
             // 
             this.kryptonLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel6.Location = new System.Drawing.Point(3, 114);
+            this.kryptonLabel6.Location = new System.Drawing.Point(3, 113);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(153, 37);
@@ -505,7 +507,7 @@ namespace Form_QuanLyThuVien
             // NV_txtSDT
             // 
             this.NV_txtSDT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NV_txtSDT.Location = new System.Drawing.Point(162, 114);
+            this.NV_txtSDT.Location = new System.Drawing.Point(162, 113);
             this.NV_txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NV_txtSDT.Multiline = true;
             this.NV_txtSDT.Name = "NV_txtSDT";
@@ -520,7 +522,7 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel5.Location = new System.Drawing.Point(3, 78);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(153, 32);
+            this.kryptonLabel5.Size = new System.Drawing.Size(153, 31);
             this.kryptonLabel5.TabIndex = 0;
             this.kryptonLabel5.Values.Text = "Loại nhân viên";
             // 
@@ -575,7 +577,7 @@ namespace Form_QuanLyThuVien
             this.NV_cboLoaiNV.Location = new System.Drawing.Point(162, 78);
             this.NV_cboLoaiNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NV_cboLoaiNV.Name = "NV_cboLoaiNV";
-            this.NV_cboLoaiNV.Size = new System.Drawing.Size(207, 21);
+            this.NV_cboLoaiNV.Size = new System.Drawing.Size(207, 25);
             this.NV_cboLoaiNV.TabIndex = 1;
             // 
             // NV_btnEditLoaiNV
@@ -584,7 +586,7 @@ namespace Form_QuanLyThuVien
             this.NV_btnEditLoaiNV.Location = new System.Drawing.Point(375, 78);
             this.NV_btnEditLoaiNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NV_btnEditLoaiNV.Name = "NV_btnEditLoaiNV";
-            this.NV_btnEditLoaiNV.Size = new System.Drawing.Size(32, 32);
+            this.NV_btnEditLoaiNV.Size = new System.Drawing.Size(32, 31);
             this.NV_btnEditLoaiNV.StateCommon.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.NV_btnEditLoaiNV.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
             this.NV_btnEditLoaiNV.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -608,7 +610,7 @@ namespace Form_QuanLyThuVien
             this.NV_ptbAvatar.Location = new System.Drawing.Point(4, 4);
             this.NV_ptbAvatar.Margin = new System.Windows.Forms.Padding(4);
             this.NV_ptbAvatar.Name = "NV_ptbAvatar";
-            this.NV_ptbAvatar.Size = new System.Drawing.Size(163, 149);
+            this.NV_ptbAvatar.Size = new System.Drawing.Size(163, 148);
             this.NV_ptbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.NV_ptbAvatar.TabIndex = 1;
             this.NV_ptbAvatar.TabStop = false;
@@ -635,7 +637,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel7.Controls.Add(this.NV_txtDiaChi, 2, 5);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel10, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 163);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 162);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 11;
@@ -650,7 +652,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.891729F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.057331F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.71564F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(587, 659);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(587, 656);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // NV_btnChonAnh
@@ -757,7 +759,7 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel10.Location = new System.Drawing.Point(170, 126);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(159, 20);
+            this.kryptonLabel10.Size = new System.Drawing.Size(159, 24);
             this.kryptonLabel10.TabIndex = 0;
             this.kryptonLabel10.Values.Text = "Tình trạng TK";
             // 
@@ -825,7 +827,7 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel9.Location = new System.Drawing.Point(170, 241);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(159, 20);
+            this.kryptonLabel9.Size = new System.Drawing.Size(159, 24);
             this.kryptonLabel9.TabIndex = 0;
             this.kryptonLabel9.Values.Text = "Địa chỉ";
             // 
@@ -836,7 +838,7 @@ namespace Form_QuanLyThuVien
             this.NV_txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NV_txtDiaChi.Multiline = true;
             this.NV_txtDiaChi.Name = "NV_txtDiaChi";
-            this.NV_txtDiaChi.Size = new System.Drawing.Size(205, 141);
+            this.NV_txtDiaChi.Size = new System.Drawing.Size(205, 140);
             this.NV_txtDiaChi.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NV_txtDiaChi.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
             this.NV_txtDiaChi.TabIndex = 1;
@@ -862,7 +864,7 @@ namespace Form_QuanLyThuVien
             this.NV_txtCMND.Location = new System.Drawing.Point(3, 6);
             this.NV_txtCMND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NV_txtCMND.Name = "NV_txtCMND";
-            this.NV_txtCMND.Size = new System.Drawing.Size(199, 23);
+            this.NV_txtCMND.Size = new System.Drawing.Size(199, 27);
             this.NV_txtCMND.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NV_txtCMND.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
             this.NV_txtCMND.TabIndex = 1;

@@ -117,7 +117,7 @@ namespace BLL_DAL
     #endregion
 		
 		public DB_QLTVDataContext() : 
-				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTP2ConnectionString2, mappingSource)
+				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTP2ConnectionString11, mappingSource)
 		{
 			OnCreated();
 		}
@@ -5760,7 +5760,11 @@ namespace BLL_DAL
 			}
 		}
 		
+<<<<<<< Updated upstream
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaNgan", DbType="NVarChar(200)")]
+=======
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaNgan", DbType="NVarChar(500)")]
+>>>>>>> Stashed changes
 		public string MoTaNgan
 		{
 			get
@@ -6698,7 +6702,11 @@ namespace BLL_DAL
 			}
 		}
 		
+<<<<<<< Updated upstream
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+=======
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NVarChar(MAX)")]
+>>>>>>> Stashed changes
 		public string ThongTinTaiLieu
 		{
 			get
@@ -7607,7 +7615,7 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NVarChar(MAX)")]
 		public string ThongTinTaiLieu
 		{
 			get
@@ -8246,7 +8254,7 @@ namespace BLL_DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NVarChar(MAX)")]
 		public string ThongTinTaiLieu
 		{
 			get

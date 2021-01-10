@@ -57,6 +57,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -283,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\defaul.png" />
+    <None Include="Resources\icons8-maximize-window-40.png" />
     <Content Include="Resources\icons8-print-40.png" />
     <None Include="Resources\icons8-search-30.png" />
     <None Include="Resources\icons8-print-401.png" />

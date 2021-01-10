@@ -493,7 +493,7 @@ namespace Form_QuanLyThuVien
                 cboViTri.Text = "Tầng 4";
             }
 
-            VT_txtKe.Text = VT_dgvDSVT.CurrentRow.Cells[2].Value.ToString();
+            VT_txtKe.Text = VT_dgvDSVT.CurrentRow.Cells[3].Value.ToString();
 
             VT_btnXoa.Enabled = true;
             VT_btnSua.Enabled = true;

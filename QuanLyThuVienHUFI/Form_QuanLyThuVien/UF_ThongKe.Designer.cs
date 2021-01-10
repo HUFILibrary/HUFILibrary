@@ -29,6 +29,8 @@ namespace Form_QuanLyThuVien
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -142,6 +144,13 @@ namespace Form_QuanLyThuVien
             this.QLTK_PM_dtp1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.QLTK_PM_dtp2 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.QLTK_PM_dgvDS = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
@@ -208,13 +217,48 @@ namespace Form_QuanLyThuVien
             this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel44 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel45 = new System.Windows.Forms.TableLayoutPanel();
+            this.kryptonGroupBox9 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.tableLayoutPanel53 = new System.Windows.Forms.TableLayoutPanel();
+            this.QLTK_dgvKQTK = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.tableLayoutPanel48 = new System.Windows.Forms.TableLayoutPanel();
+            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.QLTK_lblTongCong = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.QLTK_btnInKQ = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonGroupBox10 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonGroupBox8 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.tableLayoutPanel46 = new System.Windows.Forms.TableLayoutPanel();
+            this.kryptonGroupBox12 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.tableLayoutPanel52 = new System.Windows.Forms.TableLayoutPanel();
+            this.QLTK_rdbTaiLieu = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbLoaiTL = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbKhoa = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbPhiCoc = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbChuDe = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_btnXemKetQua = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonGroupBox11 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.tableLayoutPanel47 = new System.Windows.Forms.TableLayoutPanel();
+            this.QLTK_rdbTuNgay = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbTheoThang = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbTheoNam = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbTheoNgay = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbTuThang = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_rdbTuNam = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.QLTK_dtpTheoNgay = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpNgayBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpNgayKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpTheoThang = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpThangBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpThangKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpTheoNam = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpNamBD = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.QLTK_dtpNamKT = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.chart_Kq = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -302,6 +346,36 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel42.SuspendLayout();
             this.tableLayoutPanel43.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLTK_PXL_dgvPXL)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            this.tableLayoutPanel44.SuspendLayout();
+            this.tableLayoutPanel45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox9.Panel)).BeginInit();
+            this.kryptonGroupBox9.Panel.SuspendLayout();
+            this.kryptonGroupBox9.SuspendLayout();
+            this.tableLayoutPanel53.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QLTK_dgvKQTK)).BeginInit();
+            this.tableLayoutPanel48.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10.Panel)).BeginInit();
+            this.kryptonGroupBox10.Panel.SuspendLayout();
+            this.kryptonGroupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8.Panel)).BeginInit();
+            this.kryptonGroupBox8.Panel.SuspendLayout();
+            this.kryptonGroupBox8.SuspendLayout();
+            this.tableLayoutPanel46.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox12.Panel)).BeginInit();
+            this.kryptonGroupBox12.Panel.SuspendLayout();
+            this.kryptonGroupBox12.SuspendLayout();
+            this.tableLayoutPanel52.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox11.Panel)).BeginInit();
+            this.kryptonGroupBox11.Panel.SuspendLayout();
+            this.kryptonGroupBox11.SuspendLayout();
+            this.tableLayoutPanel47.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -347,6 +421,7 @@ namespace Form_QuanLyThuVien
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(4, 78);
@@ -1762,6 +1837,62 @@ namespace Form_QuanLyThuVien
             this.QLTK_PM_dgvDS.Size = new System.Drawing.Size(2016, 569);
             this.QLTK_PM_dgvDS.TabIndex = 1;
             // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column15.DataPropertyName = "MaPhieuMuon";
+            this.Column15.HeaderText = "Mã phiếu mượn";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column16.DataPropertyName = "MaTheThuVien";
+            this.Column16.HeaderText = "Mã thẻ thư viện";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column17.DataPropertyName = "TenNhanVien";
+            this.Column17.HeaderText = "Tên nhân viên";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.DataPropertyName = "NgayLap";
+            this.Column18.HeaderText = "Ngày lập";
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column19.DataPropertyName = "ThoiHanMuon";
+            this.Column19.HeaderText = "Thời hạn mượn";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column20.DataPropertyName = "SoLuongTreHan";
+            this.Column20.HeaderText = "Số lượng tài liệu trể";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            // 
+            // Column21
+            // 
+            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column21.DataPropertyName = "SoNgayTre";
+            this.Column21.HeaderText = "Số ngày trễ";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.tableLayoutPanel25);
@@ -2635,61 +2766,575 @@ namespace Form_QuanLyThuVien
             this.Column63.MinimumWidth = 6;
             this.Column63.Name = "Column63";
             // 
-            // Column15
+            // tabPage8
             // 
-            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column15.DataPropertyName = "MaPhieuMuon";
-            this.Column15.HeaderText = "Mã phiếu mượn";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
+            this.tabPage8.Controls.Add(this.tableLayoutPanel44);
+            this.tabPage8.Location = new System.Drawing.Point(4, 49);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(2024, 815);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Theo thời gian";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // Column16
+            // tableLayoutPanel44
             // 
-            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column16.DataPropertyName = "MaTheThuVien";
-            this.Column16.HeaderText = "Mã thẻ thư viện";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
+            this.tableLayoutPanel44.ColumnCount = 1;
+            this.tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel44.Controls.Add(this.tableLayoutPanel45, 0, 1);
+            this.tableLayoutPanel44.Controls.Add(this.kryptonGroupBox8, 0, 0);
+            this.tableLayoutPanel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel44.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel44.Name = "tableLayoutPanel44";
+            this.tableLayoutPanel44.RowCount = 2;
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.35583F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.64417F));
+            this.tableLayoutPanel44.Size = new System.Drawing.Size(2024, 815);
+            this.tableLayoutPanel44.TabIndex = 0;
             // 
-            // Column17
+            // tableLayoutPanel45
             // 
-            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column17.DataPropertyName = "TenNhanVien";
-            this.Column17.HeaderText = "Tên nhân viên";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
+            this.tableLayoutPanel45.ColumnCount = 2;
+            this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.09118F));
+            this.tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.90882F));
+            this.tableLayoutPanel45.Controls.Add(this.kryptonGroupBox9, 0, 0);
+            this.tableLayoutPanel45.Controls.Add(this.kryptonGroupBox10, 1, 0);
+            this.tableLayoutPanel45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel45.Location = new System.Drawing.Point(3, 283);
+            this.tableLayoutPanel45.Name = "tableLayoutPanel45";
+            this.tableLayoutPanel45.RowCount = 1;
+            this.tableLayoutPanel45.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel45.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 529F));
+            this.tableLayoutPanel45.Size = new System.Drawing.Size(2018, 529);
+            this.tableLayoutPanel45.TabIndex = 0;
             // 
-            // Column18
+            // kryptonGroupBox9
             // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column18.DataPropertyName = "NgayLap";
-            this.Column18.HeaderText = "Ngày lập";
-            this.Column18.MinimumWidth = 6;
-            this.Column18.Name = "Column18";
+            this.kryptonGroupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox9.Location = new System.Drawing.Point(3, 3);
+            this.kryptonGroupBox9.Name = "kryptonGroupBox9";
             // 
-            // Column19
+            // kryptonGroupBox9.Panel
             // 
-            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column19.DataPropertyName = "ThoiHanMuon";
-            this.Column19.HeaderText = "Thời hạn mượn";
-            this.Column19.MinimumWidth = 6;
-            this.Column19.Name = "Column19";
+            this.kryptonGroupBox9.Panel.Controls.Add(this.tableLayoutPanel53);
+            this.kryptonGroupBox9.Size = new System.Drawing.Size(1246, 523);
+            this.kryptonGroupBox9.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonGroupBox9.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.kryptonGroupBox9.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox9.TabIndex = 0;
+            this.kryptonGroupBox9.Values.Heading = "Kết quả thống kê theo dạng bảng";
             // 
-            // Column20
+            // tableLayoutPanel53
             // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column20.DataPropertyName = "SoLuongTreHan";
-            this.Column20.HeaderText = "Số lượng tài liệu trể";
-            this.Column20.MinimumWidth = 6;
-            this.Column20.Name = "Column20";
+            this.tableLayoutPanel53.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel53.ColumnCount = 1;
+            this.tableLayoutPanel53.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel53.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel53.Controls.Add(this.QLTK_dgvKQTK, 0, 0);
+            this.tableLayoutPanel53.Controls.Add(this.tableLayoutPanel48, 0, 1);
+            this.tableLayoutPanel53.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel53.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel53.Name = "tableLayoutPanel53";
+            this.tableLayoutPanel53.RowCount = 2;
+            this.tableLayoutPanel53.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.30303F));
+            this.tableLayoutPanel53.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.69697F));
+            this.tableLayoutPanel53.Size = new System.Drawing.Size(1242, 495);
+            this.tableLayoutPanel53.TabIndex = 0;
             // 
-            // Column21
+            // QLTK_dgvKQTK
             // 
-            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column21.DataPropertyName = "SoNgayTre";
-            this.Column21.HeaderText = "Số ngày trễ";
-            this.Column21.MinimumWidth = 6;
-            this.Column21.Name = "Column21";
+            this.QLTK_dgvKQTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QLTK_dgvKQTK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dgvKQTK.Location = new System.Drawing.Point(3, 3);
+            this.QLTK_dgvKQTK.Name = "QLTK_dgvKQTK";
+            this.QLTK_dgvKQTK.ReadOnly = true;
+            this.QLTK_dgvKQTK.RowHeadersWidth = 51;
+            this.QLTK_dgvKQTK.RowTemplate.Height = 24;
+            this.QLTK_dgvKQTK.Size = new System.Drawing.Size(1236, 441);
+            this.QLTK_dgvKQTK.TabIndex = 0;
+            // 
+            // tableLayoutPanel48
+            // 
+            this.tableLayoutPanel48.ColumnCount = 6;
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.345979F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.952959F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.00303F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.579666F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.10774F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85888F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel48.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel48.Controls.Add(this.kryptonLabel14, 2, 0);
+            this.tableLayoutPanel48.Controls.Add(this.QLTK_lblTongCong, 4, 0);
+            this.tableLayoutPanel48.Controls.Add(this.QLTK_btnInKQ, 5, 0);
+            this.tableLayoutPanel48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel48.Location = new System.Drawing.Point(3, 450);
+            this.tableLayoutPanel48.Name = "tableLayoutPanel48";
+            this.tableLayoutPanel48.RowCount = 1;
+            this.tableLayoutPanel48.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel48.Size = new System.Drawing.Size(1236, 42);
+            this.tableLayoutPanel48.TabIndex = 1;
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel14.Location = new System.Drawing.Point(216, 3);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(266, 36);
+            this.kryptonLabel14.TabIndex = 0;
+            this.kryptonLabel14.Values.Text = "Tổng cộng";
+            // 
+            // QLTK_lblTongCong
+            // 
+            this.QLTK_lblTongCong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_lblTongCong.Location = new System.Drawing.Point(519, 3);
+            this.QLTK_lblTongCong.Name = "QLTK_lblTongCong";
+            this.QLTK_lblTongCong.Size = new System.Drawing.Size(379, 36);
+            this.QLTK_lblTongCong.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Far;
+            this.QLTK_lblTongCong.TabIndex = 0;
+            this.QLTK_lblTongCong.Values.Text = "kryptonLabel14";
+            // 
+            // QLTK_btnInKQ
+            // 
+            this.QLTK_btnInKQ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_btnInKQ.Location = new System.Drawing.Point(904, 3);
+            this.QLTK_btnInKQ.Name = "QLTK_btnInKQ";
+            this.QLTK_btnInKQ.Size = new System.Drawing.Size(329, 36);
+            this.QLTK_btnInKQ.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.QLTK_btnInKQ.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.QLTK_btnInKQ.StateCommon.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnInKQ.StateCommon.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnInKQ.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.QLTK_btnInKQ.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnInKQ.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLTK_btnInKQ.StateNormal.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnInKQ.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnInKQ.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.QLTK_btnInKQ.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLTK_btnInKQ.TabIndex = 2;
+            this.QLTK_btnInKQ.Values.Text = "In kết quả";
+            // 
+            // kryptonGroupBox10
+            // 
+            this.kryptonGroupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox10.Location = new System.Drawing.Point(1255, 3);
+            this.kryptonGroupBox10.Name = "kryptonGroupBox10";
+            // 
+            // kryptonGroupBox10.Panel
+            // 
+            this.kryptonGroupBox10.Panel.Controls.Add(this.chart_Kq);
+            this.kryptonGroupBox10.Size = new System.Drawing.Size(760, 523);
+            this.kryptonGroupBox10.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonGroupBox10.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.kryptonGroupBox10.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox10.TabIndex = 1;
+            this.kryptonGroupBox10.Values.Heading = "Kết quả thống kê theo đồ thị";
+            // 
+            // kryptonGroupBox8
+            // 
+            this.kryptonGroupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox8.Location = new System.Drawing.Point(3, 3);
+            this.kryptonGroupBox8.Name = "kryptonGroupBox8";
+            // 
+            // kryptonGroupBox8.Panel
+            // 
+            this.kryptonGroupBox8.Panel.Controls.Add(this.tableLayoutPanel46);
+            this.kryptonGroupBox8.Size = new System.Drawing.Size(2018, 274);
+            this.kryptonGroupBox8.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonGroupBox8.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.kryptonGroupBox8.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox8.TabIndex = 1;
+            this.kryptonGroupBox8.Values.Heading = "Thông tin thống kê";
+            // 
+            // tableLayoutPanel46
+            // 
+            this.tableLayoutPanel46.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel46.ColumnCount = 3;
+            this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.13009F));
+            this.tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
+            this.tableLayoutPanel46.Controls.Add(this.kryptonGroupBox12, 1, 0);
+            this.tableLayoutPanel46.Controls.Add(this.kryptonGroupBox11, 0, 0);
+            this.tableLayoutPanel46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel46.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel46.Name = "tableLayoutPanel46";
+            this.tableLayoutPanel46.RowCount = 1;
+            this.tableLayoutPanel46.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel46.Size = new System.Drawing.Size(2014, 246);
+            this.tableLayoutPanel46.TabIndex = 0;
+            // 
+            // kryptonGroupBox12
+            // 
+            this.kryptonGroupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox12.Location = new System.Drawing.Point(506, 3);
+            this.kryptonGroupBox12.Name = "kryptonGroupBox12";
+            // 
+            // kryptonGroupBox12.Panel
+            // 
+            this.kryptonGroupBox12.Panel.Controls.Add(this.tableLayoutPanel52);
+            this.kryptonGroupBox12.Size = new System.Drawing.Size(338, 240);
+            this.kryptonGroupBox12.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonGroupBox12.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.kryptonGroupBox12.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox12.TabIndex = 2;
+            this.kryptonGroupBox12.Values.Heading = "Bộ chọn thống kê";
+            // 
+            // tableLayoutPanel52
+            // 
+            this.tableLayoutPanel52.ColumnCount = 2;
+            this.tableLayoutPanel52.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel52.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel52.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel52.Controls.Add(this.QLTK_rdbTaiLieu, 0, 0);
+            this.tableLayoutPanel52.Controls.Add(this.QLTK_rdbLoaiTL, 0, 1);
+            this.tableLayoutPanel52.Controls.Add(this.QLTK_rdbKhoa, 0, 2);
+            this.tableLayoutPanel52.Controls.Add(this.QLTK_rdbPhiCoc, 1, 1);
+            this.tableLayoutPanel52.Controls.Add(this.QLTK_rdbChuDe, 1, 0);
+            this.tableLayoutPanel52.Controls.Add(this.QLTK_btnXemKetQua, 0, 4);
+            this.tableLayoutPanel52.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel52.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel52.Name = "tableLayoutPanel52";
+            this.tableLayoutPanel52.RowCount = 5;
+            this.tableLayoutPanel52.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel52.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel52.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel52.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel52.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel52.Size = new System.Drawing.Size(334, 212);
+            this.tableLayoutPanel52.TabIndex = 0;
+            // 
+            // QLTK_rdbTaiLieu
+            // 
+            this.QLTK_rdbTaiLieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_rdbTaiLieu.Location = new System.Drawing.Point(3, 3);
+            this.QLTK_rdbTaiLieu.Name = "QLTK_rdbTaiLieu";
+            this.QLTK_rdbTaiLieu.Size = new System.Drawing.Size(161, 36);
+            this.QLTK_rdbTaiLieu.TabIndex = 0;
+            this.QLTK_rdbTaiLieu.Values.Text = "Tài liệu";
+            this.QLTK_rdbTaiLieu.CheckedChanged += new System.EventHandler(this.QLTK_rdbTaiLieu_CheckedChanged);
+            // 
+            // QLTK_rdbLoaiTL
+            // 
+            this.QLTK_rdbLoaiTL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_rdbLoaiTL.Location = new System.Drawing.Point(3, 45);
+            this.QLTK_rdbLoaiTL.Name = "QLTK_rdbLoaiTL";
+            this.QLTK_rdbLoaiTL.Size = new System.Drawing.Size(161, 36);
+            this.QLTK_rdbLoaiTL.TabIndex = 0;
+            this.QLTK_rdbLoaiTL.Values.Text = "Loại tài liệu";
+            this.QLTK_rdbLoaiTL.CheckedChanged += new System.EventHandler(this.QLTK_rdbLoaiTL_CheckedChanged);
+            // 
+            // QLTK_rdbKhoa
+            // 
+            this.QLTK_rdbKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_rdbKhoa.Location = new System.Drawing.Point(3, 87);
+            this.QLTK_rdbKhoa.Name = "QLTK_rdbKhoa";
+            this.QLTK_rdbKhoa.Size = new System.Drawing.Size(161, 36);
+            this.QLTK_rdbKhoa.TabIndex = 1;
+            this.QLTK_rdbKhoa.Values.Text = "Khoa";
+            this.QLTK_rdbKhoa.CheckedChanged += new System.EventHandler(this.QLTK_rdbKhoa_CheckedChanged);
+            // 
+            // QLTK_rdbPhiCoc
+            // 
+            this.QLTK_rdbPhiCoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_rdbPhiCoc.Location = new System.Drawing.Point(170, 45);
+            this.QLTK_rdbPhiCoc.Name = "QLTK_rdbPhiCoc";
+            this.QLTK_rdbPhiCoc.Size = new System.Drawing.Size(161, 36);
+            this.QLTK_rdbPhiCoc.TabIndex = 1;
+            this.QLTK_rdbPhiCoc.Values.Text = "Phí cọc";
+            this.QLTK_rdbPhiCoc.CheckedChanged += new System.EventHandler(this.QLTK_rdbPhiCoc_CheckedChanged);
+            // 
+            // QLTK_rdbChuDe
+            // 
+            this.QLTK_rdbChuDe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_rdbChuDe.Location = new System.Drawing.Point(170, 3);
+            this.QLTK_rdbChuDe.Name = "QLTK_rdbChuDe";
+            this.QLTK_rdbChuDe.Size = new System.Drawing.Size(161, 36);
+            this.QLTK_rdbChuDe.TabIndex = 1;
+            this.QLTK_rdbChuDe.Values.Text = "Chủ đề";
+            this.QLTK_rdbChuDe.CheckedChanged += new System.EventHandler(this.QLTK_rdbChuDe_CheckedChanged);
+            // 
+            // QLTK_btnXemKetQua
+            // 
+            this.QLTK_btnXemKetQua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_btnXemKetQua.Location = new System.Drawing.Point(3, 171);
+            this.QLTK_btnXemKetQua.Name = "QLTK_btnXemKetQua";
+            this.QLTK_btnXemKetQua.Size = new System.Drawing.Size(161, 38);
+            this.QLTK_btnXemKetQua.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.QLTK_btnXemKetQua.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.QLTK_btnXemKetQua.StateCommon.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnXemKetQua.StateCommon.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnXemKetQua.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.QLTK_btnXemKetQua.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnXemKetQua.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLTK_btnXemKetQua.StateNormal.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnXemKetQua.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.QLTK_btnXemKetQua.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.QLTK_btnXemKetQua.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLTK_btnXemKetQua.TabIndex = 2;
+            this.QLTK_btnXemKetQua.Values.Text = "Xem kết quả";
+            this.QLTK_btnXemKetQua.Click += new System.EventHandler(this.QLTK_btnXemKetQua_Click);
+            // 
+            // kryptonGroupBox11
+            // 
+            this.kryptonGroupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonGroupBox11.Location = new System.Drawing.Point(3, 3);
+            this.kryptonGroupBox11.Name = "kryptonGroupBox11";
+            // 
+            // kryptonGroupBox11.Panel
+            // 
+            this.kryptonGroupBox11.Panel.Controls.Add(this.tableLayoutPanel47);
+            this.kryptonGroupBox11.Size = new System.Drawing.Size(497, 240);
+            this.kryptonGroupBox11.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonGroupBox11.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.kryptonGroupBox11.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonGroupBox11.TabIndex = 0;
+            this.kryptonGroupBox11.Values.Heading = "Thời gian thống kê";
+            // 
+            // tableLayoutPanel47
+            // 
+            this.tableLayoutPanel47.ColumnCount = 4;
+            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_rdbTuNgay, 0, 1);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_rdbTheoThang, 0, 2);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_rdbTheoNam, 0, 4);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_rdbTheoNgay, 0, 0);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_rdbTuThang, 0, 3);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_rdbTuNam, 0, 5);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpTheoNgay, 1, 0);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpNgayBD, 1, 1);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpNgayKT, 3, 1);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpTheoThang, 1, 2);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpThangBD, 1, 3);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpThangKT, 3, 3);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpTheoNam, 1, 4);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpNamBD, 1, 5);
+            this.tableLayoutPanel47.Controls.Add(this.QLTK_dtpNamKT, 3, 5);
+            this.tableLayoutPanel47.Controls.Add(this.kryptonLabel11, 2, 1);
+            this.tableLayoutPanel47.Controls.Add(this.kryptonLabel12, 2, 3);
+            this.tableLayoutPanel47.Controls.Add(this.kryptonLabel13, 2, 5);
+            this.tableLayoutPanel47.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel47.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel47.Name = "tableLayoutPanel47";
+            this.tableLayoutPanel47.RowCount = 6;
+            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel47.Size = new System.Drawing.Size(493, 212);
+            this.tableLayoutPanel47.TabIndex = 0;
+            // 
+            // QLTK_rdbTuNgay
+            // 
+            this.QLTK_rdbTuNgay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QLTK_rdbTuNgay.Location = new System.Drawing.Point(3, 38);
+            this.QLTK_rdbTuNgay.Name = "QLTK_rdbTuNgay";
+            this.QLTK_rdbTuNgay.Size = new System.Drawing.Size(141, 24);
+            this.QLTK_rdbTuNgay.TabIndex = 0;
+            this.QLTK_rdbTuNgay.Values.Text = "Từ ngày";
+            this.QLTK_rdbTuNgay.CheckedChanged += new System.EventHandler(this.QLTK_rdbTuNgay_CheckedChanged);
+            // 
+            // QLTK_rdbTheoThang
+            // 
+            this.QLTK_rdbTheoThang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QLTK_rdbTheoThang.Location = new System.Drawing.Point(3, 73);
+            this.QLTK_rdbTheoThang.Name = "QLTK_rdbTheoThang";
+            this.QLTK_rdbTheoThang.Size = new System.Drawing.Size(141, 24);
+            this.QLTK_rdbTheoThang.TabIndex = 0;
+            this.QLTK_rdbTheoThang.Values.Text = "Trong tháng";
+            this.QLTK_rdbTheoThang.CheckedChanged += new System.EventHandler(this.QLTK_rdbTheoThang_CheckedChanged);
+            // 
+            // QLTK_rdbTheoNam
+            // 
+            this.QLTK_rdbTheoNam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QLTK_rdbTheoNam.Location = new System.Drawing.Point(3, 143);
+            this.QLTK_rdbTheoNam.Name = "QLTK_rdbTheoNam";
+            this.QLTK_rdbTheoNam.Size = new System.Drawing.Size(141, 24);
+            this.QLTK_rdbTheoNam.TabIndex = 0;
+            this.QLTK_rdbTheoNam.Values.Text = "Trong năm";
+            this.QLTK_rdbTheoNam.CheckedChanged += new System.EventHandler(this.QLTK_rdbTheoNam_CheckedChanged);
+            // 
+            // QLTK_rdbTheoNgay
+            // 
+            this.QLTK_rdbTheoNgay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QLTK_rdbTheoNgay.Location = new System.Drawing.Point(3, 3);
+            this.QLTK_rdbTheoNgay.Name = "QLTK_rdbTheoNgay";
+            this.QLTK_rdbTheoNgay.Size = new System.Drawing.Size(141, 24);
+            this.QLTK_rdbTheoNgay.TabIndex = 0;
+            this.QLTK_rdbTheoNgay.Values.Text = "Trong ngày";
+            this.QLTK_rdbTheoNgay.CheckedChanged += new System.EventHandler(this.QLTK_rdbTheoNgay_CheckedChanged);
+            // 
+            // QLTK_rdbTuThang
+            // 
+            this.QLTK_rdbTuThang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QLTK_rdbTuThang.Location = new System.Drawing.Point(3, 108);
+            this.QLTK_rdbTuThang.Name = "QLTK_rdbTuThang";
+            this.QLTK_rdbTuThang.Size = new System.Drawing.Size(141, 24);
+            this.QLTK_rdbTuThang.TabIndex = 0;
+            this.QLTK_rdbTuThang.Values.Text = "Từ tháng";
+            this.QLTK_rdbTuThang.CheckedChanged += new System.EventHandler(this.QLTK_rdbTuThang_CheckedChanged);
+            // 
+            // QLTK_rdbTuNam
+            // 
+            this.QLTK_rdbTuNam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.QLTK_rdbTuNam.Location = new System.Drawing.Point(3, 178);
+            this.QLTK_rdbTuNam.Name = "QLTK_rdbTuNam";
+            this.QLTK_rdbTuNam.Size = new System.Drawing.Size(141, 24);
+            this.QLTK_rdbTuNam.TabIndex = 0;
+            this.QLTK_rdbTuNam.Values.Text = "Từ năm";
+            this.QLTK_rdbTuNam.CheckedChanged += new System.EventHandler(this.QLTK_rdbTuNam_CheckedChanged);
+            // 
+            // QLTK_dtpTheoNgay
+            // 
+            this.QLTK_dtpTheoNgay.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpTheoNgay.CustomFormat = "dd/MM/yyyy";
+            this.QLTK_dtpTheoNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpTheoNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpTheoNgay.Location = new System.Drawing.Point(150, 3);
+            this.QLTK_dtpTheoNgay.Name = "QLTK_dtpTheoNgay";
+            this.QLTK_dtpTheoNgay.Size = new System.Drawing.Size(141, 29);
+            this.QLTK_dtpTheoNgay.TabIndex = 1;
+            // 
+            // QLTK_dtpNgayBD
+            // 
+            this.QLTK_dtpNgayBD.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpNgayBD.CustomFormat = "dd/MM/yyyy";
+            this.QLTK_dtpNgayBD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpNgayBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpNgayBD.Location = new System.Drawing.Point(150, 38);
+            this.QLTK_dtpNgayBD.Name = "QLTK_dtpNgayBD";
+            this.QLTK_dtpNgayBD.Size = new System.Drawing.Size(141, 29);
+            this.QLTK_dtpNgayBD.TabIndex = 1;
+            // 
+            // QLTK_dtpNgayKT
+            // 
+            this.QLTK_dtpNgayKT.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpNgayKT.CustomFormat = "dd/MM/yyyy";
+            this.QLTK_dtpNgayKT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpNgayKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpNgayKT.Location = new System.Drawing.Point(346, 38);
+            this.QLTK_dtpNgayKT.Name = "QLTK_dtpNgayKT";
+            this.QLTK_dtpNgayKT.Size = new System.Drawing.Size(144, 29);
+            this.QLTK_dtpNgayKT.TabIndex = 1;
+            // 
+            // QLTK_dtpTheoThang
+            // 
+            this.QLTK_dtpTheoThang.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpTheoThang.CustomFormat = "MM/yyy";
+            this.QLTK_dtpTheoThang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpTheoThang.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpTheoThang.Location = new System.Drawing.Point(150, 73);
+            this.QLTK_dtpTheoThang.Name = "QLTK_dtpTheoThang";
+            this.QLTK_dtpTheoThang.Size = new System.Drawing.Size(141, 29);
+            this.QLTK_dtpTheoThang.TabIndex = 1;
+            // 
+            // QLTK_dtpThangBD
+            // 
+            this.QLTK_dtpThangBD.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpThangBD.CustomFormat = "MM/yyyy";
+            this.QLTK_dtpThangBD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpThangBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpThangBD.Location = new System.Drawing.Point(150, 108);
+            this.QLTK_dtpThangBD.Name = "QLTK_dtpThangBD";
+            this.QLTK_dtpThangBD.Size = new System.Drawing.Size(141, 29);
+            this.QLTK_dtpThangBD.TabIndex = 1;
+            // 
+            // QLTK_dtpThangKT
+            // 
+            this.QLTK_dtpThangKT.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpThangKT.CustomFormat = "MM/yyyy";
+            this.QLTK_dtpThangKT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpThangKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpThangKT.Location = new System.Drawing.Point(346, 108);
+            this.QLTK_dtpThangKT.Name = "QLTK_dtpThangKT";
+            this.QLTK_dtpThangKT.Size = new System.Drawing.Size(144, 29);
+            this.QLTK_dtpThangKT.TabIndex = 1;
+            // 
+            // QLTK_dtpTheoNam
+            // 
+            this.QLTK_dtpTheoNam.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpTheoNam.CustomFormat = "yyyy";
+            this.QLTK_dtpTheoNam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpTheoNam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpTheoNam.Location = new System.Drawing.Point(150, 143);
+            this.QLTK_dtpTheoNam.Name = "QLTK_dtpTheoNam";
+            this.QLTK_dtpTheoNam.Size = new System.Drawing.Size(141, 29);
+            this.QLTK_dtpTheoNam.TabIndex = 1;
+            // 
+            // QLTK_dtpNamBD
+            // 
+            this.QLTK_dtpNamBD.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpNamBD.CustomFormat = "yyyy";
+            this.QLTK_dtpNamBD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpNamBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpNamBD.Location = new System.Drawing.Point(150, 178);
+            this.QLTK_dtpNamBD.Name = "QLTK_dtpNamBD";
+            this.QLTK_dtpNamBD.Size = new System.Drawing.Size(141, 31);
+            this.QLTK_dtpNamBD.TabIndex = 1;
+            // 
+            // QLTK_dtpNamKT
+            // 
+            this.QLTK_dtpNamKT.CalendarTodayDate = new System.DateTime(2021, 1, 7, 0, 0, 0, 0);
+            this.QLTK_dtpNamKT.CustomFormat = "yyyy";
+            this.QLTK_dtpNamKT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLTK_dtpNamKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.QLTK_dtpNamKT.Location = new System.Drawing.Point(346, 178);
+            this.QLTK_dtpNamKT.Name = "QLTK_dtpNamKT";
+            this.QLTK_dtpNamKT.Size = new System.Drawing.Size(144, 31);
+            this.QLTK_dtpNamKT.TabIndex = 1;
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel11.Location = new System.Drawing.Point(297, 38);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(43, 29);
+            this.kryptonLabel11.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel11.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel11.TabIndex = 2;
+            this.kryptonLabel11.Values.Text = "-";
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel12.Location = new System.Drawing.Point(297, 108);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(43, 29);
+            this.kryptonLabel12.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel12.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel12.TabIndex = 2;
+            this.kryptonLabel12.Values.Text = "-";
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel13.Location = new System.Drawing.Point(297, 178);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(43, 31);
+            this.kryptonLabel13.StateNormal.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel13.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel13.TabIndex = 2;
+            this.kryptonLabel13.Values.Text = "-";
+            // 
+            // chart_Kq
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart_Kq.ChartAreas.Add(chartArea2);
+            this.chart_Kq.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart_Kq.Legends.Add(legend2);
+            this.chart_Kq.Location = new System.Drawing.Point(0, 0);
+            this.chart_Kq.Name = "chart_Kq";
+            this.chart_Kq.Size = new System.Drawing.Size(756, 495);
+            this.chart_Kq.TabIndex = 0;
+            this.chart_Kq.Text = "chart1";
             // 
             // UF_ThongKe
             // 
@@ -2801,6 +3446,39 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel43.ResumeLayout(false);
             this.tableLayoutPanel43.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLTK_PXL_dgvPXL)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            this.tableLayoutPanel44.ResumeLayout(false);
+            this.tableLayoutPanel45.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox9.Panel)).EndInit();
+            this.kryptonGroupBox9.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox9)).EndInit();
+            this.kryptonGroupBox9.ResumeLayout(false);
+            this.tableLayoutPanel53.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QLTK_dgvKQTK)).EndInit();
+            this.tableLayoutPanel48.ResumeLayout(false);
+            this.tableLayoutPanel48.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10.Panel)).EndInit();
+            this.kryptonGroupBox10.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10)).EndInit();
+            this.kryptonGroupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8.Panel)).EndInit();
+            this.kryptonGroupBox8.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8)).EndInit();
+            this.kryptonGroupBox8.ResumeLayout(false);
+            this.tableLayoutPanel46.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox12.Panel)).EndInit();
+            this.kryptonGroupBox12.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox12)).EndInit();
+            this.kryptonGroupBox12.ResumeLayout(false);
+            this.tableLayoutPanel52.ResumeLayout(false);
+            this.tableLayoutPanel52.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox11.Panel)).EndInit();
+            this.kryptonGroupBox11.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox11)).EndInit();
+            this.kryptonGroupBox11.ResumeLayout(false);
+            this.tableLayoutPanel47.ResumeLayout(false);
+            this.tableLayoutPanel47.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2993,5 +3671,47 @@ namespace Form_QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel44;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel45;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox9;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox10;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel46;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel47;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTuNgay;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTheoThang;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTheoNam;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel53;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel52;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTheoNgay;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTuThang;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTuNam;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpTheoNgay;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpNgayBD;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpNgayKT;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpTheoThang;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpThangBD;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpThangKT;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpTheoNam;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpNamBD;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker QLTK_dtpNamKT;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView QLTK_dgvKQTK;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel48;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel14;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel QLTK_lblTongCong;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbTaiLieu;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbLoaiTL;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbKhoa;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbPhiCoc;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton QLTK_rdbChuDe;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton QLTK_btnXemKetQua;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel12;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel13;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton QLTK_btnInKQ;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_Kq;
     }
 }

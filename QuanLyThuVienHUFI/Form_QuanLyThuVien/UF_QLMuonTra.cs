@@ -78,6 +78,7 @@ namespace Form_QuanLyThuVien
             QLMT_TDG_btnChon.Enabled = false;
             QLMT_TDG_btnHuyChon.Enabled = false;
             QLMT_TDG_btnXacNhanVP.Enabled = false;
+           
             loadCboLoaiVP();
         }
 
@@ -106,13 +107,13 @@ namespace Form_QuanLyThuVien
             {
                 QLMT_lblMaThe.Text = item.MaTheThuVien;
                 QLMT_lblHoTenDG.Text = item.TenDocGia;
-                QLMT_lblNgaySinh.Text = item.NgaySinh.ToString();
+                QLMT_lblNgaySinh.Text = DateTime.Parse(item.NgaySinh.ToString()).ToString("dd/MM/yyyy");
                 QLMT_lblGioiTinh.Text = item.GioiTinh.ToString();
                 QLMT_lblEmail.Text = item.Email;
                 QLMT_lblSDT.Text = item.SoDienThoai;
-                QLMT_lblNgayLamThe.Text = item.NgayLamThe.ToString();
+                QLMT_lblNgayLamThe.Text = DateTime.Parse(item.NgayLamThe.ToString()).ToString("dd/MM/yyyy");
                 QLMT_lblDiaChi.Text = item.DiaChi.ToString();
-                QLMT_lblHSD.Text = item.HanSuDungTheThuVien.ToString();
+                QLMT_lblHSD.Text = DateTime.Parse(item.HanSuDungTheThuVien.ToString()).ToString("dd/MM/yyyy");
                 QLMT_lblCMND.Text = item.CMND.ToString();
                 if(item.TinhTrangTheThuVien == false)
                 {
@@ -190,15 +191,15 @@ namespace Form_QuanLyThuVien
                     MessageBox.Show("Số lượng tài liệu mượn của độc giả đạt mức tối đa của quy định thư viện.");
                     return;
                 }
-                TAILIEU tlChon = qlm.chonTaiLieu(QLMT_M_dgvTaiLieu.CurrentRow.Cells[1].Value.ToString(), dsTaiLieuChon);
+                TAILIEU tlChon = qlm.chonTaiLieu(QLMT_M_dgvTaiLieu.CurrentRow.Cells[0].Value.ToString(), dsTaiLieuChon);
                 if(tlChon != null)
                 {
                     dsTaiLieuChon.Add(tlChon);
                 }
                 loadDgvChiTietTaiLieuMuon();
             }
-            QLMT_M_lblNgayMuon.Text = DateTime.Now.ToString();
-            QLMT_M_lblNgayTraDuKien.Text = DateTime.Now.AddMonths(1).ToString();
+            QLMT_M_lblNgayMuon.Text = DateTime.Now.ToShortDateString();
+            QLMT_M_lblNgayTraDuKien.Text = DateTime.Now.AddMonths(1).ToLongDateString();
         }
 
         private void QLMT_btnXacNhanMuon_Click(object sender, EventArgs e)
@@ -632,9 +633,6 @@ namespace Form_QuanLyThuVien
 
 
             //luu chi tiet phieu nhap
-
-
-
             //reset dgv
             QLMT_T_dgvDSTL.DataSource = null;
             QLMT_T_dgvDSTL.Refresh();
@@ -662,6 +660,7 @@ namespace Form_QuanLyThuVien
             QLMT_T_btnChon.Enabled = false;
             QLMT_T_btnHuyChon.Enabled = false;
             QLMT_T_btnXacNhanTra.Enabled = false;
+            QLMT_T_txtSoNgayVP.Enabled = false;
 
             QLMT_T_chkNhanTienCoc.Checked = false;
 
@@ -779,7 +778,7 @@ namespace Form_QuanLyThuVien
                 {
                     QLMT_TDG_dgvDSTLTra.DataSource = qlt.layDGTuPMChuaTra(QLMT_TDG_txtTimMaDG.Text);
 
-                    for (int i = 0; i < QLMT_TDG_dgvDSTLTra.Rows.Count - 1; i++)
+                    for (int i = 0; i < QLMT_TDG_dgvDSTLTra.Rows.Count; i++)
                     {
 
                         if (qlt.layTTtra(int.Parse(QLMT_TDG_dgvDSTLTra.Rows[i].Cells[10].Value.ToString())))
@@ -843,17 +842,20 @@ namespace Form_QuanLyThuVien
             if (QLMT_TDG_dgvDSTLTra.CurrentRow.DefaultCellStyle.BackColor == Color.LightSkyBlue)
             {
                 MessageBox.Show("Tài liệu đã được trả !");
-                return;
             }
-            dr = dt2.NewRow();
-            dr["MaVach"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[1].Value.ToString());
-            dr["MaPhieuMuon"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[0].Value.ToString());
-            dr["TenTaiLieu"] = QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[2].Value.ToString();
-            dr["NgayLap"] = DateTime.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[8].Value.ToString());
-            dr["Gia"] = QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[9].Value.ToString();
+            else {
+                dr = dt2.NewRow();
+                dr["MaVach"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[1].Value.ToString());
+                dr["MaPhieuMuon"] = int.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[0].Value.ToString());
+                dr["TenTaiLieu"] = QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[2].Value.ToString();
+                dr["NgayLap"] = DateTime.Parse(QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[8].Value.ToString());
+                dr["Gia"] = QLMT_TDG_dgvDSTLTra.CurrentRow.Cells[9].Value.ToString();
 
-            dt2.Rows.Add(dr);
-            QLMT_TDG_dgvCT_TLTra.DataSource = dt2;
+                dt2.Rows.Add(dr);
+                QLMT_TDG_dgvCT_TLTra.DataSource = dt2;
+            }
+        
+            QLMT_TDG_btnXacNhanTra.Enabled = true;
         }
 
         private void QLMT_TDG_btnHuyChon_Click(object sender, EventArgs e)
@@ -872,8 +874,11 @@ namespace Form_QuanLyThuVien
             QLMT_TDG_txtSoNgayVP.Enabled = true;
             QLMT_TDG_cboLoaiVP.Enabled = true;
             QLMT_TDG_btnTinhTien.Enabled = true;
-            QLMT_TDG_btnXoa.Enabled = true;
-            
+            //QLMT_TDG_btnXoa.Enabled = true;
+            QLMT_TDG_btnHuyChon.Enabled = true;
+       
+
+
         }
 
         private void QLMT_TDG_btnXacNhanVP_Click(object sender, EventArgs e)
@@ -1040,8 +1045,11 @@ namespace Form_QuanLyThuVien
             QLMT_TDG_lblEmail.Text = "";
             QLMT_TDG_lblSDT.Text = "";
             QLMT_TDG_txtMV.Text = "";
+            QLMT_TDG_txtMV.Enabled = false;
             QLMT_TDG_txtTenNV.Text = "";
+            QLMT_TDG_txtTenNV.Enabled = false;
             QLMT_TDG_txtGiaTL.Text = "";
+            QLMT_TDG_txtGiaTL.Enabled = false;
             QLMT_TDG_lblTongtien.Text = "";
             QLMT_TDG_lblTongTienBT.Text = "";
 
@@ -1051,8 +1059,27 @@ namespace Form_QuanLyThuVien
             QLMT_TDG_btnChon.Enabled = false;
             QLMT_TDG_btnHuyChon.Enabled = false;
             QLMT_TDG_btnXacNhanVP.Enabled = false;
+            QLMT_TDG_txtSoNgayVP.ResetText();
 
             ////QLMT_TDG_chkTraTienCoc.Checked = false;
+        }
+
+        private void QLMT_TDG_dgvDSTLTra_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            QLMT_TDG_btnChon.Enabled = true;
+        }
+
+        private void QLMT_TDG_cboLoaiVP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (QLMT_TDG_cboLoaiVP.SelectedIndex == 1)
+            {
+
+                QLMT_TDG_txtSoNgayVP.Enabled = false;
+            }
+            else
+            {
+                QLMT_TDG_txtSoNgayVP.Enabled = true;
+            }
         }
     }
 }
