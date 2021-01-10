@@ -1,0 +1,158 @@
+﻿@using BLL_DAL;
+@using WebHUFILibrary.Models;
+@using PagedList;
+@using PagedList.Mvc;
+@using WebHUFILibrary.Models;
+@model PagedList.IPagedList<BLL_DAL.VW_TINTUC>
+@{
+    ViewBag.Title = "Tin tức - sự kiện";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<VW_TINTUC> lstTinTuc = (List<VW_TINTUC>)ViewData["lstTinTucSuKien"];
+}
+
+<section class="timkiem">
+    <div class="container">
+        <div class="title">
+            <p>Tin tức - sự kiện</p>
+        </div>
+    </div>
+</section>
+
+<section class="tintuc">
+    <div class="container">
+        <div class="tintuc__wrapper">
+            @foreach (VW_TINTUC item in Model)
+            {
+                string url = System.Web.HttpContext.Current.Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["LogoTinTuc"]);
+                string path = Path.Combine(url, item.MaTinTuc.ToString(), item.Logo.ToString());
+                string pathD = Path.Combine(url, item.MaTinTuc.ToString());
+                int i = 1;
+                if (Directory.Exists(pathD))
+                {
+                    i++;
+                }
+                if (File.Exists(path))
+                {
+                    i++;
+                }
+                if (!string.IsNullOrEmpty(item.Logo))
+                {
+                    i++;
+                }
+                if (i != 4)
+                {
+                    <div class="row">
+                        <div class="left">
+                            <div class="img">
+                                <a href="#"><img src="~/Content/TinTuc/default.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="title">
+                                <a href="@Url.Action("ChiTietTinTuc","Home",new { @matintuc = item.MaTinTuc })"><h3>@item.TieuDe</h3></a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <p>@item.MoTaNgan</p>
+                            </div>
+                            <div class="ngaylap">
+                                @{
+                                    DateTime ns = DateTime.Parse(item.NgayTao.ToString());
+                                    String nt = String.Format("{0:dd/MM/yyyy}", ns);
+                                }
+                                <p> <img src="~/Content/img/calendar.svg" alt=""> @nt</p>
+                            </div>
+                            <div class="xemthem">
+                                <a href="@Url.Action("ChiTietTinTuc","Home",new { @matintuc = item.MaTinTuc })">Xem thêm >></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="left">
+                            <div class="img">
+                                @{
+                                    string pathImg = "/Content/Tintuc/Logo/" + item.MaTinTuc.ToString() + "/" + item.Logo.ToString();
+                                }
+                                <a href="@Url.Action("ChiTietTinTuc","Home",new { @matintuc = item.MaTinTuc })"><img src="@pathImg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="title">
+                                <a href="@Url.Action("ChiTietTinTuc","Home",new { @matintuc = item.MaTinTuc })"><h3>@item.TieuDe</h3></a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="content">
+                                <p>@item.MoTaNgan</p>
+                            </div>
+                            <div class="ngaylap">
+                                @{
+                                    DateTime ns = DateTime.Parse(item.NgayTao.ToString());
+                                    String nt = String.Format("{0:dd/MM/yyyy}", ns);
+                                }
+                                <p> <img src="~/Content/img/calendar.svg" alt=""> @nt</p>
+                            </div>
+                            <div class="xemthem">
+                                <a href="@Url.Action("ChiTietTinTuc","Home",new { @matintuc = item.MaTinTuc })">Xem thêm >></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            }
+
+            @*@foreach (VW_TINTUC item in lstTinTuc)
+            {
+                <div class="row">
+                    <div class="left">
+                        <div class="img">
+                            <a href="#"><img src="/images/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title">
+                            <a href="#"><h3>Giải thưởng sao cho học sinh giỏi cấp tỉnh cấp thành phố cấp quốc gia</h3></a>
+                        </div>
+                        <div class="line"></div>
+                        <div class="content">
+                            <p>Giải thưởng sao cho học sinh giỏi cấp tGiải thưởng sao cho học sinh giỏi cấp tGiải thưởng sao cho học sinh giỏi cấp tGiải thưởng sao cho học sinh giỏi cấp tGiải thưởng sao cho học sinh giỏi cấp tGiải thưởng sao cho học sinh giỏi cấp tGiải thưởng sao cho học sinh giỏi cấp t</p>
+                        </div>
+                        <div class="ngaylap">
+                            <p> <img src="~/Content/img/calendar.svg" alt=""> 19/01/2020</p>
+                        </div>
+                        <div class="xemthem">
+                            <a href="#">Xem thêm >></a>
+                        </div>
+                    </div>
+                </div>
+            }*@
+
+        </div>
+        <div class="pagination__wrapper">
+            @*Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber) trong @Model.PageCount*@
+            @Html.PagedListPager(Model, page => Url.Action("Tn", new
+            {
+                page
+            }))
+        </div>
+    </div>
+</section>
+
+<script>
+    var loginDocGia = document.getElementById('loginDocGia');
+    var logoutDocGia = document.getElementById('logoutDocGia');
+    window.onload = function () {
+        if (loginDocGia != null) {
+            var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("SuKien","Home").ToString() })';
+            loginDocGia.href = url;
+        }
+        if (logoutDocGia != null) {
+            var url = '@Url.Action("DangXuat", "Login", new { targetUrl = Url.Action("SuKien", "Home").ToString() })';
+            logoutDocGia.href = url;
+        }
+
+    };
+</script>
+

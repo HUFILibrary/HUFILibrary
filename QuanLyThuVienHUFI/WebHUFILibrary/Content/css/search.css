@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body .wrapper main .timkiem .container .title {
     padding: 20px 20px;
     margin-left: 20px;
@@ -436,4 +441,246 @@ body .wrapper main .tailieu {
                         padding: 10px 20px;
                         display: block;
                     }
+
+body .wrapper main .tintuc {
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+    body .wrapper main .tintuc .container {
+        width: 100%;
+    }
+
+        body .wrapper main .tintuc .container .tintuc__wrapper {
+            width: 100%;
+        }
+
+            body .wrapper main .tintuc .container .tintuc__wrapper .row {
+                padding: 15px 0;
+                border-radius: 5px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                background-color: #fff;
+                width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                height: 200px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+
+                body .wrapper main .tintuc .container .tintuc__wrapper .row .left {
+                    width: 35%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    height: 100%;
+                }
+
+                    body .wrapper main .tintuc .container .tintuc__wrapper .row .left .img {
+                        width: 100%;
+                        height: 100%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                        body .wrapper main .tintuc .container .tintuc__wrapper .row .left .img a {
+                            width: 100%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            height: 100%;
+                        }
+
+                            body .wrapper main .tintuc .container .tintuc__wrapper .row .left .img a img {
+                                max-width: 100%;
+                                height: 100%;
+                                -o-object-fit: cover;
+                                object-fit: cover;
+                            }
+
+                body .wrapper main .tintuc .container .tintuc__wrapper .row .right {
+                    width: 65%;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                }
+
+                    body .wrapper main .tintuc .container .tintuc__wrapper .row .right .title a {
+                        text-decoration: none;
+                    }
+
+                        body .wrapper main .tintuc .container .tintuc__wrapper .row .right .title a h3 {
+                            font-size: 18px;
+                            font-family: 'robold';
+                            color: black;
+                        }
+
+                    body .wrapper main .tintuc .container .tintuc__wrapper .row .right .line {
+                        height: 1px solid rgba(0, 0, 0, 0.4);
+                        width: 100%;
+                    }
+
+                    body .wrapper main .tintuc .container .tintuc__wrapper .row .right .content {
+                        margin-top: 15px;
+                    }
+
+                        body .wrapper main .tintuc .container .tintuc__wrapper .row .right .content p {
+                            font-size: 16px;
+                            font-family: 'roregular';
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+
+                    body .wrapper main .tintuc .container .tintuc__wrapper .row .right .ngaylap {
+                        margin-top: 12px;
+                    }
+
+                        body .wrapper main .tintuc .container .tintuc__wrapper .row .right .ngaylap p {
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            font-size: 14px;
+                            font-family: 'roregular';
+                        }
+
+                            body .wrapper main .tintuc .container .tintuc__wrapper .row .right .ngaylap p img {
+                                width: 14px;
+                                margin-right: 5px;
+                            }
+
+                    body .wrapper main .tintuc .container .tintuc__wrapper .row .right .xemthem {
+                        margin-top: 12px;
+                    }
+
+                        body .wrapper main .tintuc .container .tintuc__wrapper .row .right .xemthem a {
+                            color: #0072C6;
+                            font-size: 16px;
+                            font-family: 'roregular';
+                            -webkit-transition: 0.3s;
+                            transition: 0.3s;
+                            text-decoration: none;
+                        }
+
+                        body .wrapper main .tintuc .container .tintuc__wrapper .row .right .xemthem:hover a {
+                            color: #004272;
+                        }
+
+body .wrapper main .chitiettintuc__wrapper {
+    margin-top: 20px;
+}
+
+    body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc {
+        padding: 20px 30px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+        body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .title h1 {
+            color: #0072C6;
+            font-size: 24px;
+            font-family: 'robold';
+            letter-spacing: 0.02em;
+            line-height: 35px;
+        }
+
+        body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .date {
+            margin: 20px 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+            body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .date .ngaytao p {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                font-size: 14px;
+                font-family: 'roregular';
+            }
+
+                body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .date .ngaytao p img {
+                    margin-right: 6px;
+                    width: 15px;
+                }
+
+            body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .date .line {
+                margin: 0 20px;
+                width: 1px;
+                height: 20px;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .date .luotxem p {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                font-size: 14px;
+                font-family: 'roregular';
+            }
+
+                body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .date .luotxem p img {
+                    margin-right: 6px;
+                    width: 15px;
+                }
+
+        body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .motangan {
+            margin: 10px 0 20px 0;
+        }
+
+            body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .motangan p {
+                font-style: italic;
+                font-size: 15px;
+                font-family: 'roregular';
+                line-height: 20px;
+                letter-spacing: 0.02em;
+            }
+
+        body .wrapper main .chitiettintuc__wrapper .container .chitiettintuc .content {
+            font-family: 'roregular';
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.02em;
+        }
 /*# sourceMappingURL=search.css.map */

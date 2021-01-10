@@ -1,4 +1,8 @@
-﻿
+﻿@using BLL_DAL;
+@{ 
+    List<VW_TINTUC> lstTinTucSuKien = (List<VW_TINTUC>)ViewData["lstTinTucSuKien"];
+    List<VW_TINTUC> lstThongBao = (List<VW_TINTUC>)ViewData["lstThongBao"];
+}
             <div class="slider">
                 <div class="container">
                     <div class="slider__item">
@@ -112,44 +116,153 @@
                         <div class="tintuc__title">
                             <div class="left">
                                 <div class="line"></div>
-                                <h2>Tin tức</h2>
+                                <h2 id="tintucsukien" style="cursor:pointer">Tin tức - sự kiện</h2>
                             </div>
                             <div class="right">
-                                <a class="prev"><img src="~/Content/img/left-arrow.svg" alt=""></a>
-                                <a class="next"><img src="~/Content/img/right-arrow.svg" alt=""></a>
+                                <!-- <a class="prev"><img src="/img/left-arrow.svg" alt=""></a>
+            <a class="next"><img src="/img/right-arrow.svg" alt=""></a> -->
                             </div>
                         </div>
                         <div class="tintuc__content">
-                            <div class="logo">
-                                <img src="~/Content/img/news2.jpg" alt="">
-                            </div>
-                            <div class="textbox">
-                                <h3>Giải thưởng dành cho nhà vô địch cuộc thi “Best University Library” – HUFI Library</h3>
-                            </div>
+                            @foreach (VW_TINTUC item in lstTinTucSuKien)
+                            {
+                                string url = System.Web.HttpContext.Current.Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["LogoTinTuc"]);
+                                string path = Path.Combine(url, item.MaTinTuc.ToString(), item.Logo.ToString());
+                                string pathD = Path.Combine(url, item.MaTinTuc.ToString());
+                                int i = 1;
+                                if(Directory.Exists(pathD))
+                                {
+                                    i++;
+                                }
+                                if (File.Exists(path))
+                                {
+                                    i++;
+                                }
+                                if (!string.IsNullOrEmpty(item.Logo))
+                                {
+                                    i++;
+                                }
+                                if (i != 4)
+                                {
+                                    <div class="box">
+                                        <div class="logo">
+                                            <a href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })">
+                                                <img src="~/Content/TinTuc/default.jpg" alt="">
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="title">
+                                            <h3><a style="text-decoration:none;color:black;" href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })">@item.TieuDe</a></h3>
+                                        </div>
+                                        <div class="textbox">
+                                            <h3>@item.MoTaNgan</h3>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="box">
+                                        <div class="logo">
+                                            @{
+                                                //string pathImg = Path.Combine("~\\Content\\TinTuc\\Logo", item.MaTinTuc.ToString(), item.Logo.ToString());
+                                                string pathImg = "/Content/Tintuc/Logo/" + item.MaTinTuc.ToString() + "/" + item.Logo.ToString();
+                                            }
+                                            <a href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })"><img src="@pathImg" loading="lazy" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a style="text-decoration:none;color:black;" href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })">@item.TieuDe</a></h3>
+                                        </div>
+                                        <div class="textbox">
+                                            <h3>@item.MoTaNgan</h3>
+                                        </div>
+                                    </div>
+                                }
+
+                            }
+
+
                         </div>
                     </div>
                     <div class="thongbao">
                         <div class="thongbao__title">
                             <div class="left">
                                 <div class="line"></div>
-                                <h2>Thông báo</h2>
+                                <h2 id="thongbao" style="cursor:pointer">Thông báo</h2>
                             </div>
                             <div class="right">
-                                <a class="prev"><img src="~/Content/img/left-arrow.svg" alt=""></a>
-                                <a class="next"><img src="~/Content/img/right-arrow.svg" alt=""></a>
+                                <!-- <a class="prev"><img src="/img/left-arrow.svg" alt=""></a>
+                                 <a class="next"><img src="/img/right-arrow.svg" alt=""></a> -->
                             </div>
                         </div>
                         <div class="thongbao__content">
-                            <div class="logo">
-                                <img src="~/Content/img/news2.jpg" alt="">
-                            </div>
-                            <div class="textbox">
-                                <h3>Giải thưởng dành cho nhà vô địch cuộc thi “Best University Library” – HUFI Library</h3>
-                            </div>
+                            @foreach (VW_TINTUC item in lstThongBao)
+                            {
+                                string url = System.Web.HttpContext.Current.Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["LogoTinTuc"]);
+                                string path = Path.Combine(url, item.MaTinTuc.ToString(), item.Logo.ToString());
+                                string pathD = Path.Combine(url, item.MaTinTuc.ToString());
+                                int i = 1;
+                                if (Directory.Exists(pathD))
+                                {
+                                    i++;
+                                }
+                                if (File.Exists(path))
+                                {
+                                    i++;
+                                }
+                                if (!string.IsNullOrEmpty(item.Logo))
+                                {
+                                    i++;
+                                }
+                                if (i != 4)
+                                {
+                                    <div class="box">
+                                        <div class="logo">
+                                            <a href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })">
+                                                <img src="~/Content/TinTuc/default.jpg" alt="">
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="title">
+                                            <h3><a style="text-decoration:none;color:black;" href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })">@item.TieuDe</a></h3>
+                                        </div>
+                                        <div class="textbox">
+                                            <h3>@item.MoTaNgan</h3>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="box">
+                                        <div class="logo">
+                                            @{
+                                                //string pathImg = Path.Combine("~\\Content\\TinTuc\\Logo", item.MaTinTuc.ToString(), item.Logo.ToString());
+                                                string pathImg = "/Content/Tintuc/Logo/" + item.MaTinTuc.ToString() + "/" + item.Logo.ToString();
+                                            }
+                                            <a href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })"><img src="@pathImg" loading="lazy" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a style="text-decoration:none;color:black;" href="@Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc })">@item.TieuDe</a></h3>
+                                        </div>
+                                        <div class="textbox">
+                                            <h3>@item.MoTaNgan</h3>
+                                        </div>
+                                    </div>
+                                }
+
+                            }
+
+
                         </div>
                     </div>
                 </div>
             </div>
-        
+            <script>
+    document.getElementById('tintucsukien').addEventListener('click', function () {
+        location.href = '@Url.Action("SuKien","Home")';
+    })
+    document.getElementById('thongbao').addEventListener('click', function () {
+        location.href = '@Url.Action("ThongBao","Home")';
+    })
+            </script>
 
  

@@ -22,7 +22,18 @@ namespace BLL_DAL
                 return false;
             }
         }
-
+        public bool kiemTraDangNhapAdmin(string username, string password)
+        {
+            NHANVIEN nv = db.NHANVIENs.Where(a => a.MaNhanVien == int.Parse(username) && a.MatKhau == password).FirstOrDefault();
+            if (nv != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public VW_DOCGIA getModelDocGia(string username)
         {
             VW_DOCGIA dg = db.VW_DOCGIAs.Where(a => a.MaTheThuVien == username).FirstOrDefault();
@@ -35,7 +46,18 @@ namespace BLL_DAL
                 return dg;
             }
         }
-
+        public VW_NHANVIEN getModelNhanVien(string username)
+        {
+            VW_NHANVIEN dg = db.VW_NHANVIENs.Where(a => a.MaNhanVien == int.Parse(username)).FirstOrDefault();
+            if (dg != null)
+            {
+                return dg;
+            }
+            else
+            {
+                return dg;
+            }
+        }
         public bool changePassword(string mathethuvien, string matkhau)
         {
             DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == mathethuvien).FirstOrDefault();

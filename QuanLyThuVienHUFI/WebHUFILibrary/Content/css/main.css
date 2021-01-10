@@ -702,6 +702,8 @@ body {
 
             body .wrapper main .tintucvathongbao {
                 width: 100%;
+                margin-top: 20px;
+                margin-bottom: 100px;
             }
 
                 body .wrapper main .tintucvathongbao .container {
@@ -781,29 +783,151 @@ body {
                         body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content {
                             margin-top: 20px;
                             width: 100%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            position: relative;
+                            outline: none;
                         }
 
-                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .logo {
+                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slick-prev {
+                                top: -16%;
+                                right: 10%;
+                                position: absolute;
+                                width: 26px;
+                                cursor: pointer;
+                            }
+
+                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slick-next {
+                                top: -16%;
+                                right: 0;
+                                position: absolute;
+                                width: 26px;
+                                cursor: pointer;
+                            }
+
+                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slider__item {
                                 width: 100%;
-                                overflow: hidden;
                             }
 
-                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .logo img {
+                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slider__item img {
                                     width: 100%;
+                                    -o-object-fit: cover;
+                                    object-fit: cover;
                                 }
 
-                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .textbox {
-                                margin: 15px 0;
-                                padding: 0 10px;
+                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slick-dots {
+                                visibility: hidden;
+                                display: none;
+                                position: absolute;
+                                bottom: 2%;
+                                left: 50%;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-transform: translateX(-50%);
+                                transform: translateX(-50%);
                             }
 
-                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .textbox h3 {
-                                    font-family: 'robold';
-                                    font-size: 15px;
+                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slick-dots li {
+                                    margin: 0 5px;
+                                    cursor: pointer;
                                 }
+
+                                    body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slick-dots li.slick-active button {
+                                        background-color: rgba(0, 0, 0, 0.6);
+                                        color: white;
+                                    }
+
+                                    body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .slick-dots li button {
+                                        padding: 5px;
+                                        background-color: transparent;
+                                        border: none;
+                                        border-radius: 50%;
+                                        width: 15px;
+                                        height: 15px;
+                                        background-color: rgba(0, 0, 0, 0.3);
+                                        display: -webkit-box;
+                                        display: -ms-flexbox;
+                                        display: flex;
+                                        -webkit-box-pack: center;
+                                        -ms-flex-pack: center;
+                                        justify-content: center;
+                                        -webkit-box-align: center;
+                                        -ms-flex-align: center;
+                                        align-items: center;
+                                        outline: none;
+                                        cursor: pointer;
+                                        color: #D8D8D8;
+                                        font-size: 0;
+                                        font-family: 'roregular';
+                                        font-weight: bold;
+                                    }
+
+                            body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box {
+                                outline: none;
+                                width: 100%;
+                            }
+
+                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .logo {
+                                    width: 100%;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                }
+
+                                    body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .logo a {
+                                        width: 100%;
+                                        height: 250px;
+                                        overflow: hidden;
+                                    }
+
+                                        body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .logo a img {
+                                            width: 100%;
+                                            height: auto;
+                                            -o-object-fit: cover;
+                                            object-fit: cover;
+                                        }
+
+                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .title {
+                                    margin: 15px 0;
+                                    cursor: pointer;
+                                }
+
+                                    body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .title h3 {
+                                        font-family: 'robold';
+                                        font-size: 16px;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                    }
+
+                                body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .textbox {
+                                    margin: 15px 0;
+                                    cursor: pointer;
+                                }
+
+                                    body .wrapper main .tintucvathongbao .container .tintuc .tintuc__content .box .textbox h3 {
+                                        font-family: 'roregular';
+                                        font-size: 15px;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                    }
 
                     body .wrapper main .tintucvathongbao .container .thongbao {
                         width: 40%;
+                        outline: none;
                     }
 
                         body .wrapper main .tintucvathongbao .container .thongbao .thongbao__title {
@@ -869,26 +993,141 @@ body {
                         body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content {
                             margin-top: 20px;
                             width: 100%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            position: relative;
+                            outline: none;
                         }
 
-                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .logo {
+                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slick-prev {
+                                top: -16%;
+                                right: 10%;
+                                position: absolute;
+                                width: 26px;
+                                cursor: pointer;
+                            }
+
+                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slick-next {
+                                top: -16%;
+                                right: 0;
+                                position: absolute;
+                                width: 26px;
+                                cursor: pointer;
+                            }
+
+                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slider__item {
                                 width: 100%;
-                                overflow: hidden;
                             }
 
-                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .logo img {
+                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slider__item img {
                                     width: 100%;
+                                    -o-object-fit: cover;
+                                    object-fit: cover;
                                 }
 
-                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .textbox {
-                                margin: 15px 0;
-                                padding: 0 10px;
+                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slick-dots {
+                                visibility: hidden;
+                                display: none;
+                                position: absolute;
+                                bottom: 2%;
+                                left: 50%;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-transform: translateX(-50%);
+                                transform: translateX(-50%);
                             }
 
-                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .textbox h3 {
-                                    font-family: 'robold';
-                                    font-size: 15px;
+                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slick-dots li {
+                                    margin: 0 5px;
+                                    cursor: pointer;
                                 }
+
+                                    body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slick-dots li.slick-active button {
+                                        background-color: rgba(0, 0, 0, 0.6);
+                                        color: white;
+                                    }
+
+                                    body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .slick-dots li button {
+                                        padding: 5px;
+                                        background-color: transparent;
+                                        border: none;
+                                        border-radius: 50%;
+                                        width: 15px;
+                                        height: 15px;
+                                        background-color: rgba(0, 0, 0, 0.3);
+                                        display: -webkit-box;
+                                        display: -ms-flexbox;
+                                        display: flex;
+                                        -webkit-box-pack: center;
+                                        -ms-flex-pack: center;
+                                        justify-content: center;
+                                        -webkit-box-align: center;
+                                        -ms-flex-align: center;
+                                        align-items: center;
+                                        outline: none;
+                                        cursor: pointer;
+                                        color: #D8D8D8;
+                                        font-size: 0;
+                                        font-family: 'roregular';
+                                        font-weight: bold;
+                                    }
+
+                            body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box {
+                                outline: none;
+                                width: 100%;
+                            }
+
+                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box .logo {
+                                    width: 100%;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    display: -webkit-box;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-pack: center;
+                                    -ms-flex-pack: center;
+                                    justify-content: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                }
+
+                                    body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box .logo img {
+                                        width: 100%;
+                                        height: 250px;
+                                        -o-object-fit: cover;
+                                        object-fit: cover;
+                                    }
+
+                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box .title {
+                                    margin: 15px 0;
+                                    cursor: pointer;
+                                }
+
+                                    body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box .title h3 {
+                                        font-family: 'robold';
+                                        font-size: 16px;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                    }
+
+                                body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box .textbox {
+                                    margin: 15px 0;
+                                    cursor: pointer;
+                                }
+
+                                    body .wrapper main .tintucvathongbao .container .thongbao .thongbao__content .box .textbox h3 {
+                                        font-family: 'roregular';
+                                        font-size: 15px;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 3;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                    }
 
         body .wrapper footer {
             width: 100%;

@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="~/Content/css/reset.css">
+    <link rel="stylesheet" href="~/Content/font/stylesheet.css">
+    <link rel="stylesheet" href="~/Content/css/main.css">
+</head>
+<body>
+    <div class="wrapper-login">
+        <div class="login">
+            <div class="form__login">
+                <div class="left">
+                    <a href="@Url.Action("Index","Home")" class="img">
+                        <img src="~/Content/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <h2>ĐĂNG NHẬP</h2>
+                    </div>
+                    <div class="form__wrapper">
+                        @using (Html.BeginForm("Login", "Admin", FormMethod.Post))
+                        {
+                            <div class="form">
+                                <div class="row">
+                                    <label for="username">Tài khoản: </label>
+                                    <input type="text" name="username" id="username" value="@ViewBag.username" class="input__row">
+                                </div>
+                                <div class="row">
+                                    <label for="password">Mật khẩu: </label>
+                                    <input type="password" name="password" id="password" class="input__row">
+                                </div>
+                                @{
+                                    if (ViewData["Msg"] != null)
+                                    {
+                                        <div class="row msg">
+
+                                            <p>@ViewData["Msg"].ToString()</p>
+
+                                        </div>
+
+                                    }
+                                }
+
+                                <div class="row submit">
+                                    <button type="submit" class="submitButton" onclick="checkValue(event)"> Đăng nhập</button>
+                                </div>
+                                <div class="row forget">
+                                    <a href="#" class="forgetPassword"><span>Lấy lại mật khẩu?</span></a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function checkValue(event) {
+            var username = document.getElementById('username');
+            var password = document.getElementById('password');
+            if (username.value == "" || password.value == "") {
+                event.preventDefault();
+                alert('Vui lòng nhập đẩy đủ dữ liệu.');
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>
+
