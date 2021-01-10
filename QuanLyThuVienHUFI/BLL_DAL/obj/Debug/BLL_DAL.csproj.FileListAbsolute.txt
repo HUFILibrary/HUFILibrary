@@ -134,4 +134,3 @@ E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\System.Com
 E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\EPPlus.xml
 E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
-E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache

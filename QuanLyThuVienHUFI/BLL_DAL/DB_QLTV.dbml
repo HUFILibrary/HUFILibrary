@@ -298,11 +298,7 @@
       <Column Name="MaTinTuc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MaLoaiTinTuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TieuDe" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-<<<<<<< Updated upstream
-      <Column Name="MoTaNgan" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-=======
       <Column Name="MoTaNgan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
->>>>>>> Stashed changes
       <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="NgayTao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="NguoiLap" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -462,11 +458,7 @@
       <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaTacGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNhaXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-<<<<<<< Updated upstream
-      <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-=======
       <Column Name="ThongTinTaiLieu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
->>>>>>> Stashed changes
       <Column Name="MaNgonNgu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaViTri" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="HinhAnh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />

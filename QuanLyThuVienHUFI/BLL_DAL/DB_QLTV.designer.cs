@@ -5760,11 +5760,7 @@ namespace BLL_DAL
 			}
 		}
 		
-<<<<<<< Updated upstream
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaNgan", DbType="NVarChar(200)")]
-=======
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaNgan", DbType="NVarChar(500)")]
->>>>>>> Stashed changes
 		public string MoTaNgan
 		{
 			get
@@ -6702,11 +6698,7 @@ namespace BLL_DAL
 			}
 		}
 		
-<<<<<<< Updated upstream
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-=======
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTinTaiLieu", DbType="NVarChar(MAX)")]
->>>>>>> Stashed changes
 		public string ThongTinTaiLieu
 		{
 			get
