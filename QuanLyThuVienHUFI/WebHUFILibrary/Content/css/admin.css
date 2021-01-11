@@ -1268,7 +1268,9 @@ body {
                                 body .wrapper .right .main__wrapper .main.thongtintintuc .content .row .col.noidung p {
                                     width: 12.5%;
                                 }
-
+                                body .wrapper .right .main__wrapper .main.thongtintintuc .content .row .col #noidung > p {
+                                    width: 100%;
+                                }
                                 body .wrapper .right .main__wrapper .main.thongtintintuc .content .row .col.noidung #noidung {
                                     border-radius: 5px;
                                     margin-left: 50px;

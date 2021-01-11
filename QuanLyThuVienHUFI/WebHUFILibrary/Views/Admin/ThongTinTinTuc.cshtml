@@ -94,11 +94,11 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p>Mã: </p>
+                                <p class="plabel">Mã: </p>
                                 <input type="text" disabled value="@item.MaTinTuc" class="input readonly id">
                             </div>
                             <div class="col">
-                                <p>Loại tin tức: </p>
+                                <p class="plabel">Loại tin tức: </p>
                                 <select class="input readonly" disabled name="loaitintuc" id="loaitintuc">
                                     @foreach (LOAITINTUC itemTT in lstLoaiTinTuc)
                                     {
@@ -117,21 +117,21 @@
                         </div>
                         <div class="row textarea">
                             <div class="col">
-                                <p>Tiêu đề: </p>
+                                <p class="plabel">Tiêu đề: </p>
                                 <textarea name="tieude" id="tieude" disabled cols="30" rows="3" class="txtArea readonly">@item.TieuDe</textarea>
                             </div>
                             <div class="col">
-                                <p>Mô tả ngắn: </p>
+                                <p class="plabel">Mô tả ngắn: </p>
                                 <textarea name="motangan" id="motangan" disabled cols="30" rows="3" class="txtArea readonly">@item.MoTaNgan</textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p>Số lượt xem: </p>
+                                <p class="plabel">Số lượt xem: </p>
                                 <input type="text" value="@item.SoLuongLuotXem" disabled class="input readonly views">
                             </div>
                             <div class="col">
-                                <p>Hiển thị: </p>
+                                <p class="plabel">Hiển thị: </p>
                                 @{
                                     if (item.HienThiTrangChu)
                                     {
@@ -146,7 +146,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p>Ngày tạo: </p>
+                                <p class="plabel">Ngày tạo: </p>
                                 @{
                                     string ngaytao = item.NgayTao == null ? "" : item.NgayTao.ToString();
                                     DateTime dngaytao = DateTime.Parse(item.NgayTao.ToString());
@@ -155,14 +155,15 @@
                                 @*<input type="date" pattern="\d{1,2}/\d{1,2}/\d{4}" value="@dngaytao" placeholder="dd-mm-yyyy" id="datecreate" class="input daycreate">*@
                             </div>
                             <div class="col">
-                                <p>Người tạo: </p>
+                                <p class="plabel">Người tạo: </p>
                                 <input type="text" value="@item.TenNhanVien" disabled class="readonly input creator">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col noidung">
-                                <p>Nội dung: </p>
-                                <textarea disabled name="noidung" id="noidung" cols="80" rows="10">@item.NoiDung</textarea>
+                                <p class="plabel">Nội dung: </p>
+                                @*<textarea disabled name="noidung" id="noidung" cols="80" rows="10">@Html.Raw(item.NoiDung)</textarea>*@
+                                <div name="noidung"  class="readonly" id="noidung" cols="80" rows="10" style="width:750px;height:500px;max-height:500px;border:1px solid rgba(0,0,0,0.35);padding:20px;overflow:auto;">@Html.Raw(item.NoiDung)</div>
                             </div>
                         </div>
                         <div class="row controls">

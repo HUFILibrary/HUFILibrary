@@ -209,7 +209,7 @@ namespace WebHUFILibrary.Controllers
         [HttpPost]
         [ValidateInput(false)]
         public JsonResult ThemTinTucAjax(FormCollection collection, HttpPostedFileBase logotintuc, string loaitintuc, string tieude,
-                                        string motangan, string ngaytao, string noidung)
+                                        string motangan, string content)
         {
 
             VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
@@ -230,7 +230,7 @@ namespace WebHUFILibrary.Controllers
             }
             item.TinhTrangXoa = false;
             item.NgayTao = DateTime.Now;
-            item.NoiDung = noidung;
+            item.NoiDung = content;
             item.Logo = "";
             db.TINTUCs.InsertOnSubmit(item);
             db.SubmitChanges();

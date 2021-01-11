@@ -178,6 +178,8 @@ C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Enti
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.SqlServer.dll
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.xml
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.SqlServer.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csprojAssemblyReference.cache
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csproj.CoreCompileInputs.cache
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\WebHUFILibrary.dll.config
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\WebHUFILibrary.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\WebHUFILibrary.pdb
@@ -267,8 +269,6 @@ D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Antlr3.Runtime.pdb
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EPPlus.xml
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Microsoft.IO.RecyclableMemoryStream.xml
-D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csprojAssemblyReference.cache
-D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csproj.CoreCompileInputs.cache
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csproj.CopyComplete
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.pdb
