@@ -198,8 +198,9 @@ namespace Form_QuanLyThuVien
                 }
                 loadDgvChiTietTaiLieuMuon();
             }
-            QLMT_M_lblNgayMuon.Text = DateTime.Now.ToShortDateString();
-            QLMT_M_lblNgayTraDuKien.Text = DateTime.Now.AddMonths(1).ToLongDateString();
+            QLMT_M_lblNgayMuon.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            QLMT_M_lblNgayTraDuKien.Text = DateTime.Now.AddMonths(1).ToString("dd/MM/yyyy");
+
         }
 
         private void QLMT_btnXacNhanMuon_Click(object sender, EventArgs e)
@@ -232,7 +233,7 @@ namespace Form_QuanLyThuVien
                     MessageBox.Show("Quá trình mượn thành công.");
                     if(MessageBox.Show("Bạn có muốn xuất phiếu mượn không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-
+                        
                         var ds = new DataSet();
                         var tailieu = new DataTable();
                         var thongtindocgia = new DataTable();
@@ -243,15 +244,27 @@ namespace Form_QuanLyThuVien
                         string ngay = DateTime.Now.Day.ToString();
                         string thang = DateTime.Now.Month.ToString();
                         string nam = DateTime.Now.Year.ToString();
+                        string phicoc = "";
+                        if (string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
+                        {
+                            phicoc = QLMT_M_txtTienDatCoc.Text;
+                        } else
+                        {
+                            phicoc = 0.ToString();
+                        }
                         string ntn = "TP. Hồ Chí Minh, Ngày " +ngay+ " tháng " + thang + " năm " +nam +".";
                         ngaythangnam.Rows.Add(ntn);
 
                         thongtindocgia.Columns.Add("hovaten");
                         thongtindocgia.Columns.Add("thethuvien");
                         thongtindocgia.Columns.Add("hovatenkiten");
+                        thongtindocgia.Columns.Add("phicoc");
                         thongtindocgia.TableName = "thongtindocgia";
-                        thongtindocgia.Rows.Add(QLMT_lblHoTenDG.Text, QLMT_lblMaThe.Text, QLMT_lblHoTenDG.Text);
-                        
+
+                        //thongtindocgia.Columns.Add("PhiCoc");
+                        //thongtindocgia.Rows.Add(QLMT_lblHoTenDG.Text, QLMT_lblMaThe.Text, QLMT_lblHoTenDG.Text,phicoc);
+                        thongtindocgia.Rows.Add(QLMT_lblHoTenDG.Text, QLMT_lblMaThe.Text, QLMT_lblHoTenDG.Text, phicoc + " đồng");
+
 
                         tailieu.Columns.Add("tentailieu");
                         tailieu.Columns.Add("tentacgia");

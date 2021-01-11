@@ -584,7 +584,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.44108F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.25926F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.32209F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 481F));
             this.tableLayoutPanel33.Controls.Add(this.label16, 0, 0);
             this.tableLayoutPanel33.Controls.Add(this.QLTL_btnSearchMaVach, 2, 0);
             this.tableLayoutPanel33.Controls.Add(this.tableLayoutPanel34, 1, 0);
@@ -616,7 +616,7 @@ namespace Form_QuanLyThuVien
             this.QLTL_btnSearchMaVach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QLTL_btnSearchMaVach.FlatAppearance.BorderSize = 0;
             this.QLTL_btnSearchMaVach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QLTL_btnSearchMaVach.Location = new System.Drawing.Point(485, 3);
+            this.QLTL_btnSearchMaVach.Location = new System.Drawing.Point(484, 3);
             this.QLTL_btnSearchMaVach.Name = "QLTL_btnSearchMaVach";
             this.QLTL_btnSearchMaVach.Size = new System.Drawing.Size(68, 44);
             this.QLTL_btnSearchMaVach.TabIndex = 2;
@@ -636,7 +636,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(324, 44);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(323, 44);
             this.tableLayoutPanel34.TabIndex = 3;
             // 
             // QLTL_txtSearchMaVach
@@ -645,7 +645,7 @@ namespace Form_QuanLyThuVien
             this.QLTL_txtSearchMaVach.Location = new System.Drawing.Point(3, 7);
             this.QLTL_txtSearchMaVach.Multiline = true;
             this.QLTL_txtSearchMaVach.Name = "QLTL_txtSearchMaVach";
-            this.QLTL_txtSearchMaVach.Size = new System.Drawing.Size(318, 29);
+            this.QLTL_txtSearchMaVach.Size = new System.Drawing.Size(317, 29);
             this.QLTL_txtSearchMaVach.TabIndex = 1;
             this.QLTL_txtSearchMaVach.TextChanged += new System.EventHandler(this.QLTL_txtSearchMaVach_TextChanged);
             // 
@@ -2062,7 +2062,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel38.Name = "tableLayoutPanel38";
             this.tableLayoutPanel38.RowCount = 1;
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel38.Size = new System.Drawing.Size(617, 37);
             this.tableLayoutPanel38.TabIndex = 3;
             // 
@@ -2332,7 +2332,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel39.Name = "tableLayoutPanel39";
             this.tableLayoutPanel39.RowCount = 1;
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel39.Size = new System.Drawing.Size(618, 37);
             this.tableLayoutPanel39.TabIndex = 6;
             // 
@@ -2355,7 +2355,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             this.tableLayoutPanel40.RowCount = 1;
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel40.Size = new System.Drawing.Size(618, 37);
             this.tableLayoutPanel40.TabIndex = 7;
             // 
@@ -2589,7 +2589,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel41.Name = "tableLayoutPanel41";
             this.tableLayoutPanel41.RowCount = 1;
             this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel41.Size = new System.Drawing.Size(517, 39);
             this.tableLayoutPanel41.TabIndex = 3;
             // 

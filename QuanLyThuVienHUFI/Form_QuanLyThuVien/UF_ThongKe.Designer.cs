@@ -29,8 +29,8 @@ namespace Form_QuanLyThuVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -228,6 +228,7 @@ namespace Form_QuanLyThuVien
             this.QLTK_lblTongCong = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLTK_btnInKQ = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonGroupBox10 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.chart_Kq = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.kryptonGroupBox8 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.tableLayoutPanel46 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonGroupBox12 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -258,7 +259,6 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.chart_Kq = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -360,6 +360,7 @@ namespace Form_QuanLyThuVien
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10.Panel)).BeginInit();
             this.kryptonGroupBox10.Panel.SuspendLayout();
             this.kryptonGroupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8.Panel)).BeginInit();
             this.kryptonGroupBox8.Panel.SuspendLayout();
@@ -375,7 +376,6 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox11.Panel.SuspendLayout();
             this.kryptonGroupBox11.SuspendLayout();
             this.tableLayoutPanel47.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -2931,6 +2931,19 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox10.TabIndex = 1;
             this.kryptonGroupBox10.Values.Heading = "Kết quả thống kê theo đồ thị";
             // 
+            // chart_Kq
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart_Kq.ChartAreas.Add(chartArea1);
+            this.chart_Kq.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart_Kq.Legends.Add(legend1);
+            this.chart_Kq.Location = new System.Drawing.Point(0, 0);
+            this.chart_Kq.Name = "chart_Kq";
+            this.chart_Kq.Size = new System.Drawing.Size(756, 495);
+            this.chart_Kq.TabIndex = 0;
+            this.chart_Kq.Text = "chart1";
+            // 
             // kryptonGroupBox8
             // 
             this.kryptonGroupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3323,19 +3336,6 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel13.TabIndex = 2;
             this.kryptonLabel13.Values.Text = "-";
             // 
-            // chart_Kq
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_Kq.ChartAreas.Add(chartArea2);
-            this.chart_Kq.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart_Kq.Legends.Add(legend2);
-            this.chart_Kq.Location = new System.Drawing.Point(0, 0);
-            this.chart_Kq.Name = "chart_Kq";
-            this.chart_Kq.Size = new System.Drawing.Size(756, 495);
-            this.chart_Kq.TabIndex = 0;
-            this.chart_Kq.Text = "chart1";
-            // 
             // UF_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3461,6 +3461,7 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox10.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10)).EndInit();
             this.kryptonGroupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8.Panel)).EndInit();
             this.kryptonGroupBox8.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8)).EndInit();
@@ -3478,7 +3479,6 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox11.ResumeLayout(false);
             this.tableLayoutPanel47.ResumeLayout(false);
             this.tableLayoutPanel47.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).EndInit();
             this.ResumeLayout(false);
 
         }
