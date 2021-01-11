@@ -29,8 +29,8 @@ namespace Form_QuanLyThuVien
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -144,13 +144,6 @@ namespace Form_QuanLyThuVien
             this.QLTK_PM_dtp1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.QLTK_PM_dtp2 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.QLTK_PM_dgvDS = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
@@ -228,6 +221,7 @@ namespace Form_QuanLyThuVien
             this.QLTK_lblTongCong = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLTK_btnInKQ = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonGroupBox10 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.chart_Kq = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.kryptonGroupBox8 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.tableLayoutPanel46 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonGroupBox12 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -258,7 +252,13 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.chart_Kq = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -360,6 +360,7 @@ namespace Form_QuanLyThuVien
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10.Panel)).BeginInit();
             this.kryptonGroupBox10.Panel.SuspendLayout();
             this.kryptonGroupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8.Panel)).BeginInit();
             this.kryptonGroupBox8.Panel.SuspendLayout();
@@ -375,7 +376,6 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox11.Panel.SuspendLayout();
             this.kryptonGroupBox11.SuspendLayout();
             this.tableLayoutPanel47.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1837,62 +1837,6 @@ namespace Form_QuanLyThuVien
             this.QLTK_PM_dgvDS.Size = new System.Drawing.Size(2016, 569);
             this.QLTK_PM_dgvDS.TabIndex = 1;
             // 
-            // Column15
-            // 
-            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column15.DataPropertyName = "MaPhieuMuon";
-            this.Column15.HeaderText = "Mã phiếu mượn";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            // 
-            // Column16
-            // 
-            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column16.DataPropertyName = "MaTheThuVien";
-            this.Column16.HeaderText = "Mã thẻ thư viện";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            // 
-            // Column17
-            // 
-            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column17.DataPropertyName = "TenNhanVien";
-            this.Column17.HeaderText = "Tên nhân viên";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            // 
-            // Column18
-            // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column18.DataPropertyName = "NgayLap";
-            this.Column18.HeaderText = "Ngày lập";
-            this.Column18.MinimumWidth = 6;
-            this.Column18.Name = "Column18";
-            // 
-            // Column19
-            // 
-            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column19.DataPropertyName = "ThoiHanMuon";
-            this.Column19.HeaderText = "Thời hạn mượn";
-            this.Column19.MinimumWidth = 6;
-            this.Column19.Name = "Column19";
-            // 
-            // Column20
-            // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column20.DataPropertyName = "SoLuongTreHan";
-            this.Column20.HeaderText = "Số lượng tài liệu trể";
-            this.Column20.MinimumWidth = 6;
-            this.Column20.Name = "Column20";
-            // 
-            // Column21
-            // 
-            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column21.DataPropertyName = "SoNgayTre";
-            this.Column21.HeaderText = "Số ngày trễ";
-            this.Column21.MinimumWidth = 6;
-            this.Column21.Name = "Column21";
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.tableLayoutPanel25);
@@ -2931,6 +2875,19 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox10.TabIndex = 1;
             this.kryptonGroupBox10.Values.Heading = "Kết quả thống kê theo đồ thị";
             // 
+            // chart_Kq
+            // 
+            chartArea7.Name = "ChartArea1";
+            this.chart_Kq.ChartAreas.Add(chartArea7);
+            this.chart_Kq.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend7.Name = "Legend1";
+            this.chart_Kq.Legends.Add(legend7);
+            this.chart_Kq.Location = new System.Drawing.Point(0, 0);
+            this.chart_Kq.Name = "chart_Kq";
+            this.chart_Kq.Size = new System.Drawing.Size(756, 495);
+            this.chart_Kq.TabIndex = 0;
+            this.chart_Kq.Text = "chart1";
+            // 
             // kryptonGroupBox8
             // 
             this.kryptonGroupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3323,18 +3280,61 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel13.TabIndex = 2;
             this.kryptonLabel13.Values.Text = "-";
             // 
-            // chart_Kq
+            // Column15
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart_Kq.ChartAreas.Add(chartArea2);
-            this.chart_Kq.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart_Kq.Legends.Add(legend2);
-            this.chart_Kq.Location = new System.Drawing.Point(0, 0);
-            this.chart_Kq.Name = "chart_Kq";
-            this.chart_Kq.Size = new System.Drawing.Size(756, 495);
-            this.chart_Kq.TabIndex = 0;
-            this.chart_Kq.Text = "chart1";
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column15.DataPropertyName = "MaPhieuMuon";
+            this.Column15.HeaderText = "Mã phiếu mượn";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column16.DataPropertyName = "MaTheThuVien";
+            this.Column16.HeaderText = "Mã thẻ thư viện";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column17.DataPropertyName = "TenNhanVien";
+            this.Column17.HeaderText = "Tên nhân viên";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.DataPropertyName = "NgayLap";
+            this.Column18.HeaderText = "Ngày lập";
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column19.DataPropertyName = "ThoiHanMuon";
+            this.Column19.HeaderText = "Thời hạn mượn";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column20.DataPropertyName = "SoLuongTreHan";
+            this.Column20.HeaderText = "Số lượng tài liệu trễ";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            // 
+            // Column21
+            // 
+            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column21.DataPropertyName = "SoNgayTre";
+            this.Column21.HeaderText = "Số ngày trễ";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
             // 
             // UF_ThongKe
             // 
@@ -3461,6 +3461,7 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox10.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox10)).EndInit();
             this.kryptonGroupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8.Panel)).EndInit();
             this.kryptonGroupBox8.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox8)).EndInit();
@@ -3478,7 +3479,6 @@ namespace Form_QuanLyThuVien
             this.kryptonGroupBox11.ResumeLayout(false);
             this.tableLayoutPanel47.ResumeLayout(false);
             this.tableLayoutPanel47.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_Kq)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3664,13 +3664,6 @@ namespace Form_QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn Column61;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column62;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column63;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel44;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel45;
@@ -3713,5 +3706,12 @@ namespace Form_QuanLyThuVien
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel13;
         private ComponentFactory.Krypton.Toolkit.KryptonButton QLTK_btnInKQ;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_Kq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
     }
 }

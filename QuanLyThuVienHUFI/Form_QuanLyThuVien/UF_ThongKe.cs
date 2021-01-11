@@ -185,11 +185,19 @@ namespace Form_QuanLyThuVien
             phieumuon.Columns.Add("mathethuvien");
             phieumuon.Columns.Add("tennhanvien");
             phieumuon.Columns.Add("thoihanmuon");
-            phieumuon.Columns.Add("phicoc");
+            phieumuon.Columns.Add("soluongtailieutre");
+            phieumuon.Columns.Add("songaytre");
             phieumuon.TableName = "phieumuon";
             foreach (DataGridViewRow row in QLTK_PM_dgvDS.Rows)
             {
-                phieumuon.Rows.Add(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[3].Value.ToString(), row.Cells[5].Value.ToString(), row.Cells[7].Value.ToString());
+                if(row.Cells[0].Value == null)
+                {
+                    continue;
+                }
+                DateTime dt = DateTime.Parse(row.Cells[4].Value.ToString());
+                String dFormat = String.Format("{0:dd/MM/yyyy}", dt);
+                phieumuon.Rows.Add(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), row.Cells[2].Value.ToString(), dFormat, row.Cells[5].Value.ToString(), row.Cells[6].Value.ToString());
+
             }
             ds.Tables.Add(phieumuon);
             ds.Tables.Add(thongtinnhanvien);
