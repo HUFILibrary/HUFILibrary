@@ -117,7 +117,7 @@ namespace BLL_DAL
     #endregion
 		
 		public DB_QLTVDataContext() : 
-				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTP2ConnectionString11, mappingSource)
+				base(global::BLL_DAL.Properties.Settings.Default.QuanLyThuVienCNTPConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

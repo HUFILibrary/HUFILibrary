@@ -17,7 +17,8 @@
 
     <script src="~/Content/js/jquery-3.5.1.min.js"></script>
     <script src="~/Content/js/admin.js" defer></script>
-    <script src="~/Content/js/lib/ckeditor.js"></script>
+    @*<script src="~/Content/js/lib/ckeditor.js"></script>*@
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
 </head>
 <body style="height:100%;">
     <div class="wrapper">
@@ -80,7 +81,7 @@
             </div>
 
             <div class="main__wrapper">
-                @using (Html.BeginForm("ThemTinTuc", "Admin", FormMethod.Post, new { @id = "formAddTT", enctype = "multipart/form-data" }))
+                @using (Html.BeginForm("ThemTinTucAjax", "Admin", FormMethod.Post, new { @id = "formAddTT", enctype = "multipart/form-data" }))
                 {
                     <div class="main thongtintintuc">
                         <div class="title">
@@ -148,13 +149,13 @@
                             <div class="row">
                                 <div class="col noidung">
                                     <p>Nội dung: </p>
-                                    <textarea name="noidung" id="noidung" cols="80" rows="10"></textarea>
+                                    <textarea class="ckeditor" name="noidung" id="noidung" cols="80" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="row controls">
                                 <a href="@Url.Action("TinTuc", "Admin")">Quay về</a>
-                                <button type="submit" onclick="checkValue(event)" id="themmoitintuc">Thêm mới</button>
-
+                                @*<button type="submit" onclick="checkValue(event)" id="themmoitintuc">Thêm mới</button>*@
+                                <button id="themmoitintuc">Thêm mới</button>
                             </div>
                         </div>
                     </div>
@@ -164,22 +165,23 @@
     </div>
     <script>
         
-        ClassicEditor
-            .create(document.querySelector('#noidung'), {
-                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+        //ClassicEditor
+        //    .create(document.querySelector('#noidung'), {
+        //        // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
 
-            })
-            .then(editor => {
-                window.editor = editor;
+        //    })
+        //    .then(editor => {
+        //        window.editor = editor;
 
-            })
-            .catch(err => {
-                console.error(err.stack);
-            });
-        @*$('#formAddTT').submit(function (e) {
+        //    })
+        //    .catch(err => {
+        //        console.error(err.stack);
+        //    });
 
-            var data = new FormData(form);
-            $.each($(form).find('input[type="file"]'), function () {
+        $('#formAddTT').submit(function (e) {
+
+            var data = new FormData(this);
+            $.each($(this).find('input[type="file"]'), function () {
                 var name = $(this).attr('name');
                 var files = $(this).prop('files');
 
@@ -211,7 +213,7 @@
                     return false;
                 }
             });
-        });*@
+        });
 
 
 

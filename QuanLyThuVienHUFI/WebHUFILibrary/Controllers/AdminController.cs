@@ -206,91 +206,98 @@ namespace WebHUFILibrary.Controllers
 
         //}
 
-        //[HttpPost]
-        //[ValidateInput(false)]
-        //public JsonResult ThemTinTucAjax(FormCollection collection, HttpPostedFileBase logotintuc, string loaitintuc, string tieude,
-        //                                string motangan, string ngaytao, string noidung)
-        //{
-            
-        //    VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
-        //    TINTUC item = new TINTUC();
-        //    item.SoLuongLuotXem = 0;
-        //    item.NguoiLap = 10000001;
-        //    item.MaLoaiTinTuc = int.Parse(loaitintuc);
-        //    item.TieuDe = tieude;
-        //    item.MoTaNgan = motangan;
-        //    string ht = collection["hienthitrangchu"];
-        //    if (ht != null)
-        //    {
-        //        item.HienThiTrangChu = true;
-        //    }
-        //    else
-        //    {
-        //        item.HienThiTrangChu = false;
-        //    }
-        //    item.TinhTrangXoa = false;
-        //    item.NgayTao = DateTime.Now;
-        //    item.NoiDung = noidung;
-        //    item.Logo = "";
-        //    db.TINTUCs.InsertOnSubmit(item);
-        //    db.SubmitChanges();
+        [HttpPost]
+        [ValidateInput(false)]
+        public JsonResult ThemTinTucAjax(FormCollection collection, HttpPostedFileBase logotintuc, string loaitintuc, string tieude,
+                                        string motangan, string ngaytao, string noidung)
+        {
 
-        //    bool upSc = false;
-        //    var files = Request.Files;
-        //    var uploadFile = files["logotintuc"];
-        //    string filename = uploadFile.FileName;
+            VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
+            TINTUC item = new TINTUC();
+            item.SoLuongLuotXem = 0;
+            item.NguoiLap = 10000001;
+            item.MaLoaiTinTuc = int.Parse(loaitintuc);
+            item.TieuDe = tieude;
+            item.MoTaNgan = motangan;
+            string ht = collection["hienthitrangchu"];
+            if (ht != null)
+            {
+                item.HienThiTrangChu = true;
+            }
+            else
+            {
+                item.HienThiTrangChu = false;
+            }
+            item.TinhTrangXoa = false;
+            item.NgayTao = DateTime.Now;
+            item.NoiDung = noidung;
+            item.Logo = "";
+            db.TINTUCs.InsertOnSubmit(item);
+            db.SubmitChanges();
 
-        //    if (!string.IsNullOrEmpty(filename))
-        //    {
-        //        string[] arr = filename.Split('.');
-        //        filename = item.MaTinTuc.ToString() + "." + arr[1].ToString();
-        //        string uploads = System.Web.HttpContext.Current.Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["LogoTinTuc"]);
-        //        string savePath = Path.Combine(uploads, item.MaTinTuc.ToString());
-        //        if (!Directory.Exists(savePath))
-        //        {
-        //            Directory.CreateDirectory(savePath);
-        //        }
-        //        string delPath = Path.Combine(savePath, item.Logo.ToString());
-        //        if (System.IO.File.Exists(delPath))
-        //        {
-        //            System.GC.Collect();
-        //            System.GC.WaitForPendingFinalizers();
-        //            System.IO.File.Delete(delPath);
-        //        }
-        //        MemoryStream ms = new MemoryStream();
-        //        using (var stream = new FileStream(Path.Combine(savePath, filename), FileMode.Create))
-        //        {
-        //            uploadFile.InputStream.CopyTo(stream);
-        //            stream.Close();
-        //        }
-        //        upSc = true;
-        //    }
-        //    if(upSc)
-        //    {
-        //        try
-        //        {
-        //            item.Logo = filename;
-        //            db.SubmitChanges();
-        //            return Json(new
-        //            {
-        //                rs = true,
-        //                matintuc = item.MaTinTuc
-        //            });
-        //        }
-        //        catch
-        //        {
-        //            return Json(new
-        //            {
-        //                rs = false
-        //            });
-        //        }
-        //    }
+            bool upSc = false;
+            var files = Request.Files;
+            var uploadFile = files["logotintuc"];
+            string filename = uploadFile.FileName;
+            //if(uploadFile.FileName == null)
+            //{
+            //    return Json(new
+            //    {
+            //        rs = false,
+            //        matintuc = item.MaTinTuc
+            //    });
+            //}
+            if (!string.IsNullOrEmpty(filename))
+            {
+                string[] arr = filename.Split('.');
+                filename = item.MaTinTuc.ToString() + "." + arr[1].ToString();
+                string uploads = System.Web.HttpContext.Current.Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["LogoTinTuc"]);
+                string savePath = Path.Combine(uploads, item.MaTinTuc.ToString());
+                if (!Directory.Exists(savePath))
+                {
+                    Directory.CreateDirectory(savePath);
+                }
+                string delPath = Path.Combine(savePath, item.Logo.ToString());
+                if (System.IO.File.Exists(delPath))
+                {
+                    System.GC.Collect();
+                    System.GC.WaitForPendingFinalizers();
+                    System.IO.File.Delete(delPath);
+                }
+                MemoryStream ms = new MemoryStream();
+                using (var stream = new FileStream(Path.Combine(savePath, filename), FileMode.Create))
+                {
+                    uploadFile.InputStream.CopyTo(stream);
+                    stream.Close();
+                }
+                upSc = true;
+            }
+            if (upSc)
+            {
+                try
+                {
+                    item.Logo = filename;
+                    db.SubmitChanges();
+                    return Json(new
+                    {
+                        rs = true,
+                        matintuc = item.MaTinTuc
+                    });
+                }
+                catch
+                {
+                    return Json(new
+                    {
+                        rs = false
+                    });
+                }
+            }
 
-        //    return Json(new
-        //    {
-        //        rs = false
-        //    });
-        //}
+            return Json(new
+            {
+                rs = false
+            });
+        }
         [HttpGet]
         public ActionResult ThemTinTuc(FormCollection collection, HttpPostedFileBase logotintuc, string matintuc, string loaitintuc, string tieude,
                                        string motangan, string ngaytao, string noidung
