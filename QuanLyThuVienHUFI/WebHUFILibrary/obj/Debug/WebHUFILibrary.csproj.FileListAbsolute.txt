@@ -272,6 +272,26 @@ D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.SqlServer.dll
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.xml
 D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EntityFramework.SqlServer.xml
+<<<<<<< Updated upstream
+=======
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\PagedList.Mvc.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.Helpers.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.Mvc.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.Optimization.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.Razor.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.WebPages.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.WebPages.Deployment.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\System.Web.WebPages.Razor.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Newtonsoft.Json.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Antlr3.Runtime.pdb
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\EPPlus.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.csproj.CopyComplete
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.dll
+D:\DATN\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\obj\Debug\WebHUFILibrary.pdb
+>>>>>>> Stashed changes
 E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\WebHUFILibrary.dll.config
 E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\WebHUFILibrary.dll
 E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\WebHUFILibrary\bin\WebHUFILibrary.pdb

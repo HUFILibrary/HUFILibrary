@@ -770,6 +770,7 @@ namespace Form_QuanLyThuVien
             QLP_N_NC_txtSL.Enabled = true;
             QLP_N_NC_txtSL.Clear();
             QLP_N_NC_txtTimTL.Focus();
+            QLP_N_NC_txtTimTL.Enabled = true;
             QLP_N_NC_txtTimTL.Clear();
             QLP_N_NC_btnTimTL.Enabled = true;
             NTLC_btnXoa.Enabled = false;
@@ -796,6 +797,7 @@ namespace Form_QuanLyThuVien
             if(flg)
             {
                 MessageBox.Show("Nhập tài liệu thành công.");
+                loadDgvChiTietPhieuNhapcu();
             }
             else
             {
@@ -813,7 +815,7 @@ namespace Form_QuanLyThuVien
         {
             if (string.IsNullOrEmpty(QLP_N_NC_txtTimTL.Text))
             {
-                MessageBox.Show("Vui lòng nhập mã vạch cần tìm!");
+                MessageBox.Show("Vui lòng nhập mã tài liệu cần tìm!");
             }
             else {
                 QLP_N_PC_dgvDSTL.DataSource = qlpn.loadTLtheoMaTL(QLP_N_NC_txtTimTL.Text);
