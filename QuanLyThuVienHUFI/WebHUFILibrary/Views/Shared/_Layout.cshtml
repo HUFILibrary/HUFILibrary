@@ -13,25 +13,36 @@
     <script src="~/Content/js/lib/slick.min.js"></script>
     <link rel="stylesheet" href="~/Content/js/lib/slick.css">
     <title>Thư viện trường Đại Học Công Nghiệp Thực Phẩm</title>
+    <style type="text/css">
+        .slick-track{
+            outline:none;
+        }
+            .slick-track .slider__item{
+                outline:none;
+            }
+            .slick-track .slider__item img{
+                outline:none;
+            }
+    </style>
 </head>
 <body>
     <div class="wrapper">
         <header id="top">
-            <div class="toolbar">
+            <div class="toolbar"  style="margin:5px 0;">
                 <div class="container">
                     <div class="toolbar__logo">
                         <img src="~/Content/img/logo.jpg" alt="">
                     </div>
-                    <div class="toolbar__selection">
-                        <div class="selection__account">
-                            @{
-                                if (Session["DocGiaIsLogin"] != null)
-                                {
 
-                                    VW_DOCGIA dg = (VW_DOCGIA)Session["DocGiaIsLogin"];
+                    @{
+                        if (Session["DocGiaIsLogin"] != null)
+                        {
 
+                            VW_DOCGIA dg = (VW_DOCGIA)Session["DocGiaIsLogin"];
+                            <div class="toolbar__selection" style="align-items:flex-end">
+                                <div class="selection__account" style="padding:0;">
                                     <div class="account">
-                                        <a href="" class="username">@dg.TenDocGia</a>
+                                        <a href="" class="username" style="display:flex; align-items: center;"> <img src="@Url.Action("getImage", "Image", new { hinhanh = dg.HinhAnh.ToString(), type="DocGia" })" style="border-radius:50%;width:35px;height:35px;margin-right:5px;" loading="lazy" alt=""> @dg.TenDocGia</a>
                                         <div class="selection">
                                             <a href="@Url.Action("ThongTinTaiKhoan","DocGia")">Thông tin tài khoản</a>
                                             @*<a href="#">Danh sách tài liệu mượn</a>*@
@@ -39,23 +50,39 @@
                                             <a id="logoutDocGia" href="@Url.Action("DangXuat","Login")">Đăng xuất</a>
                                         </div>
                                     </div>
-                                }
-                                else
-                                {
-                                    <a id="loginDocGia" href="@Url.Action("DangNhap","Login")">Đăng nhập</a>
-                                }
-                            }
-                            <div class="line"></div>
-                            <div class="lang">
-                                <span>Ngôn ngữ</span>
+                                    <div class="line"></div>
+                                    <div class="lang">
+                                        <span>Ngôn ngữ</span>
+                                    </div>
+                                </div>
+                                <div class="selection__opentime" style="padding:0;">
+                                    <p>Giờ hoạt động</p>
+                                    <div class="line"></div>
+                                    <a href="#">Chi tiết</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="selection__opentime">
-                            <p>Giờ hoạt động</p>
-                            <div class="line"></div>
-                            <a href="#">Chi tiết</a>
-                        </div>
-                    </div>
+                        }
+                        else
+                        {
+                            <div class="toolbar__selection" style="align-items:flex-end">
+                                <div class="selection__account">
+                                    <a id="loginDocGia" href="@Url.Action("DangNhap","Login")">Đăng nhập</a>
+                                    <div class="line"></div>
+                                    <div class="lang">
+                                        <span>Ngôn ngữ</span>
+                                    </div>
+                                </div>
+                                <div class="selection__opentime">
+                                    <p>Giờ hoạt động</p>
+                                    <div class="line"></div>
+                                    <a href="#">Chi tiết</a>
+                                </div>
+                            </div>
+                            
+                        }
+                    }
+                        
+
                 </div>
             </div>
             <nav class="navbar">

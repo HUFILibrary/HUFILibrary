@@ -16,6 +16,10 @@ namespace BLL_DAL
             {
                 return 0;
             }
+            else if ( nv.TinhTrangXoa == true)
+            {
+                return 2;
+            }    
             else {
                 if (nv.MatKhau != nvtk.MatKhau)
                 {

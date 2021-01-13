@@ -29,10 +29,23 @@ namespace Form_QuanLyThuVien
             if (dn.ktraDangNhapTK(nv, ref username, ref hoten) == 0)
             {
                 MessageBox.Show("Tài khoản không tồn tại !");
+                DN_txtMK.Clear();
+                DN_txtMK.Focus();
+                return;
+            }
+            else if(dn.ktraDangNhapTK(nv, ref username, ref hoten) == 2)
+            {
+                MessageBox.Show("Tài khoản này đã bị khoá.");
+                DN_txtMK.Clear();
+                DN_txtMK.Focus();
+                return;
             }
             else if (dn.ktraDangNhapTK(nv, ref username, ref hoten) == -1)
             {
                 MessageBox.Show("Mật khẩu không đúng !");
+                DN_txtMK.Clear();
+                DN_txtMK.Focus();
+                return;
             }
             else {
                 Frm_Main frmMain = new Frm_Main();
