@@ -191,7 +191,28 @@
         </div>
     </div>
     <script>
-        document.getElementById('btnSubmit').addEventListener('click', function () {
+        function checkValue() {
+            var tieude = document.getElementById('tieude');
+            var motangan = document.getElementById('motangan');
+            if (tieude.value.length > 200) {
+                event.preventDefault();
+                tieude.focus();
+                alert('Tiêu đề không được quá 200 kí tự.');
+                return 1;
+            }
+            if (motangan.value.length > 500) {
+                event.preventDefault();
+                motangan.focus();
+                alert('Mô tả ngắn không được quá 500 kí tự.');
+                return 1;
+            }
+        }
+        document.getElementById('btnSubmit').addEventListener('click', function (e) {
+            if (checkValue() === 1) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
             $('#formTT').submit();
         })
          ClassicEditor
