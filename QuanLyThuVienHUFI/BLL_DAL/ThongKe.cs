@@ -250,9 +250,8 @@ namespace BLL_DAL
                       join nxb in db.NHAXUATBANs on tl.MaNhaXuatBan equals nxb.MaNhaXuatBan
                       join vt in db.VITRIs on tl.MaViTri equals vt.MaViTri
                       where !(from ct in db.CT_PHIEUMUONs select ct.MaVach).Contains(tl.MaVach)
-                      select new
+                      group new { tl, ltl, cd, tg, nxb, vt } by new
                       {
-                          tl.MaVach,
                           tl.MaTaiLieu,
                           tl.TenTaiLieu,
                           ltl.TenLoaiTaiLieu,
@@ -267,6 +266,23 @@ namespace BLL_DAL
                           vt.MaViTri,
                           ltl.MaLoaiTaiLieu,
                           cd.MaChuDe
+                      } into solan
+                      select new
+                      {
+                          MaTaiLieu = int.Parse(solan.Key.MaTaiLieu),
+                          TenTaiLieu = solan.Key.TenTaiLieu.ToString(),
+                          TenLoaiTaiLieu = solan.Key.TenLoaiTaiLieu.ToString(),
+                          TenChuDe = solan.Key.TenChuDe.ToString(),
+                          MaTap = solan.Key.MaTap.ToString(),
+                          SoTrang = int.Parse(solan.Key.SoTrang.ToString()),
+                          Gia = double.Parse(solan.Key.Gia.ToString()),
+                          NamXuatBan = int.Parse(solan.Key.NamXuatBan.ToString()),
+                          TenNhaXuatBan = solan.Key.TenNhaXuatBan.ToString(),
+                          TenTacGia = solan.Key.TenTacGia.ToString(),
+                          ThongTinTaiLieu = solan.Key.ThongTinTaiLieu.ToString(),
+                          MaViTri = solan.Key.MaViTri.ToString(),
+                          MaLoaiTaiLieu = int.Parse(solan.Key.MaLoaiTaiLieu.ToString()),
+                          MaChuDe = int.Parse(solan.Key.MaChuDe.ToString())
                       };
             return tls;
         }
@@ -283,9 +299,8 @@ namespace BLL_DAL
                               join tl in db.TAILIEUs on ct.MaVach equals tl.MaVach
                               join ltl in db.LOAITAILIEUs on tl.MaLoaiTaiLieu equals ltl.MaLoaiTaiLieu
                               select ltl.MaLoaiTaiLieu).Contains(ltl.MaLoaiTaiLieu)
-                      select new
+                      group new { tl, ltl, cd, tg, nxb, vt } by new
                       {
-                          tl.MaVach,
                           tl.MaTaiLieu,
                           tl.TenTaiLieu,
                           ltl.TenLoaiTaiLieu,
@@ -300,6 +315,24 @@ namespace BLL_DAL
                           vt.MaViTri,
                           ltl.MaLoaiTaiLieu,
                           cd.MaChuDe
+                      } into solan
+                      select new
+                      {
+                          MaTaiLieu = int.Parse(solan.Key.MaTaiLieu),
+                          TenTaiLieu = solan.Key.TenTaiLieu.ToString(),
+                          TenLoaiTaiLieu = solan.Key.TenLoaiTaiLieu.ToString(),
+                          TenChuDe = solan.Key.TenChuDe.ToString(),
+                          MaTap = solan.Key.MaTap.ToString(),
+                          SoTrang = int.Parse(solan.Key.SoTrang.ToString()),
+                          Gia = double.Parse(solan.Key.Gia.ToString()),
+                          NamXuatBan = int.Parse(solan.Key.NamXuatBan.ToString()),
+                          TenNhaXuatBan = solan.Key.TenNhaXuatBan.ToString(),
+                          TenTacGia = solan.Key.TenTacGia.ToString(),
+                          ThongTinTaiLieu = solan.Key.ThongTinTaiLieu.ToString(),
+                          MaViTri = solan.Key.MaViTri.ToString(),
+                          MaLoaiTaiLieu = int.Parse(solan.Key.MaLoaiTaiLieu.ToString()),
+                          MaChuDe = int.Parse(solan.Key.MaChuDe.ToString()),
+                          SoLanMuon = solan.Count(s => s.tl.MaTaiLieu != null)
                       };
             return tls;
         }
@@ -315,9 +348,8 @@ namespace BLL_DAL
                               join tl in db.TAILIEUs on ct.MaVach equals tl.MaVach
                               join cd in db.CHUDEs on tl.MaChuDe equals cd.MaChuDe
                               select cd.MaChuDe).Contains(cd.MaChuDe)
-                      select new
+                      group new { tl, ltl, cd, tg, nxb, vt } by new
                       {
-                          tl.MaVach,
                           tl.MaTaiLieu,
                           tl.TenTaiLieu,
                           ltl.TenLoaiTaiLieu,
@@ -332,6 +364,24 @@ namespace BLL_DAL
                           vt.MaViTri,
                           ltl.MaLoaiTaiLieu,
                           cd.MaChuDe
+                      } into solan
+                      select new
+                      {
+                          MaTaiLieu = int.Parse(solan.Key.MaTaiLieu),
+                          TenTaiLieu = solan.Key.TenTaiLieu.ToString(),
+                          TenLoaiTaiLieu = solan.Key.TenLoaiTaiLieu.ToString(),
+                          TenChuDe = solan.Key.TenChuDe.ToString(),
+                          MaTap = solan.Key.MaTap.ToString(),
+                          SoTrang = int.Parse(solan.Key.SoTrang.ToString()),
+                          Gia = double.Parse(solan.Key.Gia.ToString()),
+                          NamXuatBan = int.Parse(solan.Key.NamXuatBan.ToString()),
+                          TenNhaXuatBan = solan.Key.TenNhaXuatBan.ToString(),
+                          TenTacGia = solan.Key.TenTacGia.ToString(),
+                          ThongTinTaiLieu = solan.Key.ThongTinTaiLieu.ToString(),
+                          MaViTri = solan.Key.MaViTri.ToString(),
+                          MaLoaiTaiLieu = int.Parse(solan.Key.MaLoaiTaiLieu.ToString()),
+                          MaChuDe = int.Parse(solan.Key.MaChuDe.ToString()),
+                          SoLanMuon = solan.Count(s => s.tl.MaTaiLieu != null)
                       };
             return tls;
         }

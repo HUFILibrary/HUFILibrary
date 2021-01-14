@@ -327,13 +327,16 @@ namespace Form_QuanLyThuVien
 
         private void QLTK_TL_btnXem_Click(object sender, EventArgs e)
         {
+
             if (QLTK_TL_rdbTangDan.Checked)
             {
+
                 tg_value = 1;
                 QLTK_TL_dgvDSTL.DataSource = tk.loadTangGiamTheoTL(tg_value);
             }
             else if (QLTK_TL_rdbGiamDan.Checked)
             {
+                
                 tg_value = 2;
                 QLTK_TL_dgvDSTL.DataSource = tk.loadTangGiamTheoTL(tg_value);
             }
@@ -2018,25 +2021,25 @@ namespace Form_QuanLyThuVien
                             tongtien += double.Parse(QLTK_dgvKQTK.Rows[i].Cells[1].Value.ToString());
                         }
                         QLTK_lblTongCong.Text = tongtien.ToString() + " VNĐ";
+                        chart_Kq.DataSource = dt;
+                        string name = QLTK_rdbPhiCoc.Text;
+                        chart_Kq.Series.Add(name).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
 
+                        for (int c = 0; c < QLTK_dgvKQTK.Rows.Count - 1; c++)
+                        {
+                            chart_Kq.Series[name].Points.AddXY(DateTime.Parse(QLTK_dgvKQTK.Rows[c].Cells[0].Value.ToString()).ToString("MM/yyyy"), double.Parse(QLTK_dgvKQTK.Rows[c].Cells[1].Value.ToString()));
+                        }
+                        chart_Kq.Titles.Add("Thống kê theo tháng");
                     }
                     else
                     {
                         tongcong = 0;
                         QLTK_lblTongCong.Text = tongcong.ToString();
-                        MessageBox.Show("Không có tài liệu được mượn trong ngày được chọn !");
+                        MessageBox.Show("Không có phí cọc khoảng thời gian này !");
                         return;
                     }
                     // chatt
-                    chart_Kq.DataSource = dt;
-                    string name = QLTK_rdbPhiCoc.Text;
-                    chart_Kq.Series.Add(name).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
 
-                    for (int c = 0; c < QLTK_dgvKQTK.Rows.Count - 1; c++)
-                    {
-                        chart_Kq.Series[name].Points.AddXY(DateTime.Parse(QLTK_dgvKQTK.Rows[c].Cells[0].Value.ToString()).ToString("dd/MM/yyyy"), double.Parse(QLTK_dgvKQTK.Rows[c].Cells[1].Value.ToString()));
-                    }
-                    chart_Kq.Titles.Add("Thống kê theo tháng");
                 }
             }
             else if (QLTK_rdbTheoNam.Checked)
@@ -2288,9 +2291,9 @@ namespace Form_QuanLyThuVien
                     }
                     else
                     {
-                        tongcong = 0;
-                        QLTK_lblTongCong.Text = tongcong.ToString();
-                        MessageBox.Show("Không có tài liệu được mượn trong ngày được chọn !");
+                        tongtien = 0;
+                        QLTK_lblTongCong.Text = tongtien.ToString();
+                        MessageBox.Show("Không có phí cọc khoảng thời gian này !");
                         return;
                     }
                     // chatt
@@ -2302,7 +2305,7 @@ namespace Form_QuanLyThuVien
                     {
                         chart_Kq.Series[name].Points.AddXY(DateTime.Parse(QLTK_dgvKQTK.Rows[c].Cells[0].Value.ToString()).ToString("dd/MM/yyyy"), double.Parse(QLTK_dgvKQTK.Rows[c].Cells[1].Value.ToString()));
                     }
-                    chart_Kq.Titles.Add("Thống kê theo ngày");
+                    chart_Kq.Titles.Add("Thống kê theo năm");
                 }
 
             }
@@ -2580,11 +2583,36 @@ namespace Form_QuanLyThuVien
                     QLTK_dgvKQTK.Columns["Ten"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
                     QLTK_dgvKQTK.Columns["Ten"].MinimumWidth = 300;
                     QLTK_dgvKQTK.Columns["TongSL"].HeaderText = "Tổng số lượng";
-                    for (int i = 0; i < QLTK_dgvKQTK.Rows.Count - 1; i++)
+                    if (QLTK_dgvKQTK.Rows.Count - 1 > 0)
                     {
-                        tongcong += int.Parse(QLTK_dgvKQTK.Rows[i].Cells[QLTK_dgvKQTK.Columns.Count - 1].Value.ToString());
+                        for (int i = 0; i < QLTK_dgvKQTK.Rows.Count - 1; i++)
+                        {
+                            tongcong += int.Parse(QLTK_dgvKQTK.Rows[i].Cells[QLTK_dgvKQTK.Columns.Count - 1].Value.ToString());
+                        }
+                        QLTK_lblTongCong.Text = tongcong.ToString();
+                        // chatt
+                        chart_Kq.DataSource = dt;
+                        string name = QLTK_rdbKhoa.Text;
+                        chart_Kq.Series.Add(name).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+
+                        for (int c = 1; c < QLTK_dgvKQTK.Columns.Count - 1; c++)
+                        {
+                            int tong = 0;
+                            for (int r = 0; r < QLTK_dgvKQTK.Rows.Count - 1; r++)
+                            {
+                                tong += int.Parse(QLTK_dgvKQTK.Rows[r].Cells[c].Value.ToString());
+                            }
+                            chart_Kq.Series[name].Points.AddXY(dt.Columns[c].ToString(), Double.Parse(tong.ToString()));
+                        }
+                        chart_Kq.Titles.Add("Thống kê theo năm");
                     }
-                    QLTK_lblTongCong.Text = tongcong.ToString();
+                    else {
+                        tongcong = 0;
+                        QLTK_lblTongCong.Text = tongcong.ToString();
+                        MessageBox.Show("Không có phí cọc khoảng thời gian này !");
+                        return;
+                    }
+                   
 
                     for (int i = 1; i < QLTK_dgvKQTK.Columns.Count; i++)
                     {
@@ -2593,21 +2621,7 @@ namespace Form_QuanLyThuVien
                         dgvCl.MinimumWidth = 100;
                         dgvCl.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
-                    // chatt
-                    chart_Kq.DataSource = dt;
-                    string name = QLTK_rdbKhoa.Text;
-                    chart_Kq.Series.Add(name).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
 
-                    for (int c = 1; c < QLTK_dgvKQTK.Columns.Count - 1; c++)
-                    {
-                        int tong = 0;
-                        for (int r = 0; r < QLTK_dgvKQTK.Rows.Count - 1; r++)
-                        {
-                            tong += int.Parse(QLTK_dgvKQTK.Rows[r].Cells[c].Value.ToString());
-                        }
-                        chart_Kq.Series[name].Points.AddXY(dt.Columns[c].ToString(), Double.Parse(tong.ToString()));
-                    }
-                    chart_Kq.Titles.Add("Thống kê theo năm");
                 }
                 else if (QLTK_rdbPhiCoc.Checked)
                 {
@@ -2615,13 +2629,13 @@ namespace Form_QuanLyThuVien
                     // code phi coc trong  khoang nam
                     lstPhiCocTheoKhoang = tk.dsPhiCocSLTheoKhoangNam(nambd, namkt);
                     dt2.Columns.Add("NgayLap", typeof(string));
-                    dt2.Columns.Add("TongTien", typeof(string));
+                    dt2.Columns.Add("TongTien", typeof(double));
                     foreach (DSTK_TLTheoKhoang item in lstPhiCocTheoKhoang)
                     {
                         dr = dt2.NewRow();
 
                         dr["NgayLap"] = item.NgayLap;
-                        dr["TongTien"] = item.PhiCoc;
+                        dr["TongTien"] = double.Parse(item.PhiCoc.ToString());
                         dt2.Rows.Add(dr);
                     }
                     QLTK_dgvKQTK.DataSource = dt2;
@@ -2642,25 +2656,26 @@ namespace Form_QuanLyThuVien
                             tongtien += double.Parse(QLTK_dgvKQTK.Rows[i].Cells[1].Value.ToString());
                         }
                         QLTK_lblTongCong.Text = tongtien.ToString() + " VNĐ";
+                        // chatt
+                        chart_Kq.DataSource = dt;
+                        string name = QLTK_rdbPhiCoc.Text;
+                        chart_Kq.Series.Add(name).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+
+                        for (int c = 0; c < QLTK_dgvKQTK.Rows.Count - 1; c++)
+                        {
+                            chart_Kq.Series[name].Points.AddXY(QLTK_dgvKQTK.Rows[c].Cells[0].Value.ToString(), QLTK_dgvKQTK.Rows[c].Cells[1].Value.ToString());
+                        }
+                        chart_Kq.Titles.Add("Thống kê theo năm");
 
                     }
                     else
                     {
                         tongcong = 0;
                         QLTK_lblTongCong.Text = tongcong.ToString();
-                        MessageBox.Show("Không có tài liệu được mượn trong ngày được chọn !");
+                        MessageBox.Show("Không có phí cọc khoảng thời gian này !");
                         return;
                     }
-                    // chatt
-                    chart_Kq.DataSource = dt;
-                    string name = QLTK_rdbPhiCoc.Text;
-                    chart_Kq.Series.Add(name).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-
-                    for (int c = 0; c < QLTK_dgvKQTK.Rows.Count - 1; c++)
-                    {
-                        chart_Kq.Series[name].Points.AddXY(DateTime.Parse(QLTK_dgvKQTK.Rows[c].Cells[0].Value.ToString()).ToString("dd/MM/yyyy"), double.Parse(QLTK_dgvKQTK.Rows[c].Cells[1].Value.ToString()));
-                    }
-                    chart_Kq.Titles.Add("Thống kê theo ngày");
+                  
                 }
             }
         }
