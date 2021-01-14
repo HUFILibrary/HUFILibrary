@@ -169,9 +169,23 @@
             var tieude = document.getElementById('tieude');
             var motangan = document.getElementById('motangan');
             var editor_data = CKEDITOR.instances['noidung'].getData();
+            
+            
             if (tieude.value == "" || motangan.value == "" || editor_data == "" || logotintuc.value == "") {
                 
                 alert('Vui lòng nhập đẩy đủ dữ liệu.');
+                return 1;
+            }
+            if (tieude.value.length > 200) {
+                event.preventDefault();
+                tieude.focus();
+                alert('Tiêu đề không được quá 200 kí tự.');
+                return 1;
+            }
+            if (motangan.value.length > 500) {
+                event.preventDefault();
+                motangan.focus();
+                alert('Mô tả ngắn không được quá 500 kí tự.');
                 return 1;
             }
 
