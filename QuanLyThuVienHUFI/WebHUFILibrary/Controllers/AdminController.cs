@@ -151,7 +151,7 @@ namespace WebHUFILibrary.Controllers
 
             if (flg)
             {
-                return RedirectToAction("SuaTinTuc", "Admin", new { matintuc = matintuc });
+                return RedirectToAction("ThongTinTinTuc", "Admin", new { matintuc = matintuc });
             }
             else
             {

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="QuanLyThuVien-Web.config Connection String" description="QuanLyThuVien Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\GitHub\\DATN\\HUFILibrary\\QuanLyThuVienHUFI\\WebHUFILibrary\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QuanLyThuVien']/@connectionString" />
+  </parameter>
+</parameters>

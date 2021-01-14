@@ -55,5 +55,16 @@ namespace BLL_DAL.Properties {
                 return ((string)(this["QuanLyThuVienCNTP2ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-F6GMAH7\\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;User ID" +
+            "=sa;Password=024453854")]
+        public string QuanLyThuVienCNTP2ConnectionString1 {
+            get {
+                return ((string)(this["QuanLyThuVienCNTP2ConnectionString1"]));
+            }
+        }
     }
 }
