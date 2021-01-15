@@ -197,6 +197,7 @@
       <Association Name="NHANVIEN_PHIEUNHAP" Member="PHIEUNHAPs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUNHAP" />
       <Association Name="NHANVIEN_PHIEUTRA" Member="PHIEUTRAs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUTRA" />
       <Association Name="NHANVIEN_PHIEUXULYVIPHAM" Member="PHIEUXULYVIPHAMs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUXULYVIPHAM" />
+      <Association Name="NHANVIEN_TINTUC" Member="TINTUCs" ThisKey="MaNhanVien" OtherKey="NguoiLap" Type="TINTUC" />
       <Association Name="LOAINHANVIEN_NHANVIEN" Member="LOAINHANVIEN" ThisKey="MaLoaiNhanVien" OtherKey="MaLoaiNhanVien" Type="LOAINHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
@@ -324,6 +325,7 @@
       <Column Name="TinhTrangXoa" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Logo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Association Name="LOAITINTUC_TINTUC" Member="LOAITINTUC" ThisKey="MaLoaiTinTuc" OtherKey="MaLoaiTinTuc" Type="LOAITINTUC" IsForeignKey="true" />
+      <Association Name="NHANVIEN_TINTUC" Member="NHANVIEN" ThisKey="NguoiLap" OtherKey="MaNhanVien" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.VW_DOCGIA" Member="VW_DOCGIAs">

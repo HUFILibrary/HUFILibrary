@@ -4014,6 +4014,8 @@ namespace BLL_DAL
 		
 		private EntitySet<PHIEUXULYVIPHAM> _PHIEUXULYVIPHAMs;
 		
+		private EntitySet<TINTUC> _TINTUCs;
+		
 		private EntityRef<LOAINHANVIEN> _LOAINHANVIEN;
 		
     #region Extensibility Method Definitions
@@ -4054,6 +4056,7 @@ namespace BLL_DAL
 			this._PHIEUNHAPs = new EntitySet<PHIEUNHAP>(new Action<PHIEUNHAP>(this.attach_PHIEUNHAPs), new Action<PHIEUNHAP>(this.detach_PHIEUNHAPs));
 			this._PHIEUTRAs = new EntitySet<PHIEUTRA>(new Action<PHIEUTRA>(this.attach_PHIEUTRAs), new Action<PHIEUTRA>(this.detach_PHIEUTRAs));
 			this._PHIEUXULYVIPHAMs = new EntitySet<PHIEUXULYVIPHAM>(new Action<PHIEUXULYVIPHAM>(this.attach_PHIEUXULYVIPHAMs), new Action<PHIEUXULYVIPHAM>(this.detach_PHIEUXULYVIPHAMs));
+			this._TINTUCs = new EntitySet<TINTUC>(new Action<TINTUC>(this.attach_TINTUCs), new Action<TINTUC>(this.detach_TINTUCs));
 			this._LOAINHANVIEN = default(EntityRef<LOAINHANVIEN>);
 			OnCreated();
 		}
@@ -4374,6 +4377,19 @@ namespace BLL_DAL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHANVIEN_TINTUC", Storage="_TINTUCs", ThisKey="MaNhanVien", OtherKey="NguoiLap")]
+		public EntitySet<TINTUC> TINTUCs
+		{
+			get
+			{
+				return this._TINTUCs;
+			}
+			set
+			{
+				this._TINTUCs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LOAINHANVIEN_NHANVIEN", Storage="_LOAINHANVIEN", ThisKey="MaLoaiNhanVien", OtherKey="MaLoaiNhanVien", IsForeignKey=true)]
 		public LOAINHANVIEN LOAINHANVIEN
 		{
@@ -4471,6 +4487,18 @@ namespace BLL_DAL
 		}
 		
 		private void detach_PHIEUXULYVIPHAMs(PHIEUXULYVIPHAM entity)
+		{
+			this.SendPropertyChanging();
+			entity.NHANVIEN = null;
+		}
+		
+		private void attach_TINTUCs(TINTUC entity)
+		{
+			this.SendPropertyChanging();
+			entity.NHANVIEN = this;
+		}
+		
+		private void detach_TINTUCs(TINTUC entity)
 		{
 			this.SendPropertyChanging();
 			entity.NHANVIEN = null;
@@ -6947,6 +6975,8 @@ namespace BLL_DAL
 		
 		private EntityRef<LOAITINTUC> _LOAITINTUC;
 		
+		private EntityRef<NHANVIEN> _NHANVIEN;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -6980,6 +7010,7 @@ namespace BLL_DAL
 		public TINTUC()
 		{
 			this._LOAITINTUC = default(EntityRef<LOAITINTUC>);
+			this._NHANVIEN = default(EntityRef<NHANVIEN>);
 			OnCreated();
 		}
 		
@@ -7118,6 +7149,10 @@ namespace BLL_DAL
 			{
 				if ((this._NguoiLap != value))
 				{
+					if (this._NHANVIEN.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnNguoiLapChanging(value);
 					this.SendPropertyChanging();
 					this._NguoiLap = value;
@@ -7257,6 +7292,40 @@ namespace BLL_DAL
 						this._MaLoaiTinTuc = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("LOAITINTUC");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHANVIEN_TINTUC", Storage="_NHANVIEN", ThisKey="NguoiLap", OtherKey="MaNhanVien", IsForeignKey=true)]
+		public NHANVIEN NHANVIEN
+		{
+			get
+			{
+				return this._NHANVIEN.Entity;
+			}
+			set
+			{
+				NHANVIEN previousValue = this._NHANVIEN.Entity;
+				if (((previousValue != value) 
+							|| (this._NHANVIEN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NHANVIEN.Entity = null;
+						previousValue.TINTUCs.Remove(this);
+					}
+					this._NHANVIEN.Entity = value;
+					if ((value != null))
+					{
+						value.TINTUCs.Add(this);
+						this._NguoiLap = value.MaNhanVien;
+					}
+					else
+					{
+						this._NguoiLap = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("NHANVIEN");
 				}
 			}
 		}

@@ -245,7 +245,7 @@ namespace Form_QuanLyThuVien
                         string thang = DateTime.Now.Month.ToString();
                         string nam = DateTime.Now.Year.ToString();
                         string phicoc = "";
-                        if (string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
+                        if (!string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
                         {
                             phicoc = QLMT_M_txtTienDatCoc.Text;
                         } else
