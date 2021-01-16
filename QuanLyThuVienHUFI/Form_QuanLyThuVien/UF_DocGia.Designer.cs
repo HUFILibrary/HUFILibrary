@@ -147,6 +147,10 @@ namespace Form_QuanLyThuVien
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -919,8 +923,9 @@ namespace Form_QuanLyThuVien
             // 
             // DG_dtpNgaySinh
             // 
+            this.DG_dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.DG_dtpNgaySinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DG_dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DG_dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DG_dtpNgaySinh.Location = new System.Drawing.Point(536, 157);
             this.DG_dtpNgaySinh.Name = "DG_dtpNgaySinh";
             this.DG_dtpNgaySinh.Size = new System.Drawing.Size(193, 30);
@@ -993,8 +998,9 @@ namespace Form_QuanLyThuVien
             // 
             // DG_dtpHanSuDung
             // 
+            this.DG_dtpHanSuDung.CustomFormat = "dd/MM/yyyy";
             this.DG_dtpHanSuDung.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DG_dtpHanSuDung.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DG_dtpHanSuDung.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DG_dtpHanSuDung.Location = new System.Drawing.Point(157, 408);
             this.DG_dtpHanSuDung.Name = "DG_dtpHanSuDung";
             this.DG_dtpHanSuDung.Size = new System.Drawing.Size(203, 25);
@@ -1567,6 +1573,11 @@ namespace Form_QuanLyThuVien
             // DG_N_dgvDSNganh
             // 
             this.DG_N_dgvDSNganh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_N_dgvDSNganh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21});
             this.DG_N_dgvDSNganh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DG_N_dgvDSNganh.Location = new System.Drawing.Point(0, 0);
             this.DG_N_dgvDSNganh.Name = "DG_N_dgvDSNganh";
@@ -1773,6 +1784,39 @@ namespace Form_QuanLyThuVien
             this.label5.Text = "KHOA && NGÀNH";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.DataPropertyName = "MaNganh";
+            this.Column18.HeaderText = "Mã ngành";
+            this.Column18.MinimumWidth = 100;
+            this.Column18.Name = "Column18";
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column19.DataPropertyName = "TenNganh";
+            this.Column19.HeaderText = "Tên ngành";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column20.DataPropertyName = "TenKhoa";
+            this.Column20.HeaderText = "Tên khoa";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "MaKhoa";
+            this.Column21.HeaderText = "Column21";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            this.Column21.Visible = false;
+            this.Column21.Width = 125;
+            // 
             // UF_DocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1972,5 +2016,9 @@ namespace Form_QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhAnh;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
     }
 }

@@ -52,6 +52,9 @@ namespace Form_QuanLyThuVien
         private void loadDgvDocGias()
         {
             DG_dgvDSDG.DataSource = qldg.loadDgvDocGia();
+            DG_dgvDSDG.Columns[7].DefaultCellStyle.Format = "dd/MM/yyyy";
+            DG_dgvDSDG.Columns[12].DefaultCellStyle.Format = "dd/MM/yyyy";
+            DG_dgvDSDG.Columns[13].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
         private void loadDgvLoaiDocGia()
         {

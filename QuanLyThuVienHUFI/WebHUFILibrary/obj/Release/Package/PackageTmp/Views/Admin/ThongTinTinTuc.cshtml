@@ -1,0 +1,228 @@
+﻿@using BLL_DAL;
+@{
+    Layout = null;
+    VW_TINTUC item = (VW_TINTUC)ViewData["data"];
+    List<LOAITINTUC> lstLoaiTinTuc = (List<LOAITINTUC>)ViewData["lstLoaiTinTuc"];
+    VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="~/Content/css/reset.css">
+    <link rel="stylesheet" href="~/Content/font/stylesheet.css">
+    <link rel="stylesheet" href="~/Content/css/admin.css">
+    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
+    <script src="~/Content/js/admin.js" defer></script>
+</head>
+<body style="height:100%;">
+    <div class="wrapper">
+        <div class="left">
+            <div class="left__wrapper">
+                <div class="title">
+                    <a href="#"><h2>TRANG QUẢN TRỊ</h2></a>
+                </div>
+                <div class="line"></div>
+                <div class="row thongke">
+                    <div class="row__parent">
+                        <a href="#">Thống kê</a>
+
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row tintuc" id="tintuc">
+                    <div class="row__parent">
+                        <a href="#">Tin tức</a>
+                        <div class="img">
+                            <img src="~/Content/img/arrowAdminRight.svg" data-arrow="right" id="imgArrow" alt="">
+                        </div>
+                    </div>
+                    <div id="tintuc__child" class="row__child">
+                        <ul>
+                            <li><a href="#">Thể loại tin tức</a></li>
+                            <li><a href="@Url.Action("TinTuc","Admin")">Tin tức</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line"></div>
+                @*<div class="row tintuc" id="tintuc">
+                        <div class="row__parent">
+                            <a href="#">Tin tức</a>
+                            <div class="img">
+                                <img src="~/Content/img/arrowAdminRight.svg" data-arrow="right" id="imgArrow" alt="">
+                            </div>
+                        </div>
+                        <div id="tintuc__child" class="row__child">
+                            <ul>
+                                <li><a href="#">Thể loại tin tức</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+        <div class="right">
+            <div class="header__wrapper">
+                <div class="header">
+                    <div class="account">
+                        <div class="username">
+                            <p>@nv.TenNhanVien</p>
+                            <div class="img">
+                                <img src="~/Content/img/profile.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main__wrapper">
+                <div class="main thongtintintuc">
+                    <div class="title">
+                        <h2>Thông tin chi tiết</h2>
+                    </div>
+                    <div class="line"></div>
+                    <div class="content">
+                        <div class="row logo">
+                            <div class="img">
+                                <img src="@Url.Content("~/Content/TinTuc/Logo/"+item.MaTinTuc.ToString()+"/" + item.Logo)" id="imgLogo" alt="">
+                            </div>
+                            <label class="chonlogo" for="logotintuc">Chọn hình</label>
+                            <input type="file" disabled name="logotintuc" id="logotintuc">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="plabel">Mã: </p>
+                                <input type="text" disabled value="@item.MaTinTuc" class="input readonly id">
+                            </div>
+                            <div class="col">
+                                <p class="plabel">Loại tin tức: </p>
+                                <select class="input readonly" disabled name="loaitintuc" id="loaitintuc">
+                                    @foreach (LOAITINTUC itemTT in lstLoaiTinTuc)
+                                    {
+                                        if (item.MaLoaiTinTuc.ToString().Equals(itemTT.MaLoaiTinTuc))
+                                        {
+                                            <option selected value="@itemTT.MaLoaiTinTuc">@itemTT.TenMaLoaiTinTuc</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@itemTT.MaLoaiTinTuc">@itemTT.TenMaLoaiTinTuc</option>
+                                        }
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row textarea">
+                            <div class="col">
+                                <p class="plabel">Tiêu đề: </p>
+                                <textarea name="tieude" id="tieude" disabled cols="30" rows="3" class="txtArea readonly">@item.TieuDe</textarea>
+                            </div>
+                            <div class="col">
+                                <p class="plabel">Mô tả ngắn: </p>
+                                <textarea name="motangan" id="motangan" disabled cols="30" rows="3" class="txtArea readonly">@item.MoTaNgan</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="plabel">Số lượt xem: </p>
+                                <input type="text" value="@item.SoLuongLuotXem" disabled class="input readonly views">
+                            </div>
+                            <div class="col">
+                                <p class="plabel">Hiển thị: </p>
+                                @{
+                                    if (item.HienThiTrangChu)
+                                    {
+                                        <input type="checkbox" disabled checked class="chkbox">
+                                    }
+                                    else
+                                    {
+                                        <input type="checkbox" disabled class="chkbox">
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="plabel">Ngày tạo: </p>
+                                @{
+                                    string ngaytao = item.NgayTao == null ? "" : item.NgayTao.ToString();
+                                    DateTime dngaytao = DateTime.Parse(item.NgayTao.ToString());
+                                }
+                                @Html.TextBox("ngaytao", item.NgayTao, "{0:yyyy-MM-dd}", new { @class = "input daycreate readonly", @id = "datecreate", type = "date", disabled = "true" })
+                                @*<input type="date" pattern="\d{1,2}/\d{1,2}/\d{4}" value="@dngaytao" placeholder="dd-mm-yyyy" id="datecreate" class="input daycreate">*@
+                            </div>
+                            <div class="col">
+                                <p class="plabel">Người tạo: </p>
+                                <input type="text" value="@item.TenNhanVien" disabled class="readonly input creator">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col noidung">
+                                <p class="plabel">Nội dung: </p>
+                                @*<textarea disabled name="noidung" id="noidung" cols="80" rows="10">@Html.Raw(item.NoiDung)</textarea>*@
+                                <div name="noidung"  class="readonly" id="noidung" cols="80" rows="10" style="width:750px;height:500px;max-height:500px;border:1px solid rgba(0,0,0,0.35);padding:20px;overflow:auto;">@Html.Raw(item.NoiDung)</div>
+                            </div>
+                        </div>
+                        <div class="row controls">
+                            <a href="@Url.Action("TinTuc","Admin")">Quay về</a>
+                            <a href="@Url.Action("SuaTinTuc","Admin", new { matintuc = item.MaTinTuc })">Sửa</a>
+                            <a data-matintuc="@item.MaTinTuc" id="xoatintuc" style="cursor:pointer;">Xoá</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#xoatintuc').click(function () {
+            var isDel = confirm('Bạn có thực sự muốn xoá ?');
+            if (isDel) {
+                $.ajax({
+                    type: 'post',
+                    url: '@Url.Action("xoaTinTucAjax", "Admin")',
+                    dataType: 'json',
+                    data: {
+                        matintuc: $(this).attr('data-matintuc')
+                    },
+                    success: function (result) {
+                        if (result.rs) {
+                            alert('Xoá thành công.');
+                            location.href = '@Url.Action("TinTuc","Admin")';
+                        }
+                        else {
+                            alert('Quá trình xoá không thành công.');
+                            return false;
+                        }
+                    },
+                    error: function () {
+                        alert('Lỗi !');
+                    }
+                });
+            }
+            else {
+                return false;
+            }
+        })
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgLogo').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+
+        $("#logotintuc").change(function () {
+            readURL(this);
+        });
+    </script>
+</body>
+</html>
+

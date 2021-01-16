@@ -140,6 +140,31 @@ namespace Form_QuanLyThuVien
             loadDgvPhieuMuon();
             load_dgvDSPhieuXLVP();
             load_dgvDSPT();
+
+            if (QLP_M_dgvDSM.Rows.Count > 0)
+            {
+                QLP_M_dgvDSM.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
+            if (QLP_T_dgvDSPT.Rows.Count > 0)
+            {
+                QLP_T_dgvDSPT.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
+            if (QLP_N_dgvDanhSachPN.Rows.Count > 0)
+            {
+                QLP_N_dgvDanhSachPN.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
+            if (NTLC_dgvPhieuNhap.Rows.Count > 0)
+            {
+                NTLC_dgvPhieuNhap.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
+            if (QLP_VP_dgvDSPhieuXLVP.Rows.Count > 0)
+            {
+                QLP_VP_dgvDSPhieuXLVP.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
+
+
+
+
         }
         public void taoPhieuNhap()
         {
@@ -153,6 +178,7 @@ namespace Form_QuanLyThuVien
         private void loadDgvPhieuNhaps()
         {
             QLP_N_dgvDanhSachPN.DataSource = qlpn.loadDgvPhieuNhap();
+            
         }
         private void QLP_N_btnTaoPN_Click(object sender, EventArgs e)
         {
@@ -367,6 +393,7 @@ namespace Form_QuanLyThuVien
         public void loadDgvPhieuMuon()
         {
             QLP_M_dgvDSM.DataSource = qlpm.loadDgvPhieuMuon();
+            
         }
         private void QLP_M_dgvDSM_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -481,6 +508,7 @@ namespace Form_QuanLyThuVien
                 {
                     MessageBox.Show("Xoá chi tiết phiếu mượn thành công.");
                     QLP_M_dgvCTPM.DataSource = qlpm.loadDgvCT_Phieumuon(QLP_M_dgvDSM.CurrentRow.Cells[0].Value.ToString());
+                    loadDgvPhieuMuon();
                 }
                 else
                 {
@@ -742,6 +770,7 @@ namespace Form_QuanLyThuVien
             QLP_N_NC_txtSL.Enabled = true;
             QLP_N_NC_txtSL.Clear();
             QLP_N_NC_txtTimTL.Focus();
+            QLP_N_NC_txtTimTL.Enabled = true;
             QLP_N_NC_txtTimTL.Clear();
             QLP_N_NC_btnTimTL.Enabled = true;
             NTLC_btnXoa.Enabled = false;
@@ -768,6 +797,7 @@ namespace Form_QuanLyThuVien
             if(flg)
             {
                 MessageBox.Show("Nhập tài liệu thành công.");
+                loadDgvChiTietPhieuNhapcu();
             }
             else
             {
@@ -785,7 +815,7 @@ namespace Form_QuanLyThuVien
         {
             if (string.IsNullOrEmpty(QLP_N_NC_txtTimTL.Text))
             {
-                MessageBox.Show("Vui lòng nhập mã vạch cần tìm!");
+                MessageBox.Show("Vui lòng nhập mã tài liệu cần tìm!");
             }
             else {
                 QLP_N_PC_dgvDSTL.DataSource = qlpn.loadTLtheoMaTL(QLP_N_NC_txtTimTL.Text);

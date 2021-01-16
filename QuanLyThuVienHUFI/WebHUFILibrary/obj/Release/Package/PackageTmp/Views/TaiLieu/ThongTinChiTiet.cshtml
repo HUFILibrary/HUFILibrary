@@ -1,0 +1,390 @@
+﻿@using BLL_DAL;
+
+@{
+    ViewBag.Title = "ThongTinChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    VW_TAILIEU item = (VW_TAILIEU)ViewData["data"];
+    List<VW_TAILIEU> listItem = (List<VW_TAILIEU>)ViewData["listdata"];
+    List<string> listItemDM = (List<string>)ViewData["listDangMuon"];
+    List<VW_TAILIEU> listItemKhongLuuThong = (List<VW_TAILIEU>)ViewData["listKhongLuuThong"];
+    int sanco = listItem.Count() - listItemDM.Count() - listItemKhongLuuThong.Count();
+
+    Dictionary<string, string> lstDicMaVach = (Dictionary<string, string>)ViewData["lstDicMaVach"];
+    Dictionary<string, string> lstDicHinhAnh = (Dictionary<string, string>)ViewData["lstDicHinhAnh"];
+    List<VW_TAILIEUCUNGTACGIA> lstTLCTG = (List<VW_TAILIEUCUNGTACGIA>)ViewData["lstTLCungTacGia"];
+
+    Dictionary<string, string> lstDicMaVachChuDe = (Dictionary<string, string>)ViewData["lstDicMaVachChuDe"];
+    Dictionary<string, string> lstDicHinhAnhChuDe = (Dictionary<string, string>)ViewData["lstDicHinhAnhChuDe"];
+    List<VW_TAILIEUCUNGCHUDE> lstTLCCD = (List<VW_TAILIEUCUNGCHUDE>)ViewData["lstTLCungChuDe"];
+    List<VW_TAILIEU> mavach = (List<VW_TAILIEU>)ViewData["listdata"];
+    string mavach44 = ViewData["mavach"].ToString();
+    
+
+}
+
+<div class="container thongtinchitiet">
+    <div class="wrapper__info">
+        <div class="info">
+            <div class="img">
+                <img src="@Url.Action("getImage","Image", new { hinhanh = item.HinhAnh, type="TaiLieu" })" loading="lazy" alt="">
+            </div>
+            <div class="thongtintailieu" style="margin-left:15px;">
+                <div class="title">
+                    <h2 style="text-transform:uppercase;">@item.TenTaiLieu</h2>
+
+                </div>
+                <div class="line"></div>
+                <div class="content">
+                    <div class="tacgia">
+                        <span>Tác giả: </span> <a href="#">@item.TenTacGia</a>
+                    </div>
+                    <div class="nhaxuatban">
+                        <span>Nhà xuất bản: </span> <a href="#">@item.TenNhaXuatBan</a>
+                    </div>
+                    <div class="sotrang"><span>Số trang: </span><a href="#">@item.SoTrang</a></div>
+                    <div class="chude">
+                        <span>Chủ đề: </span><a href="#">@item.TenChuDe</a>
+                    </div>
+                    <div class="kyhieuxepgia">
+                        <span>Kí hiệu xếp giá: </span> <a href="#">@item.MaViTri</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thongtinchung">
+            <div class="title">
+                <div class="line"></div>
+                <h3>Thông tin chung</h3>
+            </div>
+            <div class="content">
+                <div class="tongso">
+                    <p>Tổng số: @listItem.Count()</p>
+                </div>
+                <div class="sanco">
+                    <p>Sẵn có: @sanco</p>
+                </div>
+                <div class="dangchomuon">
+                    <p>Đang cho mượn: @listItemDM.Count()</p>
+                </div>
+            </div>
+            <div class="listtailieu">
+                <div class="header__list">
+                    <div class="masach">
+                        <p>Mã sách</p>
+                    </div>
+                    <div class="tinhtrang">
+                        <p>Tình trạng</p>
+                    </div>
+                    <div class="vitri">
+                        <p>Vị trí</p>
+                    </div>
+                </div>
+                <div class="content__list">
+                    @{
+                        if (ViewData["listdata"] != null)
+                        {
+                            foreach (VW_TAILIEU data in listItem)
+                            {
+                                <div class="row">
+                                    <div class="masach">
+                                        <p>@data.MaVach</p>
+                                    </div>
+                                    <div class="tinhtrang">
+                                        @{
+                                            if (data.TinhTrangXoa == true)
+                                            {
+                                                <div class="box khongluuthong">
+                                                    <p>Không lưu thông</p>
+                                                </div>
+                                            }
+                                            else if (listItemDM.Contains(data.MaVach))
+                                            {
+                                                <div class="box dangmuon">
+
+                                                    <p>Đang mượn</p>
+                                                </div>
+                                            }
+                                            else if (data.TinhTrangXoa == false)
+                                            {
+                                                <div class="box sanco">
+
+                                                    <p>Sẵn có</p>
+                                                </div>
+                                            }
+
+                                        }
+
+                                    </div>
+                                    <div class="vitri">
+                                        @{
+                                            string[] arrString = data.MaViTri.Split('-');
+                                            string tang = "";
+                                            if (arrString[0].ToString() == "A")
+                                            {
+                                                tang = "Tầng 1";
+                                            }
+                                            else if (arrString[0].ToString() == "B")
+                                            {
+                                                tang = "Tầng 2";
+                                            }
+                                            else if (arrString[0].ToString() == "C")
+                                            {
+                                                tang = "Tầng 3";
+                                            }
+                                            else
+                                            {
+                                                tang = "Tầng 4";
+                                            }
+                                        }
+                                        <p>@tang</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        <div class="lienquan lienquantheotacgia">
+            <div class="title">
+                <div class="line"></div>
+                <h3>Tài liệu liên quan theo tác giả</h3>
+                <div class="iarrow arrow" data-arrow="down">
+                    <img id="imgArrow" src="~/Content/img/downArrow.svg" alt="">
+                </div>
+            </div>
+            <div class="content">
+
+                @{
+                     
+                    if (ViewData["lstTLCungTacGia"] != null)
+                    {
+
+                        if (lstTLCTG.Count() < 3)
+                        {
+                            
+                            @*<input type="hidden" data-haveslick="false" id="cungtacgia" />*@
+                            foreach (VW_TAILIEUCUNGTACGIA tlCungTacGia in (List<VW_TAILIEUCUNGTACGIA>)ViewData["lstTLCungTacGia"])
+                            {
+                                <div class="box">
+                                    <div class="img">
+                                        @{
+                                            string hinhanh = "";
+                                            lstDicHinhAnh.TryGetValue(tlCungTacGia.MaTaiLieu, out hinhanh);
+                                            string mavach2 = "";
+                                            lstDicMaVach.TryGetValue(tlCungTacGia.MaTaiLieu, out mavach2);
+                                        }
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
+
+                                    </div>
+                                    <div class="text">
+                                        <p>@tlCungTacGia.TenTaiLieu</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            
+                            @*<input type="hidden" data-haveslick="true" id="cungtacgia" />*@
+                            foreach (VW_TAILIEUCUNGTACGIA tlCungTacGia in (List<VW_TAILIEUCUNGTACGIA>)ViewData["lstTLCungTacGia"])
+                            {
+                                <div class="box">
+                                    <div class="img">
+                                        @{
+                                            string hinhanh = "";
+                                            lstDicHinhAnh.TryGetValue(tlCungTacGia.MaTaiLieu, out hinhanh);
+                                            string mavach2 = "";
+                                            lstDicMaVach.TryGetValue(tlCungTacGia.MaTaiLieu, out mavach2);
+                                        }
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p>@tlCungTacGia.TenTaiLieu</p>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+
+                    }
+                }
+            </div>
+        </div>
+
+
+
+        <div class="lienquan lienquantheochude">
+            <div class="title">
+                <div class="line"></div>
+                <h3>Tài liệu liên quan theo chủ đề</h3>
+                <div class="iarrow arrowCD" data-arrow="down">
+                    <img id="imgArrowCD" src="~/Content/img/downArrow.svg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                @{
+                    
+                    if (ViewData["lstTLCungChuDe"] != null)
+                    {
+
+                        if (lstTLCCD.Count() < 3)
+                        {
+                            
+                            @*<input type="hidden" data-haveslick="false" id="cungchude" />*@
+                            foreach (VW_TAILIEUCUNGCHUDE tlCungChuDe in (List<VW_TAILIEUCUNGCHUDE>)ViewData["lstTLCungChuDe"])
+                            {
+                                <div class="box">
+                                    <div class="img">
+                                        @{
+                                            string hinhanh = "";
+                                            lstDicHinhAnhChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out hinhanh);
+                                            string mavach2 = "";
+                                            lstDicMaVachChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
+                                        }
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
+
+                                    </div>
+                                    <div class="text">
+                                        <p>@tlCungChuDe.TenTaiLieu</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            
+                            @*<input type="hidden" data-haveslick="true" id="cungchude" />*@
+                            foreach (VW_TAILIEUCUNGCHUDE tlCungChuDe in (List<VW_TAILIEUCUNGCHUDE>)ViewData["lstTLCungChuDe"])
+                            {
+                                <div class="box" id="cungchude" data-haveslick="True">
+                                    <div class="img">
+                                        @{
+                                            string hinhanh = "";
+                                            lstDicHinhAnhChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out hinhanh);
+                                            string mavach2 = "";
+                                            lstDicMaVachChuDe.TryGetValue(tlCungChuDe.MaTaiLieu, out mavach2);
+                                        }
+                                        <a href="@Url.Action("ThongTinChiTiet","TaiLieu", new { mavach = mavach2 })"><img style="outline:none;" src="@Url.Action("getImage","Image", new { hinhanh = hinhanh, type="TaiLieu" })" id="arrow" loading="lazy" alt=""></a>
+
+                                    </div>
+                                    <div class="text">
+                                        <p>@tlCungChuDe.TenTaiLieu</p>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+
+                    }
+                }
+
+            </div>
+        </div>
+
+    </div>
+</div>
+@if (lstTLCCD.Count > 3)
+{
+<script type="text/javascript" defer>
+    $('.lienquantheochude .content').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+        nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+    });
+    @*var itemsCD = document.getElementsByClassName('rowCD');
+    var itemsTG = document.getElementsByClassName('rowTG');
+    if (@flgHaveslickCD.ToString() == "True") {
+        $('.lienquantheochude .content').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+        });
+    }
+    if (@flgHaveslickTG.ToString() == "True") {
+        $('.lienquantheotacgia .content').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+        });
+    }*@
+    //var haveslick = document.getElementById("cungtacgia");
+    //var haveslickcd = document.getElementById("cungchude");
+    //    var data = haveslick.getAttribute('data-haveslick');
+    //    var datacd = haveslickcd.getAttribute('data-haveslick');
+    //    if (data == 'true') {
+    //        $('.lienquantheotacgia .content').slick({
+    //            infinite: true,
+    //            slidesToShow: 3,
+    //            slidesToScroll: 3,
+    //            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+    //            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+    //        });
+    //    }
+    //    if (datacd == 'true') {
+    //        $('.lienquantheochude .content').slick({
+    //            infinite: true,
+    //            slidesToShow: 3,
+    //            slidesToScroll: 3,
+    //            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+    //            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+    //        });
+    //    }
+    
+        var loginDocGia = document.getElementById('loginDocGia');
+        window.onload = function () {
+        var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+        loginDocGia.href = url;
+    };
+</script>
+}
+@if (lstTLCTG.Count() > 3)
+{
+<script type="text/javascript">
+        $('.lienquantheotacgia .content').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: "<img class='a-left control-c prev slick-prev' src='/Content/img/leftArrow.svg'>",
+            nextArrow: "<img class='a-right control-c next slick-next' src='/Content/img/rightArrow.svg'>"
+
+        });
+
+        var loginDocGia = document.getElementById('loginDocGia');
+        window.onload = function () {
+        var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+        loginDocGia.href = url;
+    };
+</script>
+}
+<script type="text/javascript">
+    var loginDocGia = document.getElementById('loginDocGia');
+    var logoutDocGia = document.getElementById('logoutDocGia');
+    window.onload = function () {
+        if (loginDocGia != null) {
+            var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+            loginDocGia.href = url;
+        }
+        if (logoutDocGia != null) {
+            var url = '@Url.Action("DangXuat", "Login", new { targetUrl = Url.Action("ThongTinChiTiet", "TaiLieu", new { mavach = mavach44 }).ToString() })';
+            logoutDocGia.href = url;
+        }
+
+    };
+</script>
+

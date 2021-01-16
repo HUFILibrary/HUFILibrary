@@ -66,24 +66,24 @@ namespace Form_QuanLyThuVien
             this.NV_btnEditLoaiNV = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.NV_ptbAvatar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.NV_btnChonAnh = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.NV_txtCMND = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.NV_txtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.NV_dtpNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.NV_dtpNgayVL = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.NV_rdbNu = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.NV_rdbNam = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.NV_dtpNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.NV_rdbDangHD = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.NV_rdbNgungHD = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.NV_btnChonAnh = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.NV_dtpNgayVL = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.NV_txtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.NV_txtCMND = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
@@ -655,55 +655,22 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel7.Size = new System.Drawing.Size(587, 656);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
-            // kryptonLabel7
+            // NV_btnChonAnh
             // 
-            this.kryptonLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel7.Location = new System.Drawing.Point(170, 2);
-            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(159, 44);
-            this.kryptonLabel7.TabIndex = 0;
-            this.kryptonLabel7.Values.Text = "CMND";
-            // 
-            // kryptonLabel8
-            // 
-            this.kryptonLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel8.Location = new System.Drawing.Point(170, 198);
-            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(159, 39);
-            this.kryptonLabel8.TabIndex = 0;
-            this.kryptonLabel8.Values.Text = "Ngày vào làm";
-            // 
-            // kryptonLabel9
-            // 
-            this.kryptonLabel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonLabel9.Location = new System.Drawing.Point(170, 241);
-            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(159, 24);
-            this.kryptonLabel9.TabIndex = 0;
-            this.kryptonLabel9.Values.Text = "Địa chỉ";
-            // 
-            // kryptonLabel10
-            // 
-            this.kryptonLabel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonLabel10.Location = new System.Drawing.Point(170, 126);
-            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(159, 24);
-            this.kryptonLabel10.TabIndex = 0;
-            this.kryptonLabel10.Values.Text = "Tình trạng TK";
-            // 
-            // kryptonLabel11
-            // 
-            this.kryptonLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel11.Location = new System.Drawing.Point(170, 86);
-            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel11.Name = "kryptonLabel11";
-            this.kryptonLabel11.Size = new System.Drawing.Size(159, 36);
-            this.kryptonLabel11.TabIndex = 0;
-            this.kryptonLabel11.Values.Text = "Ngày sinh";
+            this.NV_btnChonAnh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NV_btnChonAnh.Location = new System.Drawing.Point(4, 4);
+            this.NV_btnChonAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.NV_btnChonAnh.Name = "NV_btnChonAnh";
+            this.NV_btnChonAnh.Size = new System.Drawing.Size(159, 40);
+            this.NV_btnChonAnh.StateCommon.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.NV_btnChonAnh.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.NV_btnChonAnh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NV_btnChonAnh.StateNormal.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.NV_btnChonAnh.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.NV_btnChonAnh.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NV_btnChonAnh.TabIndex = 0;
+            this.NV_btnChonAnh.Values.Text = "Chọn ảnh";
+            this.NV_btnChonAnh.Click += new System.EventHandler(this.NV_btnChonAnh_Click);
             // 
             // kryptonLabel12
             // 
@@ -714,52 +681,6 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel12.Size = new System.Drawing.Size(159, 32);
             this.kryptonLabel12.TabIndex = 0;
             this.kryptonLabel12.Values.Text = "Giới tính";
-            // 
-            // NV_txtCMND
-            // 
-            this.NV_txtCMND.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NV_txtCMND.Location = new System.Drawing.Point(3, 6);
-            this.NV_txtCMND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NV_txtCMND.Name = "NV_txtCMND";
-            this.NV_txtCMND.Size = new System.Drawing.Size(199, 27);
-            this.NV_txtCMND.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NV_txtCMND.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
-            this.NV_txtCMND.TabIndex = 1;
-            // 
-            // NV_txtDiaChi
-            // 
-            this.NV_txtDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NV_txtDiaChi.Location = new System.Drawing.Point(335, 241);
-            this.NV_txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NV_txtDiaChi.Multiline = true;
-            this.NV_txtDiaChi.Name = "NV_txtDiaChi";
-            this.NV_txtDiaChi.Size = new System.Drawing.Size(205, 140);
-            this.NV_txtDiaChi.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NV_txtDiaChi.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
-            this.NV_txtDiaChi.TabIndex = 1;
-            // 
-            // NV_dtpNgaySinh
-            // 
-            this.NV_dtpNgaySinh.Cursor = System.Windows.Forms.Cursors.Default;
-            this.NV_dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.NV_dtpNgaySinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NV_dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NV_dtpNgaySinh.Location = new System.Drawing.Point(335, 86);
-            this.NV_dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NV_dtpNgaySinh.Name = "NV_dtpNgaySinh";
-            this.NV_dtpNgaySinh.Size = new System.Drawing.Size(205, 36);
-            this.NV_dtpNgaySinh.TabIndex = 2;
-            // 
-            // NV_dtpNgayVL
-            // 
-            this.NV_dtpNgayVL.CustomFormat = "dd/MM/yyyy";
-            this.NV_dtpNgayVL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NV_dtpNgayVL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.NV_dtpNgayVL.Location = new System.Drawing.Point(335, 198);
-            this.NV_dtpNgayVL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NV_dtpNgayVL.Name = "NV_dtpNgayVL";
-            this.NV_dtpNgayVL.Size = new System.Drawing.Size(205, 39);
-            this.NV_dtpNgayVL.TabIndex = 2;
             // 
             // tableLayoutPanel8
             // 
@@ -774,7 +695,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(205, 32);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
@@ -799,6 +720,48 @@ namespace Form_QuanLyThuVien
             this.NV_rdbNam.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NV_rdbNam.TabIndex = 0;
             this.NV_rdbNam.Values.Text = "Nam";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel7.Location = new System.Drawing.Point(170, 2);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(159, 44);
+            this.kryptonLabel7.TabIndex = 0;
+            this.kryptonLabel7.Values.Text = "CMND";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel11.Location = new System.Drawing.Point(170, 86);
+            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(159, 36);
+            this.kryptonLabel11.TabIndex = 0;
+            this.kryptonLabel11.Values.Text = "Ngày sinh";
+            // 
+            // NV_dtpNgaySinh
+            // 
+            this.NV_dtpNgaySinh.Cursor = System.Windows.Forms.Cursors.Default;
+            this.NV_dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.NV_dtpNgaySinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NV_dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.NV_dtpNgaySinh.Location = new System.Drawing.Point(335, 86);
+            this.NV_dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NV_dtpNgaySinh.Name = "NV_dtpNgaySinh";
+            this.NV_dtpNgaySinh.Size = new System.Drawing.Size(205, 36);
+            this.NV_dtpNgaySinh.TabIndex = 2;
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonLabel10.Location = new System.Drawing.Point(170, 126);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(159, 24);
+            this.kryptonLabel10.TabIndex = 0;
+            this.kryptonLabel10.Values.Text = "Tình trạng TK";
             // 
             // tableLayoutPanel9
             // 
@@ -837,22 +800,48 @@ namespace Form_QuanLyThuVien
             this.NV_rdbNgungHD.TabIndex = 0;
             this.NV_rdbNgungHD.Values.Text = "Ngưng hoạt động";
             // 
-            // NV_btnChonAnh
+            // kryptonLabel8
             // 
-            this.NV_btnChonAnh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NV_btnChonAnh.Location = new System.Drawing.Point(4, 4);
-            this.NV_btnChonAnh.Margin = new System.Windows.Forms.Padding(4);
-            this.NV_btnChonAnh.Name = "NV_btnChonAnh";
-            this.NV_btnChonAnh.Size = new System.Drawing.Size(159, 40);
-            this.NV_btnChonAnh.StateCommon.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
-            this.NV_btnChonAnh.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
-            this.NV_btnChonAnh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NV_btnChonAnh.StateNormal.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
-            this.NV_btnChonAnh.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
-            this.NV_btnChonAnh.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NV_btnChonAnh.TabIndex = 0;
-            this.NV_btnChonAnh.Values.Text = "Chọn ảnh";
-            this.NV_btnChonAnh.Click += new System.EventHandler(this.NV_btnChonAnh_Click);
+            this.kryptonLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel8.Location = new System.Drawing.Point(170, 198);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(159, 39);
+            this.kryptonLabel8.TabIndex = 0;
+            this.kryptonLabel8.Values.Text = "Ngày vào làm";
+            // 
+            // NV_dtpNgayVL
+            // 
+            this.NV_dtpNgayVL.CustomFormat = "dd/MM/yyyy";
+            this.NV_dtpNgayVL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NV_dtpNgayVL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.NV_dtpNgayVL.Location = new System.Drawing.Point(335, 198);
+            this.NV_dtpNgayVL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NV_dtpNgayVL.Name = "NV_dtpNgayVL";
+            this.NV_dtpNgayVL.Size = new System.Drawing.Size(205, 39);
+            this.NV_dtpNgayVL.TabIndex = 2;
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonLabel9.Location = new System.Drawing.Point(170, 241);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(159, 24);
+            this.kryptonLabel9.TabIndex = 0;
+            this.kryptonLabel9.Values.Text = "Địa chỉ";
+            // 
+            // NV_txtDiaChi
+            // 
+            this.NV_txtDiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NV_txtDiaChi.Location = new System.Drawing.Point(335, 241);
+            this.NV_txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NV_txtDiaChi.Multiline = true;
+            this.NV_txtDiaChi.Name = "NV_txtDiaChi";
+            this.NV_txtDiaChi.Size = new System.Drawing.Size(205, 140);
+            this.NV_txtDiaChi.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NV_txtDiaChi.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
+            this.NV_txtDiaChi.TabIndex = 1;
             // 
             // tableLayoutPanel10
             // 
@@ -868,6 +857,17 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.905661F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(205, 42);
             this.tableLayoutPanel10.TabIndex = 6;
+            // 
+            // NV_txtCMND
+            // 
+            this.NV_txtCMND.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NV_txtCMND.Location = new System.Drawing.Point(3, 6);
+            this.NV_txtCMND.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NV_txtCMND.Name = "NV_txtCMND";
+            this.NV_txtCMND.Size = new System.Drawing.Size(199, 27);
+            this.NV_txtCMND.StateNormal.Content.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NV_txtCMND.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
+            this.NV_txtCMND.TabIndex = 1;
             // 
             // UF_NhanVien
             // 

@@ -34,12 +34,12 @@ namespace BLL_DAL
                        select ncc;
             return nccs;
         }
-        public IQueryable loadTLtheoMaTL(string mav)
+        public IQueryable loadTLtheoMaTL(string matl)
         {
             var tls = from tl in db.TAILIEUs
                       join ltl in db.LOAITAILIEUs on tl.MaLoaiTaiLieu equals ltl.MaLoaiTaiLieu
                       join cd in db.CHUDEs on tl.MaChuDe equals cd.MaChuDe
-                      where tl.MaVach == mav select new {tl.MaVach, ltl.TenLoaiTaiLieu, cd.TenChuDe, tl.TenTaiLieu};
+                      where tl.MaTaiLieu == matl || tl.MaVach == matl select new {tl.MaVach,tl.MaTaiLieu, ltl.TenLoaiTaiLieu, cd.TenChuDe, tl.TenTaiLieu};
             return tls;
         }
         public bool themCT_PhieuNhap(string maphieunhap, string manhacungcap, List<TAILIEU> dsTL)
@@ -396,7 +396,7 @@ namespace BLL_DAL
                        join nxb in db.NHAXUATBANs on tls.MaNhaXuatBan equals nxb.MaNhaXuatBan
                        join vt in db.VITRIs on tls.MaViTri equals vt.MaViTri
                        where tls.TinhTrangXoa == false
-                       select new { tls.MaVach, loaitl.TenLoaiTaiLieu, tls.TenTaiLieu, cd.TenChuDe};
+                       select new { tls.MaVach,tls.MaTaiLieu, loaitl.TenLoaiTaiLieu, tls.TenTaiLieu, cd.TenChuDe};
             return dsTL;
         }
     }

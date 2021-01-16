@@ -65,8 +65,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_QLTV.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DSTK_CD.cs" />
+    <Compile Include="DSTK_Khoa.cs" />
+    <Compile Include="DSTK_LTL.cs" />
+    <Compile Include="DSTK_PhiCoc.cs" />
+    <Compile Include="DSTK_TLPM.cs" />
+    <Compile Include="DSTK_TLTheoKhoang.cs" />
     <Compile Include="ExcelReport.cs" />
     <Compile Include="PhanQuyen.cs" />
+    <Compile Include="PhieuMuonTreHanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -85,6 +92,7 @@
     <Compile Include="QuanLyPhieuXLVP.cs" />
     <Compile Include="QuanLyTaiLieu.cs" />
     <Compile Include="QuanLyThongTinDocGia.cs" />
+    <Compile Include="QuanLyTinTuc.cs" />
     <Compile Include="QuanLyTra.cs" />
     <Compile Include="ThongKe.cs" />
   </ItemGroup>
@@ -95,6 +103,9 @@
       <LastGenOutput>DB_QLTV.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="DB_QLTV.dbml.layout">
+      <DependentUpon>DB_QLTV.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,11 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DB_QLTV.dbml.layout">
-      <DependentUpon>DB_QLTV.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

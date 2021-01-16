@@ -13,7 +13,7 @@ namespace BLL_DAL
         public bool kiemTraDangNhap(string username, string password)
         {
             DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == username && a.MatKhau == password).FirstOrDefault();
-            if(dg != null)
+            if (dg != null)
             {
                 return true;
             }
@@ -22,11 +22,22 @@ namespace BLL_DAL
                 return false;
             }
         }
-
+        public bool kiemTraDangNhapAdmin(string username, string password)
+        {
+            NHANVIEN nv = db.NHANVIENs.Where(a => a.MaNhanVien == int.Parse(username) && a.MatKhau == password).FirstOrDefault();
+            if (nv != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public VW_DOCGIA getModelDocGia(string username)
         {
             VW_DOCGIA dg = db.VW_DOCGIAs.Where(a => a.MaTheThuVien == username).FirstOrDefault();
-            if(dg != null)
+            if (dg != null)
             {
                 return dg;
             }
@@ -35,11 +46,22 @@ namespace BLL_DAL
                 return dg;
             }
         }
-
+        public VW_NHANVIEN getModelNhanVien(string username)
+        {
+            VW_NHANVIEN dg = db.VW_NHANVIENs.Where(a => a.MaNhanVien == int.Parse(username)).FirstOrDefault();
+            if (dg != null)
+            {
+                return dg;
+            }
+            else
+            {
+                return dg;
+            }
+        }
         public bool changePassword(string mathethuvien, string matkhau)
         {
             DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == mathethuvien).FirstOrDefault();
-            if(dg != null)
+            if (dg != null)
             {
                 dg.MatKhau = matkhau;
                 db.SubmitChanges();
@@ -56,10 +78,10 @@ namespace BLL_DAL
             DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == mathethuvien).FirstOrDefault();
             if (dg != null)
             {
-                if(dg.MatKhau != matkhaucu)
+                if (dg.MatKhau != matkhaucu)
                 {
                     return false;
-                }    
+                }
                 return true;
             }
             else

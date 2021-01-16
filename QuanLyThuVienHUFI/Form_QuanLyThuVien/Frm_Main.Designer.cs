@@ -31,13 +31,11 @@ namespace Form_QuanLyThuVien
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_container = new System.Windows.Forms.Panel();
-            this.img_background = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.Main_TenNV = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.Main_avatarNV = new System.Windows.Forms.PictureBox();
             this.Main_btnDangXuat = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.Main_btnMuonTra = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -47,14 +45,16 @@ namespace Form_QuanLyThuVien
             this.Main_btnPhieu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Main_btnThongKe = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Main_btnPhanQuyen = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.img_background = new System.Windows.Forms.PictureBox();
+            this.Main_avatarNV = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnl_container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_background)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Main_avatarNV)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.img_background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Main_avatarNV)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -84,18 +84,6 @@ namespace Form_QuanLyThuVien
             this.pnl_container.Size = new System.Drawing.Size(1936, 915);
             this.pnl_container.TabIndex = 2;
             // 
-            // img_background
-            // 
-            this.img_background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.img_background.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_background.Image = global::Form_QuanLyThuVien.Properties.Resources.library;
-            this.img_background.Location = new System.Drawing.Point(11, 9);
-            this.img_background.Name = "img_background";
-            this.img_background.Size = new System.Drawing.Size(1914, 897);
-            this.img_background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.img_background.TabIndex = 1;
-            this.img_background.TabStop = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -108,7 +96,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1936, 96);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -166,17 +154,6 @@ namespace Form_QuanLyThuVien
             this.Main_TenNV.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.Main_TenNV.TabIndex = 0;
             this.Main_TenNV.Values.Text = "kryptonLabel1";
-            // 
-            // Main_avatarNV
-            // 
-            this.Main_avatarNV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_avatarNV.Image = global::Form_QuanLyThuVien.Properties.Resources.user;
-            this.Main_avatarNV.Location = new System.Drawing.Point(3, 3);
-            this.Main_avatarNV.Name = "Main_avatarNV";
-            this.Main_avatarNV.Size = new System.Drawing.Size(116, 84);
-            this.Main_avatarNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Main_avatarNV.TabIndex = 1;
-            this.Main_avatarNV.TabStop = false;
             // 
             // Main_btnDangXuat
             // 
@@ -403,7 +380,7 @@ namespace Form_QuanLyThuVien
             this.Main_btnPhanQuyen.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.Main_btnPhanQuyen.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
             this.Main_btnPhanQuyen.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedFull;
-            this.Main_btnPhanQuyen.StateCommon.Back.Image = global::Form_QuanLyThuVien.Properties.Resources.report;
+            this.Main_btnPhanQuyen.StateCommon.Back.Image = global::Form_QuanLyThuVien.Properties.Resources.icons8_maximize_window_40;
             this.Main_btnPhanQuyen.StateCommon.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
             this.Main_btnPhanQuyen.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.TopMiddle;
             this.Main_btnPhanQuyen.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -414,7 +391,7 @@ namespace Form_QuanLyThuVien
             this.Main_btnPhanQuyen.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.Main_btnPhanQuyen.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
             this.Main_btnPhanQuyen.StateNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedFull;
-            this.Main_btnPhanQuyen.StateNormal.Back.Image = global::Form_QuanLyThuVien.Properties.Resources.report;
+            this.Main_btnPhanQuyen.StateNormal.Back.Image = global::Form_QuanLyThuVien.Properties.Resources.icons8_maximize_window_40;
             this.Main_btnPhanQuyen.StateNormal.Back.ImageAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
             this.Main_btnPhanQuyen.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.TopMiddle;
             this.Main_btnPhanQuyen.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -425,6 +402,29 @@ namespace Form_QuanLyThuVien
             this.Main_btnPhanQuyen.Tag = "SF009";
             this.Main_btnPhanQuyen.Values.Text = "Phân quyền";
             this.Main_btnPhanQuyen.Click += new System.EventHandler(this.Main_btnPhanQuyen_Click);
+            // 
+            // img_background
+            // 
+            this.img_background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.img_background.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.img_background.Image = global::Form_QuanLyThuVien.Properties.Resources.library;
+            this.img_background.Location = new System.Drawing.Point(11, 9);
+            this.img_background.Name = "img_background";
+            this.img_background.Size = new System.Drawing.Size(1914, 897);
+            this.img_background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.img_background.TabIndex = 1;
+            this.img_background.TabStop = false;
+            // 
+            // Main_avatarNV
+            // 
+            this.Main_avatarNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_avatarNV.Image = global::Form_QuanLyThuVien.Properties.Resources.user;
+            this.Main_avatarNV.Location = new System.Drawing.Point(3, 3);
+            this.Main_avatarNV.Name = "Main_avatarNV";
+            this.Main_avatarNV.Size = new System.Drawing.Size(116, 84);
+            this.Main_avatarNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Main_avatarNV.TabIndex = 1;
+            this.Main_avatarNV.TabStop = false;
             // 
             // Frm_Main
             // 
@@ -444,13 +444,13 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.pnl_container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_background)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Main_avatarNV)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.img_background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Main_avatarNV)).EndInit();
             this.ResumeLayout(false);
 
         }

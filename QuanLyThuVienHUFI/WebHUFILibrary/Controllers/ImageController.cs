@@ -18,5 +18,14 @@ namespace WebHUFILibrary.Controllers
 
             return File(urlImage, "image/jpeg");
         }
+
+        public ActionResult getImageIndex(string matintuc, string logo)
+        {
+            string path = System.Web.HttpContext.Current.Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["LogoTinTuc"]);
+            
+            string urlImage = Path.Combine(path, matintuc, logo);
+
+            return File(urlImage, "image/jpeg");
+        }
     }
 }

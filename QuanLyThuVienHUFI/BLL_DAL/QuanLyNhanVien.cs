@@ -10,6 +10,7 @@ namespace BLL_DAL
     public class QuanLyNhanVien
     {
         DB_QLTVDataContext qltv = new DB_QLTVDataContext();
+
         public IQueryable loadDsLoaiNV() {
             var lnvs = from lnv in qltv.LOAINHANVIENs where lnv.TinhTrangXoa == false select lnv;
             return lnvs;

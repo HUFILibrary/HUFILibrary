@@ -26,6 +26,17 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-RDLUFLH4\\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integra" +
+            "ted Security=True")]
+        public string QuanLyThuVienCNTP2ConnectionString11 {
+            get {
+                return ((string)(this["QuanLyThuVienCNTP2ConnectionString11"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated " +
             "Security=True")]
         public string QuanLyThuVienCNTPConnectionString {
@@ -37,30 +48,8 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated " +
-            "Security=True")]
-        public string QuanLyThuVienCNTPConnectionString1 {
-            get {
-                return ((string)(this["QuanLyThuVienCNTPConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated " +
-            "Security=True")]
-        public string QuanLyThuVienCNTPConnectionString2 {
-            get {
-                return ((string)(this["QuanLyThuVienCNTPConnectionString2"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated " +
-            "Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-F6GMAH7\\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integra" +
+            "ted Security=True")]
         public string QuanLyThuVienCNTP2ConnectionString {
             get {
                 return ((string)(this["QuanLyThuVienCNTP2ConnectionString"]));
@@ -70,33 +59,11 @@ namespace BLL_DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated " +
-            "Security=True")]
-        public string QuanLyThuVienCNTPConnectionString3 {
-            get {
-                return ((string)(this["QuanLyThuVienCNTPConnectionString3"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=QuanLyThuVienCNTP2;Integrated " +
-            "Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-F6GMAH7\\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;User ID" +
+            "=sa;Password=024453854")]
         public string QuanLyThuVienCNTP2ConnectionString1 {
             get {
                 return ((string)(this["QuanLyThuVienCNTP2ConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-F6GMAH7\\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integra" +
-            "ted Security=True")]
-        public string QuanLyThuVienCNTP2ConnectionString2 {
-            get {
-                return ((string)(this["QuanLyThuVienCNTP2ConnectionString2"]));
             }
         }
     }

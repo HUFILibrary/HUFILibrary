@@ -73,6 +73,17 @@ namespace BLL_DAL
                         }
                     }
                     // -----------------------------------
+                    // set tinh trang xoa cho nhan vien thuoc loai nhan vien nay
+                    var nvs = from nv in qltv.NHANVIENs
+                              where nv.MaLoaiNhanVien == malnv
+                              select nv;
+                    if(nvs != null)
+                    {
+                        foreach(NHANVIEN item in nvs)
+                        {
+                            item.TinhTrangXoa = true;
+                        }
+                    }
                     qltv.SubmitChanges();
                     return true;
                 }

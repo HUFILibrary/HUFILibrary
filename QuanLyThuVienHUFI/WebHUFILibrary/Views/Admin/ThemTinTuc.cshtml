@@ -1,0 +1,319 @@
+﻿@using BLL_DAL;
+@{
+    Layout = null;
+    List<LOAITINTUC> lstLoaiTinTuc = (List<LOAITINTUC>)ViewData["lstLoaiTinTuc"];
+    VW_NHANVIEN nv = (VW_NHANVIEN)Session["AdminIsLogin"];
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="~/Content/css/reset.css">
+    <link rel="stylesheet" href="~/Content/font/stylesheet.css">
+    <link rel="stylesheet" href="~/Content/css/admin.css">
+
+    <script src="~/Content/js/jquery-3.5.1.min.js"></script>
+    <script src="~/Content/js/admin.js" defer></script>
+    @*<script src="~/Content/js/lib/ckeditor.js"></script>*@
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+</head>
+<body style="height:100%;">
+    <div class="wrapper">
+        <div class="left">
+            <div class="left__wrapper">
+                <div class="title">
+                    <a href="#"><h2>TRANG QUẢN TRỊ</h2></a>
+                </div>
+                <div class="line"></div>
+                <div class="row thongke">
+                    <div class="row__parent">
+                        <a href="#">Thống kê</a>
+
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row tintuc" id="tintuc">
+                    <div class="row__parent">
+                        <a href="#">Tin tức</a>
+                        <div class="img">
+                            <img src="~/Content/img/arrowAdminRight.svg" data-arrow="right" id="imgArrow" alt="">
+                        </div>
+                    </div>
+                    <div id="tintuc__child" class="row__child">
+                        <ul>
+                            <li><a href="#">Thể loại tin tức</a></li>
+                            <li><a href="@Url.Action("TinTuc", "Admin")">Tin tức</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line"></div>
+                @*<div class="row tintuc" id="tintuc">
+                        <div class="row__parent">
+                            <a href="#">Tin tức</a>
+                            <div class="img">
+                                <img src="~/Content/img/arrowAdminRight.svg" data-arrow="right" id="imgArrow" alt="">
+                            </div>
+                        </div>
+                        <div id="tintuc__child" class="row__child">
+                            <ul>
+                                <li><a href="#">Thể loại tin tức</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+        <div class="right">
+            <div class="header__wrapper">
+                <div class="header">
+                    <div class="account">
+                        <div class="username">
+                            <p>@nv.TenNhanVien</p>
+                            <div class="img">
+                                <img src="~/Content/img/profile.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main__wrapper">
+                @using (Html.BeginForm("ThemTinTucAjax", "Admin", FormMethod.Post, new { @id = "formAddTT", enctype = "multipart/form-data" }))
+                {
+                    <div class="main thongtintintuc">
+                        <div class="title">
+                            <h2>Thêm mới tin tức</h2>
+                        </div>
+                        <div class="line"></div>
+                        <div class="content">
+                            <div class="row logo">
+                                <div class="img">
+                                    <img src="" id="imgLogo" alt="">
+                                </div>
+                                <label class="chonlogo" for="logotintuc">Chọn hình</label>
+                                <input type="file" name="logotintuc" id="logotintuc">
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Mã: </p>
+                                    <input type="text" disabled value="" class="input readonly id">
+                                </div>
+                                <div class="col">
+                                    <p>Loại tin tức: </p>
+                                    <select class="input" name="loaitintuc" id="loaitintuc">
+                                        @foreach (LOAITINTUC itemTT in lstLoaiTinTuc)
+                                        {
+
+                                            <option value="@itemTT.MaLoaiTinTuc">@itemTT.TenMaLoaiTinTuc</option>
+
+                                        }
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row textarea">
+                                <div class="col">
+                                    <p>Tiêu đề: </p>
+                                    <textarea name="tieude" id="tieude" cols="30" rows="3" class="txtArea"></textarea>
+                                </div>
+                                <div class="col">
+                                    <p>Mô tả ngắn: </p>
+                                    <textarea name="motangan" id="motangan" cols="30" rows="3" class="txtArea"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Số lượt xem: </p>
+                                    <input type="text" value="0" disabled class="input readonly views">
+                                </div>
+                                <div class="col">
+                                    <p>Hiển thị: </p>
+                                    <input type="checkbox" name="hienthitrangchu" class="chkbox">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Ngày tạo: </p>
+
+                                    @Html.TextBox("ngaytao", DateTime.Now, "{0:yyyy-MM-dd}", new { @class = "input daycreate readonly", @id = "datecreate", type = "date", disabled = "true" })
+                                    @*<input type="date" pattern="\d{1,2}/\d{1,2}/\d{4}" value="@dngaytao" placeholder="dd-mm-yyyy" id="datecreate" class="input daycreate">*@
+                                </div>
+                                <div class="col">
+                                    <p>Người tạo: </p>
+                                    <input type="text" value="" readonly class="readonly input creator">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col noidung">
+                                    <p>Nội dung: </p>
+                                   <textarea class="ckeditor" name="noidung" id="noidung" cols="80" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="row controls">
+                                <a href="@Url.Action("TinTuc", "Admin")">Quay về</a>
+                                @*<button type="submit" onclick="checkValue(event)" id="themmoitintuc">Thêm mới</button>*@
+                                <button id="themmoitintuc">Thêm mới</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkValueThemTinTuc() {
+            var logotintuc = document.getElementById('logotintuc');
+            var tieude = document.getElementById('tieude');
+            var motangan = document.getElementById('motangan');
+            var editor_data = CKEDITOR.instances['noidung'].getData();
+            
+            
+            if (tieude.value == "" || motangan.value == "" || editor_data == "" || logotintuc.value == "") {
+                
+                alert('Vui lòng nhập đẩy đủ dữ liệu.');
+                return 1;
+            }
+            if (tieude.value.length > 200) {
+                event.preventDefault();
+                tieude.focus();
+                alert('Tiêu đề không được quá 200 kí tự.');
+                return 1;
+            }
+            if (motangan.value.length > 500) {
+                event.preventDefault();
+                motangan.focus();
+                alert('Mô tả ngắn không được quá 500 kí tự.');
+                return 1;
+            }
+
+        }
+        //ClassicEditor
+        //    .create(document.querySelector('#noidung'), {
+        //        // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+
+        //    })
+        //    .then(editor => {
+        //        window.editor = editor;
+
+        //    })
+        //    .catch(err => {
+        //        console.error(err.stack);
+        //    });
+
+        $('#formAddTT').submit(function (e) {
+            
+            if (checkValueThemTinTuc() === 1) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+            var editor_data = CKEDITOR.instances['noidung'].getData();
+            var data = new FormData(this);
+            data.append('content', editor_data);
+            $.each($(this).find('input[type="file"]'), function () {
+                var name = $(this).attr('name');
+                var files = $(this).prop('files');
+
+                if (files.length == 0) {
+                    data.set(name, null);
+                }
+            });
+            e.preventDefault();
+            return $.ajax({
+                url: '@Url.Action("ThemTinTucAjax","Admin")',
+                type: this.method,
+                //cache: false,
+                contentType: false,
+                processData: false,
+                dataType: 'json',
+                //data: data,
+                data: data,
+                success: function (result) {
+                    if (result.rs) {
+                        alert('Thêm thành công.')
+                        location.href = '@Url.Action("ThongTinTinTuc", "Admin")' + '?matintuc=' + result.matintuc;
+                    }
+                    else {
+                        alert('Quá trình thêm không thành công.')
+                        return false;
+                    }
+                },
+                error: function () {
+                    alert('Quá trình thêm không thành công.')
+                    return false;
+                }
+            });
+        });
+
+
+
+        @*$('#themmoitintuc').click(function () {
+            var data = new FormData($('#formAddTT'));
+            $.each($(form).find('input[type="file"]'), function () {
+                var name = $(this).attr('name');
+                var files = $(this).prop('files');
+
+                if (files.length == 0) {
+                    data.set(name, null);
+                }
+            });
+                $.ajax({
+                    type: 'post',
+                    url: '@Url.Action("ThemTinTucAjax", "Admin")',
+                    dataType: 'json',
+                    data: data,
+                    success: function (result) {
+                        if (result.rs) {
+                        alert('Thêm thành công.')
+                        location.href = '@Url.Action("ThongTinTinTuc", "Admin")' + '?matintuc=' + result.matintuc;
+                        }
+                        else {
+                            alert('Quá trình thêm không thành công.')
+                            return false;
+                        }
+                    },
+                    error: function () {
+                        alert('Quá trình thêm không thành công.')
+                        return false;
+                    }
+                });
+
+        })*@
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgLogo').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+        function checkValue(event) {
+            var tieude = document.getElementById('tieude');
+            var motangan = document.getElementById('motangan');
+            if (tieude.value.length > 200) {
+                event.preventDefault();
+                tieude.focus();
+                alert('Tiêu đề không được quá 200 kí tự.');
+                return false;
+            }
+            if (motangan.value.length > 500) {
+                event.preventDefault();
+                motangan.focus();
+                alert('Mô tả ngắn không được quá 500 kí tự.');
+                return false;
+            }
+        }
+        $("#logotintuc").change(function () {
+            readURL(this);
+        });
+    </script>
+</body>
+</html>
+

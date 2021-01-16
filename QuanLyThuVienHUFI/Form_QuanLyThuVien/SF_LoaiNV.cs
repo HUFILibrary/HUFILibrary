@@ -84,7 +84,7 @@ namespace Form_QuanLyThuVien
             
             LNV_btnSua.Enabled = true;
             LNV_btnXoa.Enabled = true;
-            LNV_txtTenLNV.Text = LNV_DgvDSLoai.Rows[e.RowIndex].Cells[2].Value.ToString();
+            LNV_txtTenLNV.Text = LNV_DgvDSLoai.Rows[e.RowIndex].Cells[1].Value.ToString();
             
 
         }

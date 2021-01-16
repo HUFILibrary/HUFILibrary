@@ -1,0 +1,53 @@
+﻿@using BLL_DAL;
+@{
+    ViewBag.Title = "Chi tiết tin tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    VW_TINTUC item = (VW_TINTUC)ViewData["data"];
+}
+
+<div class="chitiettintuc__wrapper">
+    <div class="container">
+        <div class="chitiettintuc">
+            <div class="title">
+                <h1>@item.TieuDe</h1>
+            </div>
+            <div class="date">
+                <div class="ngaytao">
+                    @{ 
+
+                        DateTime ns = DateTime.Parse(item.NgayTao.ToString());
+                        String nt = String.Format("{0:dd/MM/yyyy}", ns);
+                    }
+                    <p><img src="~/Content/img/calendar.svg" alt=""> @nt</p>
+                </div>
+                <div class="line"></div>
+                <div class="luotxem">
+                    <p><img src="~/Content/img/eye.svg" alt=""> @item.SoLuongLuotXem.ToString()</p>
+                </div>
+            </div>
+            <div class="motangan">
+                <p>
+                    @item.MoTaNgan
+                </p>
+            </div>
+            <div class="content">
+                @Html.Raw(item.NoiDung)
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var loginDocGia = document.getElementById('loginDocGia');
+    var logoutDocGia = document.getElementById('logoutDocGia');
+    window.onload = function () {
+        if (loginDocGia != null) {
+            var url = '@Url.Action("DangNhap", "Login", new { targetUrl = Url.Action("ChiTietTinTuc","Home",new { matintuc = item.MaTinTuc }).ToString() })';
+            loginDocGia.href = url;
+        }
+        if (logoutDocGia != null) {
+            var url = '@Url.Action("DangXuat", "Login", new { targetUrl = Url.Action("ChiTietTinTuc","Home", new { matintuc = item.MaTinTuc }).ToString() })';
+            logoutDocGia.href = url;
+        }
+
+    };
+</script>

@@ -233,6 +233,16 @@ namespace Form_QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximize_window_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-maximize-window-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_print_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-print-40", resourceCulture);

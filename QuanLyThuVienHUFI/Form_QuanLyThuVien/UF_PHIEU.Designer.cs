@@ -246,10 +246,6 @@ namespace Form_QuanLyThuVien
             this.QLP_N_NC_btnTimTL = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.QLP_N_NC_txtTimTL = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.QLP_N_PC_dgvDSTL = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.oldMaVach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oldTenLoaiTaiLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oldTenChuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oldTenTaiLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel48 = new System.Windows.Forms.TableLayoutPanel();
             this.NTLC_btnThem = new System.Windows.Forms.Button();
             this.NTLC_btnXoa = new System.Windows.Forms.Button();
@@ -281,6 +277,11 @@ namespace Form_QuanLyThuVien
             this.Column48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.oldMaVach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oldTenLoaiTaiLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oldTenChuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oldTenTaiLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -810,8 +811,9 @@ namespace Form_QuanLyThuVien
             // 
             // QLP_M_dpkNgayMuon
             // 
+            this.QLP_M_dpkNgayMuon.CustomFormat = "dd/MM/yyyy";
             this.QLP_M_dpkNgayMuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLP_M_dpkNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.QLP_M_dpkNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.QLP_M_dpkNgayMuon.Location = new System.Drawing.Point(196, 129);
             this.QLP_M_dpkNgayMuon.Margin = new System.Windows.Forms.Padding(4);
             this.QLP_M_dpkNgayMuon.Name = "QLP_M_dpkNgayMuon";
@@ -820,8 +822,9 @@ namespace Form_QuanLyThuVien
             // 
             // QLP_M_dtpThoiHanMuon
             // 
+            this.QLP_M_dtpThoiHanMuon.CustomFormat = "dd/MM/yyyy";
             this.QLP_M_dtpThoiHanMuon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLP_M_dtpThoiHanMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.QLP_M_dtpThoiHanMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.QLP_M_dtpThoiHanMuon.Location = new System.Drawing.Point(620, 129);
             this.QLP_M_dtpThoiHanMuon.Margin = new System.Windows.Forms.Padding(4);
             this.QLP_M_dtpThoiHanMuon.Name = "QLP_M_dtpThoiHanMuon";
@@ -3070,6 +3073,10 @@ namespace Form_QuanLyThuVien
             this.NTLC_TaoPhieuNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NTLC_TaoPhieuNhap.Name = "NTLC_TaoPhieuNhap";
             this.NTLC_TaoPhieuNhap.Size = new System.Drawing.Size(136, 67);
+            this.NTLC_TaoPhieuNhap.StateCommon.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.NTLC_TaoPhieuNhap.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.NTLC_TaoPhieuNhap.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Red;
+            this.NTLC_TaoPhieuNhap.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NTLC_TaoPhieuNhap.StateNormal.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
             this.NTLC_TaoPhieuNhap.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
             this.NTLC_TaoPhieuNhap.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Red;
@@ -3202,7 +3209,7 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(285, 29);
             this.kryptonLabel4.TabIndex = 0;
-            this.kryptonLabel4.Values.Text = "Số lượng";
+            this.kryptonLabel4.Values.Text = "Tìm kiếm";
             // 
             // tableLayoutPanel53
             // 
@@ -3257,6 +3264,7 @@ namespace Form_QuanLyThuVien
             this.QLP_N_PC_dgvDSTL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.QLP_N_PC_dgvDSTL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.oldMaVach,
+            this.Column24,
             this.oldTenLoaiTaiLieu,
             this.oldTenChuDe,
             this.oldTenTaiLieu});
@@ -3268,34 +3276,6 @@ namespace Form_QuanLyThuVien
             this.QLP_N_PC_dgvDSTL.RowTemplate.Height = 24;
             this.QLP_N_PC_dgvDSTL.Size = new System.Drawing.Size(1533, 269);
             this.QLP_N_PC_dgvDSTL.TabIndex = 1;
-            // 
-            // oldMaVach
-            // 
-            this.oldMaVach.DataPropertyName = "MaVach";
-            this.oldMaVach.HeaderText = "Mã vạch";
-            this.oldMaVach.MinimumWidth = 6;
-            this.oldMaVach.Name = "oldMaVach";
-            // 
-            // oldTenLoaiTaiLieu
-            // 
-            this.oldTenLoaiTaiLieu.DataPropertyName = "TenLoaiTaiLieu";
-            this.oldTenLoaiTaiLieu.HeaderText = "Tên loại tài liệu";
-            this.oldTenLoaiTaiLieu.MinimumWidth = 6;
-            this.oldTenLoaiTaiLieu.Name = "oldTenLoaiTaiLieu";
-            // 
-            // oldTenChuDe
-            // 
-            this.oldTenChuDe.DataPropertyName = "TenChuDe";
-            this.oldTenChuDe.HeaderText = "Tên chủ đề";
-            this.oldTenChuDe.MinimumWidth = 6;
-            this.oldTenChuDe.Name = "oldTenChuDe";
-            // 
-            // oldTenTaiLieu
-            // 
-            this.oldTenTaiLieu.DataPropertyName = "TenTaiLieu";
-            this.oldTenTaiLieu.HeaderText = "Tên tài liệu";
-            this.oldTenTaiLieu.MinimumWidth = 6;
-            this.oldTenTaiLieu.Name = "oldTenTaiLieu";
             // 
             // tableLayoutPanel48
             // 
@@ -3739,6 +3719,42 @@ namespace Form_QuanLyThuVien
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // oldMaVach
+            // 
+            this.oldMaVach.DataPropertyName = "MaVach";
+            this.oldMaVach.HeaderText = "Mã vạch";
+            this.oldMaVach.MinimumWidth = 6;
+            this.oldMaVach.Name = "oldMaVach";
+            // 
+            // Column24
+            // 
+            this.Column24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column24.DataPropertyName = "MaTaiLieu";
+            this.Column24.HeaderText = "Mã tài liệu";
+            this.Column24.MinimumWidth = 6;
+            this.Column24.Name = "Column24";
+            // 
+            // oldTenLoaiTaiLieu
+            // 
+            this.oldTenLoaiTaiLieu.DataPropertyName = "TenLoaiTaiLieu";
+            this.oldTenLoaiTaiLieu.HeaderText = "Tên loại tài liệu";
+            this.oldTenLoaiTaiLieu.MinimumWidth = 6;
+            this.oldTenLoaiTaiLieu.Name = "oldTenLoaiTaiLieu";
+            // 
+            // oldTenChuDe
+            // 
+            this.oldTenChuDe.DataPropertyName = "TenChuDe";
+            this.oldTenChuDe.HeaderText = "Tên chủ đề";
+            this.oldTenChuDe.MinimumWidth = 6;
+            this.oldTenChuDe.Name = "oldTenChuDe";
+            // 
+            // oldTenTaiLieu
+            // 
+            this.oldTenTaiLieu.DataPropertyName = "TenTaiLieu";
+            this.oldTenTaiLieu.HeaderText = "Tên tài liệu";
+            this.oldTenTaiLieu.MinimumWidth = 6;
+            this.oldTenTaiLieu.Name = "oldTenTaiLieu";
+            // 
             // UF_PHIEU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4061,10 +4077,6 @@ namespace Form_QuanLyThuVien
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel52;
         private System.Windows.Forms.Button QLP_VP_btnXoaCT;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView QLP_VP_dgvDSCTPhieuXLVP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oldMaVach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oldTenLoaiTaiLieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oldTenChuDe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oldTenTaiLieu;
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox NTLC_cboNhaCungCap;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
@@ -4145,5 +4157,10 @@ namespace Form_QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn Column47;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column48;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oldMaVach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oldTenLoaiTaiLieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oldTenChuDe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oldTenTaiLieu;
     }
 }

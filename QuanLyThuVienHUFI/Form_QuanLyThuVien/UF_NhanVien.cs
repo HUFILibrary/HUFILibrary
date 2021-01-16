@@ -30,6 +30,14 @@ namespace Form_QuanLyThuVien
         {
             loadDgvNhanVien();
             loadCboLoaiNV();
+            if (NV_dgvDSNV.Rows.Count > 0)
+            {
+                NV_dgvDSNV.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+                NV_dgvDSNV.Columns[6].DefaultCellStyle.Format = "dd/MM/yyyy";
+                NV_dgvDSNV.Columns[6].MinimumWidth = 150;
+                NV_dgvDSNV.Columns[7].MinimumWidth = 200;
+            }
+
         }
         void loadDgvNhanVien()
         {
@@ -51,6 +59,8 @@ namespace Form_QuanLyThuVien
             //NV_txtTenNV.Enabled = false;
             //NV_rdbDangHD.Enabled = false;
             //NV_rdbNgungHD.Enabled = false;
+            
+
 
         }
         public void loadCboLoaiNV() {
