@@ -201,8 +201,27 @@ namespace Form_QuanLyThuVien
             }
             ds.Tables.Add(phieumuon);
             ds.Tables.Add(thongtinnhanvien);
-            ReportExcel.FillReport("DanhSachPhieuMuonTreHanChuaTra.xlsx", "DSPMTHCT.xlsx", ds, new string[] { "{", "}" });
-            Process.Start("DanhSachPhieuMuonTreHanChuaTra.xlsx");
+            bool flgCheck = false;
+            ReportExcel.FillReport("DanhSachPhieuMuonTreHanChuaTra.xlsx", "DSPMTHCT.xlsx", ds, new string[] { "{", "}" }, ref flgCheck);
+            if (flgCheck)
+            {
+                do
+                {
+                    if (MessageBox.Show("Bạn có muốn xuất lại danh sách không? \n*LƯU Ý: vui lòng đóng file excel trước khi nhấn muốn xuất lại.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    {
+                        ReportExcel.FillReport("DanhSachPhieuMuonTreHanChuaTra.xlsx", "DSPMTHCT.xlsx", ds, new string[] { "{", "}" }, ref flgCheck);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                } while (flgCheck);
+            }
+            if (!flgCheck)
+            {
+                Process.Start("DanhSachPhieuMuonTreHanChuaTra.xlsx");
+            }
+            
         }
 
 

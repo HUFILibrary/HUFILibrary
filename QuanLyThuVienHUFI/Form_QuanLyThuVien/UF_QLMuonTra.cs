@@ -303,8 +303,27 @@ namespace Form_QuanLyThuVien
                         ds.Tables.Add(tailieu);
                         ds.Tables.Add(thongtindocgia);
                         ds.Tables.Add(ngaythangnam);
-                        ReportExcel.FillReport("phieumuonrs.xlsx", "PhieuMuon.xlsx", ds, new string[] { "{", "}" });
-                        Process.Start("phieumuonrs.xlsx");
+                        bool flgCheck = false;
+                        ReportExcel.FillReport("phieumuonrs.xlsx", "PhieuMuon.xlsx", ds, new string[] { "{", "}" }, ref flgCheck);
+                        if(flgCheck)
+                        {
+                            do
+                            {
+                                if (MessageBox.Show("Bạn có muốn xuất lại phiếu mượn không? \n*LƯU Ý: vui lòng đóng file excel trước khi nhấn muốn xuất lại.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                                {
+                                    ReportExcel.FillReport("phieumuonrs.xlsx", "PhieuMuon.xlsx", ds, new string[] { "{", "}" }, ref flgCheck);
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            } while (flgCheck);
+                        }
+                        if(!flgCheck)
+                        {
+                            Process.Start("phieumuonrs.xlsx");
+                        }
+                        
                     }    
                     dsTaiLieuChon.Clear();
                     loadDgvChiTietTaiLieuMuon();

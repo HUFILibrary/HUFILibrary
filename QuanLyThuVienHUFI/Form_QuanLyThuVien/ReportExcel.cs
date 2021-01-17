@@ -8,20 +8,36 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace Form_QuanLyThuVien
 {
     public class ReportExcel
     {
         public static void FillReport(string filename, string templatefilename, DataSet data)
         {
-            FillReport(filename, templatefilename, data, new string[] { "%", "%" });
+            bool flgCheck = false;
+            FillReport(filename, templatefilename, data, new string[] { "%", "%" },ref flgCheck);
         }
 
-        public static void FillReport(string filename, string templatefilename, DataSet data, string[] deliminator)
+        public static void FillReport(string filename, string templatefilename, DataSet data, string[] deliminator, ref bool flgCheck)
         {
             if (File.Exists(filename))
-                File.Delete(filename);
+            {
+                System.GC.Collect();
+                System.GC.WaitForPendingFinalizers();
+                try
+                {
+                    File.Delete(filename);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("File đang được mở.\nVui lòng đóng file trước khi xuất.");
+                    flgCheck = true;
+                    return;
+                }
+                
+            }    
+                
 
             using (var file = new FileStream(filename, FileMode.CreateNew))
             {
@@ -29,8 +45,10 @@ namespace Form_QuanLyThuVien
                 {
                     using (var xls = new ExcelPackage(file, temp))
                     {
+                        
                         foreach (var n in xls.Workbook.Names)
                         {
+                            
                             FillWorksheetData(data, n.Worksheet, n, deliminator);
                         }
 
@@ -64,6 +82,7 @@ namespace Form_QuanLyThuVien
                     }
                 }
             }
+            flgCheck = false;
         }
 
         private static void FillWorksheetData(DataSet data, ExcelWorksheet ws, ExcelNamedRange n, string[] deliminator)
