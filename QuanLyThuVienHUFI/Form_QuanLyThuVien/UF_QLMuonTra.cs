@@ -202,9 +202,25 @@ namespace Form_QuanLyThuVien
             QLMT_M_lblNgayTraDuKien.Text = DateTime.Now.AddMonths(1).ToString("dd/MM/yyyy");
 
         }
-
+        public bool ktraTxtChuaSo(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void QLMT_btnXacNhanMuon_Click(object sender, EventArgs e)
         {
+            if(!ktraTxtChuaSo(QLMT_M_txtTienDatCoc))
+            {
+                MessageBox.Show("Phí cọc chỉ nhập số.");
+                QLMT_M_txtTienDatCoc.Focus();
+                return;
+            }    
             if(string.IsNullOrEmpty(QLMT_lblMaThe.Text))
             {
                 MessageBox.Show("Vui lòng nhập thông tin độc giả.");
