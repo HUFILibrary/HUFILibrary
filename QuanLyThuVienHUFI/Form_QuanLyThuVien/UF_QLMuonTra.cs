@@ -219,31 +219,33 @@ namespace Form_QuanLyThuVien
         }
         private void QLMT_btnXacNhanMuon_Click(object sender, EventArgs e)
         {
-            if(!ktraTxtChuaSo(QLMT_M_txtTienDatCoc))
-            {
-                MessageBox.Show("Phí cọc chỉ nhập số.");
-                QLMT_M_txtTienDatCoc.Focus();
-                return;
-            }    
+            //if(!ktraTxtChuaSo(QLMT_M_txtTienDatCoc))
+            //{
+            //    MessageBox.Show("Phí cọc chỉ nhập số.");
+            //    QLMT_M_txtTienDatCoc.Focus();
+            //    return;
+            //}    
             if(string.IsNullOrEmpty(QLMT_lblMaThe.Text))
             {
                 MessageBox.Show("Vui lòng nhập thông tin độc giả.");
                 return;
             }    
-            if(string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
-            {
-                MessageBox.Show("Vui lòng nhập phí cọc.");
-                return;
-            }    
+            //if(string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
+            //{
+            //    MessageBox.Show("Vui lòng nhập phí cọc.");
+            //    return;
+            //}    
             if(dsTaiLieuChon.Count() != 0)
             {
                 string manhanvien = "";
-                if(!string.IsNullOrEmpty(Frm_Main.username))
+                string phicoc = "";
+                if (!string.IsNullOrEmpty(Frm_Main.username))
                 {
                     manhanvien = Frm_Main.username;
-                }    
-                bool flg = qlm.muonTaiLieu(dsTaiLieuChon, QLMT_lblMaThe.Text, QLMT_M_txtTienDatCoc.Text, manhanvien);
-                if(!flg)
+                }
+                //bool flg = qlm.muonTaiLieu(dsTaiLieuChon, QLMT_lblMaThe.Text, QLMT_M_txtTienDatCoc.Text, manhanvien);
+                bool flg = qlm.muonTaiLieu(dsTaiLieuChon, QLMT_lblMaThe.Text, manhanvien, ref phicoc);
+                if (!flg)
                 {
                     MessageBox.Show("Quá trình mượn tài liệu thất bại.");
                     return;
@@ -264,14 +266,14 @@ namespace Form_QuanLyThuVien
                         string ngay = DateTime.Now.Day.ToString();
                         string thang = DateTime.Now.Month.ToString();
                         string nam = DateTime.Now.Year.ToString();
-                        string phicoc = "";
-                        if (!string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
-                        {
-                            phicoc = QLMT_M_txtTienDatCoc.Text;
-                        } else
-                        {
-                            phicoc = 0.ToString();
-                        }
+                        
+                        //if (!string.IsNullOrEmpty(QLMT_M_txtTienDatCoc.Text))
+                        //{
+                        //    phicoc = QLMT_M_txtTienDatCoc.Text;
+                        //} else
+                        //{
+                        //    phicoc = 0.ToString();
+                        //}
                         string ntn = "TP. Hồ Chí Minh, Ngày " +ngay+ " tháng " + thang + " năm " +nam +".";
                         ngaythangnam.Rows.Add(ntn);
 

@@ -45,9 +45,25 @@ namespace Form_QuanLyThuVien
             this.QLMT_M_txtTimSach = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonGroupBox6 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.QLMT_M_dgvTaiLieu = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonGroupBox7 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.QLMT_M_dgvChiTietTaiLieuMuon = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.QLMT_btnXacNhanMuon = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -112,8 +128,25 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel41 = new System.Windows.Forms.TableLayoutPanel();
             this.QLMT_T_dgvCTTra = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonGroupBox12 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.QLMT_T_dgvDSTL = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonLabel20 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLTL_T_btnTimTL = new System.Windows.Forms.Button();
@@ -129,16 +162,17 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel49 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel50 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonLabel29 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel30 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.QLMT_T_lblHoTen = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_T_lblTinhTrang = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_T_lblMaThe = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.QLMT_T_lblSDT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel24 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel22 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel26 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_T_lblTienCoc = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_T_lblEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel30 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.QLMT_T_lblHoTen = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.QLMT_T_lblSDT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel35 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_T_ptbAvatar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
@@ -183,8 +217,26 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
             this.QLMT_TDG_dgvCT_TLTra = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonGroupBox9 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.QLMT_TDG_dgvDSTLTra = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel42 = new System.Windows.Forms.TableLayoutPanel();
             this.QLMT_TDG_btnChon = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.QLMT_TDG_btnHuyChon = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -199,17 +251,18 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel47 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel51 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel52 = new System.Windows.Forms.TableLayoutPanel();
-            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.QLMT_TDG_lblHoTen = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_TDG_lblTTThe = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_TDG_lblMaThe = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.QLMT_TDG_lblSDT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel40 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel41 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel42 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_TDG_lblTienCoc = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_TDG_lblEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.QLMT_TDG_lblSDT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.QLMT_TDG_lblHoTen = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel17 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_TDG_ptbAvatar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel53 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel54 = new System.Windows.Forms.TableLayoutPanel();
@@ -248,59 +301,6 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel58 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonLabel51 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.QLMT_TDG_lblTongTienBT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kryptonLabel35 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel17 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -689,6 +689,84 @@ namespace Form_QuanLyThuVien
             this.QLMT_M_dgvTaiLieu.TabIndex = 0;
             this.QLMT_M_dgvTaiLieu.SelectionChanged += new System.EventHandler(this.QLMT_M_dgvTaiLieu_SelectionChanged);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column1.DataPropertyName = "MaVach";
+            this.Column1.HeaderText = "Mã vạch";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 74;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "TenTaiLieu";
+            this.Column2.HeaderText = "Tên tài liệu";
+            this.Column2.MinimumWidth = 350;
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column3.DataPropertyName = "TenChuDe";
+            this.Column3.HeaderText = "Chủ đề";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column3.Width = 65;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column8.DataPropertyName = "MaTap";
+            this.Column8.HeaderText = "Tập";
+            this.Column8.MinimumWidth = 50;
+            this.Column8.Name = "Column8";
+            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column8.Width = 50;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column6.DataPropertyName = "TenNgonNgu";
+            this.Column6.HeaderText = "Ngôn ngữ";
+            this.Column6.MinimumWidth = 120;
+            this.Column6.Name = "Column6";
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column6.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column4.DataPropertyName = "TenNhaXuatBan";
+            this.Column4.HeaderText = "Nhà xuất bản";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column4.Width = 107;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column5.DataPropertyName = "TenTacGia";
+            this.Column5.HeaderText = "Tác giả";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column5.Width = 65;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column12.DataPropertyName = "MaViTri";
+            this.Column12.HeaderText = "Vị trí";
+            this.Column12.MinimumWidth = 100;
+            this.Column12.Name = "Column12";
+            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // kryptonGroupBox7
             // 
             this.kryptonGroupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -744,6 +822,84 @@ namespace Form_QuanLyThuVien
             this.QLMT_M_dgvChiTietTaiLieuMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.QLMT_M_dgvChiTietTaiLieuMuon.Size = new System.Drawing.Size(1274, 160);
             this.QLMT_M_dgvChiTietTaiLieuMuon.TabIndex = 0;
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column17.DataPropertyName = "MaVach";
+            this.Column17.HeaderText = "Mã vạch";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column17.Width = 74;
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.DataPropertyName = "TenTaiLieu";
+            this.Column18.HeaderText = "Tên tài liệu";
+            this.Column18.MinimumWidth = 300;
+            this.Column18.Name = "Column18";
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column19.DataPropertyName = "TenChuDe";
+            this.Column19.HeaderText = "Chủ đề";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column19.Width = 65;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column11.DataPropertyName = "MaTap";
+            this.Column11.HeaderText = "Tập";
+            this.Column11.MinimumWidth = 100;
+            this.Column11.Name = "Column11";
+            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column9.DataPropertyName = "TenNgonNgu";
+            this.Column9.HeaderText = "Ngôn ngữ";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column9.Width = 86;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column10.DataPropertyName = "TenNhaXuatBan";
+            this.Column10.HeaderText = "Nhà xuất bản";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column10.Width = 107;
+            // 
+            // TacGia
+            // 
+            this.TacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TacGia.DataPropertyName = "TenTacGia";
+            this.TacGia.HeaderText = "Tác Giả";
+            this.TacGia.MinimumWidth = 6;
+            this.TacGia.Name = "TacGia";
+            this.TacGia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TacGia.Width = 66;
+            // 
+            // MaViTri
+            // 
+            this.MaViTri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MaViTri.DataPropertyName = "MaViTri";
+            this.MaViTri.HeaderText = "Vị trí";
+            this.MaViTri.MinimumWidth = 100;
+            this.MaViTri.Name = "MaViTri";
+            this.MaViTri.Visible = false;
+            this.MaViTri.Width = 125;
             // 
             // tableLayoutPanel19
             // 
@@ -843,6 +999,7 @@ namespace Form_QuanLyThuVien
             this.QLMT_M_txtTienDatCoc.Size = new System.Drawing.Size(194, 27);
             this.QLMT_M_txtTienDatCoc.StateNormal.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
             this.QLMT_M_txtTienDatCoc.TabIndex = 1;
+            this.QLMT_M_txtTienDatCoc.Visible = false;
             // 
             // kryptonLabel18
             // 
@@ -855,6 +1012,7 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel18.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonLabel18.TabIndex = 0;
             this.kryptonLabel18.Values.Text = "Tiền đặt cọc:";
+            this.kryptonLabel18.Visible = false;
             // 
             // QLMT_M_lblNgayMuon
             // 
@@ -1745,6 +1903,66 @@ namespace Form_QuanLyThuVien
             this.QLMT_T_dgvCTTra.TabIndex = 0;
             this.QLMT_T_dgvCTTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QLMT_T_dgvCTTra_CellClick_1);
             // 
+            // Column21
+            // 
+            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column21.DataPropertyName = "MaVach";
+            this.Column21.FillWeight = 92.24599F;
+            this.Column21.HeaderText = "Mã vạch";
+            this.Column21.MinimumWidth = 100;
+            this.Column21.Name = "Column21";
+            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column22
+            // 
+            this.Column22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column22.DataPropertyName = "MaPhieuMuon";
+            this.Column22.FillWeight = 92.24599F;
+            this.Column22.HeaderText = "Mã phiếu mượn";
+            this.Column22.MinimumWidth = 100;
+            this.Column22.Name = "Column22";
+            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column22.Width = 124;
+            // 
+            // Column23
+            // 
+            this.Column23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column23.DataPropertyName = "TenTaiLieu";
+            this.Column23.FillWeight = 131.016F;
+            this.Column23.HeaderText = "Tên tài liệu";
+            this.Column23.MinimumWidth = 300;
+            this.Column23.Name = "Column23";
+            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column24
+            // 
+            this.Column24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column24.DataPropertyName = "NgayLap";
+            this.Column24.FillWeight = 92.24599F;
+            this.Column24.HeaderText = "Ngày mượn";
+            this.Column24.MinimumWidth = 6;
+            this.Column24.Name = "Column24";
+            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column25
+            // 
+            this.Column25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column25.DataPropertyName = "Gia";
+            this.Column25.HeaderText = "Gias";
+            this.Column25.MinimumWidth = 6;
+            this.Column25.Name = "Column25";
+            this.Column25.Visible = false;
+            this.Column25.Width = 125;
+            // 
+            // Column29
+            // 
+            this.Column29.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column29.DataPropertyName = "ThoiHanMuon";
+            this.Column29.FillWeight = 92.24599F;
+            this.Column29.HeaderText = "Thời hạn mượn";
+            this.Column29.MinimumWidth = 120;
+            this.Column29.Name = "Column29";
+            // 
             // kryptonGroupBox12
             // 
             this.kryptonGroupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1786,6 +2004,115 @@ namespace Form_QuanLyThuVien
             this.QLMT_T_dgvDSTL.RowTemplate.Height = 24;
             this.QLMT_T_dgvDSTL.Size = new System.Drawing.Size(1078, 308);
             this.QLMT_T_dgvDSTL.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "MaVach";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Mã vạch";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn23.Width = 74;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column13.DataPropertyName = "MaPhieuMuon";
+            this.Column13.HeaderText = "Mã phiếu mượn";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column13.Visible = false;
+            this.Column13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "TenTaiLieu";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Tên tài liệu";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 300;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "TenChuDe";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Chủ đề";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn25.Width = 65;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "MaTap";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Tập";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 50;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn26.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "TenNgonNgu";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Ngôn ngữ";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn27.Width = 86;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "TenNhaXuatBan";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Nhà sản xuất";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn28.Width = 104;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "TenTacGia";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Tác giả";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn29.Width = 65;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "NgayLap";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Ngày mượn";
+            this.dataGridViewTextBoxColumn30.MinimumWidth = 130;
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn30.Visible = false;
+            this.dataGridViewTextBoxColumn30.Width = 125;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Gia";
+            this.Column14.HeaderText = "Gia";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.Visible = false;
+            this.Column14.Width = 125;
+            // 
+            // Column28
+            // 
+            this.Column28.DataPropertyName = "ThoiHanMuon";
+            this.Column28.HeaderText = "Thời hạn mượn";
+            this.Column28.MinimumWidth = 6;
+            this.Column28.Name = "Column28";
+            this.Column28.Visible = false;
+            this.Column28.Width = 125;
             // 
             // tableLayoutPanel5
             // 
@@ -2056,29 +2383,6 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel29.TabIndex = 0;
             this.kryptonLabel29.Values.Text = "Mã thẻ:";
             // 
-            // kryptonLabel30
-            // 
-            this.kryptonLabel30.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonLabel30.Location = new System.Drawing.Point(3, 113);
-            this.kryptonLabel30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel30.Name = "kryptonLabel30";
-            this.kryptonLabel30.Size = new System.Drawing.Size(126, 24);
-            this.kryptonLabel30.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel30.TabIndex = 0;
-            this.kryptonLabel30.Values.Text = "Họ và tên:";
-            // 
-            // QLMT_T_lblHoTen
-            // 
-            this.QLMT_T_lblHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLMT_T_lblHoTen.Location = new System.Drawing.Point(135, 113);
-            this.QLMT_T_lblHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.QLMT_T_lblHoTen.Name = "QLMT_T_lblHoTen";
-            this.QLMT_T_lblHoTen.Size = new System.Drawing.Size(192, 64);
-            this.QLMT_T_lblHoTen.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QLMT_T_lblHoTen.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.QLMT_T_lblHoTen.TabIndex = 0;
-            this.QLMT_T_lblHoTen.Values.Text = "";
-            // 
             // QLMT_T_lblTinhTrang
             // 
             this.QLMT_T_lblTinhTrang.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2101,17 +2405,6 @@ namespace Form_QuanLyThuVien
             this.QLMT_T_lblMaThe.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.QLMT_T_lblMaThe.TabIndex = 0;
             this.QLMT_T_lblMaThe.Values.Text = "";
-            // 
-            // QLMT_T_lblSDT
-            // 
-            this.QLMT_T_lblSDT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLMT_T_lblSDT.Location = new System.Drawing.Point(136, 61);
-            this.QLMT_T_lblSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.QLMT_T_lblSDT.Name = "QLMT_T_lblSDT";
-            this.QLMT_T_lblSDT.Size = new System.Drawing.Size(190, 41);
-            this.QLMT_T_lblSDT.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.QLMT_T_lblSDT.TabIndex = 1;
-            this.QLMT_T_lblSDT.Values.Text = "";
             // 
             // kryptonLabel24
             // 
@@ -2161,6 +2454,52 @@ namespace Form_QuanLyThuVien
             this.QLMT_T_lblEmail.Size = new System.Drawing.Size(211, 64);
             this.QLMT_T_lblEmail.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.QLMT_T_lblEmail.TabIndex = 4;
+            // 
+            // kryptonLabel30
+            // 
+            this.kryptonLabel30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonLabel30.Location = new System.Drawing.Point(3, 113);
+            this.kryptonLabel30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel30.Name = "kryptonLabel30";
+            this.kryptonLabel30.Size = new System.Drawing.Size(126, 24);
+            this.kryptonLabel30.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel30.TabIndex = 0;
+            this.kryptonLabel30.Values.Text = "Họ và tên:";
+            // 
+            // QLMT_T_lblHoTen
+            // 
+            this.QLMT_T_lblHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLMT_T_lblHoTen.Location = new System.Drawing.Point(135, 113);
+            this.QLMT_T_lblHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QLMT_T_lblHoTen.Name = "QLMT_T_lblHoTen";
+            this.QLMT_T_lblHoTen.Size = new System.Drawing.Size(192, 64);
+            this.QLMT_T_lblHoTen.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLMT_T_lblHoTen.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.QLMT_T_lblHoTen.TabIndex = 0;
+            this.QLMT_T_lblHoTen.Values.Text = "";
+            // 
+            // QLMT_T_lblSDT
+            // 
+            this.QLMT_T_lblSDT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLMT_T_lblSDT.Location = new System.Drawing.Point(136, 61);
+            this.QLMT_T_lblSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.QLMT_T_lblSDT.Name = "QLMT_T_lblSDT";
+            this.QLMT_T_lblSDT.Size = new System.Drawing.Size(190, 41);
+            this.QLMT_T_lblSDT.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.QLMT_T_lblSDT.TabIndex = 1;
+            this.QLMT_T_lblSDT.Values.Text = "";
+            // 
+            // kryptonLabel35
+            // 
+            this.kryptonLabel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonLabel35.Location = new System.Drawing.Point(3, 59);
+            this.kryptonLabel35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel35.Name = "kryptonLabel35";
+            this.kryptonLabel35.Size = new System.Drawing.Size(126, 45);
+            this.kryptonLabel35.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel35.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel35.TabIndex = 5;
+            this.kryptonLabel35.Values.Text = "SĐT";
             // 
             // QLMT_T_ptbAvatar
             // 
@@ -2840,6 +3179,63 @@ namespace Form_QuanLyThuVien
             this.QLMT_TDG_dgvCT_TLTra.TabIndex = 0;
             this.QLMT_TDG_dgvCT_TLTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QLMT_TDG_dgvCT_TLTra_CellClick);
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MaVach";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Mã vạch";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 50;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 74;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "MaPhieuMuon";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Mã phiếu mượn";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn7.Width = 112;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "TenTaiLieu";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Tên tài liệu";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "NgayLap";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Ngày mượn";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Gia";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Gias";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // Column31
+            // 
+            this.Column31.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column31.DataPropertyName = "ThoiHanMuon";
+            this.Column31.HeaderText = "Thời hạn mượn";
+            this.Column31.MinimumWidth = 120;
+            this.Column31.Name = "Column31";
+            this.Column31.Width = 131;
+            // 
             // kryptonGroupBox9
             // 
             this.kryptonGroupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2883,6 +3279,132 @@ namespace Form_QuanLyThuVien
             this.QLMT_TDG_dgvDSTLTra.Size = new System.Drawing.Size(1082, 267);
             this.QLMT_TDG_dgvDSTLTra.TabIndex = 0;
             this.QLMT_TDG_dgvDSTLTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QLMT_TDG_dgvDSTLTra_CellClick);
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "MaPhieuMuon";
+            this.dataGridViewTextBoxColumn12.FillWeight = 620.3209F;
+            this.dataGridViewTextBoxColumn12.HeaderText = "Mã phiếu mượn";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn12.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "MaVach";
+            this.dataGridViewTextBoxColumn11.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Mã vạch";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn11.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "TenTaiLieu";
+            this.dataGridViewTextBoxColumn13.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Tên tài liệu";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn13.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "TenChuDe";
+            this.dataGridViewTextBoxColumn14.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn14.HeaderText = "Chủ đề";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn14.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "MaTap";
+            this.dataGridViewTextBoxColumn15.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn15.HeaderText = "Tập";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 50;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn15.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "TenNgonNgu";
+            this.dataGridViewTextBoxColumn16.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn16.HeaderText = "Ngôn ngữ";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn16.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "TenNhaXuatBan";
+            this.dataGridViewTextBoxColumn17.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn17.HeaderText = "Nhà sản xuất";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn17.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "TenTacGia";
+            this.dataGridViewTextBoxColumn18.FillWeight = 25.66845F;
+            this.dataGridViewTextBoxColumn18.HeaderText = "Tác giả";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn18.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "NgayLap";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Ngày mượn";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn19.Visible = false;
+            this.dataGridViewTextBoxColumn19.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Gia";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Gia";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            this.dataGridViewTextBoxColumn20.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "MaChiTietPhieuMuon";
+            this.Column7.HeaderText = "ttt";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Visible = false;
+            this.Column7.Width = 125;
+            // 
+            // Column30
+            // 
+            this.Column30.DataPropertyName = "ThoiHanMuon";
+            this.Column30.HeaderText = "Column30";
+            this.Column30.MinimumWidth = 6;
+            this.Column30.Name = "Column30";
+            this.Column30.Visible = false;
+            this.Column30.Width = 125;
             // 
             // tableLayoutPanel42
             // 
@@ -3134,17 +3656,6 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel52.Size = new System.Drawing.Size(709, 151);
             this.tableLayoutPanel52.TabIndex = 0;
             // 
-            // kryptonLabel9
-            // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(3, 54);
-            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(47, 24);
-            this.kryptonLabel9.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel9.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonLabel9.TabIndex = 0;
-            this.kryptonLabel9.Values.Text = "SĐT";
-            // 
             // kryptonLabel13
             // 
             this.kryptonLabel13.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3156,18 +3667,6 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel13.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel13.TabIndex = 0;
             this.kryptonLabel13.Values.Text = "Mã thẻ:";
-            // 
-            // QLMT_TDG_lblHoTen
-            // 
-            this.QLMT_TDG_lblHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLMT_TDG_lblHoTen.Location = new System.Drawing.Point(135, 97);
-            this.QLMT_TDG_lblHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.QLMT_TDG_lblHoTen.Name = "QLMT_TDG_lblHoTen";
-            this.QLMT_TDG_lblHoTen.Size = new System.Drawing.Size(193, 44);
-            this.QLMT_TDG_lblHoTen.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QLMT_TDG_lblHoTen.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.QLMT_TDG_lblHoTen.TabIndex = 0;
-            this.QLMT_TDG_lblHoTen.Values.Text = "";
             // 
             // QLMT_TDG_lblTTThe
             // 
@@ -3191,17 +3690,6 @@ namespace Form_QuanLyThuVien
             this.QLMT_TDG_lblMaThe.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.QLMT_TDG_lblMaThe.TabIndex = 0;
             this.QLMT_TDG_lblMaThe.Values.Text = "";
-            // 
-            // QLMT_TDG_lblSDT
-            // 
-            this.QLMT_TDG_lblSDT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QLMT_TDG_lblSDT.Location = new System.Drawing.Point(136, 56);
-            this.QLMT_TDG_lblSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.QLMT_TDG_lblSDT.Name = "QLMT_TDG_lblSDT";
-            this.QLMT_TDG_lblSDT.Size = new System.Drawing.Size(191, 31);
-            this.QLMT_TDG_lblSDT.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.QLMT_TDG_lblSDT.TabIndex = 1;
-            this.QLMT_TDG_lblSDT.Values.Text = "";
             // 
             // kryptonLabel40
             // 
@@ -3251,6 +3739,51 @@ namespace Form_QuanLyThuVien
             this.QLMT_TDG_lblEmail.Size = new System.Drawing.Size(212, 44);
             this.QLMT_TDG_lblEmail.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.QLMT_TDG_lblEmail.TabIndex = 4;
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(3, 54);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(47, 24);
+            this.kryptonLabel9.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel9.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.kryptonLabel9.TabIndex = 0;
+            this.kryptonLabel9.Values.Text = "SĐT";
+            // 
+            // QLMT_TDG_lblSDT
+            // 
+            this.QLMT_TDG_lblSDT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLMT_TDG_lblSDT.Location = new System.Drawing.Point(136, 56);
+            this.QLMT_TDG_lblSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.QLMT_TDG_lblSDT.Name = "QLMT_TDG_lblSDT";
+            this.QLMT_TDG_lblSDT.Size = new System.Drawing.Size(191, 31);
+            this.QLMT_TDG_lblSDT.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.QLMT_TDG_lblSDT.TabIndex = 1;
+            this.QLMT_TDG_lblSDT.Values.Text = "";
+            // 
+            // QLMT_TDG_lblHoTen
+            // 
+            this.QLMT_TDG_lblHoTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QLMT_TDG_lblHoTen.Location = new System.Drawing.Point(135, 97);
+            this.QLMT_TDG_lblHoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QLMT_TDG_lblHoTen.Name = "QLMT_TDG_lblHoTen";
+            this.QLMT_TDG_lblHoTen.Size = new System.Drawing.Size(193, 44);
+            this.QLMT_TDG_lblHoTen.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLMT_TDG_lblHoTen.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.QLMT_TDG_lblHoTen.TabIndex = 0;
+            this.QLMT_TDG_lblHoTen.Values.Text = "";
+            // 
+            // kryptonLabel17
+            // 
+            this.kryptonLabel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonLabel17.Location = new System.Drawing.Point(3, 97);
+            this.kryptonLabel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kryptonLabel17.Name = "kryptonLabel17";
+            this.kryptonLabel17.Size = new System.Drawing.Size(126, 24);
+            this.kryptonLabel17.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel17.TabIndex = 5;
+            this.kryptonLabel17.Values.Text = "Họ và tên:";
             // 
             // QLMT_TDG_ptbAvatar
             // 
@@ -3793,536 +4326,6 @@ namespace Form_QuanLyThuVien
             this.QLMT_TDG_lblTongTienBT.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLMT_TDG_lblTongTienBT.TabIndex = 1;
             this.QLMT_TDG_lblTongTienBT.Values.Text = "0";
-            // 
-            // Column21
-            // 
-            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column21.DataPropertyName = "MaVach";
-            this.Column21.FillWeight = 92.24599F;
-            this.Column21.HeaderText = "Mã vạch";
-            this.Column21.MinimumWidth = 100;
-            this.Column21.Name = "Column21";
-            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column22
-            // 
-            this.Column22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column22.DataPropertyName = "MaPhieuMuon";
-            this.Column22.FillWeight = 92.24599F;
-            this.Column22.HeaderText = "Mã phiếu mượn";
-            this.Column22.MinimumWidth = 100;
-            this.Column22.Name = "Column22";
-            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column22.Width = 124;
-            // 
-            // Column23
-            // 
-            this.Column23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column23.DataPropertyName = "TenTaiLieu";
-            this.Column23.FillWeight = 131.016F;
-            this.Column23.HeaderText = "Tên tài liệu";
-            this.Column23.MinimumWidth = 300;
-            this.Column23.Name = "Column23";
-            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column24
-            // 
-            this.Column24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column24.DataPropertyName = "NgayLap";
-            this.Column24.FillWeight = 92.24599F;
-            this.Column24.HeaderText = "Ngày mượn";
-            this.Column24.MinimumWidth = 6;
-            this.Column24.Name = "Column24";
-            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column25
-            // 
-            this.Column25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column25.DataPropertyName = "Gia";
-            this.Column25.HeaderText = "Gias";
-            this.Column25.MinimumWidth = 6;
-            this.Column25.Name = "Column25";
-            this.Column25.Visible = false;
-            this.Column25.Width = 70;
-            // 
-            // Column29
-            // 
-            this.Column29.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column29.DataPropertyName = "ThoiHanMuon";
-            this.Column29.FillWeight = 92.24599F;
-            this.Column29.HeaderText = "Thời hạn mượn";
-            this.Column29.MinimumWidth = 120;
-            this.Column29.Name = "Column29";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "MaVach";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Mã vạch";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 50;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 74;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "MaPhieuMuon";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Mã phiếu mượn";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 100;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn7.Width = 124;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "TenTaiLieu";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Tên tài liệu";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "NgayLap";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Ngày mượn";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 100;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Gia";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Gias";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            this.dataGridViewTextBoxColumn10.Width = 70;
-            // 
-            // Column31
-            // 
-            this.Column31.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column31.DataPropertyName = "ThoiHanMuon";
-            this.Column31.HeaderText = "Thời hạn mượn";
-            this.Column31.MinimumWidth = 120;
-            this.Column31.Name = "Column31";
-            this.Column31.Width = 142;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "MaPhieuMuon";
-            this.dataGridViewTextBoxColumn12.FillWeight = 620.3209F;
-            this.dataGridViewTextBoxColumn12.HeaderText = "Mã phiếu mượn";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn12.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "MaVach";
-            this.dataGridViewTextBoxColumn11.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn11.HeaderText = "Mã vạch";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn11.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "TenTaiLieu";
-            this.dataGridViewTextBoxColumn13.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn13.HeaderText = "Tên tài liệu";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn13.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "TenChuDe";
-            this.dataGridViewTextBoxColumn14.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn14.HeaderText = "Chủ đề";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn14.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "MaTap";
-            this.dataGridViewTextBoxColumn15.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn15.HeaderText = "Tập";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 50;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn15.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "TenNgonNgu";
-            this.dataGridViewTextBoxColumn16.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn16.HeaderText = "Ngôn ngữ";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn16.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "TenNhaXuatBan";
-            this.dataGridViewTextBoxColumn17.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn17.HeaderText = "Nhà sản xuất";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn17.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "TenTacGia";
-            this.dataGridViewTextBoxColumn18.FillWeight = 25.66845F;
-            this.dataGridViewTextBoxColumn18.HeaderText = "Tác giả";
-            this.dataGridViewTextBoxColumn18.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn18.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "NgayLap";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Ngày mượn";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn19.Visible = false;
-            this.dataGridViewTextBoxColumn19.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Gia";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Gia";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
-            this.dataGridViewTextBoxColumn20.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "MaChiTietPhieuMuon";
-            this.Column7.HeaderText = "ttt";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Visible = false;
-            this.Column7.Width = 125;
-            // 
-            // Column30
-            // 
-            this.Column30.DataPropertyName = "ThoiHanMuon";
-            this.Column30.HeaderText = "Column30";
-            this.Column30.MinimumWidth = 6;
-            this.Column30.Name = "Column30";
-            this.Column30.Visible = false;
-            this.Column30.Width = 125;
-            // 
-            // Column17
-            // 
-            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column17.DataPropertyName = "MaVach";
-            this.Column17.HeaderText = "Mã vạch";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column17.Width = 74;
-            // 
-            // Column18
-            // 
-            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column18.DataPropertyName = "TenTaiLieu";
-            this.Column18.HeaderText = "Tên tài liệu";
-            this.Column18.MinimumWidth = 300;
-            this.Column18.Name = "Column18";
-            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column19
-            // 
-            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column19.DataPropertyName = "TenChuDe";
-            this.Column19.HeaderText = "Chủ đề";
-            this.Column19.MinimumWidth = 6;
-            this.Column19.Name = "Column19";
-            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column19.Width = 65;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column11.DataPropertyName = "MaTap";
-            this.Column11.HeaderText = "Tập";
-            this.Column11.MinimumWidth = 100;
-            this.Column11.Name = "Column11";
-            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column9.DataPropertyName = "TenNgonNgu";
-            this.Column9.HeaderText = "Ngôn ngữ";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column9.Width = 86;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column10.DataPropertyName = "TenNhaXuatBan";
-            this.Column10.HeaderText = "Nhà xuất bản";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column10.Width = 107;
-            // 
-            // TacGia
-            // 
-            this.TacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TacGia.DataPropertyName = "TenTacGia";
-            this.TacGia.HeaderText = "Tác Giả";
-            this.TacGia.MinimumWidth = 6;
-            this.TacGia.Name = "TacGia";
-            this.TacGia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TacGia.Width = 66;
-            // 
-            // MaViTri
-            // 
-            this.MaViTri.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MaViTri.DataPropertyName = "MaViTri";
-            this.MaViTri.HeaderText = "Vị trí";
-            this.MaViTri.MinimumWidth = 100;
-            this.MaViTri.Name = "MaViTri";
-            this.MaViTri.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.DataPropertyName = "MaVach";
-            this.Column1.HeaderText = "Mã vạch";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 74;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "TenTaiLieu";
-            this.Column2.HeaderText = "Tên tài liệu";
-            this.Column2.MinimumWidth = 350;
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column3.DataPropertyName = "TenChuDe";
-            this.Column3.HeaderText = "Chủ đề";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 65;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column8.DataPropertyName = "MaTap";
-            this.Column8.HeaderText = "Tập";
-            this.Column8.MinimumWidth = 50;
-            this.Column8.Name = "Column8";
-            this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column8.Width = 50;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column6.DataPropertyName = "TenNgonNgu";
-            this.Column6.HeaderText = "Ngôn ngữ";
-            this.Column6.MinimumWidth = 120;
-            this.Column6.Name = "Column6";
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column6.Width = 120;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column4.DataPropertyName = "TenNhaXuatBan";
-            this.Column4.HeaderText = "Nhà xuất bản";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 107;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.DataPropertyName = "TenTacGia";
-            this.Column5.HeaderText = "Tác giả";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column5.Width = 65;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column12.DataPropertyName = "MaViTri";
-            this.Column12.HeaderText = "Vị trí";
-            this.Column12.MinimumWidth = 100;
-            this.Column12.Name = "Column12";
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // kryptonLabel35
-            // 
-            this.kryptonLabel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel35.Location = new System.Drawing.Point(3, 59);
-            this.kryptonLabel35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel35.Name = "kryptonLabel35";
-            this.kryptonLabel35.Size = new System.Drawing.Size(126, 45);
-            this.kryptonLabel35.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel35.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonLabel35.TabIndex = 5;
-            this.kryptonLabel35.Values.Text = "SĐT";
-            // 
-            // kryptonLabel17
-            // 
-            this.kryptonLabel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonLabel17.Location = new System.Drawing.Point(3, 97);
-            this.kryptonLabel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kryptonLabel17.Name = "kryptonLabel17";
-            this.kryptonLabel17.Size = new System.Drawing.Size(126, 24);
-            this.kryptonLabel17.StateNormal.ShortText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel17.TabIndex = 5;
-            this.kryptonLabel17.Values.Text = "Họ và tên:";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "MaVach";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Mã vạch";
-            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn23.Width = 74;
-            // 
-            // Column13
-            // 
-            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column13.DataPropertyName = "MaPhieuMuon";
-            this.Column13.HeaderText = "Mã phiếu mượn";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column13.Visible = false;
-            this.Column13.Width = 124;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "TenTaiLieu";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Tên tài liệu";
-            this.dataGridViewTextBoxColumn24.MinimumWidth = 300;
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "TenChuDe";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Chủ đề";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn25.Width = 65;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "MaTap";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Tập";
-            this.dataGridViewTextBoxColumn26.MinimumWidth = 50;
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn26.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "TenNgonNgu";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Ngôn ngữ";
-            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn27.Width = 86;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "TenNhaXuatBan";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Nhà sản xuất";
-            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn28.Width = 104;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "TenTacGia";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Tác giả";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn29.Width = 65;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "NgayLap";
-            this.dataGridViewTextBoxColumn30.HeaderText = "Ngày mượn";
-            this.dataGridViewTextBoxColumn30.MinimumWidth = 130;
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn30.Visible = false;
-            this.dataGridViewTextBoxColumn30.Width = 130;
-            // 
-            // Column14
-            // 
-            this.Column14.DataPropertyName = "Gia";
-            this.Column14.HeaderText = "Gia";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            this.Column14.Visible = false;
-            this.Column14.Width = 125;
-            // 
-            // Column28
-            // 
-            this.Column28.DataPropertyName = "ThoiHanMuon";
-            this.Column28.HeaderText = "Thời hạn mượn";
-            this.Column28.MinimumWidth = 6;
-            this.Column28.Name = "Column28";
-            this.Column28.Visible = false;
-            this.Column28.Width = 125;
             // 
             // UF_QLMuonTra
             // 

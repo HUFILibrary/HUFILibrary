@@ -192,8 +192,30 @@ namespace BLL_DAL
             return dsTaiLieuChon;
         }
 
-        public bool muonTaiLieu(List<TAILIEU> dsTaiLieuMuon, string mathethuvien, string phicoc,string manhanvien)
+        public bool muonTaiLieu(List<TAILIEU> dsTaiLieuMuon, string mathethuvien,string manhanvien, ref string phicoc)
         {
+            double tongphicoc = 0;
+            int tisonhan = 0;
+            DOCGIA dg = db.DOCGIAs.Where(a => a.MaTheThuVien == mathethuvien).FirstOrDefault();
+            if(dg.MaLoaiDocGia == 1)
+            {
+                tisonhan = 1;
+            }
+            else if(dg.MaLoaiDocGia == 2)
+            {
+                tisonhan = 0;
+            }
+            else if(dg.MaLoaiDocGia == 3)
+            {
+                tisonhan = 2;
+            }
+            foreach (TAILIEU item in dsTaiLieuMuon)
+            {
+                tongphicoc += double.Parse(item.Gia.ToString());
+            }
+            double dPhicoc = tongphicoc * tisonhan;
+            phicoc = dPhicoc.ToString();
+
             string maphieumuon = "";
             PHIEUMUON newPM = new PHIEUMUON();
             newPM.MaTheThuVien = mathethuvien;
@@ -202,7 +224,8 @@ namespace BLL_DAL
             newPM.ThoiHanMuon = thoihanmuon;
             newPM.SoSachMuon = dsTaiLieuMuon.Count();
             newPM.TinhTrangTra = false;
-            newPM.PhiCoc = double.Parse(phicoc);
+            //newPM.PhiCoc = double.Parse(phicoc);
+            newPM.PhiCoc = dPhicoc;
             newPM.MaNhanVien = int.Parse(manhanvien);
             newPM.TinhTrangXoa = false;
             try
