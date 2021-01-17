@@ -161,17 +161,17 @@ namespace BLL_DAL
             MessageBox.Show("Sửa thành công.");
             
         }
-        public void luuDocGia(string mathethuvien, string tendocgia, string maloaidocgia, string manganh, string cmnd, string ngaysinh, string gioitinh, string sdt, string diachi, string email, string hansudungthethuvien, bool tinhtrangthethuvien, string ngaylamthe, string hinhanh, string matkhau)
+        public bool luuDocGia(string mathethuvien, string tendocgia, string maloaidocgia, string manganh, string cmnd, string ngaysinh, string gioitinh, string sdt, string diachi, string email, string hansudungthethuvien, bool tinhtrangthethuvien, string ngaylamthe, string hinhanh, string matkhau)
         {
             if (checkMaThe(mathethuvien))
             {
                 MessageBox.Show("Mã thẻ thư viện đã tồn tại.");
-                return;
+                return false;
             }
             if(string.IsNullOrEmpty(mathethuvien) || string.IsNullOrEmpty(maloaidocgia) || string.IsNullOrEmpty(manganh) || string.IsNullOrEmpty(tendocgia) || string.IsNullOrEmpty(cmnd) || string.IsNullOrEmpty(ngaysinh) || string.IsNullOrEmpty(gioitinh) || string.IsNullOrEmpty(sdt) || string.IsNullOrEmpty(diachi) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(hansudungthethuvien) || string.IsNullOrEmpty(tinhtrangthethuvien.ToString()) || string.IsNullOrEmpty(ngaylamthe))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu");
-                return;
+                return false;
             }
 
             try
@@ -225,11 +225,12 @@ namespace BLL_DAL
                 db.DOCGIAs.InsertOnSubmit(item);
                 db.SubmitChanges();
                 MessageBox.Show("Lưu thành công.");
+                return true;
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Lưu không thành công.");
-                return;
+                return false;
             }
         }
        

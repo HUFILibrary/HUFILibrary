@@ -154,7 +154,6 @@ namespace Form_QuanLyThuVien
                 MessageBox.Show("Xóa thất bại !");
             }
         }
-
         private void NV_btnLuuNV_Click(object sender, EventArgs e)
         {
             NHANVIEN nvm = new NHANVIEN();
@@ -180,17 +179,67 @@ namespace Form_QuanLyThuVien
             else { nvm.TinhTrangTK = false; }
             nvm.DiaChi = NV_txtDiaChi.Text;
             nvm.HinhAnh = urlNhanVien;
+
+
+            Dictionary<string, string> lstDauMang = new Dictionary<string, string>();
+            lstDauMang.Add("086", "086");
+            lstDauMang.Add("096", "096");
+            lstDauMang.Add("097", "097");
+            lstDauMang.Add("098", "098");
+            lstDauMang.Add("032", "032");
+            lstDauMang.Add("033", "033");
+            lstDauMang.Add("034", "034");
+            lstDauMang.Add("035", "035");
+            lstDauMang.Add("036", "036");
+            lstDauMang.Add("037", "037");
+            lstDauMang.Add("038", "038");
+            lstDauMang.Add("039", "039");
+            lstDauMang.Add("088", "088");
+            lstDauMang.Add("091", "091");
+            lstDauMang.Add("094", "094");
+            lstDauMang.Add("084", "084");
+            lstDauMang.Add("083", "083");
+            lstDauMang.Add("085", "085");
+            lstDauMang.Add("081", "081");
+            lstDauMang.Add("082", "082");
+            lstDauMang.Add("089", "089");
+            lstDauMang.Add("090", "090");
+            lstDauMang.Add("093", "093");
+            lstDauMang.Add("070", "070");
+            lstDauMang.Add("079", "079");
+            lstDauMang.Add("077", "077");
+            lstDauMang.Add("076", "076");
+            lstDauMang.Add("078", "078");
+            lstDauMang.Add("092", "092");
+            lstDauMang.Add("056", "056");
+            lstDauMang.Add("058", "058");
+            lstDauMang.Add("099", "099");
+            lstDauMang.Add("059", "059");
+            string sdt = NV_txtSDT.Text;
+            string basodau = sdt.Substring(0, 3);
+            if (!lstDauMang.ContainsKey(basodau))
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng.");
+                NV_txtSDT.Focus();
+                return;
+            }
+            
+
+
             if (ktraTxtNull(NV_txtTenNV) == false)
             {
                 MessageBox.Show("Họ tên không được bỏ trống !");
+                NV_txtTenNV.Focus();
             }
             else if (ktraTxtChuaChu(NV_txtTenNV) == false)
             {
                 MessageBox.Show("Tên chỉ chứa chữ cái !");
+                NV_txtTenNV.Focus();
             }
             else if (ktraTxtNull(NV_txtMKNV) == false)
             {
                 MessageBox.Show("Mật khẩu không được bỏ trống");
+                NV_txtMKNV.Focus();
             }
             else if (ktraTxtChuaSo(NV_txtSDT) == false || NV_txtSDT.TextLength != 10)
             {
@@ -310,6 +359,49 @@ namespace Form_QuanLyThuVien
             else { nvm.TinhTrangTK = false; }
             nvm.DiaChi = NV_txtDiaChi.Text;
             nvm.HinhAnh = urlNhanVien;
+
+            Dictionary<string, string> lstDauMang = new Dictionary<string, string>();
+            lstDauMang.Add("086", "086");
+            lstDauMang.Add("096", "096");
+            lstDauMang.Add("097", "097");
+            lstDauMang.Add("098", "098");
+            lstDauMang.Add("032", "032");
+            lstDauMang.Add("033", "033");
+            lstDauMang.Add("034", "034");
+            lstDauMang.Add("035", "035");
+            lstDauMang.Add("036", "036");
+            lstDauMang.Add("037", "037");
+            lstDauMang.Add("038", "038");
+            lstDauMang.Add("039", "039");
+            lstDauMang.Add("088", "088");
+            lstDauMang.Add("091", "091");
+            lstDauMang.Add("094", "094");
+            lstDauMang.Add("084", "084");
+            lstDauMang.Add("083", "083");
+            lstDauMang.Add("085", "085");
+            lstDauMang.Add("081", "081");
+            lstDauMang.Add("082", "082");
+            lstDauMang.Add("089", "089");
+            lstDauMang.Add("090", "090");
+            lstDauMang.Add("093", "093");
+            lstDauMang.Add("070", "070");
+            lstDauMang.Add("079", "079");
+            lstDauMang.Add("077", "077");
+            lstDauMang.Add("076", "076");
+            lstDauMang.Add("078", "078");
+            lstDauMang.Add("092", "092");
+            lstDauMang.Add("056", "056");
+            lstDauMang.Add("058", "058");
+            lstDauMang.Add("099", "099");
+            lstDauMang.Add("059", "059");
+            string sdt = NV_txtSDT.Text;
+            string basodau = sdt.Substring(0, 3);
+            if (!lstDauMang.ContainsKey(basodau))
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng.");
+                NV_txtSDT.Focus();
+                return;
+            }
 
             if (ktraTxtNull(NV_txtTenNV) == false)
             {

@@ -135,6 +135,8 @@ namespace Form_QuanLyThuVien
                     QLMT_avatarDG.Image = new Bitmap(urlImage);
                 }
                 QLM_dgvDSTLDangMuon.DataSource = qlm.getDSTLDangMuon(QLMT_txtSearchDG.Text);
+                dsTaiLieuChon.Clear();
+                loadDgvChiTietTaiLieuMuon();
                 //int soluongtailieumuon = 0;
                 //double sotiencoc = 0;
                 //qlm.returnThongtinmuon(item.MaTheThuVien.ToString(), ref soluongtailieumuon, ref sotiencoc);
@@ -204,9 +206,25 @@ namespace Form_QuanLyThuVien
             QLMT_M_lblNgayTraDuKien.Text = DateTime.Now.AddMonths(1).ToString("dd/MM/yyyy");
 
         }
-
+        public bool ktraTxtChuaSo(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void QLMT_btnXacNhanMuon_Click(object sender, EventArgs e)
         {
+            if(!ktraTxtChuaSo(QLMT_M_txtTienDatCoc))
+            {
+                MessageBox.Show("Phí cọc chỉ nhập số.");
+                QLMT_M_txtTienDatCoc.Focus();
+                return;
+            }    
             if(string.IsNullOrEmpty(QLMT_lblMaThe.Text))
             {
                 MessageBox.Show("Vui lòng nhập thông tin độc giả.");
@@ -925,12 +943,20 @@ namespace Form_QuanLyThuVien
 
         private void QLMT_TDG_btnHuyChon_Click(object sender, EventArgs e)
         {
+            if(QLMT_TDG_dgvCT_TLTra.Rows.Count == 1)
+            {
+                return;
+            }
            QLMT_TDG_dgvCT_TLTra.Rows.RemoveAt(QLMT_TDG_dgvCT_TLTra.CurrentRow.Index);
            QLMT_TDG_dgvCT_TLTra.DataSource = dt2;
         }
 
         private void QLMT_TDG_dgvCT_TLTra_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(QLMT_TDG_dgvCT_TLTra.Rows.Count == 1)
+            {
+                return; 
+            }
             hoten = Frm_Main.hoten;
             QLMT_TDG_txtMV.Text = QLMT_TDG_dgvCT_TLTra.Rows[e.RowIndex].Cells[0].Value.ToString();
            QLMT_TDG_txtGiaTL.Text = QLMT_TDG_dgvCT_TLTra.Rows[e.RowIndex].Cells[4].Value.ToString();

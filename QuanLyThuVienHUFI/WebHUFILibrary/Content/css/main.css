@@ -2191,6 +2191,7 @@ body {
 
                             body .thongtintaikhoan__wrapper .container .tab__content .thongtintaikhoan .left .img img {
                                 max-width: 100%;
+                                padding-right:10px;
                                 height: auto;
                                 -o-object-fit: cover;
                                 object-fit: cover;

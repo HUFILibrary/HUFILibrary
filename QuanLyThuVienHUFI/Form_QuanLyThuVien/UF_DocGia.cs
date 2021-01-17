@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL_DAL;
@@ -197,6 +198,104 @@ namespace Form_QuanLyThuVien
 
         private void DG_btnSua_Click(object sender, EventArgs e)
         {
+            
+            if(!ktraTxtChuaChu(DG_txtTenDG))
+            {
+                MessageBox.Show("Tên độc giả chỉ được chứa chữ.");
+                DG_txtTenDG.Focus();
+                return;
+            } 
+            if (!ktraTxtChuaSo(DG_txtSDT))
+            {
+                MessageBox.Show("Số điện thoại chỉ được chứa số.");
+                DG_txtSDT.Focus();
+                return;
+            }
+            if (DG_txtSDT.TextLength != 10)
+            {
+                MessageBox.Show("Số điện thoại phải đủ 10 chữ số.");
+                DG_txtSDT.Focus();
+                return;
+            }
+            Dictionary<string, string> lstDauMang = new Dictionary<string, string>();
+            lstDauMang.Add("086", "086");
+            lstDauMang.Add("096", "096");
+            lstDauMang.Add("097", "097");
+            lstDauMang.Add("098", "098");
+            lstDauMang.Add("032", "032");
+            lstDauMang.Add("033", "033");
+            lstDauMang.Add("034", "034");
+            lstDauMang.Add("035", "035");
+            lstDauMang.Add("036", "036");
+            lstDauMang.Add("037", "037");
+            lstDauMang.Add("038", "038");
+            lstDauMang.Add("039", "039");
+            lstDauMang.Add("088", "088");
+            lstDauMang.Add("091", "091");
+            lstDauMang.Add("094", "094");
+            lstDauMang.Add("084", "084");
+            lstDauMang.Add("083", "083");
+            lstDauMang.Add("085", "085");
+            lstDauMang.Add("081", "081");
+            lstDauMang.Add("082", "082");
+            lstDauMang.Add("089", "089");
+            lstDauMang.Add("090", "090");
+            lstDauMang.Add("093", "093");
+            lstDauMang.Add("070", "070");
+            lstDauMang.Add("079", "079");
+            lstDauMang.Add("077", "077");
+            lstDauMang.Add("076", "076");
+            lstDauMang.Add("078", "078");
+            lstDauMang.Add("092", "092");
+            lstDauMang.Add("056", "056");
+            lstDauMang.Add("058", "058");
+            lstDauMang.Add("099", "099");
+            lstDauMang.Add("059", "059");
+            string sdt = DG_txtSDT.Text;
+            string basodau = sdt.Substring(0, 3);
+            if (!lstDauMang.ContainsKey(basodau))
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng.");
+                DG_txtSDT.Focus();
+                return;
+            }
+            string email = DG_txtEmail.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (match.Success)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Email không hợp lệ.");
+                DG_txtEmail.Focus();
+                return;
+            }
+            if (DG_txtCMND.TextLength != 9 && DG_txtCMND.TextLength != 12)
+            {
+                MessageBox.Show("CMND không hợp lệ.");
+                DG_txtCMND.Focus();
+                return;
+            }
+            if (!ktraTxtChuaSo(DG_txtCMND))
+            {
+                MessageBox.Show("CMND không được chứa ký tự chữ.");
+                DG_txtCMND.Focus();
+                return;
+            }
+
+            DateTime ngaylamthe = DateTime.ParseExact(DG_dtpNgayLamThe.Text, "dd/MM/yyyy", null);
+            DateTime hansudung = DateTime.ParseExact(DG_dtpHanSuDung.Text, "dd/MM/yyyy", null);
+            int cmp = ngaylamthe.CompareTo(hansudung);
+            if (cmp < 0)
+            {
+                MessageBox.Show("Hạn sử dụng không được tới trước ngày làm thẻ.");
+                return;
+            }
+
+
+
             DOCGIA dg = new DOCGIA();
             dg.MaTheThuVien = DG_txtMaThe.Text;
             dg.TenDocGia = DG_txtTenDG.Text;
@@ -240,9 +339,134 @@ namespace Form_QuanLyThuVien
                 hinhanh, DG_txtMaThe.Text.ToString());
             loadDgvDocGias();
         }
-
+        
+        public bool ktraTxtChuaSo(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool ktraTxtChuaChu(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void DG_btnLuu_Click(object sender, EventArgs e)
         {
+            if(!ktraTxtChuaSo(DG_txtMaThe))
+            {
+                MessageBox.Show("Mã thẻ thư viện chỉ được chứa số.");
+                DG_txtMaThe.Focus();
+                return;
+            }
+            if(!ktraTxtChuaChu(DG_txtTenDG))
+            {
+                MessageBox.Show("Tên độc giả chỉ được chứa chữ.");
+                DG_txtTenDG.Focus();
+                return;
+            }    
+            if(!ktraTxtChuaSo(DG_txtSDT))
+            {
+                MessageBox.Show("Số điện thoại chỉ được chứa số.");
+                DG_txtSDT.Focus();
+                return;
+            }
+            if(DG_txtSDT.TextLength != 10)
+            {
+                MessageBox.Show("Số điện thoại phải đủ 10 chữ số.");
+                DG_txtSDT.Focus();
+                return;
+            }
+            Dictionary<string, string> lstDauMang = new Dictionary<string, string>();
+            lstDauMang.Add("086", "086");
+            lstDauMang.Add("096", "096");
+            lstDauMang.Add("097", "097");
+            lstDauMang.Add("098", "098");
+            lstDauMang.Add("032", "032");
+            lstDauMang.Add("033", "033");
+            lstDauMang.Add("034", "034");
+            lstDauMang.Add("035", "035");
+            lstDauMang.Add("036", "036");
+            lstDauMang.Add("037", "037");
+            lstDauMang.Add("038", "038");
+            lstDauMang.Add("039", "039");
+            lstDauMang.Add("088", "088");
+            lstDauMang.Add("091", "091");
+            lstDauMang.Add("094", "094");
+            lstDauMang.Add("084", "084");
+            lstDauMang.Add("083", "083");
+            lstDauMang.Add("085", "085");
+            lstDauMang.Add("081", "081");
+            lstDauMang.Add("082", "082");
+            lstDauMang.Add("089", "089");
+            lstDauMang.Add("090", "090");
+            lstDauMang.Add("093", "093");
+            lstDauMang.Add("070", "070");
+            lstDauMang.Add("079", "079");
+            lstDauMang.Add("077", "077");
+            lstDauMang.Add("076", "076");
+            lstDauMang.Add("078", "078");
+            lstDauMang.Add("092", "092");
+            lstDauMang.Add("056", "056");
+            lstDauMang.Add("058", "058");
+            lstDauMang.Add("099", "099");
+            lstDauMang.Add("059", "059");
+            string sdt = DG_txtSDT.Text;
+            string basodau = sdt.Substring(0,3);
+            if (!lstDauMang.ContainsKey(basodau))
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng.");
+                DG_txtSDT.Focus();
+                return;
+            }
+            string email = DG_txtEmail.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (match.Success)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Email không hợp lệ.");
+                DG_txtEmail.Focus();
+                return;
+            }
+            if(DG_txtCMND.TextLength != 9 && DG_txtCMND.TextLength != 12)
+            {
+                MessageBox.Show("CMND không hợp lệ.");
+                DG_txtCMND.Focus();
+                return;
+            }
+            if(!ktraTxtChuaSo(DG_txtCMND))
+            {
+                MessageBox.Show("CMND không được chứa ký tự chữ.");
+                DG_txtCMND.Focus();
+                return;
+            }
+            
+            DateTime ngaylamthe = DateTime.ParseExact(DG_dtpNgayLamThe.Text, "dd/MM/yyyy", null);
+            DateTime hansudung = DateTime.ParseExact(DG_dtpHanSuDung.Text, "dd/MM/yyyy", null);
+            int cmp = ngaylamthe.CompareTo(hansudung);
+            if (cmp  < 0)
+            {
+                MessageBox.Show("Hạn sử dụng không được tới trước ngày làm thẻ.");
+                return;
+            }
+
+
+
             DOCGIA dg = new DOCGIA();
             if(string.IsNullOrEmpty(DG_txtMaThe.Text) || string.IsNullOrEmpty(DG_txtTenDG.Text) ||
                 string.IsNullOrEmpty(DG_txtCMND.Text) || DG_dtpNgaySinh.Value == null || string.IsNullOrEmpty(DG_txtSDT.Text) ||
@@ -285,12 +509,22 @@ namespace Form_QuanLyThuVien
             if(!string.IsNullOrEmpty(DG_urlImage))
             {
                 hinhanh = DG_urlImage;
-            }    
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn hình cho độc giả.");
+                return;
+            }
             dg.MatKhau = DG_txtMaThe.Text.ToString();
             dg.TinhTrangXoa = false;
-            qldg.luuDocGia(DG_txtMaThe.Text, DG_txtTenDG.Text, DG_cboLoaiDG.SelectedValue.ToString(), DG_cboNganh.SelectedValue.ToString(), DG_txtCMND.Text, DG_dtpNgaySinh.Value.ToString(), gioitinh,
+            
+            bool flg = qldg.luuDocGia(DG_txtMaThe.Text, DG_txtTenDG.Text, DG_cboLoaiDG.SelectedValue.ToString(), DG_cboNganh.SelectedValue.ToString(), DG_txtCMND.Text, DG_dtpNgaySinh.Value.ToString(), gioitinh,
                 DG_txtSDT.Text, DG_txtDiaChi.Text, DG_txtEmail.Text, DG_dtpHanSuDung.Value.ToString(), tinhtrangthethuvien, DG_dtpNgayLamThe.Value.ToString(),
                 hinhanh, DG_txtMaThe.Text.ToString());
+            if(!flg)
+            {
+                return;
+            }
             loadDgvDocGias();
             DG_btnLuu.Enabled = false;
             DG_btnThem.Enabled = true;

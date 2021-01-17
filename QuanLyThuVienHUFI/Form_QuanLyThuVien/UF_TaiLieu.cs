@@ -532,9 +532,56 @@ namespace Form_QuanLyThuVien
             loadDgvViTri();
 
         }
-
+        public bool ktraTxtChuaSo(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool ktraTxtChuaChu(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void TL_btnLuu_Click(object sender, EventArgs e)
         {
+            if(!ktraTxtChuaSo(TL_txtMaVach))
+            {
+                MessageBox.Show("Mã vạch chỉ chứa ký tự số.");
+                TL_txtMaVach.Focus();
+                return; 
+            }
+            if (!ktraTxtChuaSo(TL_txtSoTrang))
+            {
+                MessageBox.Show("Số trang vui lòng chỉ nhập số");
+                TL_txtSoTrang.Focus();
+                return;
+            }
+            
+            if (!ktraTxtChuaSo(TL_txtGia))
+            {
+                MessageBox.Show("Giá vui lòng chỉ nhập số");
+                TL_txtGia.Focus();
+                return;
+            }
+            
+            if (!ktraTxtChuaSo(TL_txtSoLuong))
+            {
+                MessageBox.Show("Số lượng vui lòng chỉ nhập số");
+                TL_txtSoLuong.Focus();
+                return;
+            }
             if (string.IsNullOrEmpty(TL_urlImage))
             {
                 MessageBox.Show("Vui lòng chọn hình.");
@@ -611,6 +658,32 @@ namespace Form_QuanLyThuVien
             //tl.MaChuDe = int.Parse(TL_CboChuDe.SelectedValue.ToString());
             //tl.NamXuatBan = int.Parse(TL_txtNamXuatBan.Text);
             //tl.ThongTinTaiLieu = TL_txtMoTa.Text;
+            if (!ktraTxtChuaSo(TL_txtMaVach))
+            {
+                MessageBox.Show("Mã vạch chỉ chứa ký tự số.");
+                TL_txtMaVach.Focus();
+                return;
+            }
+            if (!ktraTxtChuaSo(TL_txtSoTrang))
+            {
+                MessageBox.Show("Số trang vui lòng chỉ nhập số");
+                TL_txtSoTrang.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(TL_txtGia))
+            {
+                MessageBox.Show("Giá vui lòng chỉ nhập số");
+                TL_txtGia.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(TL_txtSoLuong))
+            {
+                MessageBox.Show("Số lượng vui lòng chỉ nhập số");
+                TL_txtSoLuong.Focus();
+                return;
+            }
             if (dgvTaiLieu.RowCount == 0)
             {
                 MessageBox.Show("Không có dữ liệu để sửa.");
