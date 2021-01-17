@@ -96,14 +96,12 @@ namespace Form_QuanLyThuVien
             this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.DG_cboKhoa = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.DG_cboNganh = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.DG_btnChonHinh = new System.Windows.Forms.Button();
+            this.DG_btnChonHinh3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.dgvLoaiDocGia = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -143,14 +141,18 @@ namespace Form_QuanLyThuVien
             this.DG_K_txtTenKhoa = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonGroupBox4 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.DG_K_dgvDSKhoa = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LDG_MaLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LDG_TenLoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.K_TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DG_btnChonHinh = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -761,6 +763,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel7.Controls.Add(this.kryptonLabel14, 5, 9);
             this.tableLayoutPanel7.Controls.Add(this.DG_cboKhoa, 3, 9);
             this.tableLayoutPanel7.Controls.Add(this.DG_cboNganh, 7, 9);
+            this.tableLayoutPanel7.Controls.Add(this.DG_btnChonHinh3, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.DG_btnChonHinh, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 152);
@@ -1083,15 +1086,16 @@ namespace Form_QuanLyThuVien
             this.DG_cboNganh.TabIndex = 10;
             this.DG_cboNganh.Text = "kryptonComboBox1";
             // 
-            // DG_btnChonHinh
+            // DG_btnChonHinh3
             // 
-            this.DG_btnChonHinh.Location = new System.Drawing.Point(18, 3);
-            this.DG_btnChonHinh.Name = "DG_btnChonHinh";
-            this.DG_btnChonHinh.Size = new System.Drawing.Size(107, 45);
-            this.DG_btnChonHinh.TabIndex = 11;
-            this.DG_btnChonHinh.Text = "Chọn hình";
-            this.DG_btnChonHinh.UseVisualStyleBackColor = true;
-            this.DG_btnChonHinh.Click += new System.EventHandler(this.DG_btnChonHinh_Click);
+            this.DG_btnChonHinh3.Location = new System.Drawing.Point(157, 3);
+            this.DG_btnChonHinh3.Name = "DG_btnChonHinh3";
+            this.DG_btnChonHinh3.Size = new System.Drawing.Size(107, 45);
+            this.DG_btnChonHinh3.TabIndex = 11;
+            this.DG_btnChonHinh3.Text = "Chọn hình";
+            this.DG_btnChonHinh3.UseVisualStyleBackColor = true;
+            this.DG_btnChonHinh3.Visible = false;
+            this.DG_btnChonHinh3.Click += new System.EventHandler(this.DG_btnChonHinh_Click);
             // 
             // tabPage2
             // 
@@ -1162,8 +1166,8 @@ namespace Form_QuanLyThuVien
             // 
             this.dgvLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiDocGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column16,
-            this.MaLoaiDocGia});
+            this.LDG_MaLoaiDocGia,
+            this.LDG_TenLoaiDocGia});
             this.dgvLoaiDocGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLoaiDocGia.Location = new System.Drawing.Point(0, 0);
             this.dgvLoaiDocGia.Name = "dgvLoaiDocGia";
@@ -1172,23 +1176,6 @@ namespace Form_QuanLyThuVien
             this.dgvLoaiDocGia.Size = new System.Drawing.Size(1311, 599);
             this.dgvLoaiDocGia.TabIndex = 0;
             this.dgvLoaiDocGia.SelectionChanged += new System.EventHandler(this.dgvLoaiDocGia_SelectionChanged);
-            // 
-            // Column16
-            // 
-            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column16.DataPropertyName = "TenLoaiDocGia";
-            this.Column16.HeaderText = "Loại độc giả";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            // 
-            // MaLoaiDocGia
-            // 
-            this.MaLoaiDocGia.DataPropertyName = "MaLoaiDocGia";
-            this.MaLoaiDocGia.HeaderText = "Mã Loại Độc Giả";
-            this.MaLoaiDocGia.MinimumWidth = 6;
-            this.MaLoaiDocGia.Name = "MaLoaiDocGia";
-            this.MaLoaiDocGia.Visible = false;
-            this.MaLoaiDocGia.Width = 125;
             // 
             // tableLayoutPanel12
             // 
@@ -1733,8 +1720,8 @@ namespace Form_QuanLyThuVien
             // 
             this.DG_K_dgvDSKhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_K_dgvDSKhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaKhoa,
-            this.Column17});
+            this.K_MaKhoa,
+            this.K_TenKhoa});
             this.DG_K_dgvDSKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DG_K_dgvDSKhoa.Location = new System.Drawing.Point(0, 0);
             this.DG_K_dgvDSKhoa.Name = "DG_K_dgvDSKhoa";
@@ -1743,23 +1730,6 @@ namespace Form_QuanLyThuVien
             this.DG_K_dgvDSKhoa.Size = new System.Drawing.Size(540, 457);
             this.DG_K_dgvDSKhoa.TabIndex = 0;
             this.DG_K_dgvDSKhoa.SelectionChanged += new System.EventHandler(this.DG_K_dgvDSKhoa_SelectionChanged);
-            // 
-            // MaKhoa
-            // 
-            this.MaKhoa.DataPropertyName = "MaKhoa";
-            this.MaKhoa.HeaderText = "Mã Khoa";
-            this.MaKhoa.MinimumWidth = 6;
-            this.MaKhoa.Name = "MaKhoa";
-            this.MaKhoa.Visible = false;
-            this.MaKhoa.Width = 125;
-            // 
-            // Column17
-            // 
-            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column17.DataPropertyName = "TenKhoa";
-            this.Column17.HeaderText = "Khoa";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
             // 
             // label4
             // 
@@ -1791,6 +1761,7 @@ namespace Form_QuanLyThuVien
             this.Column18.HeaderText = "Mã ngành";
             this.Column18.MinimumWidth = 100;
             this.Column18.Name = "Column18";
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column19
             // 
@@ -1799,6 +1770,7 @@ namespace Form_QuanLyThuVien
             this.Column19.HeaderText = "Tên ngành";
             this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column20
             // 
@@ -1807,6 +1779,7 @@ namespace Form_QuanLyThuVien
             this.Column20.HeaderText = "Tên khoa";
             this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
+            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column21
             // 
@@ -1814,8 +1787,70 @@ namespace Form_QuanLyThuVien
             this.Column21.HeaderText = "Column21";
             this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
+            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column21.Visible = false;
             this.Column21.Width = 125;
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column16.DataPropertyName = "TenLoaiDocGia";
+            this.Column16.HeaderText = "Loại độc giả";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // LDG_MaLoaiDocGia
+            // 
+            this.LDG_MaLoaiDocGia.DataPropertyName = "MaLoaiDocGia";
+            this.LDG_MaLoaiDocGia.HeaderText = "Mã loại độc giả";
+            this.LDG_MaLoaiDocGia.MinimumWidth = 6;
+            this.LDG_MaLoaiDocGia.Name = "LDG_MaLoaiDocGia";
+            this.LDG_MaLoaiDocGia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.LDG_MaLoaiDocGia.Visible = false;
+            this.LDG_MaLoaiDocGia.Width = 125;
+            // 
+            // LDG_TenLoaiDocGia
+            // 
+            this.LDG_TenLoaiDocGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LDG_TenLoaiDocGia.DataPropertyName = "TenLoaiDocGia";
+            this.LDG_TenLoaiDocGia.HeaderText = "Tên loại độc giả";
+            this.LDG_TenLoaiDocGia.MinimumWidth = 6;
+            this.LDG_TenLoaiDocGia.Name = "LDG_TenLoaiDocGia";
+            this.LDG_TenLoaiDocGia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // K_MaKhoa
+            // 
+            this.K_MaKhoa.DataPropertyName = "MaKhoa";
+            this.K_MaKhoa.HeaderText = "Mã khoa";
+            this.K_MaKhoa.MinimumWidth = 6;
+            this.K_MaKhoa.Name = "K_MaKhoa";
+            this.K_MaKhoa.Visible = false;
+            this.K_MaKhoa.Width = 125;
+            // 
+            // K_TenKhoa
+            // 
+            this.K_TenKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.K_TenKhoa.DataPropertyName = "TenKhoa";
+            this.K_TenKhoa.HeaderText = "Tên khoa";
+            this.K_TenKhoa.MinimumWidth = 6;
+            this.K_TenKhoa.Name = "K_TenKhoa";
+            // 
+            // DG_btnChonHinh
+            // 
+            this.DG_btnChonHinh.Location = new System.Drawing.Point(19, 4);
+            this.DG_btnChonHinh.Margin = new System.Windows.Forms.Padding(4);
+            this.DG_btnChonHinh.Name = "DG_btnChonHinh";
+            this.DG_btnChonHinh.Size = new System.Drawing.Size(123, 40);
+            this.DG_btnChonHinh.StateCommon.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.DG_btnChonHinh.StateCommon.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.DG_btnChonHinh.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DG_btnChonHinh.StateNormal.Back.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.DG_btnChonHinh.StateNormal.Back.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.DG_btnChonHinh.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DG_btnChonHinh.TabIndex = 12;
+            this.DG_btnChonHinh.Values.Text = "Chọn ảnh";
+            this.DG_btnChonHinh.Click += new System.EventHandler(this.DG_btnChonHinh_Click);
             // 
             // UF_DocGia
             // 
@@ -1991,13 +2026,9 @@ namespace Form_QuanLyThuVien
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView DG_K_dgvDSKhoa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiDocGia;
         private System.Windows.Forms.Label label6;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox DG_N_txtMaNganh;
-        private System.Windows.Forms.Button DG_btnChonHinh;
+        private System.Windows.Forms.Button DG_btnChonHinh3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrangXoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -2020,5 +2051,11 @@ namespace Form_QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LDG_MaLoaiDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LDG_TenLoaiDocGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_MaKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn K_TenKhoa;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton DG_btnChonHinh;
     }
 }

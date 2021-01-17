@@ -584,7 +584,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.44108F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.25926F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.32209F));
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 481F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 482F));
             this.tableLayoutPanel33.Controls.Add(this.label16, 0, 0);
             this.tableLayoutPanel33.Controls.Add(this.QLTL_btnSearchMaVach, 2, 0);
             this.tableLayoutPanel33.Controls.Add(this.tableLayoutPanel34, 1, 0);
@@ -616,9 +616,9 @@ namespace Form_QuanLyThuVien
             this.QLTL_btnSearchMaVach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QLTL_btnSearchMaVach.FlatAppearance.BorderSize = 0;
             this.QLTL_btnSearchMaVach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QLTL_btnSearchMaVach.Location = new System.Drawing.Point(484, 3);
+            this.QLTL_btnSearchMaVach.Location = new System.Drawing.Point(483, 3);
             this.QLTL_btnSearchMaVach.Name = "QLTL_btnSearchMaVach";
-            this.QLTL_btnSearchMaVach.Size = new System.Drawing.Size(68, 44);
+            this.QLTL_btnSearchMaVach.Size = new System.Drawing.Size(67, 44);
             this.QLTL_btnSearchMaVach.TabIndex = 2;
             this.QLTL_btnSearchMaVach.UseVisualStyleBackColor = false;
             this.QLTL_btnSearchMaVach.Click += new System.EventHandler(this.QLTL_btnSearchMaVach_Click);
@@ -636,7 +636,7 @@ namespace Form_QuanLyThuVien
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(323, 44);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(322, 44);
             this.tableLayoutPanel34.TabIndex = 3;
             // 
             // QLTL_txtSearchMaVach
@@ -645,7 +645,7 @@ namespace Form_QuanLyThuVien
             this.QLTL_txtSearchMaVach.Location = new System.Drawing.Point(3, 7);
             this.QLTL_txtSearchMaVach.Multiline = true;
             this.QLTL_txtSearchMaVach.Name = "QLTL_txtSearchMaVach";
-            this.QLTL_txtSearchMaVach.Size = new System.Drawing.Size(317, 29);
+            this.QLTL_txtSearchMaVach.Size = new System.Drawing.Size(316, 29);
             this.QLTL_txtSearchMaVach.TabIndex = 1;
             this.QLTL_txtSearchMaVach.TextChanged += new System.EventHandler(this.QLTL_txtSearchMaVach_TextChanged);
             // 

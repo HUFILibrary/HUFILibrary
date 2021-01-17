@@ -91,6 +91,9 @@ namespace Form_QuanLyThuVien
 
         private void dgvTacGia_SelectionChanged(object sender, EventArgs e)
         {
+            TG_btnXoa.Enabled = true;
+            TG_btnSua.Enabled = true;
+            TG_btnLuu.Enabled = false;
             TG_txtTenTG.Text = dgvTacGia.CurrentRow.Cells[1].Value.ToString();
             matg = dgvTacGia.CurrentRow.Cells[0].Value.ToString();
         }
@@ -193,6 +196,9 @@ namespace Form_QuanLyThuVien
 
         private void dgvNhaXuatBan_SelectionChanged(object sender, EventArgs e)
         {
+            NXB_btnXoa.Enabled = true;
+            NXB_btnSua.Enabled = true;
+            NXB_btnLuu.Enabled = false;
             manxb = dgvNhaXuatBan.CurrentRow.Cells[0].Value.ToString();
             NXB_txtTen.Text = dgvNhaXuatBan.CurrentRow.Cells[1].Value.ToString();
         }
@@ -261,6 +267,9 @@ namespace Form_QuanLyThuVien
         {
             macd = CD_dgvCD.CurrentRow.Cells[0].Value.ToString();
             CD_txtTen.Text = CD_dgvCD.CurrentRow.Cells[1].Value.ToString();
+            CD_btnXoa.Enabled = true;
+            CD_btnSua.Enabled = true;
+            CD_btnLuu.Enabled = false;
         }
 
         private void CD_btnSua_Click(object sender, EventArgs e)
@@ -307,6 +316,10 @@ namespace Form_QuanLyThuVien
         {
             mann = dgvNgonNgu.CurrentRow.Cells[0].Value.ToString();
             NN_txtTenNN.Text = dgvNgonNgu.CurrentRow.Cells[1].Value.ToString();
+
+            NN_btnXoa.Enabled = true;
+            NN_btnSua.Enabled = true;
+            NN_btnLuu.Enabled = false;
         }
 
         private void NN_btnSua_Click(object sender, EventArgs e)
@@ -324,6 +337,9 @@ namespace Form_QuanLyThuVien
         {
             maltl = LTL_dgvDSLTL.CurrentRow.Cells[0].Value.ToString();
             LTL_txtTen.Text = LTL_dgvDSLTL.CurrentRow.Cells[1].Value.ToString();
+            LTL_btnXoa.Enabled = true;
+            LTL_btnSua.Enabled = true;
+            LTL_btnLuu.Enabled = false;
         }
 
         private void LTL_btnThem_Click(object sender, EventArgs e)
@@ -497,6 +513,8 @@ namespace Form_QuanLyThuVien
 
             VT_btnXoa.Enabled = true;
             VT_btnSua.Enabled = true;
+            VT_btnLuu.Enabled = false;
+
         }
         private void loadComboboxMaViTri()
         {

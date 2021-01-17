@@ -43,7 +43,7 @@ namespace Form_QuanLyThuVien
         {
             NV_dgvDSNV.DataSource = qlnv.loadDsNhanVien();
             NV_btnXoaNV.Enabled = false;
-            //NV_btnSuaNV.Enabled = false;
+            NV_btnSuaNV.Enabled = false;
             NV_btnLuuNV.Enabled = false;
 
             //NV_cboLoaiNV.Enabled = false;
@@ -72,6 +72,8 @@ namespace Form_QuanLyThuVien
         private void NV_btnThemNV_Click(object sender, EventArgs e)
         {
             NV_btnLuuNV.Enabled = true;
+            NV_btnXoaNV.Enabled = false;
+            NV_btnSuaNV.Enabled = false;
 
             NV_txtCMND.Enabled = true;
             NV_txtCMND.Text = "";
@@ -132,6 +134,7 @@ namespace Form_QuanLyThuVien
 
             NV_btnXoaNV.Enabled = true;
             NV_btnSuaNV.Enabled = true;
+            NV_btnLuuNV.Enabled = false;
 
 
         }

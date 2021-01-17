@@ -111,6 +111,11 @@ namespace Form_QuanLyThuVien
 
         private void DG_K_btnXoa_Click(object sender, EventArgs e)
         {
+            if(makhoa == "8")
+            {
+                MessageBox.Show("Không thể xoá loại khoa này. ");
+                return;
+            }
             qlk.xoaKhoa(makhoa);
             loadDgvKhoas();
         }
@@ -123,6 +128,9 @@ namespace Form_QuanLyThuVien
 
         private void DG_K_dgvDSKhoa_SelectionChanged(object sender, EventArgs e)
         {
+            DG_K_btnXoa.Enabled = true;
+            DG_K_btnSua.Enabled = true;
+            DG_K_btnLuu.Enabled = false;
             DG_K_txtTenKhoa.Text = DG_K_dgvDSKhoa.CurrentRow.Cells[1].Value.ToString();
             makhoa = DG_K_dgvDSKhoa.CurrentRow.Cells[0].Value.ToString();
         }
@@ -144,6 +152,9 @@ namespace Form_QuanLyThuVien
 
         private void dgvLoaiDocGia_SelectionChanged(object sender, EventArgs e)
         {
+            LDG_btnXoa.Enabled = true;
+            LDG_btnSua.Enabled = true;
+            LDG_btnLuu.Enabled = false;
             maloaidocgia = dgvLoaiDocGia.CurrentRow.Cells[0].Value.ToString();
             txtTenLoaiDocGia.Text = dgvLoaiDocGia.CurrentRow.Cells[1].Value.ToString();
         }
@@ -156,6 +167,7 @@ namespace Form_QuanLyThuVien
 
         private void DG_btnThem_Click(object sender, EventArgs e)
         {
+            DG_pbAvatar.Image = null;
             DG_btnXoa.Enabled = false;
             DG_btnSua.Enabled = false;
             DG_btnLuu.Enabled = true;
@@ -341,8 +353,12 @@ namespace Form_QuanLyThuVien
                 //DG_cboNganh.ValueMember = "MaNganh";
                 //DG_cboNganh.DataSource = qldg.loadComboboxNganhByKhoa(DG_cboKhoa.SelectedValue.ToString(), );
                 //checkSelection = false;
+                DG_cboNganh.DisplayMember = "TenNganh";
+                DG_cboNganh.ValueMember = "MaNganh";
+                DG_cboNganh.DataSource = qldg.loadComboboxNganh(DG_cboKhoa.SelectedValue.ToString());
+                DG_cboNganh.Text = DG_dgvDSDG.CurrentRow.Cells[2].Value.ToString();
                 checkSelection = false;
-                return;
+                //return;
             }    
             else
             {
@@ -386,6 +402,9 @@ namespace Form_QuanLyThuVien
 
         private void DG_N_dgvDSNganh_SelectionChanged(object sender, EventArgs e)
         {
+            DG_N_btnXoa.Enabled = true;
+            DG_N_btnSua.Enabled = true;
+            DG_N_btnLuu.Enabled = false;
             DG_N_txtMaNganh.Text = DG_N_dgvDSNganh.CurrentRow.Cells[0].Value.ToString();
             DG_N_txtTenNganh.Text = DG_N_dgvDSNganh.CurrentRow.Cells[1].Value.ToString();
             DG_N_cboTenKhoa.Text = DG_N_dgvDSNganh.CurrentRow.Cells[2].Value.ToString();
@@ -459,14 +478,18 @@ namespace Form_QuanLyThuVien
 
         private void DG_dgvDSDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             DG_btnXoa.Enabled = true;
             DG_btnSua.Enabled = true;
+            DG_btnLuu.Enabled = false;
             checkSelection = true;
             DG_txtMaThe.Text = DG_dgvDSDG.CurrentRow.Cells[0].Value.ToString();
             DG_txtTenDG.Text = DG_dgvDSDG.CurrentRow.Cells[4].Value.ToString();
             DG_cboLoaiDG.Text = DG_dgvDSDG.CurrentRow.Cells[1].Value.ToString();
-            DG_cboNganh.Text = DG_dgvDSDG.CurrentRow.Cells[2].Value.ToString();
+            
             DG_cboKhoa.Text = DG_dgvDSDG.CurrentRow.Cells[3].Value.ToString();
+            
+
             DG_txtCMND.Text = DG_dgvDSDG.CurrentRow.Cells[5].Value.ToString();
             DG_dtpNgaySinh.Value = Convert.ToDateTime(DG_dgvDSDG.CurrentRow.Cells[6].Value.ToString());
             if (DG_dgvDSDG.CurrentRow.Cells[7].Value.ToString() == "Nam")

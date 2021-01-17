@@ -22,8 +22,10 @@ namespace Form_QuanLyThuVien
         private void LNV_btnThem_Click(object sender, EventArgs e)
         {
             LNV_txtTenLNV.Text = "";
+            LNV_txtTenLNV.Focus();
             LNV_btnLuu.Enabled = true;
-            
+            LNV_btnXoa.Enabled = false;
+            LNV_btnSua.Enabled = false;
         }
 
         private void LNV_btnXoa_Click(object sender, EventArgs e)
@@ -84,6 +86,7 @@ namespace Form_QuanLyThuVien
             
             LNV_btnSua.Enabled = true;
             LNV_btnXoa.Enabled = true;
+            LNV_btnLuu.Enabled = false;
             LNV_txtTenLNV.Text = LNV_DgvDSLoai.Rows[e.RowIndex].Cells[1].Value.ToString();
             
 
