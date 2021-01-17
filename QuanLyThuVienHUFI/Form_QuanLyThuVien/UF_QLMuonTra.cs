@@ -133,6 +133,8 @@ namespace Form_QuanLyThuVien
                     QLMT_avatarDG.Image = new Bitmap(urlImage);
                 }
                 QLM_dgvDSTLDangMuon.DataSource = qlm.getDSTLDangMuon(QLMT_txtSearchDG.Text);
+                dsTaiLieuChon.Clear();
+                loadDgvChiTietTaiLieuMuon();
                 //int soluongtailieumuon = 0;
                 //double sotiencoc = 0;
                 //qlm.returnThongtinmuon(item.MaTheThuVien.ToString(), ref soluongtailieumuon, ref sotiencoc);
