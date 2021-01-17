@@ -17,7 +17,7 @@ namespace BLL_DAL
 
         public List<VW_TAILIEUDAMUON> getDSTLDaMuon(string mathethuvien)
         {
-            List<VW_TAILIEUDAMUON> lstTaiLieuDangMuon = db.VW_TAILIEUDAMUONs.Where(a => a.MaTheThuVien == mathethuvien && a.TinhTrangTra == true && a.TinhTrangTraCT == true).ToList();
+            List<VW_TAILIEUDAMUON> lstTaiLieuDangMuon = db.VW_TAILIEUDAMUONs.Where(a => a.MaTheThuVien == mathethuvien /*&& a.TinhTrangTra == true*/ && a.TinhTrangTraCT == true).ToList();
             return lstTaiLieuDangMuon;
         }
     }

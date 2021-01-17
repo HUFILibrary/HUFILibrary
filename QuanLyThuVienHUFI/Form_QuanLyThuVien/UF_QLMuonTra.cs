@@ -889,12 +889,20 @@ namespace Form_QuanLyThuVien
 
         private void QLMT_TDG_btnHuyChon_Click(object sender, EventArgs e)
         {
+            if(QLMT_TDG_dgvCT_TLTra.Rows.Count == 1)
+            {
+                return;
+            }
            QLMT_TDG_dgvCT_TLTra.Rows.RemoveAt(QLMT_TDG_dgvCT_TLTra.CurrentRow.Index);
            QLMT_TDG_dgvCT_TLTra.DataSource = dt2;
         }
 
         private void QLMT_TDG_dgvCT_TLTra_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(QLMT_TDG_dgvCT_TLTra.Rows.Count == 1)
+            {
+                return; 
+            }
             hoten = Frm_Main.hoten;
             QLMT_TDG_txtMV.Text = QLMT_TDG_dgvCT_TLTra.Rows[e.RowIndex].Cells[0].Value.ToString();
            QLMT_TDG_txtGiaTL.Text = QLMT_TDG_dgvCT_TLTra.Rows[e.RowIndex].Cells[4].Value.ToString();
