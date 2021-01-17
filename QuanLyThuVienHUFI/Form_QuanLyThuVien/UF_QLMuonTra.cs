@@ -252,7 +252,7 @@ namespace Form_QuanLyThuVien
                 }    
                 else
                 {
-                    MessageBox.Show("Quá trình mượn thành công.");
+                    MessageBox.Show("Quá trình mượn thành công. \nPhí cọc là "+ phicoc + " đồng");
                     if(MessageBox.Show("Bạn có muốn xuất phiếu mượn không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         
