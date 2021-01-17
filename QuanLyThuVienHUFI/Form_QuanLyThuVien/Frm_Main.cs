@@ -127,7 +127,7 @@ namespace Form_QuanLyThuVien
         }
 
         private void Frm_Main_KeyDown(object sender, KeyEventArgs e)
-        {
+       {
             if (e.Alt == true && e.KeyCode == Keys.NumPad1 || e.Alt == true && e.KeyCode == Keys.D1 )
             {
                 pnl_container.Controls.Clear();

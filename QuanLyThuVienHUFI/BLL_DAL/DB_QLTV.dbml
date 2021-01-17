@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyThuVienCNTP2" Class="DB_QLTVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-F6GMAH7\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTP2ConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-RDLUFLH4\SQLEXPRESS;Initial Catalog=QuanLyThuVienCNTP2;Integrated Security=True" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QuanLyThuVienCNTP2ConnectionString11" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHUDE" Member="CHUDEs">
     <Type Name="CHUDE">
       <Column Name="MaChuDe" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

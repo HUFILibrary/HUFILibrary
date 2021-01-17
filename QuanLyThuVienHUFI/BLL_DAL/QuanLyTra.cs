@@ -21,7 +21,7 @@ namespace BLL_DAL
                      join nxb in qltv.NHAXUATBANs on tls.MaNhaXuatBan equals nxb.MaNhaXuatBan
                      join vt in qltv.VITRIs on tls.MaViTri equals vt.MaViTri
                      where matl == ctpm.MaVach && tls.TinhTrangXoa == false && ctpm.TinhTrangTraCT == false && pm.TinhTrangTra == false
-                     select new { tls.MaVach, pm.MaPhieuMuon, tls.TenTaiLieu, cd.TenChuDe, tls.MaTap, nn.TenNgonNgu, nxb.TenNhaXuatBan, tg.TenTacGia, pm.NgayLap, tls.Gia };
+                     select new { tls.MaVach, pm.MaPhieuMuon, tls.TenTaiLieu, cd.TenChuDe, tls.MaTap, nn.TenNgonNgu, nxb.TenNhaXuatBan, tg.TenTacGia, pm.NgayLap, tls.Gia, pm.ThoiHanMuon };
             return mv;
         }
 
@@ -209,8 +209,8 @@ namespace BLL_DAL
                       join loaitl in qltv.LOAITAILIEUs on mv.MaLoaiTaiLieu equals loaitl.MaLoaiTaiLieu
                       join tg in qltv.TACGIAs on mv.MaTacGia equals tg.MaTacGia
                       join nxb in qltv.NHAXUATBANs on mv.MaNhaXuatBan equals nxb.MaNhaXuatBan
-                      where pm.MaTheThuVien == mathetv && pm.TinhTrangTra == false
-                      select new { pm.MaPhieuMuon, mv.MaVach,  mv.TenTaiLieu, cd.TenChuDe, mv.MaTap, nn.TenNgonNgu, nxb.TenNhaXuatBan, tg.TenTacGia, pm.NgayLap, mv.Gia,ctpm.MaChiTietPhieuMuon };
+                      where pm.MaTheThuVien == mathetv 
+                      select new { pm.MaPhieuMuon, mv.MaVach,  mv.TenTaiLieu, cd.TenChuDe, mv.MaTap, nn.TenNgonNgu, nxb.TenNhaXuatBan, tg.TenTacGia, pm.NgayLap, mv.Gia,ctpm.MaChiTietPhieuMuon, pm.ThoiHanMuon };
             return mdg;
         }
         public int ktraTonTaiDG(DOCGIA dg)
@@ -224,7 +224,7 @@ namespace BLL_DAL
         }
         public int ktraDGTrongPM(DOCGIA dg)
         {
-            PHIEUMUON pms = qltv.PHIEUMUONs.Where(d => d.MaTheThuVien == dg.MaTheThuVien && d.TinhTrangTra == false).FirstOrDefault();
+            PHIEUMUON pms = qltv.PHIEUMUONs.Where(d => d.MaTheThuVien == dg.MaTheThuVien).FirstOrDefault();
             if (pms != null)
             {
                 return 1;

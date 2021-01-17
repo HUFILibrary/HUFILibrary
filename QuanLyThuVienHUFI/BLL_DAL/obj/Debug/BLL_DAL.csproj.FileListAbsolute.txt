@@ -134,7 +134,6 @@ C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_D
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.dll
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.pdb
 C:\DevPrograms\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
-E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
 E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\BLL_DAL.dll.config
 E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\BLL_DAL.dll
 E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\bin\Debug\BLL_DAL.pdb
@@ -148,3 +147,4 @@ E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.Co
 E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csproj.CopyComplete
 E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.dll
 E:\GitHub\DATN\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.pdb
+E:\CODE\DoAnTotNghiep\HUFILibrary\QuanLyThuVienHUFI\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache
