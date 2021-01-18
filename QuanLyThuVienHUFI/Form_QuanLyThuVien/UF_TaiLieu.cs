@@ -104,6 +104,7 @@ namespace Form_QuanLyThuVien
             TG_txtTenTG.Focus();
             TG_btnSua.Enabled = false;
             TG_btnXoa.Enabled = false;
+            TG_btnLuu.Enabled = true;
         }
 
         private void TG_btnLuu_Click(object sender, EventArgs e)
@@ -556,12 +557,12 @@ namespace Form_QuanLyThuVien
         }
         private void TL_btnLuu_Click(object sender, EventArgs e)
         {
-            if(!ktraTxtChuaSo(TL_txtMaVach))
-            {
-                MessageBox.Show("Mã vạch chỉ chứa ký tự số.");
-                TL_txtMaVach.Focus();
-                return; 
-            }
+            //if(!ktraTxtChuaSo(TL_txtMaVach))
+            //{
+            //    MessageBox.Show("Mã vạch chỉ chứa ký tự số.");
+            //    TL_txtMaVach.Focus();
+            //    return; 
+            //}
             if (!ktraTxtChuaSo(TL_txtSoTrang))
             {
                 MessageBox.Show("Số trang vui lòng chỉ nhập số");
@@ -575,7 +576,12 @@ namespace Form_QuanLyThuVien
                 TL_txtGia.Focus();
                 return;
             }
-            
+            if (!ktraTxtChuaSo(TL_txtNamXuatBan))
+            {
+                MessageBox.Show("Năm xuất bản vui lòng chỉ nhập số");
+                TL_txtNamXuatBan.Focus();
+                return;
+            }
             if (!ktraTxtChuaSo(TL_txtSoLuong))
             {
                 MessageBox.Show("Số lượng vui lòng chỉ nhập số");
@@ -658,12 +664,12 @@ namespace Form_QuanLyThuVien
             //tl.MaChuDe = int.Parse(TL_CboChuDe.SelectedValue.ToString());
             //tl.NamXuatBan = int.Parse(TL_txtNamXuatBan.Text);
             //tl.ThongTinTaiLieu = TL_txtMoTa.Text;
-            if (!ktraTxtChuaSo(TL_txtMaVach))
-            {
-                MessageBox.Show("Mã vạch chỉ chứa ký tự số.");
-                TL_txtMaVach.Focus();
-                return;
-            }
+            //if (!ktraTxtChuaSo(TL_txtMaVach))
+            //{
+            //    MessageBox.Show("Mã vạch chỉ chứa ký tự số.");
+            //    TL_txtMaVach.Focus();
+            //    return;
+            //}
             if (!ktraTxtChuaSo(TL_txtSoTrang))
             {
                 MessageBox.Show("Số trang vui lòng chỉ nhập số");

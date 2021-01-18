@@ -229,6 +229,10 @@ namespace BLL_DAL
             PHIEUNHAP pn = db.PHIEUNHAPs.Where(a => a.MaPhieuNhap == int.Parse(maphieunhap)).FirstOrDefault();
             if(pn != null)
             {
+                if(pn.TongTien == null)
+                {
+                    pn.TongTien = 0;
+                }    
                 pn.TongTien += tongtien;
                 db.SubmitChanges();
             }

@@ -476,11 +476,13 @@ namespace Form_QuanLyThuVien
                 dr["TenTaiLieu"] = QLMT_T_dgvDSTL.CurrentRow.Cells[2].Value.ToString();
                 dr["NgayLap"] = DateTime.Parse(QLMT_T_dgvDSTL.CurrentRow.Cells[8].Value.ToString());
                 dr["Gia"] = QLMT_T_dgvDSTL.CurrentRow.Cells[9].Value.ToString();
+                
                 dr["ThoiHanMuon"] = DateTime.Parse(QLMT_T_dgvDSTL.CurrentRow.Cells[10].Value.ToString());
 
                 dt2.Rows.Add(dr);
                 QLMT_T_dgvCTTra.DataSource = dt2;
-
+                QLMT_T_dgvCTTra.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
+                QLMT_T_dgvCTTra.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
                 string flg = qlt.layMaTVTheoPM(QLMT_T_dgvDSTL.CurrentRow.Cells[1].Value.ToString());
                 if (string.IsNullOrEmpty(flg))
                 {

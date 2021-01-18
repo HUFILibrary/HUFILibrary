@@ -223,9 +223,58 @@ namespace Form_QuanLyThuVien
         {
 
         }
-
+        public bool ktraTxtChuaSo(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool ktraTxtChuaChu(Control ctrl)
+        {
+            foreach (char c in ctrl.Text)
+            {
+                if (!char.IsLetter(c) && !char.IsWhiteSpace(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void QLP_N_btnLuu_Click(object sender, EventArgs e)
         {
+            if (!ktraTxtChuaSo(QLP_N_txtSoTrang))
+            {
+                MessageBox.Show("Số trang vui lòng chỉ nhập số.");
+                QLP_N_txtSoTrang.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(QLP_N_txtGiaMoi))
+            {
+                MessageBox.Show("Giá vui lòng chỉ nhập số.");
+                QLP_N_txtGiaMoi.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(QLP_N_txtSL))
+            {
+                MessageBox.Show("Số lượng vui lòng chỉ nhập số.");
+                QLP_N_txtSL.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(QLP_N_txtNamXB))
+            {
+                MessageBox.Show("Năm xuất bản vui lòng chỉ nhập số.");
+                QLP_N_txtNamXB.Focus();
+                return;
+            }
+            
             // số lượng tài liệu cần thêm
             int soluongtailieu = int.Parse(QLP_N_txtSL.Text);
 
@@ -674,6 +723,33 @@ namespace Form_QuanLyThuVien
 
         private void QLP_N_btnSua_Click_1(object sender, EventArgs e)
         {
+            if (!ktraTxtChuaSo(QLP_N_txtSoTrang))
+            {
+                MessageBox.Show("Số trang vui lòng chỉ nhập số.");
+                QLP_N_txtSoTrang.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(QLP_N_txtGiaMoi))
+            {
+                MessageBox.Show("Giá vui lòng chỉ nhập số.");
+                QLP_N_txtGiaMoi.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(QLP_N_txtSL))
+            {
+                MessageBox.Show("Số lượng vui lòng chỉ nhập số.");
+                QLP_N_txtSL.Focus();
+                return;
+            }
+
+            if (!ktraTxtChuaSo(QLP_N_txtNamXB))
+            {
+                MessageBox.Show("Năm xuất bản vui lòng chỉ nhập số.");
+                QLP_N_txtNamXB.Focus();
+                return;
+            }
             qltl.suaTaiLieu(QLP_N_dgvChiTietPN.CurrentRow.Cells["MaVach"].Value.ToString(), QLP_N_cboLoaiTL.SelectedValue.ToString(), QLP_N_cboChuDe.SelectedValue.ToString(), QLP_N_cboTacGia.SelectedValue.ToString(), QLP_N_cboNhaXB.SelectedValue.ToString(), QLP_N_txtTLMoi.Text, QLP_N_txtSoTrang.Text, QLP_N_txtGiaMoi.Text, QLP_N_txtNamXB.Text, QLP_N_txtMoTa.Text, QLP_N_cboNgonNgu.SelectedValue.ToString(), TL_urlImage, QLP_N_cboVitri.SelectedValue.ToString(), QLP_N_dgvChiTietPN.CurrentRow.Cells["MaTaiLieu"].Value.ToString());
             loadDgvChiTietPhieuNhap();
         }
@@ -784,7 +860,12 @@ namespace Form_QuanLyThuVien
         }
         private void NTLC_btnLuu_Click(object sender, EventArgs e)
         {
-            
+            if(!ktraTxtChuaSo(QLP_N_NC_txtSL))
+            {
+                MessageBox.Show("Số lượng vui lòng chỉ nhập số.");
+                QLP_N_NC_txtSL.Focus();
+                return;
+            }    
             
             if (QLP_N_PC_dgvDSTL.RowCount == 0)
             {
